@@ -1,7 +1,6 @@
-export class User {
+export interface User {
   id: string;
-  firName: string;
-  lastName: string;
+  name: string;
   phoneNo: string;
   email: string;
   college: string;
@@ -9,4 +8,10 @@ export class User {
   pinCode: number;
   participatingEvents: Array<string>;
   transportation: boolean;
+}
+
+export interface UserNew {
+  id: string;
+  name: string;
+  email: string;
 }

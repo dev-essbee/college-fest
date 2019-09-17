@@ -15,6 +15,10 @@ import {environment} from '../environments/environment';
 // firebase
 import {AngularFireModule} from '@angular/fire';
 import {AngularFirestoreModule} from '@angular/fire/firestore';
+import {AngularFireAuthModule} from '@angular/fire/auth';
+import { DashboardComponent } from './dashboard/dashboard.component';
+
+
 
 
 
@@ -26,7 +30,8 @@ import {AngularFirestoreModule} from '@angular/fire/firestore';
     RegisterComponent,
     TeamComponent,
     NavigationComponent,
-    SponsorsComponent
+    SponsorsComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,
@@ -34,7 +39,8 @@ import {AngularFirestoreModule} from '@angular/fire/firestore';
     FlexLayoutModule,
     BrowserAnimationsModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    AngularFireAuthModule
   ],
   providers: [],
   bootstrap: [AppComponent]

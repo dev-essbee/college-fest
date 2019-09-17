@@ -5,6 +5,7 @@ import {RegisterComponent} from './register/register.component';
 import {EventsComponent} from './events/events.component';
 import {SponsorsComponent} from './sponsors/sponsors.component';
 import {HomeComponent} from './home/home.component';
+import {DashboardComponent} from './dashboard/dashboard.component';
 
 
 const appRoutes: Routes = [
@@ -12,15 +13,16 @@ const appRoutes: Routes = [
   {path: 'register', component: RegisterComponent},
   {path: 'events', component: EventsComponent},
   {path: 'sponsors', component: SponsorsComponent},
+  {path: 'dashboard', component: DashboardComponent},
   {path: '**', component: HomeComponent}
 
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(appRoutes,
-    // todo: remove in production
+    // todo: comment in production
     // {enableTracing: true}
-    )],
+  )],
   exports: [RouterModule]
 })
 export class AppRoutingModule {
