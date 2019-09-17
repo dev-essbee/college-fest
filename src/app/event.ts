@@ -6,4 +6,5 @@ export class Event {
   longDes: string;
   startTime: string;
   endTime: string;
+  // fee:string;
 }
