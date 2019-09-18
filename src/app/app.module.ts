@@ -16,10 +16,9 @@ import {environment} from '../environments/environment';
 import {AngularFireModule} from '@angular/fire';
 import {AngularFirestoreModule} from '@angular/fire/firestore';
 import {AngularFireAuthModule} from '@angular/fire/auth';
-import { DashboardComponent } from './dashboard/dashboard.component';
+import {DashboardComponent} from './dashboard/dashboard.component';
 
-
-
+import {MaterialModule} from './material.module';
 
 
 @NgModule({
@@ -40,7 +39,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     BrowserAnimationsModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    MaterialModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
