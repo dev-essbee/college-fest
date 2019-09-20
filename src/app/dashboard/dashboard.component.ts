@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {UserAuthService} from '../user-auth.service';
+import {FirebaseDatabaseService} from '../firebase-database.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -8,7 +9,8 @@ import {UserAuthService} from '../user-auth.service';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor(public auth: UserAuthService) {
+  constructor(public auth: UserAuthService,
+              public db: FirebaseDatabaseService) {
   }
 
   ngOnInit() {

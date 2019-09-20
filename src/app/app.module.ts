@@ -12,14 +12,18 @@ import {TeamComponent} from './team/team.component';
 import {NavigationComponent} from './navigation/navigation.component';
 import {SponsorsComponent} from './sponsors/sponsors.component';
 import {environment} from '../environments/environment';
+
+
 // firebase
 import {AngularFireModule} from '@angular/fire';
 import {AngularFirestoreModule} from '@angular/fire/firestore';
 import {AngularFireAuthModule} from '@angular/fire/auth';
 import {DashboardComponent} from './dashboard/dashboard.component';
 
-import {MaterialModule} from './material.module';
 
+// angular material
+import {MaterialModule} from './material.module';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -41,6 +45,8 @@ import {MaterialModule} from './material.module';
     AngularFirestoreModule,
     AngularFireAuthModule,
     MaterialModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

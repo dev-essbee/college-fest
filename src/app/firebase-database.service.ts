@@ -1,8 +1,9 @@
 import {Injectable} from '@angular/core';
-import {User} from './user';
+import {User, UserNew} from './user';
 import {AngularFirestore} from '@angular/fire/firestore';
 import {AngularFireAuth} from '@angular/fire/auth';
-import {first} from 'rxjs/operators';
+import {first, switchMap} from 'rxjs/operators';
+import {Observable, of} from "rxjs";
 
 
 @Injectable({
@@ -10,15 +11,19 @@ import {first} from 'rxjs/operators';
 })
 
 export class FirebaseDatabaseService {
-  user: any;
+  loggedInUserData: Observable<UserNew>;
 
   constructor(private aFSs: AngularFirestore,
               public aFAuth: AngularFireAuth) {
-    this.aFAuth.auth.onAuthStateChanged(user => {
-      if (user) {
-        this.user = user;
-      }
-    });
+    this.loggedInUserData = this.aFAuth.authState.pipe(
+      switchMap(user => {
+        if (user) {
+          return this.aFSs.collection('users').doc<UserNew>(`${user.uid}`).valueChanges();
+        } else {
+          return of(null);
+        }
+      })
+    );
   }
 
   /*
@@ -52,4 +57,18 @@ export class FirebaseDatabaseService {
   updateUser(value: User) {
     return this.aFSs.collection('users').doc(this.user.uid).set(value);
   }
+
+  findNewUser(): Observable<User> {
+    this.loggedInUserData = this.aFAuth.authState.pipe(
+      switchMap(user => {
+        if (user) {
+          return this.aFSs.collection('users').doc<UserNew>(`${user.uid}`).valueChanges();
+        } else {
+          return of(null);
+        }
+      })
+    );
+    return of(null);
+  }
+
 }

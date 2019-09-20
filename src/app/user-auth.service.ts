@@ -4,28 +4,26 @@ import {UserNew} from './user';
 import {auth} from 'firebase/app';
 import {AngularFireAuth} from '@angular/fire/auth';
 import {AngularFirestore, AngularFirestoreDocument} from '@angular/fire/firestore';
-import {switchMap} from 'rxjs/operators';
+import {first, switchMap} from 'rxjs/operators';
 import {Router} from '@angular/router';
+import {FirebaseDatabaseService} from './firebase-database.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserAuthService {
-  loggedInUser: Observable<UserNew>;
+  loggedInUser: any;
 
   constructor(private aFAuth: AngularFireAuth,
               private aFSs: AngularFirestore,
-              private router: Router
+              private router: Router,
+              private db: FirebaseDatabaseService
   ) {
-    this.loggedInUser = this.aFAuth.authState.pipe(
-      switchMap(user => {
-        if (user) {
-          return this.aFSs.collection('users').doc<UserNew>(`${user.uid}`).valueChanges();
-        } else {
-          return of(null);
-        }
-      })
-    );
+    this.aFAuth.auth.onAuthStateChanged(user => {
+      if (user) {
+        this.loggedInUser = user;
+      }
+    });
   }
 
   async googleSignIn() {
@@ -36,18 +34,29 @@ export class UserAuthService {
 
   private createUser(user) {
     const userRef: AngularFirestoreDocument<UserNew> = this.aFSs.collection('users').doc(`${user.uid}`);
-    const data: UserNew = {
-        id: user.uid,
-        email: user.email,
-        name: user.displayName,
-      }
-    ;
-    this.router.navigate(['/events']);
-    return userRef.set(data, {merge: true});
+    if (this.checkNewUser(userRef)) {
+      const data: UserNew = {
+          id: user.uid,
+          email: user.email,
+          name: user.displayName,
+          newUser: true,
+        }
+      ;
+      this.router.navigate(['/registration']);
+      return userRef.set(data, {merge: true});
+    } else {
+      this.router.navigate(['/events']);
+    }
   }
 
   async signOut() {
     await this.aFAuth.auth.signOut();
     this.router.navigate(['/']);
   }
+
+  checkNewUser(userRef) {
+    FirebaseDatabaseService.findNewUser()
+    return false;
+  }
+
 }
