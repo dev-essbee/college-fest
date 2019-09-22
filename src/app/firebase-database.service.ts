@@ -30,6 +30,15 @@ export class FirebaseDatabaseService {
       name: user.displayName,
       email: user.email,
       newUser: true,
+      phoneNo: '',
+      pinCode: '',
+      gender: '',
+      city: '',
+      state: '',
+      college: '',
+      address: '',
+      transport: '-1'
+
     };
     return userRef.set(data, {merge: true});
   }
@@ -48,8 +57,8 @@ export class FirebaseDatabaseService {
     );
   }
 
-  updateData() {
-    return null;
+  updateData(data) {
+    return this.afs.collection('users').doc(this.loggedInUserData.id).set(data, {merge: true});
   }
 
   userSignedIn(user) {

@@ -15,7 +15,10 @@
               <mat-label>Name</mat-label>
               <input matInput placeholder="Shubham Bhandari" formControlName="name">
               <mat-hint>Name should match your ID proof</mat-hint>
-<!--              <mat-error *ngIf="(name.dirty || name.touched)"></mat-error>-->
+              <mat-error *ngFor="let validation of userDetailsValidMsg.name">
+                <mat-error
+                  *ngIf="(name.dirty || name.touched)&& name.hasError(validation.type)">{{validation.message}}</mat-error>
+              </mat-error>
             </mat-form-field>
           </div>
 
@@ -23,25 +26,26 @@
             <div style="margin-right: 2%" class="field">
               <mat-form-field appearance="outline">
                 <mat-select placeholder="Gender" formControlName="gender">
-                  <mat-option value="female">Female</mat-option>
-                  <mat-option value="male">Male</mat-option>
-                  <mat-option value="other">Other</mat-option>
+                  <mat-option *ngFor="let gender of genders" [value]=gender.id>{{gender.value}}</mat-option>
                 </mat-select>
-<!--                <mat-error *ngIf="(gender.dirty || gender.touched)"></mat-error>-->
+                <mat-error *ngFor="let validation of userDetailsValidMsg.gender">
+                  <mat-error
+                    *ngIf="(gender.dirty || gender.touched) && gender.hasError(validation.type)">{{validation.message}}</mat-error>
+                </mat-error>
               </mat-form-field>
             </div>
 
 
             <div style="margin-left: 2%" class="field">
-              <form class="phone-no">
-                <mat-form-field class="phone-no-field" appearance="outline">
-                  <mat-label>Mobile Number</mat-label>
-                  <span matPrefix>+91 &nbsp;</span>
-                  <input matInput #phoneno maxlength="10" placeholder="1234567890" formControlName="phoneNo">
-                  <mat-hint align="end">{{phoneno.value.length}} / 10</mat-hint>
-<!--                  <mat-error *ngIf="(phoneNo.dirty || phoneNo.touched)"></mat-error>-->
-                </mat-form-field>
-              </form>
+              <mat-form-field class="phone-no-field" appearance="outline">
+                <mat-label>Mobile Number</mat-label>
+                <input matInput #phoneno maxlength="10" placeholder="1234567890" formControlName="phoneNo">
+                <mat-hint align="end">{{phoneno.value.length}} / 10</mat-hint>
+                <mat-error *ngFor="let validation of userDetailsValidMsg.phoneNo">
+                  <mat-error
+                    *ngIf="(phoneNo.dirty || phoneNo.touched) && phoneNo.hasError(validation.type)">{{validation.message}}</mat-error>
+                </mat-error>
+              </mat-form-field>
             </div>
           </div>
 
@@ -57,7 +61,10 @@
             <mat-form-field class="address-field full-width" appearance="outline">
               <mat-label>Address</mat-label>
               <input matInput placeholder="12, Chitrakoot" formControlName="address">
-<!--              <mat-error *ngIf="(address.dirty || address.touched)"></mat-error>-->
+              <mat-error *ngFor="let validation of userDetailsValidMsg.address">
+                <mat-error
+                  *ngIf="(address.dirty || address.touched) && address.hasError(validation.type)">{{validation.message}}</mat-error>
+              </mat-error>
             </mat-form-field>
           </div>
 
@@ -66,17 +73,23 @@
               <mat-form-field class="city-field" appearance="outline">
                 <mat-label>City</mat-label>
                 <input matInput placeholder="Jaipur" formControlName="city">
-<!--                <mat-error *ngIf="(city.dirty || city.touched)"></mat-error>-->
+                <mat-error *ngFor="let validation of userDetailsValidMsg.city">
+                  <mat-error
+                    *ngIf="(city.dirty || city.touched) && city.hasError(validation.type)">{{validation.message}}</mat-error>
+                </mat-error>
               </mat-form-field>
             </div>
 
 
             <div class="d-flex">
               <div style="margin-right: 2%" class="field">
-                <mat-form-field class="address-field" appearance="outline">
-                  <mat-label>City</mat-label>
+                <mat-form-field class="state-field" appearance="outline">
+                  <mat-label>State</mat-label>
                   <input matInput placeholder="Rajasthan" formControlName="state">
-<!--                  <mat-error *ngIf="(state.dirty || state.touched)"></mat-error>-->
+                  <mat-error *ngFor="let validation of userDetailsValidMsg.state">
+                    <mat-error
+                      *ngIf="(state.dirty || state.touched) && state.hasError(validation.type)">{{validation.message}}</mat-error>
+                  </mat-error>
                 </mat-form-field>
               </div>
 
@@ -85,23 +98,30 @@
                   <mat-label>Pincode</mat-label>
                   <input matInput #pincode maxlength="6" placeholder="302021" formControlName="pinCode">
                   <mat-hint align="end">{{pincode.value.length}} / 6</mat-hint>
-<!--                  <mat-error *ngIf="(pinCode.dirty || pinCode.touched)"></mat-error>-->
+                  <mat-error *ngFor="let validation of userDetailsValidMsg.pinCode">
+                    <mat-error
+                      *ngIf="(pinCode.dirty || pinCode.touched) && pinCode.hasError(validation.type)">{{validation.message}}</mat-error>
+                  </mat-error>
                 </mat-form-field>
               </div>
             </div>
           </div>
+
           <div class="full-width field">
             <mat-form-field appearance="outline" class=full-width>
               <mat-label>College/University Name</mat-label>
               <input matInput placeholder="JK Lakshmipat University" formControlName="college">
               <mat-hint>Enter full name of your institution</mat-hint>
-<!--              <mat-error *ngIf="(college.dirty || college.touched)"></mat-error>-->
+              <mat-error *ngFor="let validation of userDetailsValidMsg.college">
+                <mat-error
+                  *ngIf="(college.dirty || college.touched) && college.hasError(validation.type)">{{validation.message}}</mat-error>
+              </mat-error>
             </mat-form-field>
           </div>
 
           <div>
             <section class="transport-section field">
-              <mat-slide-toggle class="example-margin" [disabled]="true">
+              <mat-slide-toggle class="example-margin" formControlName="transport">
                 Transportation
               </mat-slide-toggle>
             </section>

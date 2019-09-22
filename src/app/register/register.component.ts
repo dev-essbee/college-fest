@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {FirebaseDatabaseService} from '../firebase-database.service';
 import {User} from '../user';
 import {Validators, FormBuilder, FormGroup, FormControl} from '@angular/forms';
+import {toTitleCase} from 'codelyzer/util/utils';
 
 
 @Component({
@@ -9,17 +10,27 @@ import {Validators, FormBuilder, FormGroup, FormControl} from '@angular/forms';
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css']
 })
+
+// todo: fix error messages, autofill state and city from pincode
 export class RegisterComponent implements OnInit {
   userDetailsForm: FormGroup;
+  genders = [{id: 'f', value: 'Female'}, {id: 'm', value: 'Male'}, {id: 'o', value: 'Other'}];
   userDetailsValidMsg = {
-    name: [{type: 'required', message: 'Please enter your full name'}],
-    phoneNo: [{type: 'required', message: 'Please enter your mobile number'}],
-    pinCode: [{type: 'required', message: 'Please enter your pincode'}],
+    name: [{type: 'required', message: 'Please enter your full name'},
+      {type: 'pattern', message: 'Should not start with space and special Characters not allowed'}],
+    phoneNo: [{type: 'required', message: 'Please enter your mobile number'},
+      {type: 'pattern', message: 'Enter valid mobile number'}],
+    pinCode: [{type: 'required', message: 'Please enter your pincode'},
+      {type: 'pattern', message: 'Enter valid pincode'}],
     gender: [{type: 'required', message: 'Please select a gender'}],
-    city: [{type: 'required', message: 'Please enter your city name'}],
-    state: [{type: 'required', message: 'Please enter your state name'}],
-    college: [{type: 'required', message: 'Please enter your College/University name'}],
-    address: [{type: 'required', message: 'Please enter your address'}]
+    city: [{type: 'required', message: 'Please enter your city name'},
+      {type: 'pattern', message: 'Special Characters not allowed'}],
+    state: [{type: 'required', message: 'Please enter your state name'},
+      {type: 'pattern', message: 'Special Characters not allowed'}],
+    college: [{type: 'required', message: 'Please enter your College/University name'},
+      {type: 'pattern', message: 'Special Characters not allowed'}],
+    address: [{type: 'required', message: 'Please enter your address'},
+      {type: 'pattern', message: 'Special Characters not allowed'}]
   };
 
   constructor(public databaseService: FirebaseDatabaseService) {
@@ -27,22 +38,61 @@ export class RegisterComponent implements OnInit {
   }
 
   ngOnInit() {
-
+    console.log('subscribed');
+    this.city.valueChanges
+      .subscribe((city) => {
+        console.log(this.transport);
+        if (city.toString().trim().toLowerCase() === 'jaipur') {
+          this.transport.enable();
+        } else {
+          this.transport.disable();
+        }
+      });
 
   }
 
 
   createFormGroup() {
+    const data = this.getData();
     return new FormGroup({
-      name: new FormControl('', [Validators.required]),
-      phoneNo: new FormControl('', [Validators.required]),
-      pinCode: new FormControl('', [Validators.required]),
-      gender: new FormControl('', [Validators.required]),
-      city: new FormControl('', [Validators.required]),
-      state: new FormControl('', [Validators.required]),
-      college: new FormControl('', [Validators.required]),
-      address: new FormControl('', [Validators.required])
+      name: new FormControl(toTitleCase(data.name), [Validators.required, Validators.pattern('[a-zA-Z][a-zA-Z\\s.]*')]),
+      phoneNo: new FormControl(data.phoneNo, [Validators.required, Validators.pattern('[9876][0-9]{9}')]),
+      pinCode: new FormControl(data.pinCode, [Validators.required, Validators.pattern('[0-9]{6}')]),
+      gender: new FormControl(data.gender, [Validators.required]),
+      city: new FormControl(toTitleCase(data.city), [Validators.required, Validators.pattern('[a-zA-Z][a-zA-Z\\s.]*')]),
+      state: new FormControl(toTitleCase(data.state), [Validators.required, Validators.pattern('[a-zA-Z][a-zA-Z\\s.]*')]),
+      college: new FormControl(toTitleCase(data.college), [Validators.required, Validators.pattern('[a-zA-Z][a-zA-Z\\s.]*')]),
+      address: new FormControl(toTitleCase(data.address), [Validators.required, Validators.pattern('[a-zA-Z0-9][a-zA-Z0-9\\s.,/()]*')]),
+      transport: new FormControl({
+          value: this.transStringToBool(data.transport),
+          disabled: this.disableStringToBool(data.transport)
+        },
+      )
     });
+  }
+
+  disableStringToBool(transport) {
+    return transport.value === '-1';
+  }
+
+  transStringToBool(trans) {
+    return trans === '1';
+  }
+
+  transBoolToString(trans) {
+    if (trans.value) {
+      return '1';
+    } else if (trans.enabled) {
+      return '0';
+    } else {
+      return '-1';
+    }
+  }
+
+
+  getData() {
+    return this.databaseService.loggedInUserData;
+
   }
 
   get name() {
@@ -77,7 +127,27 @@ export class RegisterComponent implements OnInit {
     return this.userDetailsForm.get('address');
   }
 
-  onSubmit() {
-
+  get transport() {
+    console.log('trans');
+    console.log(this.userDetailsForm.get('transport'));
+    return this.userDetailsForm.get('transport');
   }
+
+  onSubmit() {
+    const data = {
+      name: this.name.value.toString().trim(),
+      gender: this.gender.value,
+      phoneNo: this.phoneNo.value,
+      pinCode: this.pinCode.value,
+      city: this.city.value.toString().trim(),
+      state: this.state.value.toString().trim(),
+      college: this.college.value.toString().trim(),
+      address: this.address.value.toString().trim(),
+      transport: this.transBoolToString(this.transport)
+    };
+    console.log(this.transport.value);
+    this.databaseService.updateData(data);
+  }
+
+
 }
