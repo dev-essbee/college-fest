@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Event} from '../event';
+import {events} from '../data/events-data';
+import {FirebaseDatabaseService} from '../firebase-database.service';
 
 @Component({
   selector: 'app-events',
@@ -7,37 +9,20 @@ import {Event} from '../event';
   styleUrls: ['./events.component.css']
 })
 export class EventsComponent implements OnInit {
-  events: Event[] = [{
-    id: 1,
-    name: 'First',
-    pic: 'http://via.placeholder.com/640x360',
-    shortDes: 'This is short description of the event',
-    longDes: 'This is long description of the event',
-    startTime: '12:12',
-    endTime: '18:18'
-  }, {
-    id: 2,
-    name: 'Second',
-    pic: 'http://via.placeholder.com/640x360',
-    shortDes: 'This is short description of the event',
-    longDes: 'This is long description of the event',
-    startTime: '12:12',
-    endTime: '18:18'
-  }
-  ];
+  events = events;
 
-  onClickRegister(event: Event): void {
-    alert(event.name);
-  }
 
-  onClickMore(event: Event): void {
-    alert(event.name);
-  }
-
-  constructor() {
+  constructor(private dbService: FirebaseDatabaseService) {
   }
 
   ngOnInit() {
   }
 
+  onClickRegister(event) {
+    this.dbService.savePartEvents({participatingEvents: [event.id]});
+  }
+
+  onClickMore(event) {
+
+  }
 }
