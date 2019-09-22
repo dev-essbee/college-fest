@@ -2,7 +2,7 @@ import {Event} from '../event';
 
 
 export let events: Event[] = [{
-  id: 1,
+  id: '0',
   name: 'First',
   pic: 'http://via.placeholder.com/640x360',
   shortDes: 'This is short description of the event',
@@ -10,7 +10,7 @@ export let events: Event[] = [{
   startTime: '12:12',
   endTime: '18:18'
 }, {
-  id: 2,
+  id: '1',
   name: 'Second',
   pic: 'http://via.placeholder.com/640x360',
   shortDes: 'This is short description of the event',
@@ -18,7 +18,7 @@ export let events: Event[] = [{
   startTime: '12:12',
   endTime: '18:18'
 }, {
-  id: 3,
+  id: '2',
   name: 'third',
   pic: 'http://via.placeholder.com/640x360',
   shortDes: 'This is short description of the event',
@@ -26,7 +26,7 @@ export let events: Event[] = [{
   startTime: '12:12',
   endTime: '18:18'
 }, {
-  id: 4,
+  id: '3',
   name: 'fourth',
   pic: 'http://via.placeholder.com/640x360',
   shortDes: 'This is short description of the event',
@@ -34,7 +34,7 @@ export let events: Event[] = [{
   startTime: '12:12',
   endTime: '18:18'
 }, {
-  id: 5,
+  id: '4',
   name: 'fifth',
   pic: 'http://via.placeholder.com/640x360',
   shortDes: 'This is short description of the event',

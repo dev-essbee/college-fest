@@ -74,7 +74,7 @@ export class FirebaseDatabaseService {
     return this.afs.collection('users').doc(this.loggedInUserData.id).set(data, {merge: true});
   }
 
-  userSignedIn(user) {
+  userSignedIn(user,route) {
     const userRef: AngularFirestoreDocument<User> = this.afs.collection('users').doc(`${user.uid}`);
     console.log('create user data');
     userRef.ref.get().then((snapshot) => {
@@ -84,7 +84,7 @@ export class FirebaseDatabaseService {
         return this.createUserData(userRef, user);
       }
     });
-    this.router.navigate(['/events']);
+    this.router.navigate([route]);
 
   }
 

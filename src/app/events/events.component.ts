@@ -18,11 +18,17 @@ export class EventsComponent implements OnInit {
   ngOnInit() {
   }
 
-  onClickRegister(event) {
-    this.dbService.savePartEvents({participatingEvents: [event.id]});
+  onClickRegister(event: Event) {
+    console.log(event.id);
+    const id = event.id;
+    const data = {
+      participatingEvents:{
+        [id]: true}
+    };
+    this.dbService.savePartEvents(data);
   }
 
-  onClickMore(event) {
+  // onClickMore(event) {
 
-  }
+  // }
 }

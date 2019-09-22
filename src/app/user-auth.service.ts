@@ -24,14 +24,20 @@ export class UserAuthService {
   }
 
   async googleSignIn() {
+    const route=this.router.url;
+    console.log(route)
     const provider = new auth.GoogleAuthProvider();
     const credential = await this.afAuth.auth.signInWithPopup(provider);
     console.log(this.dbService.loggedInUserData);
-    return this.dbService.userSignedIn(credential.user);
+    return this.dbService.userSignedIn(credential.user,route);
   }
 
   async signOut() {
+    let route=this.router.url;
     await this.afAuth.auth.signOut();
-    this.router.navigate(['/']);
+    if (route==='/dashboard'){
+      route='/';
+    }
+    this.router.navigate([route]);
   }
 }

@@ -13,10 +13,11 @@
 </ng-template>
 <!-- User logged in -->
 <ng-template #authenticated>
-  <div *ngIf="dbService.loggedInUserData as user">
-    <h3>Howdy, {{ user.name }}</h3>
-    <p>UID: {{ user.id }}</p>
-
+  <div>
+    <h3>Howdy, {{ userData.name }}</h3>
+    <p>UID: {{ userData.id }}</p>
+    <p>Events participated</p>
+    <p *ngFor="let event of participatedEvents">{{event}}</p> 
     <button (click)="auth.signOut()">Logout</button>
   </div>
 </ng-template>
