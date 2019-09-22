@@ -1,4 +1,4 @@
-<div *ngIf="db.loggedInUserData | async; then authenticated else guest">
+<div *ngIf="dbService.loggedInUserData; then authenticated else guest">
   <!-- template will replace this div -->
 </div>
 
@@ -13,7 +13,7 @@
 </ng-template>
 <!-- User logged in -->
 <ng-template #authenticated>
-  <div *ngIf="db.loggedInUserData | async as user">
+  <div *ngIf="dbService.loggedInUserData as user">
     <h3>Howdy, {{ user.name }}</h3>
     <p>UID: {{ user.id }}</p>
 

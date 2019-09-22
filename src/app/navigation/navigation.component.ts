@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {UserAuthService} from '../user-auth.service';
+import {FirebaseDatabaseService} from '../firebase-database.service';
 
 @Component({
   selector: 'app-navigation',
@@ -8,7 +9,9 @@ import {UserAuthService} from '../user-auth.service';
 })
 export class NavigationComponent implements OnInit {
 
-  constructor(public auth: UserAuthService) {
+  constructor(public auth: UserAuthService,
+              public dbService: FirebaseDatabaseService
+  ) {
   }
 
   ngOnInit() {

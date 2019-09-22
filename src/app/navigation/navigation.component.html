@@ -6,7 +6,7 @@
   <a routerLink="/team" routerLinkActive="active">Team</a>
   <br>
   <a routerLink="/sponsors" routerLinkActive="active">Our Sponsors</a>
-  <div *ngIf="auth.loggedInUser | async; then authenticated else guest">
+  <div *ngIf="dbService.loggedInUserData; then authenticated else guest">
   </div>
   <ng-template #guest>
     <button (click)="auth.googleSignIn()">Login</button>

@@ -10,7 +10,7 @@ import {FirebaseDatabaseService} from '../firebase-database.service';
 export class DashboardComponent implements OnInit {
 
   constructor(public auth: UserAuthService,
-              public db: FirebaseDatabaseService) {
+              public dbService: FirebaseDatabaseService) {
   }
 
   ngOnInit() {
