@@ -22,8 +22,9 @@ export class EventsComponent implements OnInit {
     console.log(event.id);
     const id = event.id;
     const data = {
-      participatingEvents:{
-        [id]: true}
+      participatingEvents: {
+        [id]: true
+      }
     };
     this.dbService.savePartEvents(data);
   }
