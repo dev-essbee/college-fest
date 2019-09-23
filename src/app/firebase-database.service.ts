@@ -5,6 +5,7 @@ import {AngularFireAuth} from '@angular/fire/auth';
 import {first, switchMap} from 'rxjs/operators';
 import {Observable, of} from 'rxjs';
 import {Router} from '@angular/router';
+import {MatSnackBar} from '@angular/material/snack-bar';
 
 
 @Injectable({
@@ -91,5 +92,6 @@ export class FirebaseDatabaseService {
   savePartEvents(data) {
     console.log(data);
     return this.afs.collection('users').doc(this.loggedInUserData.id).set(data, {merge: true});
+
   }
 }

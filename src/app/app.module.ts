@@ -25,6 +25,7 @@ import {DashboardComponent} from './dashboard/dashboard.component';
 import {MaterialModule} from './material.module';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,6 +36,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     NavigationComponent,
     SponsorsComponent,
     DashboardComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -49,7 +51,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     FormsModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule {
 }

@@ -11,6 +11,11 @@ body {
 
 }
 
+/*todo: snackbar color*/
+.snackbar-login {
+  background: #000000;
+}
+
 /* primary color: blood red
 background : black
 accent color: yellowish orange */
