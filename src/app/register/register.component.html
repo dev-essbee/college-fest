@@ -14,7 +14,7 @@
             <mat-form-field appearance="outline">
               <mat-label>Name</mat-label>
               <input matInput placeholder="Shubham Bhandari" formControlName="name">
-              <mat-hint>Name should match your ID proof</mat-hint>
+              <mat-hint>Name should match your ID proof.</mat-hint>
               <mat-error *ngFor="let validation of userDetailsValidMsg.name">
                 <mat-error
                   *ngIf="(name.dirty || name.touched)&& name.hasError(validation.type)">{{validation.message}}</mat-error>
@@ -36,7 +36,7 @@
             </div>
 
 
-            <div style="margin-left: 2%" class="field">
+            <div class="field">
               <mat-form-field class="phone-no-field" appearance="outline">
                 <mat-label>Mobile Number</mat-label>
                 <input matInput #phoneno maxlength="10" placeholder="1234567890" formControlName="phoneNo">
@@ -49,11 +49,11 @@
             </div>
           </div>
 
-          <div class="full-width" class="field" style="padding-bottom: 10px">
+          <div class="full-width" class="field" class="email-field"  style="padding-bottom: 15px">
             <mat-form-field class="email-id-field" appearance="outline">
               <mat-label>Email-id</mat-label>
               <input matInput placeholder="Email-id" disabled value="shubhambhandari13@gmail.com">
-              <mat-hint>All further communicatiion will be made to this email-id</mat-hint>
+              <mat-hint>All further communicatiion will be made to this Email-Id.</mat-hint>
             </mat-form-field>
           </div>
 
@@ -113,7 +113,7 @@
             <mat-form-field appearance="outline" class=full-width>
               <mat-label>College/University Name</mat-label>
               <input matInput placeholder="JK Lakshmipat University" formControlName="college">
-              <mat-hint>Enter full name of your institution</mat-hint>
+              <mat-hint>Enter full name of your Institution.</mat-hint>
               <mat-error *ngFor="let validation of userDetailsValidMsg.college">
                 <mat-error
                   *ngIf="(college.dirty || college.touched) && college.hasError(validation.type)">{{validation.message}}</mat-error>
