@@ -1,0 +1,17 @@
+.dash-card {
+  max-width: 800px;
+  margin: 40px auto;
+}
+
+.dash-card-container{
+  text-align: center;
+}
+
+.dash-card:hover{
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.3);
+  transition: .3s;
+}
+
+.dash-card-content{
+  padding-left: 15px;
+}
