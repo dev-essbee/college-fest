@@ -14,3 +14,7 @@
     flex: auto;
   }
 }
+
+.full-width{
+  width: 412px !important;
+}
