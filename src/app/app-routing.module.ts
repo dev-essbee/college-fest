@@ -25,13 +25,12 @@ const appRoutes: Routes = [
 
 const routerOptions: ExtraOptions = {
   anchorScrolling: 'enabled',
-}
+  scrollPositionRestoration: 'enabled',
+};
 
 @NgModule({
   imports: [RouterModule.forRoot(appRoutes,
     routerOptions
-    // todo: comment in production
-    // {enableTracing: true}
   )],
   exports: [RouterModule]
 })
