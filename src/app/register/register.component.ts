@@ -3,8 +3,9 @@ import {FirebaseDatabaseService} from '../firebase-database.service';
 import {User} from '../user';
 import {Validators, FormBuilder, FormGroup, FormControl} from '@angular/forms';
 import {toTitleCase} from 'codelyzer/util/utils';
-import {SnackbarService} from "../snackbar.service";
-import {Router} from "@angular/router";
+import {SnackbarService} from '../snackbar.service';
+import {Router} from '@angular/router';
+import {Location} from '@angular/common';
 
 
 @Component({
@@ -35,12 +36,12 @@ export class RegisterComponent implements OnInit {
       {type: 'pattern', message: 'Special Characters not allowed'}]
   };
 
+
   constructor(private databaseService: FirebaseDatabaseService,
               private snackBarService: SnackbarService,
-              private router: Router
+              private location: Location
   ) {
-    this
-      .userDetailsForm = this.createFormGroup();
+    this.userDetailsForm = this.createFormGroup();
   }
 
   ngOnInit() {
@@ -155,7 +156,7 @@ export class RegisterComponent implements OnInit {
     console.log(this.transport.value);
     console.log(this.databaseService.updateData(data));
     this.snackBarService.showSnackBar('Data Updated Successfully', '', 2);
-    this.router.navigate(['/events']);
+    this.location.back();
   }
 
 

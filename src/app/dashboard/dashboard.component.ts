@@ -3,6 +3,7 @@ import {UserAuthService} from '../user-auth.service';
 import {FirebaseDatabaseService} from '../firebase-database.service';
 import {events} from '../data/events-data';
 import {User} from '../user';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-dashboard',
@@ -15,7 +16,8 @@ export class DashboardComponent implements OnInit {
   userData: User = {};
 
   constructor(public auth: UserAuthService,
-              public dbService: FirebaseDatabaseService) {
+              public dbService: FirebaseDatabaseService,
+              private router:Router) {
   }
 
   getEvents() {
@@ -30,6 +32,9 @@ export class DashboardComponent implements OnInit {
       }
     }
     return pEvent;
+  }
+  editUserDetails(){
+    this.router.navigate(['/register']);
   }
 
   ngOnInit() {

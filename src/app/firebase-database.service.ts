@@ -98,7 +98,7 @@ export class FirebaseDatabaseService {
         return this.createUserData(userRef, user);
       }
     });
-    this.router.navigate([route]);
+    // this.router.navigate([route]);
 
   }
 }
