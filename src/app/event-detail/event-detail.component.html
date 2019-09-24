@@ -1,21 +1,22 @@
-<div *ngIf="event" style="width: 100%; height: 100%">
-  <div [ngStyle]="{background: 'url(http://via.placeholder.com/1920x1080)'}">
+<div *ngIf="event" style="background: url('http://via.placeholder.com/1920x1080') center;
+background-size: cover; margin-top: 0">
+  <div class="event-data-card">
     <div class="d.flex flex-column">
 
-      <div class="card event-data-card title-card">
+      <div class="card event-data-card title-card" style="margin-bottom: 20px">
         <div class="card-body">
           <h1 class="card-text">{{event.name | titlecase}}</h1>
         </div>
       </div>
 
-      <div class="card event-data-card des-card">
+      <div class="card event-data-card des-card" style="margin-bottom: 20px">
         <div class="card-body">
           <h5 class="card-title">Description</h5>
           <p class="card-text">{{event.des}}</p>
         </div>
       </div>
 
-      <div class="card event-data-card judge-card">
+      <div class="card event-data-card judge-card" style="margin-bottom: 20px">
         <div class="card-body">
           <h5 class="card-title">Judgement Criteria</h5>
           <div *ngFor="let e of event.judgement">
@@ -26,7 +27,7 @@
         </div>
       </div>
 
-      <div class="card event-data-card rules-card">
+      <div class="card event-data-card rules-card" style="margin-bottom: 20px">
         <div class="card-body">
           <h5 class="card-title">Rules</h5>
           <div *ngFor="let e of event.rules">
@@ -37,16 +38,18 @@
         </div>
       </div>
 
-      <div class="card event-data-card fee-prize-card">
+      <div class="card event-data-card fee-prize-card" style="margin-bottom: 20px">
         <div class="card-body">
           <h5 class="card-title">Fees and Prize</h5>
           <p class="card-text">{{event.fee}}</p>
           <p class="card-text">{{event.prize}}</p>
         </div>
       </div>
-
+      <button (click)="onClickRegister(event)">Register</button>
+      <button (click)="goBack()">Back</button>
     </div>
-    <button (click)="onClickRegister(event)">Register</button>
-    <button (click)="goBack()">Back</button>
   </div>
 </div>
+
+<!--TODO: Change the cards to mat-cards
+-->
