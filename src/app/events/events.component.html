@@ -1,17 +1,18 @@
 <div class="event-card" *ngFor="let event of events">
-    <div class="card d-flex flex-row" (click)="onClickRegister(event)">
+    <div class="card d-flex flex-row" (click)="onClickMore(event)">
         <div class="card-image">
             <img src={{event.pic}} class="card-img-top" alt="...">
         </div>
         <div class="card-text">
             <div class="card-body">
                 <h4 class="card-title" >{{event.name}}</h4>
-                <p class="card-text">{{event.shortDes}}
+                <p class="card-text">{{event.des}}
                 </p>
                 <h6 class="card-subtitle">{{event.startTime}}-{{event.endTime}}</h6>
-                <button type="button" class="btn btn-primary" (click)="onClickRegister(event)">Register</button>
                 <button type="button" class="btn btn-primary" (click)="onClickMore(event)">More</button>
             </div>
         </div>
     </div>
 </div>
+
+<!--onClickRegister(event)-->

@@ -4,6 +4,7 @@ import {events} from '../data/events-data';
 import {FirebaseDatabaseService} from '../firebase-database.service';
 import {UserAuthService} from '../user-auth.service';
 import {MatSnackBar} from '@angular/material/snack-bar';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-events',
@@ -16,38 +17,13 @@ export class EventsComponent implements OnInit {
 
   constructor(private dbService: FirebaseDatabaseService,
               private authService: UserAuthService,
-              private snackBar: MatSnackBar) {
+              private snackBar: MatSnackBar,
+              private router: Router) {
   }
 
   ngOnInit() {
   }
-
-  showLoginSnackBar() {
-    return this.snackBar.open('Please Login to continue', 'LOGIN', {
-      panelClass: ['snackbar-login']
-    });
-  }
-
-  onClickRegister(event: Event) {
-    console.log(event.id);
-    const id = event.id;
-    const data = {
-      participatingEvents: {
-        [id]: true
-      }
-    };
-    if (this.dbService.loggedInUserData) {
-      this.dbService.savePartEvents(data);
-    } else {
-      const loginSnackbarRef = this.showLoginSnackBar();
-      loginSnackbarRef.onAction().subscribe(() => {
-        loginSnackbarRef.dismiss();
-        this.authService.googleSignIn();
-      });
-    }
-  }
-
-  onClickMore(event) {
-
+  onClickMore(event: Event) {
+    this.router.navigate(['/events/' + event.id]);
   }
 }

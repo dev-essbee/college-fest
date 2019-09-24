@@ -6,7 +6,6 @@
 <ng-template #guest>
   <h3>Howdy, GUEST</h3>
   <p>Login to get started...</p>
-
   <button (click)="auth.googleSignIn()">
     <i class="fa fa-google"></i> Connect Google
   </button>
@@ -14,10 +13,19 @@
 <!-- User logged in -->
 <ng-template #authenticated>
   <div>
-    <h3>Howdy, {{ userData.name }}</h3>
-    <p>UID: {{ userData.id }}</p>
-    <p>Events participated</p>
-    <p *ngFor="let event of participatedEvents">{{event}}</p> 
-    <button (click)="auth.signOut()">Logout</button>
+
+<!--    <button (click)="auth.signOut()">Logout</button>-->
+  </div>
+  <div class="d-flex flex-column">
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h3 class="card-title">{{ userData.name }}</h3>
+        <h6 class="card-subtitle mb-2 text-muted">{{userData.college}}</h6>
+        <div class="card-text">
+          <p>Events participated</p>
+          <p *ngFor="let event of participatedEvents">{{event}}</p>
+        </div>
+      </div>
+    </div>
   </div>
 </ng-template>
