@@ -6,6 +6,7 @@ import {first, switchMap} from 'rxjs/operators';
 import {Observable, of} from 'rxjs';
 import {Router} from '@angular/router';
 import {MatSnackBar} from '@angular/material/snack-bar';
+import {SnackbarService} from './snackbar.service';
 
 
 @Injectable({
@@ -18,6 +19,7 @@ export class FirebaseDatabaseService {
   constructor(private afs: AngularFirestore,
               private afAuth: AngularFireAuth,
               private router: Router,
+              private snackBar: SnackbarService
   ) {
     console.log('read data called-user-db');
     this.readData().subscribe((userData) => {
@@ -72,13 +74,14 @@ export class FirebaseDatabaseService {
   }
 
   updateData(data) {
-    console.log('update');
-    console.log(data);
-    console.log(typeof (data));
-    if (this.loggedInUserData.participatingEvents[data.keys()[0]]) {
-// todo: show snackbar
+    return this.afs.collection('users').doc(this.loggedInUserData.id).set(data, {merge: true});
+  }
+
+  registerEvent(data) {
+    if (this.loggedInUserData.participatingEvents[Object.keys(data.participatingEvents)[0]]) {
+      this.snackBar.showSnackBar('You have already registered for this event', '', 3);
     } else {
-      this.afs.collection('users').doc(this.loggedInUserData.id).set(data, {merge: true});
+      this.updateData(data);
       if (this.loggedInUserData.newUser) {
         this.router.navigate(['/register']);
       }

@@ -8,6 +8,7 @@ import {Router} from '@angular/router';
 import {FirebaseDatabaseService} from './firebase-database.service';
 import {User} from './user';
 import {MatSnackBar} from '@angular/material/snack-bar';
+import {SnackbarService} from './snackbar.service';
 
 @Injectable({
   providedIn: 'root'
@@ -20,7 +21,7 @@ export class UserAuthService {
     private afs: AngularFirestore,
     private router: Router,
     private dbService: FirebaseDatabaseService,
-    private snackBar: MatSnackBar
+    private snackBar: SnackbarService
   ) {
 
   }
@@ -33,10 +34,10 @@ export class UserAuthService {
     try {
       credential = await this.afAuth.auth.signInWithPopup(provider);
       console.log(this.dbService.loggedInUserData);
-      this.showSnackBar('Login Successful', '', 3);
+      this.snackBar.showSnackBar('Login Successful', '', 3);
       return this.dbService.userSignedIn(credential.user, route);
     } catch (error) {
-      const retrySnackbarRef = this.showSnackBar('Login Unsuccessful', 'RETRY', 5);
+      const retrySnackbarRef = this.snackBar.showSnackBar('Login Unsuccessful', 'RETRY', 5);
       retrySnackbarRef.onAction().subscribe(() => {
         retrySnackbarRef.dismiss();
         this.googleSignIn();
@@ -51,20 +52,9 @@ export class UserAuthService {
     if (route === '/dashboard') {
       route = '/';
     }
-    this.showSnackBar('Logout Successful', '', 3);
+    this.snackBar.showSnackBar('Logout Successful', '', 3);
     this.router.navigate([route]);
   }
 
-  showSnackBar(message: string, action: string, dur: number) {
-    if (dur !== 0) {
-      return this.snackBar.open(message, action, {
-        duration: dur * 1000,
-        panelClass: ['snackbar-login']
-      });
-    } else {
-      return this.snackBar.open(message, action, {
-        panelClass: ['snackbar-login']
-      });
-    }
-  }
+
 }

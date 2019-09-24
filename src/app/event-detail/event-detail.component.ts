@@ -6,6 +6,7 @@ import {Location} from '@angular/common';
 import {FirebaseDatabaseService} from '../firebase-database.service';
 import {UserAuthService} from '../user-auth.service';
 import {MatSnackBar} from '@angular/material/snack-bar';
+import {SnackbarService} from '../snackbar.service';
 
 @Component({
   selector: 'app-event-detail',
@@ -20,6 +21,7 @@ export class EventDetailComponent implements OnInit {
               private location: Location,
               private dbService: FirebaseDatabaseService,
               private authService: UserAuthService,
+              private snackbarService: SnackbarService
   ) {
   }
 
@@ -46,9 +48,9 @@ export class EventDetailComponent implements OnInit {
       }
     };
     if (this.dbService.loggedInUserData) {
-      this.dbService.updateData(data);
+      this.dbService.registerEvent(data);
     } else {
-      const loginSnackbarRef = this.authService.showSnackBar('Please Login to continue', 'LOGIN',0);
+      const loginSnackbarRef = this.snackbarService.showSnackBar('Please Login to continue', 'LOGIN', 0);
       loginSnackbarRef.onAction().subscribe(() => {
         loginSnackbarRef.dismiss();
         this.authService.googleSignIn();
