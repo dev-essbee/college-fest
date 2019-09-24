@@ -9,6 +9,7 @@ import {DashboardComponent} from './dashboard/dashboard.component';
 import {AuthGuard} from './auth.guard';
 import {EventDetailComponent} from './event-detail/event-detail.component';
 import {EventsSmallComponent} from './home/events-small/events-small.component';
+import {SponsorsHomeComponent} from './home/sponsors-home/sponsors-home.component';
 
 
 const appRoutes: Routes = [
@@ -18,7 +19,7 @@ const appRoutes: Routes = [
   {path: 'sponsors', component: SponsorsComponent},
   {path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard]},
   {path: 'events/:id', component: EventDetailComponent},
-  {path: 'temp', component: EventsSmallComponent},
+  {path: 'temp', component: SponsorsHomeComponent},
   {path: '**', component: HomeComponent}
 
 ];

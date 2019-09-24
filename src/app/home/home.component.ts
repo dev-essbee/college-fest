@@ -7,16 +7,17 @@ import {DynamicScriptLoaderServiceService} from '../dynamic-script-loader-servic
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  headerImg: string;
+
 
 
   constructor(private dynamicScriptLoader: DynamicScriptLoaderServiceService) {
-    this.headerImg = 'http://via.placeholder.com/1920x1080';
+
 
   }
 
   ngOnInit() {
-    this.loadScripts();
+    // todo: for leonsans
+    // this.loadScripts();
   }
 
   private loadScripts() {
