@@ -6,7 +6,7 @@
       </mat-card-title>
     </mat-card-header>
     <mat-divider></mat-divider>
-    <mat-card-content style="padding: 15px">
+    <mat-card-content style="padding-top: 2%; padding-bottom: 2%; padding-left: 2%;padding-left: 2%">
 
       <div class="form-fields d-flex flex-column">
         <form [formGroup]="userDetailsForm" (ngSubmit)="onSubmit()">
@@ -92,8 +92,10 @@
                   </mat-error>
                 </mat-form-field>
               </div>
+            </div>
 
-              <div class="field">
+            <div class="d-flex">
+              <div class="field" style="margin-right: 2%">
                 <mat-form-field class="pin-code-field" appearance="outline">
                   <mat-label>Pincode</mat-label>
                   <input matInput #pincode maxlength="6" placeholder="302021" formControlName="pinCode">
