@@ -2,9 +2,11 @@ export class Event {
   id: string;
   name: string;
   pic: string;
-  shortDes: string;
-  longDes: string;
+  des: string;
+  judgement: string[];
+  rules: string[];
   startTime: string;
   endTime: string;
-  // fee:string;
+  fee: string;
+  prize: string;
 }
