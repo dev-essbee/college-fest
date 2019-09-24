@@ -53,4 +53,3 @@ export let events: Event[] = [{
     prize: 'Expected prize money will be 8-10 times of registration fee. '
   }
 ];
-
