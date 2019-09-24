@@ -72,7 +72,17 @@ export class FirebaseDatabaseService {
   }
 
   updateData(data) {
-    return this.afs.collection('users').doc(this.loggedInUserData.id).set(data, {merge: true});
+    console.log('update');
+    console.log(data);
+    console.log(typeof (data));
+    if (this.loggedInUserData.participatingEvents[data.keys()[0]]) {
+// todo: show snackbar
+    } else {
+      this.afs.collection('users').doc(this.loggedInUserData.id).set(data, {merge: true});
+      if (this.loggedInUserData.newUser) {
+        this.router.navigate(['/register']);
+      }
+    }
   }
 
   userSignedIn(user, route) {
@@ -86,12 +96,6 @@ export class FirebaseDatabaseService {
       }
     });
     this.router.navigate([route]);
-
-  }
-
-  savePartEvents(data) {
-    console.log(data);
-    return this.afs.collection('users').doc(this.loggedInUserData.id).set(data, {merge: true});
 
   }
 }

@@ -24,6 +24,9 @@ import {DashboardComponent} from './dashboard/dashboard.component';
 // angular material
 import {MaterialModule} from './material.module';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {EventDetailComponent} from './event-detail/event-detail.component';
+import {EventsSmallComponent} from './home/events-small/events-small.component';
+import {FooterComponent} from './footer/footer.component';
 
 
 @NgModule({
@@ -36,7 +39,9 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     NavigationComponent,
     SponsorsComponent,
     DashboardComponent,
-
+    EventDetailComponent,
+    EventsSmallComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

@@ -51,7 +51,7 @@ export class UserAuthService {
     if (route === '/dashboard') {
       route = '/';
     }
-    this.showSnackBar('Logout Successful', '', 3)
+    this.showSnackBar('Logout Successful', '', 3);
     this.router.navigate([route]);
   }
 

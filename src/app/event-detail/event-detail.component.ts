@@ -46,7 +46,7 @@ export class EventDetailComponent implements OnInit {
       }
     };
     if (this.dbService.loggedInUserData) {
-      this.dbService.savePartEvents(data);
+      this.dbService.updateData(data);
     } else {
       const loginSnackbarRef = this.authService.showSnackBar('Please Login to continue', 'LOGIN',0);
       loginSnackbarRef.onAction().subscribe(() => {

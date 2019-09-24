@@ -143,10 +143,11 @@ export class RegisterComponent implements OnInit {
       state: this.state.value.toString().trim(),
       college: this.college.value.toString().trim(),
       address: this.address.value.toString().trim(),
-      transport: this.transBoolToString(this.transport)
+      transport: this.transBoolToString(this.transport),
+      newUser: false
     };
     console.log(this.transport.value);
-    this.databaseService.updateData(data);
+    console.lot(this.databaseService.updateData(data));
   }
 
 
