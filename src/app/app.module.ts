@@ -24,6 +24,7 @@ import {DashboardComponent} from './dashboard/dashboard.component';
 // angular material
 import {MaterialModule} from './material.module';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
@@ -36,6 +37,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     NavigationComponent,
     SponsorsComponent,
     DashboardComponent,
+    FooterComponent,
 
   ],
   imports: [

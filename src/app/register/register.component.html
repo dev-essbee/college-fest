@@ -1,4 +1,4 @@
-<div class="registration-form">
+<div class="registration-form" style="padding: 5px; justify-content: center">
   <mat-card class='registration-card' tabindex="1">
     <mat-card-header>
       <mat-card-title class="form-title">
@@ -6,11 +6,11 @@
       </mat-card-title>
     </mat-card-header>
     <mat-divider></mat-divider>
-    <mat-card-content>
+    <mat-card-content style="padding: 15px">
 
       <div class="form-fields d-flex flex-column">
         <form [formGroup]="userDetailsForm" (ngSubmit)="onSubmit()">
-          <div class="full-width field">
+          <div class="full-width field" style="padding-bottom: 10px">
             <mat-form-field appearance="outline">
               <mat-label>Name</mat-label>
               <input matInput placeholder="Shubham Bhandari" formControlName="name">
@@ -49,7 +49,7 @@
             </div>
           </div>
 
-          <div class="full-width" class="field">
+          <div class="full-width" class="field" style="padding-bottom: 10px">
             <mat-form-field class="email-id-field" appearance="outline">
               <mat-label>Email-id</mat-label>
               <input matInput placeholder="Email-id" disabled value="shubhambhandari13@gmail.com">
@@ -69,7 +69,7 @@
           </div>
 
           <div class="d-flex">
-            <div style="margin-right: 2%" class="field">
+            <div style="margin-right: 2px" class="field">
               <mat-form-field class="city-field" appearance="outline">
                 <mat-label>City</mat-label>
                 <input matInput placeholder="Jaipur" formControlName="city">
@@ -82,7 +82,7 @@
 
 
             <div class="d-flex">
-              <div style="margin-right: 2%" class="field">
+              <div style="margin-right: 2px" class="field">
                 <mat-form-field class="state-field" appearance="outline">
                   <mat-label>State</mat-label>
                   <input matInput placeholder="Rajasthan" formControlName="state">
@@ -93,7 +93,7 @@
                 </mat-form-field>
               </div>
 
-              <div style="margin-left:2%" class="field">
+              <div class="field">
                 <mat-form-field class="pin-code-field" appearance="outline">
                   <mat-label>Pincode</mat-label>
                   <input matInput #pincode maxlength="6" placeholder="302021" formControlName="pinCode">
@@ -107,7 +107,7 @@
             </div>
           </div>
 
-          <div class="full-width field">
+          <div class="full-width field" style="padding-bottom: 10px">
             <mat-form-field appearance="outline" class=full-width>
               <mat-label>College/University Name</mat-label>
               <input matInput placeholder="JK Lakshmipat University" formControlName="college">

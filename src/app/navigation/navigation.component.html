@@ -1,17 +1,27 @@
-<nav>
-  <a routerLink="/home" routerLinkActive="active">Home</a>
-  <br>
-  <a routerLink="/events" routerLinkActive="active">Events</a>
-  <br>
-  <a routerLink="/team" routerLinkActive="active">Team</a>
-  <br>
-  <a routerLink="/sponsors" routerLinkActive="active">Our Sponsors</a>
-  <div *ngIf="dbService.loggedInUserData; then authenticated else guest">
-  </div>
-  <ng-template #guest>
-    <button (click)="auth.googleSignIn()">Login</button>
-  </ng-template>
-  <ng-template #authenticated>
-    <button (click)="auth.signOut()">Logout</button>
-  </ng-template>
-</nav>
+<div class="main_header">
+  <nav class="navbar navbar-light navbar-expand-md navigation-clean">
+    <div class="container">
+      <button data-toggle="collapse" data-target="#navcol-1" class="navbar-toggler"><span class="sr-only">Menu</span><span
+        class="navbar-toggler-icon"></span></button>
+      <a routerLink="home"><img src="" alt="SABRANG2K19" style="width: 100px; padding-left: 15px; text-decoration: none; color: #aaaaaa;"/></a>
+      <div class="collapse navbar-collapse"
+           id="navcol-1">
+        <ul class="nav navbar-nav ml-auto">
+          <li class="nav-item"><a class="nav-link" routerLink="/home" routerLinkActive="active">Home</a></li>
+          <li class="nav-item"><a class="nav-link" routerLink="/dashboard" routerLinkActive="active">Dashboard</a></li>
+          <li class="nav-item"><a class="nav-link" routerLink="/events" routerLinkActive="active">Events</a></li>
+<!--          <li class="nav-item"><a class="nav-link" routerLink="/team" routerLinkActive="active">Team</a></li>-->
+          <li class="nav-item"><a class="nav-link" routerLink="/sponsors" routerLinkActive="active">Our Sponsors</a></li>
+        </ul>
+        <div *ngIf="dbService.loggedInUserData; then authenticated else guest">
+        </div>
+        <ng-template #guest>
+          <button mat-button (click)="auth.googleSignIn()" class="login_button">Login</button>
+        </ng-template>
+        <ng-template #authenticated>
+          <button mat-button (click)="auth.signOut()" class="logout_button">Logout</button>
+        </ng-template>
+      </div>
+    </div>
+  </nav>
+</div>
