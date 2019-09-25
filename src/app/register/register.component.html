@@ -1,20 +1,21 @@
 <div class="registration-form" style="padding: 5px; justify-content: center">
   <mat-card class='registration-card' tabindex="1">
-    <mat-card-header>
-      <mat-card-title class="form-title">
-        <h2>Registration Form</h2>
-      </mat-card-title>
-    </mat-card-header>
+    <div class="form-title">
+      <mat-card-header>
+        <mat-card-title>
+          <h2 style="text-align: center">Registration Form</h2>
+        </mat-card-title>
+      </mat-card-header>
+    </div>
     <mat-divider></mat-divider>
-    <mat-card-content style="padding-top: 2%; padding-bottom: 2%; padding-left: 2%;padding-left: 2%">
+    <mat-card-content style="padding-top: 15px">
 
       <div class="form-fields d-flex flex-column">
         <form [formGroup]="userDetailsForm" (ngSubmit)="onSubmit()">
-          <div class="full-width field" style="padding-bottom: 10px">
-            <mat-form-field appearance="outline">
+          <div class="full-width field" style="padding-bottom: 10px;">
+            <mat-form-field class="full-width" appearance="outline">
               <mat-label>Name</mat-label>
               <input matInput placeholder="Shubham Bhandari" formControlName="name">
-              <mat-hint>Name should match your ID proof.</mat-hint>
               <mat-error *ngFor="let validation of userDetailsValidMsg.name">
                 <mat-error
                   *ngIf="(name.dirty || name.touched)&& name.hasError(validation.type)">{{validation.message}}</mat-error>
@@ -23,7 +24,7 @@
           </div>
 
           <div class="d-flex">
-            <div style="margin-right: 2%" class="field">
+            <div class="field" style="margin-right: 2%;">
               <mat-form-field appearance="outline">
                 <mat-select placeholder="Gender" formControlName="gender">
                   <mat-option *ngFor="let gender of genders" [value]=gender.id>{{gender.value}}</mat-option>
@@ -34,8 +35,6 @@
                 </mat-error>
               </mat-form-field>
             </div>
-
-
             <div class="field">
               <mat-form-field class="phone-no-field" appearance="outline">
                 <mat-label>Mobile Number</mat-label>
@@ -49,27 +48,44 @@
             </div>
           </div>
 
-          <div class="full-width" class="field" class="email-field"  style="padding-bottom: 15px">
-            <mat-form-field class="email-id-field" appearance="outline">
-              <mat-label>Email-id</mat-label>
-              <input matInput placeholder="Email-id" disabled value="shubhambhandari13@gmail.com">
-              <mat-hint>All further communicatiion will be made to this Email-Id.</mat-hint>
-            </mat-form-field>
-          </div>
-
-          <div class="full-width field">
-            <mat-form-field class="address-field full-width" appearance="outline">
-              <mat-label>Address</mat-label>
-              <input matInput placeholder="12, Chitrakoot" formControlName="address">
-              <mat-error *ngFor="let validation of userDetailsValidMsg.address">
-                <mat-error
-                  *ngIf="(address.dirty || address.touched) && address.hasError(validation.type)">{{validation.message}}</mat-error>
-              </mat-error>
-            </mat-form-field>
+          <div class="d-flex">
+            <div class="full-width field" class="email-field" style="padding-bottom: 10px;">
+              <mat-form-field class="email-id-field full-width" appearance="outline">
+                <mat-label>Email-id</mat-label>
+                <input matInput placeholder="Email-id" disabled value="shubhambhandari13@gmail.com">
+              </mat-form-field>
+            </div>
           </div>
 
           <div class="d-flex">
-            <div style="margin-right: 2px" class="field">
+            <div class="full-width field" style="margin-right: 2%;">
+              <mat-form-field class="address-field full-width" appearance="outline">
+                <mat-label>Address</mat-label>
+                <input matInput placeholder="12, Chitrakoot" formControlName="address">
+                <mat-error *ngFor="let validation of userDetailsValidMsg.address">
+                  <mat-error
+                    *ngIf="(address.dirty || address.touched) && address.hasError(validation.type)">{{validation.message}}</mat-error>
+                </mat-error>
+              </mat-form-field>
+            </div>
+          </div>
+
+          <div class="d-flex">
+            <div class="field">
+              <mat-form-field class="pin-code-field" appearance="outline">
+                <mat-label>Pincode</mat-label>
+                <input matInput #pincode maxlength="6" placeholder="302021" formControlName="pinCode">
+                <mat-hint align="end">{{pincode.value.length}} / 6</mat-hint>
+                <mat-error *ngFor="let validation of userDetailsValidMsg.pinCode">
+                  <mat-error
+                    *ngIf="(pinCode.dirty || pinCode.touched) && pinCode.hasError(validation.type)">{{validation.message}}</mat-error>
+                </mat-error>
+              </mat-form-field>
+            </div>
+          </div>
+
+          <div class="d-flex">
+            <div style="margin-right: 2%" class="field">
               <mat-form-field class="city-field" appearance="outline">
                 <mat-label>City</mat-label>
                 <input matInput placeholder="Jaipur" formControlName="city">
@@ -79,10 +95,8 @@
                 </mat-error>
               </mat-form-field>
             </div>
-
-
             <div class="d-flex">
-              <div style="margin-right: 2px" class="field">
+              <div class="field">
                 <mat-form-field class="state-field" appearance="outline">
                   <mat-label>State</mat-label>
                   <input matInput placeholder="Rajasthan" formControlName="state">
@@ -93,27 +107,12 @@
                 </mat-form-field>
               </div>
             </div>
-
-            <div class="d-flex">
-              <div class="field" style="margin-right: 2%">
-                <mat-form-field class="pin-code-field" appearance="outline">
-                  <mat-label>Pincode</mat-label>
-                  <input matInput #pincode maxlength="6" placeholder="302021" formControlName="pinCode">
-                  <mat-hint align="end">{{pincode.value.length}} / 6</mat-hint>
-                  <mat-error *ngFor="let validation of userDetailsValidMsg.pinCode">
-                    <mat-error
-                      *ngIf="(pinCode.dirty || pinCode.touched) && pinCode.hasError(validation.type)">{{validation.message}}</mat-error>
-                  </mat-error>
-                </mat-form-field>
-              </div>
-            </div>
           </div>
 
           <div class="full-width field" style="padding-bottom: 10px">
             <mat-form-field appearance="outline" class=full-width>
               <mat-label>College/University Name</mat-label>
               <input matInput placeholder="JK Lakshmipat University" formControlName="college">
-              <mat-hint>Enter full name of your Institution.</mat-hint>
               <mat-error *ngFor="let validation of userDetailsValidMsg.college">
                 <mat-error
                   *ngIf="(college.dirty || college.touched) && college.hasError(validation.type)">{{validation.message}}</mat-error>
@@ -123,13 +122,14 @@
 
           <div>
             <section class="transport-section field">
-              <mat-slide-toggle class="example-margin" formControlName="transport">
+              <mat-slide-toggle class="example-margin" formControlName="transport"
+                                matTooltip="Are you a Jaipurite? We can provide transportation.">
                 Transportation
               </mat-slide-toggle>
             </section>
           </div>
 
-          <div class="submit-button field" style="margin-top:2%">
+          <div class="submit-button field" style="margin-top:15px; text-align: right">
             <button mat-raised-button color="primary" type="submit" [disabled]="!userDetailsForm.valid">Submit
             </button>
           </div>

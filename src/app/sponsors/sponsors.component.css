@@ -1,0 +1,17 @@
+.sponsor-container{
+  max-width: 800px;
+  margin: 40px auto;
+}
+
+.sponsor-card{
+  text-align: center;
+}
+
+.sponsor-card:hover{
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.3);
+  transition: .3s;
+}
+
+.sponsor-logo{
+  padding-bottom: 50px;
+}

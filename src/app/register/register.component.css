@@ -1,16 +1,22 @@
-.field{
-    /* margin: 2%; */
+.field {
+  /* margin: 2%; */
 }
-.registration-card{
-    text-align: -webkit-center;
+
+.registration-card {
+  text-align: -webkit-center;
 }
-.registration-form{
-    display: flex;
+
+.registration-form {
+  display: flex;
 }
 
 @media (max-width: 768px) {
-  .d-flex{
+  .d-flex {
     flex-direction: column;
     flex: auto;
   }
+}
+
+.full-width {
+  width: 412px !important;
 }

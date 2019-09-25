@@ -5,8 +5,12 @@
 
 .main_header{
   box-sizing: border-box;
-  margin-bottom: 15px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
+  /*position: fixed;*/
+  /*top: 0;*/
+  /*left: 0;*/
+  /*right: 0;*/
+  /*z-index: 2;*/
 }
 
 .navigation-clean{
