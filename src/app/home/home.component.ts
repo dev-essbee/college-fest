@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.loadScripts();
+    // this.loadScripts();
   }
 
   private loadScripts() {
