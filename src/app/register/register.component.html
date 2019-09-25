@@ -1,4 +1,4 @@
-<div class="registration-form" style="padding: 5px; justify-content: center">
+<div class="registration-form" style="padding: 5px; justify-content: center; margin-top: 5%; margin-bottom: 5% ">
   <mat-card class='registration-card' tabindex="1">
     <div class="form-title">
       <mat-card-header>
@@ -12,7 +12,7 @@
 
       <div class="form-fields d-flex flex-column">
         <form [formGroup]="userDetailsForm" (ngSubmit)="onSubmit()">
-          <div class="full-width field" style="padding-bottom: 10px;">
+          <div class="full-width field">
             <mat-form-field class="full-width" appearance="outline">
               <mat-label>Name</mat-label>
               <input matInput placeholder="Shubham Bhandari" formControlName="name">
@@ -50,7 +50,7 @@
           </div>
 
           <div class="d-flex">
-            <div class="full-width field" class="email-field" style="padding-bottom: 10px;">
+            <div class="full-width field" class="email-field">
               <mat-form-field class="email-id-field full-width" appearance="outline">
                 <mat-label>Email id</mat-label>
                 <input matInput #email placeholder="Email id" formControlName="email">
@@ -110,7 +110,7 @@
             </div>
           </div>
 
-          <div class="full-width field" style="padding-bottom: 10px">
+          <div class="full-width field">
             <mat-form-field appearance="outline" class=full-width>
               <mat-label>College/University Name</mat-label>
               <input matInput placeholder="JK Lakshmipat University" formControlName="college">

@@ -3,7 +3,7 @@
   Orangish-yellow = #bc6e00
  */
 
-.main_header{
+.main_header {
   box-sizing: border-box;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
   /*position: fixed;*/
@@ -13,7 +13,7 @@
   /*z-index: 2;*/
 }
 
-.navigation-clean{
+.navigation-clean {
   background: #000000;
   padding-top: 1rem;
   padding-bottom: .75rem;
@@ -22,41 +22,52 @@
 }
 
 @media (min-width: 768px) {
-  .navigation-clean{
+  .navigation-clean {
     padding-top: 1rem;
     padding-bottom: 1rem;
   }
 }
 
-.navigation-clean.navbar .navbar-nav .nav-link{
+.navigation-clean.navbar .navbar-nav .nav-link {
   padding-left: 18px;
   padding-right: 18px;
   color: #cccccc;
 }
 
-.navigation-clean .navbar-toggler{
-  border-color: white;
+.navigation-clean .navbar-toggler {
+  /*border-color: #aaaaaa;*/
+  color: #aaaaaa;
 }
 
-.navigation-clean.navbar-light .navbar-nav .nav-link:hover{
+.navigation-clean.navbar-light .navbar-nav .nav-link:hover {
   color: #4b4c4d !important;
   background-color: transparent;
   transition: .3s;
 }
 
-.navigation-clean .navbar-toggler:hover, .navigation-clean .navbar-toggler:focus{
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+.navigation-clean .navbar-toggler:hover, .navigation-clean .navbar-toggler:focus {
+  box-shadow: 0 4px 8px 0 #88001a;
   transition: .3s;
+  /*border-color: #88001a;*/
+  color: #88001a;
 }
 
-.interaction{
+.interaction {
   margin-left: 25px;
   border: 1px solid #88001a;
-  border-radius: unset;
 }
 
-.interaction:hover{
+.interaction:hover {
   background-color: #88001a;
+  box-shadow: 0 4px 8px 0 #88001a;
   transition: .3s;
   color: #000000;
+  border-radius: 5px;
+}
+
+.nav_logo {
+  width: 200px;
+  padding-left: 15px;
+  text-decoration: none;
+  color: #333333
 }
