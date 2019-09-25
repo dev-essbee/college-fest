@@ -11,32 +11,6 @@
   </button>
 </ng-template>
 <!-- User logged in -->
-<!--<ng-template #authenticated>-->
-<!--  <div>-->
-
-<!--    &lt;!&ndash;    <button (click)="auth.signOut()">Logout</button>&ndash;&gt;-->
-<!--  </div>-->
-<!--  <div class="d-flex flex-column" class="dash-card">-->
-<!--    <div class="card shadow-sm rounded" style="width: 30rem;">-->
-<!--      <div class="card-header d-flex flex-row">-->
-<!--        <h4>{{userData.name}}</h4>-->
-<!--        <button mat-button (click)="editUserDetails()">-->
-<!--          <mat-icon>edit</mat-icon>-->
-<!--        </button>-->
-<!--      </div>-->
-<!--      <div class="card-body">-->
-<!--        <h6 class="card-subtitle mb-2 text-muted">{{userData.college}}</h6>-->
-<!--        <div *ngIf="participatedEvents && participatedEvents.length>0">-->
-<!--          <div class="card-text">-->
-<!--            <p>Events participated</p>-->
-<!--            <p *ngFor="let event of participatedEvents">{{event}}</p>-->
-<!--          </div>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--  </div>-->
-<!--</ng-template>-->
-
 <ng-template #authenticated>
   <mat-card class="dash-card">
     <div class="dash-card-container">
@@ -51,7 +25,8 @@
         </button>
       </mat-card-content>
     </div>
-    <hr style="margin-top: 5px">
+  </mat-card>
+  <mat-card class="dash-card">
     <div class="dash-card-content">
       <mat-card-content>
         <h5 style="padding-bottom: 8px">Events Participated</h5>
