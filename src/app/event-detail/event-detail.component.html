@@ -2,8 +2,16 @@
 <div class="main_container">
   <div class="event-detail-card-container">
 
+    <div class="d-flex flex-row">
+      <div>
+        <button mat-button (click)="goBack()">
+          <mat-icon>arrow_back</mat-icon>
+        </button>
+      </div>
+    </div>
+
     <mat-card class="event-detail-card">
-      <h1>{{event.name | titlecase}}</h1>
+      <h1 style="text-align: center">{{event.name | titlecase}}</h1>
     </mat-card>
 
     <mat-card class="event-detail-card">
@@ -56,7 +64,6 @@
 
     <div class="button-container">
       <button mat-button (click)="onClickRegister(event)">Register</button>
-      <button mat-button (click)="goBack()">Back</button>
     </div>
   </div>
 </div>

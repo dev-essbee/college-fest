@@ -6,10 +6,17 @@
 .event-detail-card-container {
   position: relative;
   max-width: 800px;
-  padding-top: 40px;
+  padding-top: 20px;
   padding-bottom: 40px;
   margin-left: auto;
   margin-right: auto;
+}
+
+@media (max-width: 1200px) {
+  .event-detail-card-container{
+    margin-left: 15%;
+    margin-right: 15%;
+  }
 }
 
 .event-detail-card {

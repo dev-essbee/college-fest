@@ -1,5 +1,5 @@
 <div class="event-card" *ngFor="let event of events">
-  <div class="card d-flex flex-row" (click)="onClickMore(event)">
+  <div class="card d-flex flex-row" (click)="onClickMore(event)" matTooltip="click to know more.">
     <div class="card-image">
       <img src={{event.pic}} class="card-img-top" alt="...">
     </div>
@@ -8,8 +8,7 @@
         <h4 class="card-title">{{event.name}}</h4>
         <p class="card-text">{{event.des}}
         </p>
-        <h6 class="card-subtitle">{{event.startTime}}-{{event.endTime}}</h6>
-        <button type="button" class="btn btn-primary" (click)="onClickMore(event)">More</button>
+<!--        <h6 class="card-subtitle">{{event.startTime}}-{{event.endTime}}</h6>-->
       </div>
     </div>
   </div>
