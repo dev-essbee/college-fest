@@ -62,6 +62,7 @@ export class RegisterComponent implements OnInit {
   createFormGroup() {
     const data = this.getData();
     return new FormGroup({
+      email: new FormControl({value: data.email, disabled: true}, []),
       name: new FormControl(toTitleCase(data.name), [Validators.required, Validators.pattern('[a-zA-Z][a-zA-Z\\s.]*')]),
       phoneNo: new FormControl(data.phoneNo, [Validators.required, Validators.pattern('[9876][0-9]{9}')]),
       pinCode: new FormControl(data.pinCode, [Validators.required, Validators.pattern('[0-9]{6}')]),

@@ -35,6 +35,7 @@
                 </mat-error>
               </mat-form-field>
             </div>
+
             <div class="field">
               <mat-form-field class="phone-no-field" appearance="outline">
                 <mat-label>Mobile Number</mat-label>
@@ -51,8 +52,8 @@
           <div class="d-flex">
             <div class="full-width field" class="email-field" style="padding-bottom: 10px;">
               <mat-form-field class="email-id-field full-width" appearance="outline">
-                <mat-label>Email-id</mat-label>
-                <input matInput placeholder="Email-id" disabled value="shubhambhandari13@gmail.com">
+                <mat-label>Email id</mat-label>
+                <input matInput #email placeholder="Email id" formControlName="email">
               </mat-form-field>
             </div>
           </div>
