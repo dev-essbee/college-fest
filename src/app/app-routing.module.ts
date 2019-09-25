@@ -9,6 +9,7 @@ import {DashboardComponent} from './dashboard/dashboard.component';
 import {AuthGuard} from './auth.guard';
 import {EventDetailComponent} from './event-detail/event-detail.component';
 import {EventsSmallComponent} from './home/events-small/events-small.component';
+import {SponsorsHomeComponent} from './home/sponsors-home/sponsors-home.component';
 
 
 const appRoutes: Routes = [
