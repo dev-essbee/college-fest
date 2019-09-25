@@ -1,14 +1,6 @@
-.about-card {
-  margin: 150px 10% 40px;
-  transition: box-shadow .3s;
-}
-
-.about-card:hover {
-  box-shadow: 0 0 11px rgba(33, 33, 33, .2);
-}
-
-.about-image {
-  width: 600px;
-  vertical-align: middle;
-  /*padding-bottom: 10px;*/
+@media (max-width: 1142px) {
+  .d-flex{
+    flex-direction: column-reverse;
+    flex: auto;
+  }
 }
