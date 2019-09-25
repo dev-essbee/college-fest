@@ -28,7 +28,8 @@
             ],
             "scripts": [
               "src/assets/js/leon.js",
-              "src/assets/js/font.js"
+              "src/assets/js/font.js",
+              "node_modules/scrollreveal/dist/scrollreveal.js"
             ]
           },
           "configurations": {
