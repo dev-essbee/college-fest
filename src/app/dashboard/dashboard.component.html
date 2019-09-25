@@ -43,9 +43,11 @@
       <img src="../../assets/img/icons8-male-user-96.png" alt="Avatar">
       <mat-card-title style="margin-top:8px">{{userData.name}}</mat-card-title>
       <mat-card-subtitle>{{userData.college}}</mat-card-subtitle>
-      <button mat-button (click)="editUserDetails()" matTooltip="Edit your info.">
-        <mat-icon>edit</mat-icon>
-      </button>
+      <mat-card-content style="text-align: right">
+        <button  mat-button (click)="editUserDetails()" matTooltip="Edit your info.">
+          <mat-icon>edit</mat-icon>
+        </button>
+      </mat-card-content>
     </div>
     <hr style="margin-top: 5px">
     <div class="dash-card-content">

@@ -1,10 +1,12 @@
 <div class="registration-form" style="padding: 5px; justify-content: center">
   <mat-card class='registration-card' tabindex="1">
-    <mat-card-header>
-      <mat-card-title class="form-title">
-        <h2>Registration Form</h2>
-      </mat-card-title>
-    </mat-card-header>
+    <div class="form-title">
+      <mat-card-header>
+        <mat-card-title>
+          <h2 style="text-align: center">Registration Form</h2>
+        </mat-card-title>
+      </mat-card-header>
+    </div>
     <mat-divider></mat-divider>
     <mat-card-content style="padding-top: 15px">
 
@@ -19,15 +21,6 @@
                   *ngIf="(name.dirty || name.touched)&& name.hasError(validation.type)">{{validation.message}}</mat-error>
               </mat-error>
             </mat-form-field>
-          </div>
-
-          <div class="d-flex">
-            <div class="full-width field" class="email-field" style="padding-bottom: 10px;">
-              <mat-form-field class="email-id-field full-width" appearance="outline">
-                <mat-label>Email-id</mat-label>
-                <input matInput placeholder="Email-id" disabled value="shubhambhandari13@gmail.com">
-              </mat-form-field>
-            </div>
           </div>
 
           <div class="d-flex">
@@ -51,6 +44,15 @@
                   <mat-error
                     *ngIf="(phoneNo.dirty || phoneNo.touched) && phoneNo.hasError(validation.type)">{{validation.message}}</mat-error>
                 </mat-error>
+              </mat-form-field>
+            </div>
+          </div>
+
+          <div class="d-flex">
+            <div class="full-width field" class="email-field" style="padding-bottom: 10px;">
+              <mat-form-field class="email-id-field full-width" appearance="outline">
+                <mat-label>Email-id</mat-label>
+                <input matInput placeholder="Email-id" disabled value="shubhambhandari13@gmail.com">
               </mat-form-field>
             </div>
           </div>
@@ -120,13 +122,14 @@
 
           <div>
             <section class="transport-section field">
-              <mat-slide-toggle class="example-margin" formControlName="transport">
+              <mat-slide-toggle class="example-margin" formControlName="transport"
+                                matTooltip="Are you a Jaipurite? We can provide transportation.">
                 Transportation
               </mat-slide-toggle>
             </section>
           </div>
 
-          <div class="submit-button field" style="margin-top:2%">
+          <div class="submit-button field" style="margin-top:15px; text-align: right">
             <button mat-raised-button color="primary" type="submit" [disabled]="!userDetailsForm.valid">Submit
             </button>
           </div>
