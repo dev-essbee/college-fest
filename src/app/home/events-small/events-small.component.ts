@@ -10,15 +10,6 @@ export class EventsSmallComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.setupEventCycle();
-  }
-
-  runEventCycle() {
-
-  }
-
-  setupEventCycle() {
-
 
   }
 

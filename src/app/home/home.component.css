@@ -52,7 +52,7 @@ section button {
   white-space: nowrap;
 }
 
-.firstpage a {
+.firstPage a {
   position: absolute;
   bottom: 20px;
   left: 50%;
@@ -67,24 +67,24 @@ section button {
   transition: opacity .3s;
 }
 
-.firstpage a:hover {
+.firstPage a:hover {
   opacity: .5;
 }
 
 /*Add the background image here*/
 
-#firstpage_content {
+#firstPage-content {
   background: url('../../assets/img/sample.jpg') center;
   background-size: cover;
   width: 100%;
 }
 
 
-#firstpage_content a {
+#firstPage-content a {
   padding-top: 70px;
 }
 
-#firstpage_content a span {
+#firstPage-content a span {
   position: absolute;
   top: 0;
   left: 50%;
@@ -129,122 +129,44 @@ section button {
 }
 
 
-/*sponsors corousel*/
-
-h2 {
+/*parallax button*/
+a {
+  position: relative;
+  display: inline-block;
+  padding: 1.2em 2em;
+  text-decoration: none;
   text-align: center;
-  padding: 20px;
-}
-
-/* Slider */
-
-.slick-slide {
-  margin: 0px 20px;
-}
-
-.slick-slide img {
-  width: 100%;
-}
-
-.slick-slider {
-  position: relative;
-  display: block;
-  box-sizing: border-box;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-touch-callout: none;
-  -khtml-user-select: none;
-  -ms-touch-action: pan-y;
-  touch-action: pan-y;
-  -webkit-tap-highlight-color: transparent;
-}
-
-.slick-list {
-  position: relative;
-  display: block;
-  overflow: hidden;
-  margin: 0;
-  padding: 0;
-}
-
-.slick-list:focus {
-  outline: none;
-}
-
-.slick-list.dragging {
   cursor: pointer;
-  cursor: hand;
+  user-select: none;
+  color: white;
 }
 
-.slick-slider .slick-track,
-.slick-slider .slick-list {
-  -webkit-transform: translate3d(0, 0, 0);
-  -moz-transform: translate3d(0, 0, 0);
-  -ms-transform: translate3d(0, 0, 0);
-  -o-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-}
-
-.slick-track {
-  position: relative;
+a::before {
+  content: '';
+  position: absolute;
   top: 0;
   left: 0;
-  display: block;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  border-radius: 4px;
+  transition: box-shadow 0.5s ease, transform 0.2s ease;
+  will-change: transform;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+  transform: translateY(var(--ty, 0)) rotateX(var(--rx, 0)) rotateY(var(--ry, 0)) translateZ(var(--tz, -12px));
 }
 
-.slick-track:before,
-.slick-track:after {
-  display: table;
-  content: '';
+a:hover::before {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, .3);
 }
 
-.slick-track:after {
-  clear: both;
-}
-
-.slick-loading .slick-track {
-  visibility: hidden;
-}
-
-.slick-slide {
-  display: none;
-  float: left;
-  height: 100%;
-  min-height: 1px;
-}
-
-[dir='rtl'] .slick-slide {
-  float: right;
-}
-
-.slick-slide img {
-  display: block;
-}
-
-.slick-slide.slick-loading img {
-  display: none;
-}
-
-.slick-slide.dragging img {
-  pointer-events: none;
-}
-
-.slick-initialized .slick-slide {
-  display: block;
-}
-
-.slick-loading .slick-slide {
-  visibility: hidden;
-}
-
-.slick-vertical .slick-slide {
-  display: block;
-  height: auto;
-  border: 1px solid transparent;
-}
-
-.slick-arrow.slick-hidden {
-  display: none;
+a::after {
+  position: relative;
+  display: inline-block;
+  content: attr(data-title);
+  transition: transform 0.2s ease;
+  font-weight: bold;
+  letter-spacing: 0.01em;
+  will-change: transform;
+  transform: translateY(var(--ty, 0)) rotateX(var(--rx, 0)) rotateY(var(--ry, 0));
 }

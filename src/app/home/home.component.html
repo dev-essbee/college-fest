@@ -1,27 +1,10 @@
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-<script>
-    // $(document).ready(function () {
-    //     $("a").on('click', function (event) {
-    //         if (this.hash !== "") {
-    //             event.preventDefault();
-    //             var hash = this.hash;
-    //             $('html, body').animate({
-    //                 scrollTop: $(hash).offset().top
-    //             }, 800, function () {
-    //
-    //                 window.location.hash = hash;
-    //             });
-    //         }
-    //     });
-    // });
-
-</script>
-<section id="firstpage_content" class="firstpage">
-  <img src="../../assets/img/sab2.png" style="width: 30%">
+<section id="firstPage-content" class="firstPage">
+  <img src="../../assets/img/sab2.png" style="width: 30%" alt="Sabrang">
   <!-- Add the id of the next component-->
-  <a href="#id_goes_here"><span></span>Scroll</a>
-  <button>Register</button>
+  <a href="#down"><span></span>Scroll</a>
+  <a href="#" class="register-button" data-title="Register Now" (mousemove)="onMouseMove($event)"
+     (mouseleave)="onMouseLeave($event)"
+     (mousedown)="onMouseDown($event)" (mouseup)="onMouseUp($event)"></a>
 </section>
-
+<div id="down"></div>
 

@@ -19,7 +19,7 @@ const appRoutes: Routes = [
   {path: 'sponsors', component: SponsorsComponent},
   {path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard]},
   {path: 'events/:id', component: EventDetailComponent},
-  {path: 'temp', component: SponsorsHomeComponent},
+  {path: 'temp', component: EventsSmallComponent},
   {path: '**', component: HomeComponent}
 
 ];
