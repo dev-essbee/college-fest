@@ -27,7 +27,6 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {EventDetailComponent} from './event-detail/event-detail.component';
 import {EventsSmallComponent} from './home/events-small/events-small.component';
 import {FooterComponent} from './footer/footer.component';
-import { SponsorsHomeComponent } from './home/sponsors-home/sponsors-home.component';
 
 
 @NgModule({
@@ -42,8 +41,7 @@ import { SponsorsHomeComponent } from './home/sponsors-home/sponsors-home.compon
     DashboardComponent,
     EventDetailComponent,
     EventsSmallComponent,
-    FooterComponent,
-    SponsorsHomeComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
