@@ -158,6 +158,7 @@ export class RegisterComponent implements OnInit {
     console.log(this.databaseService.updateData(data));
     this.snackBarService.showSnackBar('Data Updated Successfully', '', 2);
     this.location.back();
+  //  TODO: Reload Page
   }
 
 
