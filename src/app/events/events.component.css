@@ -1,9 +1,65 @@
-.event-card {
-  margin: 5% 15%;
-  transition: box-shadow .3s;
+.event-container-1 {
+  background-color: black;
+  color: #aaaaaa;
+  margin: 20px 15%;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .3);
+  transition: box-shadow .3s
 }
 
-.event-card:hover {
+.event-container-1:hover {
   box-shadow: 0 0 11px rgba(33, 33, 33, .2);
   cursor: pointer;
+}
+
+.event-container-2 {
+  background-color: black;
+  color: #aaaaaa;
+  margin: 20px 15%;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .3);
+  transition: box-shadow .3s
+}
+
+.event-container-2:hover {
+  box-shadow: 0 0 11px rgba(33, 33, 33, .2);
+  cursor: pointer;
+}
+
+.p-2 {
+  padding: 0 !important;
+}
+
+.img-gradient-1 {
+  background: rgb(0, 0, 0);
+  background: -moz-linear-gradient(270deg, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 1) 100%);
+  background: -webkit-linear-gradient(270deg, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 1) 100%);
+  background: linear-gradient(270deg, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000", endColorstr="#ffffff", GradientType=1);
+}
+
+.img-gradient-2{
+  background: rgb(0,0,0);
+  background: -moz-linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(255,255,255,1) 100%);
+  background: -webkit-linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(255,255,255,1) 100%);
+  background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(255,255,255,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#ffffff",GradientType=1);
+}
+
+@media (max-width: 1142px) {
+  .event-container-1 .d-flex{
+    flex-direction: column;
+    flex: auto;
+  }
+
+  .event-container-2 .d-flex{
+    flex-direction: column-reverse;
+    flex: auto;
+  }
+
+  .img-gradient {
+    background: rgb(0, 0, 0);
+    background: -moz-linear-gradient(360deg, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 1) 100%);
+    background: -webkit-linear-gradient(360deg, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 1) 100%);
+    background: linear-gradient(360deg, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000", endColorstr="#ffffff", GradientType=1);
+  }
 }

@@ -1,17 +1,36 @@
-<div class="event-card" *ngFor="let event of events">
-  <div class="card d-flex flex-row" (click)="onClickMore(event)" matTooltip="click to know more.">
-    <div class="card-image">
-      <img src={{event.pic}} class="card-img-top" alt="...">
+<!--Container Type 1-->
+<div class="event-container-1" *ngFor="let event of events">
+  <div class="d-flex" (click)="onClickMore(event)" matTooltip="click to know more.">
+    <div class="p-2 flex-grow-1">
+      <img alt='{{event.name}}' class="img-fluid img-gradient-1 img-gradient" src="../../assets/img/sabrang-logo.png">
     </div>
-    <div class="card-text">
+    <div class="p-2 bd-highlight">
+      <br>
       <div class="card-body">
         <h4 class="card-title">{{event.name}}</h4>
         <p class="card-text">{{event.des}}
         </p>
-<!--        <h6 class="card-subtitle">{{event.startTime}}-{{event.endTime}}</h6>-->
+        <!--        <h6 class="card-subtitle">{{event.startTime}}-{{event.endTime}}</h6>-->
       </div>
     </div>
   </div>
 </div>
 
-<!--onClickRegister(event)-->
+
+<!--Container Type 2-->
+<div class="event-container-2" *ngFor="let event of events">
+  <div class="d-flex" (click)="onClickMore(event)" matTooltip="click to know more.">
+    <div class="p-2">
+      <br>
+      <div class="card-body">
+        <h4 class="card-title">{{event.name}}</h4>
+        <p class="card-text">{{event.des}}
+        </p>
+        <!--        <h6 class="card-subtitle">{{event.startTime}}-{{event.endTime}}</h6>-->
+      </div>
+    </div>
+    <div class="p-2 flex-grow-1">
+      <img alt='{{event.name}}' class="img-fluid img-gradient-2 img-gradient" src="../../assets/img/sabrang-logo.png">
+    </div>
+  </div>
+</div>
