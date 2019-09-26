@@ -1,10 +1,3 @@
-/*footer{*/
-/*  position: absolute;*/
-/*  bottom: 0;*/
-/*  width: 100%;*/
-/*  height: 125px;*/
-/*}*/
-
 .footer-container {
   background-color: black;
 }
@@ -33,26 +26,26 @@
   animation-direction: normal;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
-  animation-duration: .6s;
+  animation-duration: 2s;
   animation-fill-mode: none;
   /*opacity: .8;*/
 }
 
 @keyframes pulse {
   0%{
-    text-shadow: none;
+    text-shadow: 1px 1px red;
   }
   25%{
-    text-shadow: 1px 1px red;
-  }
-  50%{
     text-shadow: 2px 2px 1px red;
   }
+  50%{
+    text-shadow: 3px 3px 2px red;
+  }
   75%{
-    text-shadow: 1px 1px red;
+    text-shadow: 2px 2px 1px red;
   }
   100%{
-    text-shadow: none;
+    text-shadow: 1px 1px red;
   }
 }
 
@@ -68,7 +61,7 @@
   text-align: center;
   padding-top: 15px;
   color: #aaaaaa;
-  text-shadow: 2px 2px 1px #88001a;
+  text-shadow: 4px 4px 2px red;
   font-size: small;
 }
 
@@ -87,10 +80,13 @@
   color: #aaaaaa;
   text-shadow: 3px 3px 2px #88001a;
   opacity: .7;
-
+  animation-name: pulse;
+  animation-direction: normal;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-duration: 2s;
+  animation-fill-mode: none;
 }
-
-
 
 .social a:hover{
   opacity: 1;
@@ -102,7 +98,7 @@
 .footer-copyright{
   padding-top: 15px;
   color: #aaaaaa;
-  text-shadow: 2px 2px 1px red;
+  text-shadow: 4px 4px 2px red;
 }
 
 @media (max-width: 768px){

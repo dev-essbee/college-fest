@@ -15,16 +15,16 @@ export class DashboardComponent implements OnInit {
   registeredEvents = [];
   userData: User = {};
   basePath = '../../assets/img/avatars/';
-  avatars = [{fileName: 'avatar-1.png', tooltip: 'tooltip text'},
-    {fileName: 'avatar-2.png', tooltip: 'tooltip text'},
-    {fileName: 'avatar-3.png', tooltip: 'tooltip text'},
-    {fileName: 'avatar-4.png', tooltip: 'tooltip text'},
-    {fileName: 'avatar-5.png', tooltip: 'tooltip text'},
-    {fileName: 'avatar-6.png', tooltip: 'tooltip text'},
-    {fileName: 'avatar-7.png', tooltip: 'tooltip text'},
-    {fileName: 'avatar-8.png', tooltip: 'tooltip text'},
-    {fileName: 'avatar-9.png', tooltip: 'tooltip text'},
-    {fileName: 'avatar-10.png', tooltip: 'tooltip text'}];
+  avatars = [{fileName: 'The-Devil.png', tooltip: 'Hello there! You naughty Little Devil'},
+    {fileName: 'Clown.png', tooltip: 'We all live down here.'},
+    {fileName: 'Grim-Reaper.png', tooltip: 'It is Time.'},
+    {fileName: 'HellBoy.png', tooltip: 'Born in Hell, forged in Fire!'},
+    {fileName: 'Red-Skull.png', tooltip: 'The Red Floating Guy.'},
+    {fileName: 'Skull.png', tooltip: 'RIP'},
+    {fileName: 'Slasher.png', tooltip: 'Slash! Slash! Cut.'},
+    {fileName: 'Stiches.png', tooltip: 'Face of thread, lol.'},
+    {fileName: 'Vampire-cat.png', tooltip: 'I need Blood.'},
+    {fileName: 'Werewolf.png', tooltip: 'Aarrroooooooo'}];
   randomNo = Math.round(Math.random());
 
   path: string;
