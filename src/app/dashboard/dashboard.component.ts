@@ -12,7 +12,7 @@ import {Router} from '@angular/router';
 })
 export class DashboardComponent implements OnInit {
   eventsData = events;
-  participatedEvents = [];
+  registeredEvents = [];
   userData: User = {};
 
   constructor(public auth: UserAuthService,
@@ -33,13 +33,17 @@ export class DashboardComponent implements OnInit {
     }
     return pEvent;
   }
+
   editUserDetails() {
     this.router.navigate(['/register']);
   }
 
   ngOnInit() {
     this.userData = this.dbService.loggedInUserData;
-    this.participatedEvents = this.getEvents();
+    this.registeredEvents = this.getEvents();
   }
 
+  navigateToEvents() {
+    this.router.navigate(['/events']);
+  }
 }
