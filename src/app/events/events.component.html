@@ -1,3 +1,9 @@
+<!--Bookmarks card-->
+<div class="event-bookmarks">
+  <mat-card>
+    <button mat-button  *ngFor="let event of events">{{event.name}}</button>
+  </mat-card>
+</div>
 <!--Container Type 1-->
 <div class="event-container-1" *ngFor="let event of events">
   <div class="d-flex" (click)="onClickMore(event)" matTooltip="click to know more.">

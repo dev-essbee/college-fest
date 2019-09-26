@@ -1,3 +1,14 @@
+.event-bookmarks{
+  margin: 20px 15%;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .3);
+  transition: box-shadow .3s
+}
+
+.event-bookmarks button:hover{
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,.3);
+  text-align: center;
+}
+
 .event-container-1 {
   background-color: black;
   color: #aaaaaa;
