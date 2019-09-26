@@ -28,6 +28,7 @@ import {EventDetailComponent} from './event-detail/event-detail.component';
 import {EventsSmallComponent} from './home/events-small/events-small.component';
 import {FooterComponent} from './footer/footer.component';
 import {NgsRevealModule} from 'ngx-scrollreveal';
+import { SponsorsHomeComponent } from './home/sponsors-home/sponsors-home.component';
 
 
 @NgModule({
@@ -42,7 +43,8 @@ import {NgsRevealModule} from 'ngx-scrollreveal';
     DashboardComponent,
     EventDetailComponent,
     EventsSmallComponent,
-    FooterComponent
+    FooterComponent,
+    SponsorsHomeComponent
   ],
   imports: [
     BrowserModule,

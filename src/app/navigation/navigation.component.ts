@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, ElementRef, HostListener, OnInit, ViewChild} from '@angular/core';
 import {UserAuthService} from '../user-auth.service';
 import {FirebaseDatabaseService} from '../firebase-database.service';
 
@@ -9,6 +9,7 @@ import {FirebaseDatabaseService} from '../firebase-database.service';
 })
 export class NavigationComponent implements OnInit {
 
+
   constructor(public auth: UserAuthService,
               public dbService: FirebaseDatabaseService
   ) {
@@ -16,5 +17,6 @@ export class NavigationComponent implements OnInit {
 
   ngOnInit() {
   }
+n
 
 }
