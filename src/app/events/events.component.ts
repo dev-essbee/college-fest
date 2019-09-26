@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Event} from '../event';
-import {events} from '../data/events-data';
+import {categories, events} from '../data/events-data';
 import {FirebaseDatabaseService} from '../firebase-database.service';
 import {UserAuthService} from '../user-auth.service';
 import {MatSnackBar} from '@angular/material/snack-bar';
@@ -13,6 +13,7 @@ import {Router} from '@angular/router';
 })
 export class EventsComponent implements OnInit {
   events = events;
+  categories = categories;
 
   constructor(private dbService: FirebaseDatabaseService,
               private authService: UserAuthService,
@@ -28,4 +29,6 @@ export class EventsComponent implements OnInit {
   onClickMore(event: Event) {
     this.router.navigate(['/events/' + event.id]);
   }
+
+// todo: scroll to id when button is clicked.
 }

@@ -17,7 +17,7 @@ export let events: Event[] = [{
   endTime: '18:18',
   fee: '150',
   prize: 'Expected prize money will be 8-10 times of registration fee. ',
-  category: 'civil'
+  category: 'civil-0'
 },
   {
     id: '1',
@@ -35,7 +35,7 @@ export let events: Event[] = [{
     endTime: '18:18',
     fee: '150',
     prize: 'Expected prize money will be 8-10 times of registration fee. ',
-    category: 'civil'
+    category: 'mech-0'
   },
   {
     id: '2',
@@ -53,6 +53,12 @@ export let events: Event[] = [{
     endTime: '18:18',
     fee: '150',
     prize: 'Expected prize money will be 8-10 times of registration fee. ',
-    category: 'civil'
+    category: 'cse-0'
   }
+];
+
+export let categories = [
+  {key: 'civil-0', value: 'Civil'},
+  {key: 'cse-0', value: 'CSE'},
+  {key: 'mech-0', value: 'Mechanical'}
 ];
