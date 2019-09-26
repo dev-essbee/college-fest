@@ -14,21 +14,13 @@ export class DashboardComponent implements OnInit {
   eventsData = events;
   registeredEvents = [];
   userData: User = {};
-  basePath = '../../assets/img/avatars/';
-  avatars = [{fileName: 'The-Devil.png', tooltip: 'Hello there! You naughty Little Devil'},
-    {fileName: 'Clown.png', tooltip: 'We all live down here.'},
-    {fileName: 'Grim-Reaper.png', tooltip: 'It is Time.'},
-    {fileName: 'HellBoy.png', tooltip: 'Born in Hell, forged in Fire!'},
-    {fileName: 'Red-Skull.png', tooltip: 'The Red Floating Guy.'},
-    {fileName: 'Skull.png', tooltip: 'RIP'},
-    {fileName: 'Slasher.png', tooltip: 'Slash! Slash! Cut.'},
-    {fileName: 'Stiches.png', tooltip: 'Face of thread, lol.'},
-    {fileName: 'Vampire-cat.png', tooltip: 'I need Blood.'},
-    {fileName: 'Werewolf.png', tooltip: 'Aarrroooooooo'}];
-  randomNo = Math.round(Math.random());
+  
+  basePath = '../../assets/img/avatars/avatar-';
+  tooltips = ['Tooltip', 'Tooltip', 'Tooltip', 'Tooltip', 'Tooltip', 'Tooltip', 'Tooltip', 'Tooltip', 'Tooltip', 'Tooltip'];
+  randomNo = Math.round(Math.random() * 10);
 
   path: string;
-  toolTipAvatar: string;
+  tooltipAvatar: string;
 
   constructor(public auth: UserAuthService,
               public dbService: FirebaseDatabaseService,
@@ -55,8 +47,8 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit() {
     console.log(this.randomNo);
-    this.path = this.basePath + this.avatars[this.randomNo].fileName;
-    this.toolTipAvatar = this.avatars[this.randomNo].tooltip;
+    this.path = this.basePath + this.randomNo + '.png';
+    this.tooltipAvatar = this.tooltips[this.randomNo];
     this.userData = this.dbService.loggedInUserData;
     this.registeredEvents = this.getEvents();
   }

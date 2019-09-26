@@ -62,6 +62,22 @@ export class HomeComponent implements OnInit, AfterContentInit, OnDestroy, After
   scrollToAbout(): void {
     this.aboutRef.nativeElement.scrollIntoView({behavior: 'smooth'});
   }
+
+  onMouseMove(e) {
+    console.log('move');
+  }
+
+  onMouseUp() {
+    console.log('up');
+  }
+
+  onMouseLeave() {
+    console.log('leave');
+  }
+
+  onMouseDown() {
+    console.log('down');
+  }
 }
 
 
