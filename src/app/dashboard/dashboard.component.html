@@ -42,8 +42,13 @@
   </mat-card>
 </ng-template>
 <ng-template #noEvents>
-  <p>You have not registered for any event.
-    <button (click)="navigateToEvents()">Register Now</button>
-  </p>
-
+  <mat-card class="dash-card">
+    <div class="dash-card-content">
+      <mat-card-content>
+        <p>You have not registered for any event.
+          <button mat-button (click)="navigateToEvents()"><b>Register Now</b></button>
+        </p>
+      </mat-card-content>
+    </div>
+  </mat-card>
 </ng-template>
