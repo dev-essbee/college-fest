@@ -14,15 +14,17 @@ import {Router} from '@angular/router';
 export class EventsComponent implements OnInit {
   events = events;
 
-
   constructor(private dbService: FirebaseDatabaseService,
               private authService: UserAuthService,
               private snackBar: MatSnackBar,
               private router: Router) {
+
   }
 
   ngOnInit() {
+    console.log();
   }
+
   onClickMore(event: Event) {
     this.router.navigate(['/events/' + event.id]);
   }

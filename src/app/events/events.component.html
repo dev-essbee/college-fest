@@ -1,42 +1,52 @@
 <!--Bookmarks card-->
 <div class="event-bookmarks">
   <mat-card>
-    <button mat-button  *ngFor="let event of events">{{event.name}}</button>
+    <button mat-button *ngFor="let event of events">{{event.name}}</button>
   </mat-card>
 </div>
 <!--Container Type 1-->
-<div class="event-container-1" *ngFor="let event of events">
-  <div class="d-flex" (click)="onClickMore(event)" matTooltip="click to know more.">
-    <div class="p-2 flex-grow-1">
-      <img alt='{{event.name}}' class="img-fluid img-gradient-1 img-gradient" src="../../assets/img/sabrang-logo.png">
-    </div>
-    <div class="p-2 bd-highlight">
-      <br>
-      <div>
-        <h4>{{event.name}}</h4>
-        <p>{{event.des}}
-        </p>
-        <!--        <h6 class="card-subtitle">{{event.startTime}}-{{event.endTime}}</h6>-->
+<div *ngFor="let event of events">
+  <ng-container
+    [ngTemplateOutlet]="event.id%2==0? con1 : con2"
+    [ngTemplateOutletContext]="{event:event}">
+  </ng-container>
+</div>
+
+<ng-template #con1 let-event="event">
+  <div class="event-container-1">
+    <div class="d-flex" (click)="onClickMore(event)" matTooltip="click to know more.">
+      <div class="p-2 flex-grow-1">
+        <img alt='{{event.name}}' class="img-fluid img-gradient-1 img-gradient" src="../../assets/img/sabrang-logo.png">
+      </div>
+      <div class="p-2 bd-highlight">
+        <br>
+        <div>
+          <h4>{{event.name}}</h4>
+          <p>{{event.des}}
+          </p>
+          <!--        <h6 class="card-subtitle">{{event.startTime}}-{{event.endTime}}</h6>-->
+        </div>
       </div>
     </div>
   </div>
-</div>
+</ng-template>
 
-
-<!--Container Type 2-->
-<div class="event-container-2" *ngFor="let event of events">
-  <div class="d-flex" (click)="onClickMore(event)" matTooltip="click to know more.">
-    <div class="p-2">
-      <br>
-      <div>
-        <h4>{{event.name}}</h4>
-        <p>{{event.des}}
-        </p>
-        <!--        <h6 class="card-subtitle">{{event.startTime}}-{{event.endTime}}</h6>-->
+<ng-template #con2 let-event="event">
+  <!--Container Type 2-->
+  <div class="event-container-2">
+    <div class="d-flex" (click)="onClickMore(event)" matTooltip="click to know more.">
+      <div class="p-2">
+        <br>
+        <div>
+          <h4>{{event.name}}</h4>
+          <p>{{event.des}}
+          </p>
+          <!--        <h6 class="card-subtitle">{{event.startTime}}-{{event.endTime}}</h6>-->
+        </div>
+      </div>
+      <div class="p-2 flex-grow-1">
+        <img alt='{{event.name}}' class="img-fluid img-gradient-2 img-gradient" src="../../assets/img/sabrang-logo.png">
       </div>
     </div>
-    <div class="p-2 flex-grow-1">
-      <img alt='{{event.name}}' class="img-fluid img-gradient-2 img-gradient" src="../../assets/img/sabrang-logo.png">
-    </div>
   </div>
-</div>
+</ng-template>

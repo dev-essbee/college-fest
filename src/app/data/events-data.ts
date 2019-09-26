@@ -3,7 +3,7 @@ import {Event} from '../event';
 
 export let events: Event[] = [{
   id: '0',
-  name: 'STACKITECTURE',
+  name: 'STACKITECTURE-0',
   pic: 'http://via.placeholder.com/640x360',
   des: 'Show your creativity with stacks. Pile up the wooden pieces in a ' +
     'creative and stable form using your mind and some techniques without any gum/thread. ',
@@ -21,7 +21,7 @@ export let events: Event[] = [{
 },
   {
     id: '1',
-    name: 'STACKITECTURE',
+    name: 'STACKITECTURE-1',
     pic: 'http://via.placeholder.com/640x360',
     des: 'Show your creativity with stacks. Pile up the wooden pieces in a ' +
       'creative and stable form using your mind and some techniques without any gum/thread. ',
@@ -39,7 +39,7 @@ export let events: Event[] = [{
   },
   {
     id: '2',
-    name: 'STACKITECTURE',
+    name: 'STACKITECTURE-2',
     pic: 'http://via.placeholder.com/640x360',
     des: 'Show your creativity with stacks. Pile up the wooden pieces in a ' +
       'creative and stable form using your mind and some techniques without any gum/thread. ',
