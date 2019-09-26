@@ -26,12 +26,24 @@
       </mat-card-content>
     </div>
   </mat-card>
+  <div class="events-registered-card" *ngIf="registeredEvents.length>0; then events else noEvents">
+    <!--    events template will replace here-->
+  </div>
+</ng-template>
+
+<ng-template #events>
   <mat-card class="dash-card">
     <div class="dash-card-content">
       <mat-card-content>
         <h5 style="padding-bottom: 8px">Events Participated</h5>
-        <p *ngFor="let event of participatedEvents">{{event}}</p>
+        <p *ngFor="let event of registeredEvents">{{event}}</p>
       </mat-card-content>
     </div>
   </mat-card>
+</ng-template>
+<ng-template #noEvents>
+  <p>You have not registered for any event.
+    <button (click)="navigateToEvents()">Register Now</button>
+  </p>
+
 </ng-template>

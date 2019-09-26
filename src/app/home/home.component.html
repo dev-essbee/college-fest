@@ -1,13 +1,15 @@
-<!--<div class="container">-->
-<!--  <div class="navigation">-->
+<section id="firstPage_content" class="firstPage">
+  <div id="sabrang-logo" #sabrangLogoRef>
+    <img src="../../assets/img/sab2.png" style="width: 30%" data-depth="0.6">
+  </div>
+  <!-- Add the id of the next component-->
+  <a class="register" href="#" data-title="Register"></a>
+  <br>
+  <a class="scroll" href='' (click)="!!scrollToAbout()"><span class="scroll-span"></span>Scroll</a>
 
-<!--  </div>-->
-<!--  <div class="header-img">-->
-<!--<img src="{{headerImg}}">-->
-<!--  </div>-->
-<!--</div>-->
+</section>
 
-<div style="margin: 30px 15%">
+<div style="margin: 30px 15%" #about>
   <div class="d-flex bd-highlight">
     <div class="p-2 bd-highlight">
       About sabrang...<br>
@@ -24,3 +26,42 @@
 </div>
 
 <app-events-small></app-events-small>
+<app-sponsors-home></app-sponsors-home>
+
+<!--<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">-->
+<!--<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>-->
+<!--<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
+
+<!--
+<div class="wrapper">
+  <header>
+    <nav>
+      <div class="menu-icon">
+        <i class="fa fa-bars fa-2x"></i>
+      </div>
+      <div class="logo">
+        LOGO
+      </div>
+      <div class="menu">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+
+  <div class="content">
+    <p>
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    </p>
+    <p>
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    </p>
+  </div>
+</div>-->
