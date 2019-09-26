@@ -1,0 +1,22 @@
+.container{
+  margin: 40px auto;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  height: 150px;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.3);
+}
+
+.carousel-item{
+  transition: transform 2s ease, opacity .5s ease-out;
+  text-align: -webkit-center;
+  text-align: -moz-center;
+}
+
+.carousel-sponsor{
+  width: 100px;
+}
+
+.carousel-inner{
+  padding-left: 10px;
+  padding-right: 10px;
+}
