@@ -14,21 +14,12 @@ export class DashboardComponent implements OnInit {
   eventsData = events;
   registeredEvents = [];
   userData: User = {};
-  basePath = '../../assets/img/avatars/';
-  avatars = [{fileName: 'avatar-1.png', tooltip: 'tooltip text'},
-    {fileName: 'avatar-2.png', tooltip: 'tooltip text'},
-    {fileName: 'avatar-3.png', tooltip: 'tooltip text'},
-    {fileName: 'avatar-4.png', tooltip: 'tooltip text'},
-    {fileName: 'avatar-5.png', tooltip: 'tooltip text'},
-    {fileName: 'avatar-6.png', tooltip: 'tooltip text'},
-    {fileName: 'avatar-7.png', tooltip: 'tooltip text'},
-    {fileName: 'avatar-8.png', tooltip: 'tooltip text'},
-    {fileName: 'avatar-9.png', tooltip: 'tooltip text'},
-    {fileName: 'avatar-10.png', tooltip: 'tooltip text'}];
-  randomNo = Math.round(Math.random());
+  basePath = '../../assets/img/avatars/avatar-';
+  tooltips = ['Tooltip', 'Tooltip', 'Tooltip', 'Tooltip', 'Tooltip', 'Tooltip', 'Tooltip', 'Tooltip', 'Tooltip', 'Tooltip'];
+  randomNo = Math.round(Math.random() * 10);
 
   path: string;
-  toolTipAvatar: string;
+  tooltipAvatar: string;
 
   constructor(public auth: UserAuthService,
               public dbService: FirebaseDatabaseService,
@@ -55,8 +46,8 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit() {
     console.log(this.randomNo);
-    this.path = this.basePath + this.avatars[this.randomNo].fileName;
-    this.toolTipAvatar = this.avatars[this.randomNo].tooltip;
+    this.path = this.basePath + this.randomNo + '.png';
+    this.tooltipAvatar = this.tooltips[this.randomNo];
     this.userData = this.dbService.loggedInUserData;
     this.registeredEvents = this.getEvents();
   }
