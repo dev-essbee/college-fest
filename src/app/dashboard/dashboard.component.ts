@@ -14,6 +14,21 @@ export class DashboardComponent implements OnInit {
   eventsData = events;
   registeredEvents = [];
   userData: User = {};
+  basePath = '../../assets/img/avatars/';
+  avatars = [{fileName: 'avatar-1.png', tooltip: 'tooltip text'},
+    {fileName: 'avatar-2.png', tooltip: 'tooltip text'},
+    {fileName: 'avatar-3.png', tooltip: 'tooltip text'},
+    {fileName: 'avatar-4.png', tooltip: 'tooltip text'},
+    {fileName: 'avatar-5.png', tooltip: 'tooltip text'},
+    {fileName: 'avatar-6.png', tooltip: 'tooltip text'},
+    {fileName: 'avatar-7.png', tooltip: 'tooltip text'},
+    {fileName: 'avatar-8.png', tooltip: 'tooltip text'},
+    {fileName: 'avatar-9.png', tooltip: 'tooltip text'},
+    {fileName: 'avatar-10.png', tooltip: 'tooltip text'}];
+  randomNo = Math.round(Math.random());
+
+  path: string;
+  toolTipAvatar: string;
 
   constructor(public auth: UserAuthService,
               public dbService: FirebaseDatabaseService,
@@ -39,6 +54,9 @@ export class DashboardComponent implements OnInit {
   }
 
   ngOnInit() {
+    console.log(this.randomNo);
+    this.path = this.basePath + this.avatars[this.randomNo].fileName;
+    this.toolTipAvatar = this.avatars[this.randomNo].tooltip;
     this.userData = this.dbService.loggedInUserData;
     this.registeredEvents = this.getEvents();
   }

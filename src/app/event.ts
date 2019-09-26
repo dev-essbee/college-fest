@@ -9,4 +9,5 @@ export class Event {
   endTime: string;
   fee: string;
   prize: string;
+  category: string;
 }
