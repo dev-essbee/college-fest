@@ -14,6 +14,7 @@ export class DashboardComponent implements OnInit {
   eventsData = events;
   registeredEvents = [];
   userData: User = {};
+  
   basePath = '../../assets/img/avatars/avatar-';
   tooltips = ['Tooltip', 'Tooltip', 'Tooltip', 'Tooltip', 'Tooltip', 'Tooltip', 'Tooltip', 'Tooltip', 'Tooltip', 'Tooltip'];
   randomNo = Math.round(Math.random() * 10);

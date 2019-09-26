@@ -32,8 +32,8 @@
 </ng-template>
 
 <ng-template #events>
-  <mat-card class="dash-card">
-    <div class="dash-card-content">
+  <mat-card class="dash-card-2">
+    <div class="dash-card-content-2">
       <mat-card-content>
         <h5 style="padding-bottom: 8px">Events Participated</h5>
         <p *ngFor="let event of registeredEvents">{{event}}</p>
@@ -42,8 +42,8 @@
   </mat-card>
 </ng-template>
 <ng-template #noEvents>
-  <mat-card class="dash-card">
-    <div class="dash-card-content">
+  <mat-card class="dash-card-2">
+    <div class="dash-card-content-2">
       <mat-card-content>
         <p>You have not registered for any event.
           <button mat-button (click)="navigateToEvents()"><b>Register Now</b></button>
