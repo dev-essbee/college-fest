@@ -19,11 +19,9 @@
       <mat-card-subtitle>{{userData.college}}</mat-card-subtitle>
       <mat-card-subtitle>{{userData.address}} | {{userData.city}} | {{userData.state}}</mat-card-subtitle>
       <mat-card-subtitle>{{userData.phoneNo}}</mat-card-subtitle>
-      <mat-card-content style="text-align: right">
-        <button mat-button (click)="editUserDetails()" matTooltip="Edit your info.">
-          <mat-icon>edit</mat-icon>
-        </button>
-      </mat-card-content>
+      <mat-card-subtitle style="text-align: center">
+        <button mat-button (click)="editUserDetails()">I would like to edit my Information</button>
+      </mat-card-subtitle>
     </div>
   </mat-card>
   <div class="events-registered-card" *ngIf="registeredEvents.length>0; then events else noEvents">
