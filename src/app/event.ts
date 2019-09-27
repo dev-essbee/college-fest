@@ -1,7 +1,8 @@
 export class Event {
   id: string;
   name: string;
-  pic: string;
+  smallImg: string;
+  largeImg: string;
   des: string;
   judgement: string[];
   rules: string[];
