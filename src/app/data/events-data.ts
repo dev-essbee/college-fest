@@ -1,6 +1,6 @@
 import {Event} from '../event';
 // todo fix categories
-export let categories = ['civil', 'cse'];
+export let categories = {id: 'cse-0', value: 'CSE'};
 export let events: Event[] = [
   {
     id: '0',
