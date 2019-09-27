@@ -1,15 +1,28 @@
 .event-home-container{
-  max-width: 800px;
-  margin: 20px auto;
+  max-width: 80%;
+  margin: 60px auto;
+}
+.event_carousel{
+  box-shadow: 0 16px 32px 0 rgba(0,0,0,0.4);
+}
+
+.event-head{
+  text-align: center;
 }
 
 .carousel-item{
   transition: transform 2s ease, opacity .5s ease-out;
 }
 
-@media (max-width: 1200px){
+@media (max-width: 768px){
   .event_carousel{
-    margin-left: 6%;
-    margin-right: 6%;
+    margin-left: 3%;
+    margin-right: 3%;
+    max-width: 800px;
+  }
+  .event-head{
+    font-size: medium;
   }
 }
+
+/*TODO: Add text shadow in the head*/
