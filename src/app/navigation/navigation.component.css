@@ -5,12 +5,13 @@
 
 .main_header {
   box-sizing: border-box;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 4px 0 #964f00;
   z-index: 3;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
+  width: 100%;
 }
 
 .navigation-clean {
@@ -31,7 +32,7 @@
 .navigation-clean.navbar .navbar-nav .nav-link {
   padding-left: 18px;
   padding-right: 18px;
-  color: #cccccc;
+  color: #aaaaaa;
 }
 
 .navigation-clean .navbar-toggler {
@@ -40,7 +41,8 @@
 }
 
 .navigation-clean.navbar-light .navbar-nav .nav-link:hover {
-  color: #4b4c4d !important;
+  text-shadow: 4px 4px 3px #88001a;
+  color: #aaaaaa !important;
   background-color: transparent;
   transition: .3s;
 }
@@ -66,7 +68,7 @@
 }
 
 .nav_logo {
-  width: 200px;
+  max-width: 150px;
   padding-left: 15px;
   text-decoration: none;
   color: #333333

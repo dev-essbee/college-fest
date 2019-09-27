@@ -1,14 +1,33 @@
 .dash-card {
   max-width: 800px;
-  margin: 140px auto;
+  margin: 140px auto 40px;
+  background-color: black;
+  color: #aaaaaa;
+  box-shadow: 0 4px 8px 0 #400012;
 }
 
 .dash-card-container{
   text-align: center;
 }
 
+.sub{
+  color: #aaaaaa;
+}
+
+.edit_button{
+  color: #3f3f3f;
+  margin-top: 10px;
+  opacity: .7;
+}
+
+.edit_button:hover{
+  color: #5c5c5c;
+  opacity: 1;
+  transition: .3s;
+}
+
 .dash-card:hover{
-  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.3);
+  box-shadow: 0 8px 16px 0 #400012;
   transition: .3s;
 }
 
@@ -18,14 +37,14 @@
 
 .dash-card-2 {
   max-width: 800px;
-  margin: 40px auto 220px;
-}
-
-.dash-card-2:hover{
-  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.3);
-  transition: .3s;
+  margin: 0 auto 220px;
+  background-color: black;
+  color: #aaaaaa;
+  box-shadow: 0 4px 8px 0 #400012;
 }
 
 .dash-card-content-2{
   padding-left: 15px;
+  background-color: black;
+  color: #aaaaaa;
 }

@@ -1,42 +1,54 @@
-.event-bookmarks{
+.event-bookmarks mat-card{
+  background-color: #430A06;
+  color: #aaaaaa;
   margin: 140px 15% 60px;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .3);
-  transition: box-shadow .3s
+  box-shadow: 0 8px 16px 0 #362400;
+  transition: box-shadow .3s;
+  opacity: .9;
 }
 
-.event-bookmarks:hover{
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .3);
+.event-bookmarks mat-card:hover{
+  box-shadow: 0 4px 8px 0 #362400;
+}
+
+.event-bookmarks button{
+  text-shadow: 1px 1px 1px #800601;
+  font-size: large;
 }
 
 .event-bookmarks button:hover{
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,.3);
+  box-shadow: 0 4px 8px 0 #800601;
   text-align: center;
+  text-shadow: none;
+  transition: .3s;
 }
 
 .event-container-1 {
   background-color: black;
   color: #aaaaaa;
-  margin: 20px 15%;
-  box-shadow: 0 16px 32px 0 rgba(0, 0, 0, .4);
-  transition: box-shadow .3s
+  margin: 40px 15%;
+  box-shadow: 0 16px 24px 0 #430A06;
+  transition: box-shadow .3s;
 }
 
 .event-container-1:hover {
-  box-shadow: 0 0 11px rgba(33, 33, 33, .2);
+  box-shadow: 0 0 11px #ffae00;
   cursor: pointer;
+  color: #6e4c00;
 }
 
 .event-container-2 {
   background-color: black;
   color: #aaaaaa;
-  margin: 20px 15%;
-  box-shadow: 0 16px 32px 0 rgba(0, 0, 0, .4);
+  margin: 30px 15%;
+  box-shadow: 0 16px 24px 0 #430A06;
   transition: box-shadow .3s
 }
 
 .event-container-2:hover {
-  box-shadow: 0 0 11px rgba(33, 33, 33, .2);
+  box-shadow: 0 0 11px #ffae00;
   cursor: pointer;
+  color: #6e4c00;
 }
 
 .event-text{

@@ -26,7 +26,7 @@
           <div class="d-flex">
             <div class="field" style="margin-right: 2%;">
               <mat-form-field appearance="outline">
-                <mat-select placeholder="Gender" formControlName="gender">
+                <mat-select style="color: #aaaaaa" placeholder="Gender" formControlName="gender">
                   <mat-option *ngFor="let gender of genders" [value]=gender.id>{{gender.value}}</mat-option>
                 </mat-select>
                 <mat-error *ngFor="let validation of userDetailsValidMsg.gender">
@@ -53,7 +53,7 @@
             <div class="full-width field" class="email-field">
               <mat-form-field class="email-id-field full-width" appearance="outline">
                 <mat-label>Email id</mat-label>
-                <input matInput #email placeholder="Email id" formControlName="email">
+                <input style="color: #aaaaaa" matInput #email placeholder="Email id" formControlName="email">
               </mat-form-field>
             </div>
           </div>
@@ -131,7 +131,7 @@
           </div>
 
           <div class="submit-button field" style="margin-top:15px; text-align: right">
-            <button mat-raised-button color="primary" type="submit" [disabled]="!userDetailsForm.valid">Submit
+            <button mat-raised-button color="warn" type="submit" [disabled]="!userDetailsForm.valid">Submit
             </button>
           </div>
         </form>
