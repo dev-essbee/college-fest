@@ -1,18 +1,18 @@
 <section id="firstPage_content" class="firstPage">
-<div class="d-flex flex-column">
-  <div id="sabrang-logo" class="d-flex flex-row logo_container" #sabrangLogoRef>
-    <img class="first_page_logo" src="../../assets/img/sab2.png" data-depth="0.6">
-  </div>
+  <div class="d-flex flex-column">
+    <div id="sabrang-logo" class="d-flex flex-row logo_container" #sabrangLogoRef>
+      <img class="first_page_logo" src="../../assets/img/sab2.png" data-depth="0.6">
+    </div>
 
-  <!-- Add the id of the next component-->
-  <div class="d-flex flex-row register_container" (mousemove)="onMouseMove($event)">
-    <a class="register" href="#" data-title="Register" (mousedown)="onMouseDown()"
-       (mouseup)="onMouseUp()" (mouseleave)="onMouseLeave()"></a>
+    <!-- Add the id of the next component-->
+    <div class="d-flex flex-row register_container" (mousemove)="onMouseMove($event)">
+      <a class="register" href="#" data-title="Register" (mousedown)="onMouseDown()"
+         (mouseup)="onMouseUp()" (mouseleave)="onMouseLeave()"></a>
+    </div>
+    <div class="d-flex flex-row scroll_container">
+      <a class="scroll" href='' (click)="!!scrollToAbout()"><span class="scroll-span"></span>Scroll</a>
+    </div>
   </div>
-  <div class="d-flex flex-row scroll_container">
-  <a class="scroll" href='' (click)="!!scrollToAbout()"><span class="scroll-span"></span>Scroll</a>
-  </div>
-</div>
 </section>
 
 <div style="margin: 30px 15%" #about>
