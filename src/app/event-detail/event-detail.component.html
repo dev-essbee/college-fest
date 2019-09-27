@@ -4,7 +4,7 @@
 
     <div class="d-flex flex-row">
       <div>
-        <button mat-button (click)="goBack()">
+        <button style="text-align: left" mat-button (click)="goBack()">
           <mat-icon>arrow_back</mat-icon>
         </button>
       </div>
@@ -52,11 +52,11 @@
 
       <mat-card class="event-detail-card">
         <mat-card-title>
-          Fees and Prize
+          Fees and Prizes
         </mat-card-title>
         <mat-card-content>
           <ul>
-            <li>Rs.{{event.fee}}</li>
+            <li>The Registration fee for this event is Rs.{{event.fee}}</li>
             <li>{{event.prize}}</li>
           </ul>
 
