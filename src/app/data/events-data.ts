@@ -1,6 +1,6 @@
 import {Event} from '../event';
-
-
+// todo fix categories
+export let categories = ['civil', 'cse'];
 export let events: Event[] = [
   {
     id: '0',
@@ -361,7 +361,7 @@ export let events: Event[] = [
       'Expected prize money will be 8-10 times of registration fee. '
   },
   {
-    id: '0',
+    id: '12',
     name:
       'THE LOGICIANS',
     smallImg:
@@ -399,7 +399,7 @@ export let events: Event[] = [
       'Expected prize money will be 8-10 times of registration fee. '
   },
   {
-    id: '0',
+    id: '13',
     name: 'MANAGEMENT QUIZ',
     smallImg: 'http://via.placeholder.com/640x360',
     largeImg: 'http://via.placeholder.com/1920x1080',
@@ -427,7 +427,7 @@ export let events: Event[] = [
       'Expected prize money will be 8-10 times of registration fee. '
   },
   {
-    id: '0',
+    id: '14',
     name:
       'ACCOUNTS MASTER',
     smallImg:
@@ -457,7 +457,7 @@ export let events: Event[] = [
       'Expected prize money will be 8-10 times of registration fee. '
   },
   {
-    id: '0',
+    id: '15',
     name:
       'THINK A THON',
     smallImg:
