@@ -6,7 +6,7 @@ import {toTitleCase} from 'codelyzer/util/utils';
 import {SnackbarService} from '../snackbar.service';
 import {Router} from '@angular/router';
 import {Location} from '@angular/common';
-
+import {pinCode} from '../data/pincode-data';
 
 @Component({
   selector: 'app-register',
@@ -39,7 +39,7 @@ export class RegisterComponent implements OnInit {
 
   constructor(private databaseService: FirebaseDatabaseService,
               private snackBarService: SnackbarService,
-              private location: Location
+              private location: Location,
   ) {
     this.userDetailsForm = this.createFormGroup();
   }
@@ -55,7 +55,18 @@ export class RegisterComponent implements OnInit {
           this.transport.disable();
         }
       });
+    this.pinCode.valueChanges
+      .subscribe((pin) => {
+        if (pin.toString().trim().length === 3) {
+          console.log(pin);
+          if (pinCode.hasOwnProperty(pin)) {
+            console.log(pinCode[pin][1].toString());
+            this.userDetailsForm.get('city').setValue(toTitleCase(pinCode[pin][1].toString().trim()));
+            this.userDetailsForm.get('state').setValue(toTitleCase(pinCode[pin][0].toString().trim()));
 
+          }
+        }
+      });
   }
 
 
@@ -158,7 +169,7 @@ export class RegisterComponent implements OnInit {
     console.log(this.databaseService.updateData(data));
     this.snackBarService.showSnackBar('Data Updated Successfully', '', 2);
     this.location.back();
-  //  TODO: Reload Page
+    //  TODO: Reload Page
   }
 
 
