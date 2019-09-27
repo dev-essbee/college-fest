@@ -2,12 +2,16 @@
   background-color: black;
 }
 
-.row_1_container{
+.row_1_container {
   margin-top: 10px;
 }
 
+.footer_avatar {
+  width: 16px;
+}
+
 /*  Navigation Links  */
-.footer-nav-list ul{
+.footer-nav-list ul {
   text-align: center;
   padding: 0;
   list-style: none;
@@ -32,24 +36,24 @@
 }
 
 @keyframes pulse {
-  0%{
+  0% {
     text-shadow: 1px 1px red;
   }
-  25%{
+  25% {
     text-shadow: 2px 2px 1px red;
   }
-  50%{
+  50% {
     text-shadow: 3px 3px 2px red;
   }
-  75%{
+  75% {
     text-shadow: 2px 2px 1px red;
   }
-  100%{
+  100% {
     text-shadow: 1px 1px red;
   }
 }
 
-.footer-nav-list ul a:hover{
+.footer-nav-list ul a:hover {
   /*opacity: 1;*/
   color: white;
   transition: .3s;
@@ -57,7 +61,7 @@
   /*text-shadow:#88001a;*/
 }
 
-.footer-about{
+.footer-about {
   text-align: center;
   padding-top: 15px;
   color: #aaaaaa;
@@ -67,7 +71,7 @@
 
 /*  Social Media Icons  */
 
-.social a{
+.social a {
   font-size: 20px;
   width: 36px;
   height: 36px;
@@ -88,41 +92,45 @@
   animation-fill-mode: none;
 }
 
-.social a:hover{
+.social a:hover {
   opacity: 1;
   transition: .3s;
   box-shadow: 0 8px 16px 0 #88001a;
 }
 
 /***************************************************/
-.footer-copyright{
+.footer-copyright {
   padding-top: 15px;
   color: #aaaaaa;
   text-shadow: 4px 4px 2px red;
 }
 
-@media (max-width: 768px){
-  .row_1_container.d-flex{
+@media (max-width: 768px) {
+  .row_1_container.d-flex {
     flex-direction: column;
     flex: auto;
     flex-wrap: wrap;
   }
-  .social{
+
+  .social {
     padding-top: 15px;
   }
 }
 
 @media (min-width: 768px) {
-  .social{
+  .social {
     padding-top: 50px;
   }
-  .footer-nav-list{
+
+  .footer-nav-list {
     padding-top: 15px;
   }
-  .footer-nav-list ul a{
+
+  .footer-nav-list ul a {
     font-size: medium;
   }
-  .footer-about{
+
+  .footer-about {
     font-size: large;
     max-width: 600px;
   }
