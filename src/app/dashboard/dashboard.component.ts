@@ -18,7 +18,7 @@ export class DashboardComponent implements OnInit {
   basePath = '../../assets/img/avatars/avatar-';
   tooltips = ['Hello there! You naughty Little Devil', 'We all live down here.'
     , 'It is Time.', 'Born in Hell, forged in Fire!', 'The Red Floating Guy.',
-    'RIP', 'Slash! Slash! Cut.', 'Face of thread, lol.', 'Meowmpire', 'Aarrroooooooo'];
+    'RIP', 'Slash! Slash! Cut.', 'Stich it up.', 'Meowmpire', 'Aarrroooooooo'];
   randomNo = Math.round(Math.random() * 10);
 
   path: string;
