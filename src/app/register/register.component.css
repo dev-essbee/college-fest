@@ -3,8 +3,11 @@
 }
 
 .registration-card {
+  background-color: black;
   text-align: -webkit-center;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 4px #400012;
+  margin-top: 140px;
+  color: #aaaaaa;
 }
 
 .registration-form {
@@ -21,3 +24,61 @@
 .full-width {
   width: 412px !important;
 }
+
+/*.mat-form-field-underline {*/
+/*  background-color: rgb(177, 140, 81) !important;*/
+/*}*/
+
+/*.mat-form-field-underline.mat-disabled {*/
+/*  background-color: transparent !important;*/
+/*}*/
+/*// mat-icon-stepper selected color change*/
+   ::ng-deep .mat-step-header .mat-step-icon-selected, .mat-step-header .mat-step-icon-state-done, .mat-step-header .mat-step-icon-state-edit {
+     background-color: #400012!important;
+   }
+
+/*//input outline color*/
+  ::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+    color: #400012!important;
+  /*// opacity: 1!important;*/
+  }
+
+/*//mat-input focused color*/
+  ::ng-deep .mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
+    color: #400012!important;
+  }
+
+/*// mat-input error outline color*/
+   ::ng-deep .mat-form-field-appearance-outline.mat-form-field-invalid.mat-form-field-invalid .mat-form-field-outline-thick{
+     color: #400012!important;
+     opacity: 0.8!important;
+   }
+
+/*// mat-input carent color*/
+   ::ng-deep .mat-input-element {
+     caret-color: #400012!important;
+   }
+   /*::ng-deep .mat-select{*/
+   /*  caret-color: #400012!important ;*/
+   /*}*/
+
+/*// mat-input error carent color*/
+   ::ng-deep .mat-form-field-invalid .mat-input-element, .mat-warn .mat-input-element {
+     caret-color: #400012!important;
+   }
+
+/*// mat-label normal state style*/
+   ::ng-deep .mat-form-field-label {
+     color: #aaaaaa!important;
+   /*// color: $mainColor!important;*/
+   }
+
+/*// mat-label focused style*/
+   ::ng-deep .mat-form-field.mat-focused .mat-form-field-label {
+     color: #aaaaaa!important;
+   }
+
+/*// mat-label error style*/
+   ::ng-deep .mat-form-field.mat-form-field-invalid .mat-form-field-label {
+     color: #aaaaaa!important;
+   }

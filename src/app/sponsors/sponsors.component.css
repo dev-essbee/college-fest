@@ -1,6 +1,6 @@
 .sponsor-container{
   max-width: 800px;
-  margin: 40px auto;
+  margin: 140px auto;
 }
 
 .sponsor-card{
@@ -14,4 +14,14 @@
 
 .sponsor-logo{
   padding-bottom: 50px;
+}
+
+@media (max-width:768px) {
+  .sponsor-container{
+    margin-left: 6%;
+    margin-right: 6%;
+  }
+  .sponsor-logo{
+    max-width: 200px;
+  }
 }

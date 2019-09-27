@@ -35,7 +35,7 @@
   /*opacity: .8;*/
 }
 
-@keyframes pulse {
+@-webkit-keyframes pulse {
   0% {
     text-shadow: 1px 1px red;
   }
@@ -56,7 +56,7 @@
 .footer-nav-list ul a:hover {
   /*opacity: 1;*/
   color: white;
-  transition: .3s;
+  -webkit-transition: .3s;
   text-shadow: 5px 5px 1px red;
   /*text-shadow:#88001a;*/
 }

@@ -52,10 +52,10 @@ export class HomeComponent implements OnInit, AfterContentInit, OnDestroy, After
   }
 
   ngAfterViewInit(): void {
-    // this.parallaxInst = new Parallax(this.sabrangLogoRef.nativeElement,
-    //   {
-    //     relativeInput: true,
-    //   });
+    this.parallaxInst = new Parallax(this.sabrangLogoRef.nativeElement,
+      {
+        relativeInput: true,
+      });
     this.docStyle = document.documentElement.style;
     this.registerEle = document.querySelector('.register');
     this.boundingClientRect = this.registerEle.getBoundingClientRect();
