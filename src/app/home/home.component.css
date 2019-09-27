@@ -25,6 +25,7 @@ body {
   transform-style: preserve-3d;
   transform: perspective(800px);
 }
+
 /*DT*/
 section {
   position: relative;
@@ -34,13 +35,13 @@ section {
   padding-top: 10%;
 }
 
-section.d-flex{
+section.d-flex {
   flex-direction: column;
   justify-content: center;
 }
 
 @media (max-width: 768px) {
-  section.d-flex{
+  section.d-flex {
     flex-direction: column;
     justify-content: center;
   }
@@ -57,16 +58,18 @@ section::after {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, .8) 80%, rgba(0, 0, 0, .8) 100%);
 }
 
-.logo_container{
+.logo_container {
   justify-content: center;
 }
-.register_container{
+
+.register_container {
   justify-content: center;
 }
-.scroll_container{
+
+.scroll_container {
   justify-content: center;
   /*top:80%;*/
-  margin-top:15%
+  margin-top: 15%
 }
 
 .first_page_logo {
@@ -171,6 +174,7 @@ section::after {
   color: #fff;
   white-space: nowrap;
 }
+/*todo make register button animation lag free*/
 .register::before {
   content: '';
   position: absolute;
@@ -183,11 +187,13 @@ section::after {
   transition: box-shadow 0.5s ease, transform 0.2s ease;
   will-change: transform;
   box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
-  /*transform: translateY(var(--ty, 0)) rotateX(var(--rx, 0)) rotateY(var(--ry, 0)) translateZ(var(--tz, -12px));*/
+  transform: translateY(var(--ty, 0)) rotateX(var(--rx, 0)) rotateY(var(--ry, 0)) translateZ(var(--tz, -12px));
 }
+
 .register:hover::before {
   box-shadow: 0 5px 15px rgba(0, 0, 0, .3);
 }
+
 .register::after {
   position: relative;
   display: inline-block;
@@ -196,5 +202,5 @@ section::after {
   font-weight: bold;
   letter-spacing: 0.01em;
   will-change: transform;
-  /*transform: translateY(var(--ty, 0)) rotateX(var(--rx, 0)) rotateY(var(--ry, 0));*/
+  transform: translateY(var(--ty, 0)) rotateX(var(--rx, 0)) rotateY(var(--ry, 0));
 }
