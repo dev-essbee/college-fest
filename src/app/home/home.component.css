@@ -159,7 +159,7 @@ section button {
   transition: box-shadow 0.5s ease, transform 0.2s ease;
   will-change: transform;
   box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
-  transform: translateY(var(--ty, 0)) rotateX(var(--rx, 0)) rotateY(var(--ry, 0)) translateZ(var(--tz, -12px));
+  transform: translateY(var(--ty, 10px)) rotateX(var(--rx, 0)) rotateY(var(--ry, 0)) translateZ(var(--tz, -12px));
 }
 .register:hover::before {
   box-shadow: 0 5px 15px rgba(0, 0, 0, .3);
@@ -173,12 +173,4 @@ section button {
   letter-spacing: 0.01em;
   will-change: transform;
   transform: translateY(var(--ty, 0)) rotateX(var(--rx, 0)) rotateY(var(--ry, 0));
-}
-body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  transform-style: preserve-3d;
-  transform: perspective(800px);
 }

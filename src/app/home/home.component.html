@@ -3,10 +3,10 @@
     <img src="../../assets/img/sab2.png" style="width: 30%" data-depth="0.6">
   </div>
   <!-- Add the id of the next component-->
-  <div (mousemove)="onMouseMove($event)">
-    <a class="register" href="#" data-title="Register" (mousedown)="onMouseDown()"
-       (mouseup)="onMouseUp()" (mouseleave)="onMouseLeave()"></a>
-  </div>
+<!-- todo: replace href with routerlink-->
+  <a class="register" href="/events" data-title="Register" (mousemove)="onMouseMove($event)" (mousedown)="onMouseDown()"
+     (mouseup)="onMouseUp()" (mouseleave)="onMouseLeave()"></a>
+
 
   <a class="scroll" href='' (click)="!!scrollToAbout()"><span class="scroll-span"></span>Scroll</a>
 

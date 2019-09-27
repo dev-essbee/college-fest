@@ -25,6 +25,9 @@ export class HomeComponent implements OnInit, AfterContentInit, OnDestroy, After
   @ViewChild('sabrangLogoRef', {static: false}) sabrangLogoRef: ElementRef;
 
   @ViewChild('about', {static: false}) aboutRef: ElementRef;
+  docStyle;
+  registerEle;
+  boundingClientRect;
 
   constructor(private dynamicScriptLoader: DynamicScriptLoaderServiceService) {
     this.headerImg = 'http://via.placeholder.com/1920x1080';
@@ -49,10 +52,14 @@ export class HomeComponent implements OnInit, AfterContentInit, OnDestroy, After
   }
 
   ngAfterViewInit(): void {
-    this.parallaxInst = new Parallax(this.sabrangLogoRef.nativeElement,
-      {
-        relativeInput: true,
-      });
+    // this.parallaxInst = new Parallax(this.sabrangLogoRef.nativeElement,
+    //   {
+    //     relativeInput: true,
+    //   });
+    this.docStyle = document.documentElement.style;
+    this.registerEle = document.querySelector('.register');
+    this.boundingClientRect = this.registerEle.getBoundingClientRect();
+    console.log(this.boundingClientRect);
   }
 
   ngOnDestroy(): void {
@@ -65,18 +72,37 @@ export class HomeComponent implements OnInit, AfterContentInit, OnDestroy, After
 
   onMouseMove(e) {
     console.log('move');
+    const x = e.clientX - this.boundingClientRect.left;
+    const y = e.clientY - this.boundingClientRect.top;
+    const xc = this.boundingClientRect.width / 2;
+    const yc = this.boundingClientRect.height / 2;
+    const dx = x - xc;
+    const dy = y - yc;
+    this.docStyle.setProperty('--rx', `${dy / -1}deg`);
+    this.docStyle.setProperty('--ry', `${dx / 10}deg`);
+
   }
 
   onMouseUp() {
     console.log('up');
+    this.docStyle.setProperty('--tz', '-12px');
   }
 
   onMouseLeave() {
     console.log('leave');
+    this.docStyle.setProperty('--ty', '0');
+    this.docStyle.setProperty('--rx', '0');
+    this.docStyle.setProperty('--ry', '0');
   }
 
   onMouseDown() {
     console.log('down');
+    this.docStyle.setProperty('--tz', '-25px');
+
+  }
+
+  navigateToEvents() {
+    this.router.navigate(['/events']);
   }
 }
 

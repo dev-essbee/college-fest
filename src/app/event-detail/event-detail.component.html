@@ -10,58 +10,59 @@
       </div>
     </div>
 
-    <mat-card class="event-detail-card">
-      <h1 style="text-align: center">{{event.name | titlecase}}</h1>
-    </mat-card>
+    <div class="event-detail-content" ngsReveal>
+      <mat-card class="event-detail-card">
+        <h1 style="text-align: center">{{event.name | titlecase}}</h1>
+      </mat-card>
 
-    <mat-card class="event-detail-card">
-      <mat-card-title>
-        Description
-      </mat-card-title>
-      <mat-card-content>
-        <p>{{event.des}}</p>
-      </mat-card-content>
-    </mat-card>
+      <mat-card class="event-detail-card">
+        <mat-card-title>
+          Description
+        </mat-card-title>
+        <mat-card-content>
+          <p>{{event.des}}</p>
+        </mat-card-content>
+      </mat-card>
 
-    <mat-card class="event-detail-card">
-      <mat-card-title>
-        Judgement Criteria
-      </mat-card-title>
-      <mat-card-content>
-        <div *ngFor="let e of event.judgement">
+      <mat-card class="event-detail-card">
+        <mat-card-title>
+          Judgement Criteria
+        </mat-card-title>
+        <mat-card-content>
+          <div *ngFor="let e of event.judgement">
+            <ul>
+              <li>{{e}}</li>
+            </ul>
+          </div>
+        </mat-card-content>
+      </mat-card>
+
+      <mat-card class="event-detail-card">
+        <mat-card-title>
+          Rules
+        </mat-card-title>
+        <mat-card-content>
+          <div *ngFor="let e of event.rules">
+            <ul>
+              <li>{{e}}</li>
+            </ul>
+          </div>
+        </mat-card-content>
+      </mat-card>
+
+      <mat-card class="event-detail-card">
+        <mat-card-title>
+          Fees and Prize
+        </mat-card-title>
+        <mat-card-content>
           <ul>
-            <li>{{e}}</li>
+            <li>Rs.{{event.fee}}</li>
+            <li>{{event.prize}}</li>
           </ul>
-        </div>
-      </mat-card-content>
-    </mat-card>
 
-    <mat-card class="event-detail-card">
-      <mat-card-title>
-        Rules
-      </mat-card-title>
-      <mat-card-content>
-        <div *ngFor="let e of event.rules">
-          <ul>
-            <li>{{e}}</li>
-          </ul>
-        </div>
-      </mat-card-content>
-    </mat-card>
-
-    <mat-card class="event-detail-card">
-      <mat-card-title>
-        Fees and Prize
-      </mat-card-title>
-      <mat-card-content>
-        <ul>
-          <li>Rs.{{event.fee}}</li>
-          <li>{{event.prize}}</li>
-        </ul>
-
-      </mat-card-content>
-    </mat-card>
-
+        </mat-card-content>
+      </mat-card>
+    </div>
     <div class="button-container">
       <button mat-button (click)="onClickRegister(event)">Register</button>
     </div>
@@ -70,3 +71,4 @@
 
 <!--TODO: Change the cards to mat-cards
 -->
+<!--todo open top of page -->

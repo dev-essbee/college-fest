@@ -33,7 +33,7 @@
 
 <ng-template #con2 let-event="event">
   <!--Container Type 2-->
-  <div class="event-container-2" id="{{event.category}}">
+  <div class="event-container-2" id="{{event.category}}{{event.id}}">
     <div class="d-flex" (click)="onClickMore(event)" matTooltip="click to know more.">
       <div class="p-2">
         <br>

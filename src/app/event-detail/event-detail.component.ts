@@ -38,7 +38,7 @@ export class EventDetailComponent implements OnInit {
   goBack(): void {
     this.location.back();
   }
-
+// todo: set ngsreveal properly
   onClickRegister(event: Event) {
     console.log(event.id);
     const id = event.id;
