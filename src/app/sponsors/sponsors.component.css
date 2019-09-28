@@ -16,7 +16,7 @@
   transition: .3s;
 }
 
-.sponsor-logo{
+.sponsor-logo-a{
   margin-bottom: 50px;
   border: none;
   box-shadow: 0 4px 8px 0 #88001a;
@@ -27,7 +27,7 @@
     margin-left: 6%;
     margin-right: 6%;
   }
-  .sponsor-logo{
+  .sponsor-logo-a{
     max-width: 200px;
   }
 }
