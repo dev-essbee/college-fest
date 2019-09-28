@@ -1,5 +1,7 @@
 .main_container {
-  background: url('http://via.placeholder.com/1920x1080') center;
+  /*background: url('../../assets/img/events/1080p/singingpalooza.jpg') center;*/
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
 }
 

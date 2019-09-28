@@ -16,7 +16,7 @@
   <div class="event-container-1" id="{{event.category}}">
     <div class="d-flex" (click)="onClickMore(event)" matTooltip="click to know more.">
       <div class="p-2 flex-grow-1">
-        <img alt='{{event.name}}' class="img-fluid img-gradient-1 img-gradient" src="../../assets/img/sabrang-logo.png">
+        <img alt='{{event.name}}' class="img-fluid img-gradient-1 img-gradient" src={{event.smallImg}}>
       </div>
       <div class="p-2 bd-highlight">
         <br>
@@ -45,7 +45,7 @@
         </div>
       </div>
       <div class="p-2 flex-grow-1">
-        <img alt='{{event.name}}' class="img-fluid img-gradient-2 img-gradient" src="../../assets/img/sabrang-logo.png">
+        <img alt='{{event.name}}' class="img-fluid img-gradient-2 img-gradient" src={{event.smallImg}}>
       </div>
     </div>
   </div>

@@ -60,4 +60,10 @@ export class EventDetailComponent implements OnInit {
     }
   }
 
+  getBgLoc(e) {
+    const loc = 'url(' + e.largeImg + ')';
+    console.log(loc);
+    return loc;
+  }
+
 }
