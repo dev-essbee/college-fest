@@ -33,6 +33,9 @@
 }
 
 @media (max-width: 768px){
+  .event-home-container{
+    margin-bottom: 40px;
+  }
   .event_carousel{
     margin-left: 3%;
     margin-right: 3%;

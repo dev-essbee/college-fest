@@ -30,8 +30,7 @@
               "src/assets/js/leon.js",
               "src/assets/js/font.js",
               "node_modules/scrollreveal/dist/scrollreveal.js",
-              "node_modules/parallax-js/dist/parallax.min.js",
-              "node_modules/scrollreveal/dist/scrollreveal.js"
+              "node_modules/parallax-js/dist/parallax.min.js"
             ]
           },
           "configurations": {

@@ -1,8 +1,9 @@
 .main_container {
   /*background: url('../../assets/img/events/1080p/singingpalooza.jpg') center;*/
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  /*width: 100%;*/
 }
 
 .event-detail-card-container {
@@ -22,11 +23,14 @@
 }
 
 .event-detail-card {
+  background: rgba(255,255,255,0.7);
   margin-bottom: 20px;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3);
 }
 .event-detail-card:hover{
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  background:  #ffffff;
+  color: black;
 }
 
 .button-container button{
@@ -42,4 +46,26 @@
   color: #282d32;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
   transition: .3s;
+}
+
+@media(max-width: 1024px){
+  .event-detail-card{
+    font-size: small;
+  }
+}
+
+@media(max-width: 425px){
+  .event-detail-card{
+    font-size: small;
+  }
+  .event-detail-card h1{
+    font-size: large;
+    font-weight: bold;
+    text-align: center;
+  }
+  .event-detail-card mat-card-title{
+    font-size: medium;
+    font-weight: bold;
+    text-align: center;
+  }
 }
