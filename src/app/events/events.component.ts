@@ -24,6 +24,8 @@ export class EventsComponent implements OnInit {
 
   ngOnInit() {
     console.log();
+    // todo implement scroll to previous position
+    window.scrollTo(0, 0);
   }
 
   onClickMore(event: Event) {

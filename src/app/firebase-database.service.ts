@@ -52,10 +52,16 @@ export class FirebaseDatabaseService {
         7: false,
         8: false,
         9: false,
-        10: false
+        10: false,
+        11: false,
+        12: false,
+        13: false,
+        14: false,
+        15: false
       }
 
     };
+    this.snackBar.showSnackBar('Hi ' + user.displayName + ', Welcome Onboard!', '', 3);
     return userRef.set(data, {merge: true});
   }
 
@@ -84,6 +90,8 @@ export class FirebaseDatabaseService {
       this.updateData(data);
       if (this.loggedInUserData.newUser) {
         this.router.navigate(['/register']);
+      } else {
+        this.snackBar.showSnackBar('You have successfully registered for the event.', '', 5);
       }
     }
   }
