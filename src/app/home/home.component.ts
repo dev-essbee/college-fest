@@ -18,6 +18,7 @@ declare var Parallax: any;
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
+// @HostListener('window:resize', ['$event'])
 export class HomeComponent implements OnInit, AfterContentInit, OnDestroy, AfterViewInit {
   headerImg: string;
   parallaxInst: any;
@@ -72,12 +73,21 @@ export class HomeComponent implements OnInit, AfterContentInit, OnDestroy, After
 
   onMouseMove(e) {
     console.log('move');
+    const innerWth = window.innerWidth;
+    const innerHt = window.innerHeight;
+    const resW = (340 * innerWth) / 1920;
+    let resH = innerHt / 976;
     const x = e.clientX - this.boundingClientRect.left;
     const y = e.clientY - this.boundingClientRect.top;
     const xc = this.boundingClientRect.width / 2;
     const yc = this.boundingClientRect.height / 2;
-    const dx = x - xc;
-    const dy = y - (yc + 240);
+    if (innerHt < 750) {
+      resH = 10;
+    }
+    const dx = x - (xc + resH);
+    const dy = y - (yc + resW);
+    console.log(innerHt);
+
     this.docStyle.setProperty('--rx', `${dy / -1}deg`);
     this.docStyle.setProperty('--ry', `${dx / 10}deg`);
 
