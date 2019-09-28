@@ -1,14 +1,26 @@
 /*TODO: Add Text Shadow to the header*/
 
+.sponsor-home-container{
+  margin: 30px 10%;
+  padding-top: 25px;
+  background: rgba(29,29,29,0.6);
+}
+
 .sponsor-head{
-  margin: 60px auto 10px;
-  max-width: 800px;
+  /*margin-top: 60px;*/
+  /*margin-left: 10%;*/
+  /*margin-right: 10%;*/
+  /*background: rgba(29,29,29,0.6);*/
+  /*max-width: 800px;*/
   color: #aaaaaa;
   text-shadow: 3px 3px 2px #800601;
 }
 
 .container{
-  margin: 0 auto 60px;
+  /*margin-left: 10%;*/
+  /*margin-right: 10%;*/
+  /*margin-bottom: 60px;*/
+  /*background: rgba(29,29,29,0.6);*/
   padding-top: 40px;
   padding-bottom: 40px;
   height: 150px;
@@ -36,10 +48,7 @@
 }
 
 @media (max-width: 768px){
-  .container{
-    display: none;
-  }
-  .sponsor-head{
+  .sponsor-home-container{
     display: none;
   }
 }

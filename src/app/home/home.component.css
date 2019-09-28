@@ -10,6 +10,8 @@
 .home-about{
   color: #aaaaaa;
   text-shadow: 2px 2px 1px #430A06;
+  margin: 30px 10%;
+  padding-top: 10px;
 }
 
 * {
