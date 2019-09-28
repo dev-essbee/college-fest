@@ -77,7 +77,7 @@ export class HomeComponent implements OnInit, AfterContentInit, OnDestroy, After
     const xc = this.boundingClientRect.width / 2;
     const yc = this.boundingClientRect.height / 2;
     const dx = x - xc;
-    const dy = y - yc;
+    const dy = y - (yc + 240);
     this.docStyle.setProperty('--rx', `${dy / -1}deg`);
     this.docStyle.setProperty('--ry', `${dx / 10}deg`);
 
