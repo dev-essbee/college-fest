@@ -9,7 +9,7 @@
 
 .home-about{
   color: #aaaaaa;
-  text-shadow: 4px 4px 2px red;
+  text-shadow: 2px 2px 1px #430A06;
 }
 
 * {
@@ -23,20 +23,16 @@ html, body {
 
 body {
   display: flex;
-  /*align-items: center;*/
-  /*justify-content: center;*/
   height: 100vh;
   transform-style: preserve-3d;
   transform: perspective(800px);
 }
 
-/*DT*/
 section {
   position: relative;
   width: 100%;
   height: 100%;
   z-index: 5;
-  padding-top: 10%;
 }
 
 section.d-flex {
@@ -48,6 +44,41 @@ section.d-flex {
   section.d-flex {
     flex-direction: column;
     justify-content: center;
+  }
+  .logo_container{
+    margin-top: 300px;
+  }
+
+  .first_page_logo{
+    min-width: 350px !important;
+  }
+
+  .register_container{
+    margin-top: 300px;
+  }
+  .register{
+    width: 150px !important;
+    height: 50px !important;
+    font-size: small !important;
+  }
+}
+
+@media (max-width: 1200px){
+  .logo_container{
+    margin-top: 250px;
+  }
+
+  .first_page_logo{
+    min-width: 600px;
+  }
+
+  .register_container{
+    margin-top: 30px !important;
+  }
+  .register{
+    width: 200px !important;
+    height: 60px !important;
+    /*font-size: small !important;*/
   }
 }
 
@@ -64,6 +95,7 @@ section::after {
 
 .logo_container {
   justify-content: center;
+  margin-top: 150px;
 }
 
 .register_container {
@@ -90,13 +122,13 @@ section::after {
 }
 
 .scroll {
-  /*position: absolute;*/
+  position: absolute;
   bottom: 20px;
   left: 50%;
   z-index: 10;
   display: inline-block;
-  -webkit-transform: translate(0, -50%);
-  transform: translate(0, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   color: #fff;
   font: normal 400 20px/1 'Josefin Sans', sans-serif;
   letter-spacing: .1em;
@@ -167,13 +199,15 @@ section::after {
 
 .register {
   position: relative;
+  width: 250px;
+  height: 60px;
   display: inline-block;
   padding: 1.2em 2em;
   text-decoration: none;
   text-align: center;
   cursor: pointer;
   user-select: none;
-  /*margin-top: 90px;*/
+  margin-top: 90px;
   z-index: 10;
   color: #fff;
   white-space: nowrap;
