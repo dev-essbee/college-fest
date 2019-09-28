@@ -7,6 +7,16 @@
   box-shadow: 0 16px 32px 0 #88001a;
 }
 
+.event_carousel:hover{
+  box-shadow: 0 0 11px #ffae00;
+  color: #6e4c00;
+  transition: .3s;
+}
+
+.carousel-caption{
+  z-index: 1;
+}
+
 .event-head{
   text-align: center;
   color: #aaaaaa;
