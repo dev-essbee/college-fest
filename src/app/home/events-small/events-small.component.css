@@ -1,9 +1,13 @@
 .event-home-container{
-  max-width: 70%;
-  margin: 60px auto;
+  /*max-width: 70%;*/
+  margin-top: 60px;
+  padding-top: 25px;
+  background: rgba(29,29,29,0.9);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
 }
 .event_carousel{
-  margin-top: 15px;
+  max-width: 70%;
+  margin: 0 auto;
   box-shadow: 0 16px 32px 0 #88001a;
 }
 
@@ -18,8 +22,10 @@
 }
 
 .event-head{
+  margin-bottom: 18px;
   text-align: center;
   color: #aaaaaa;
+  text-shadow: 3px 3px 2px #430A06;
 }
 
 .carousel-item{
