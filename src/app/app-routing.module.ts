@@ -18,14 +18,13 @@ const appRoutes: Routes = [
   {path: 'sponsors', component: SponsorsComponent},
   {path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard]},
   {path: 'events/:id', component: EventDetailComponent},
-  {path: 'temp', component: EventsSmallComponent},
   {path: '**', component: HomeComponent}
 
 ];
 
 const routerOptions: ExtraOptions = {
   anchorScrolling: 'enabled',
-  scrollPositionRestoration: 'enabled',
+  scrollPositionRestoration: 'enabled'
 };
 
 @NgModule({

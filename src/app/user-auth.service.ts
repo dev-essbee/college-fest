@@ -42,6 +42,7 @@ export class UserAuthService {
         retrySnackbarRef.dismiss();
         this.googleSignIn();
       });
+      return false;
     }
 
   }

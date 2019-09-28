@@ -6,7 +6,7 @@
 
     <!-- Add the id of the next component-->
     <div class="d-flex flex-row register_container" (mousemove)="onMouseMove($event)">
-      <a class="register" href="#" data-title="Register" (mousedown)="onMouseDown()"
+      <a class="register" [routerLink]="['/events']" data-title="Register" (mousedown)="onMouseDown()"
          (mouseup)="onMouseUp()" (mouseleave)="onMouseLeave()"></a>
     </div>
     <div class="d-flex flex-row scroll_container">

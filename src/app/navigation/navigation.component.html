@@ -21,7 +21,7 @@
         </ul>
         <div *ngIf="dbService.loggedInUserData; then authenticated else guest"></div>
         <ng-template #guest>
-          <button class="interaction" mat-button (click)="auth.googleSignIn()">Login</button>
+          <button class="interaction" mat-button (click)="auth.googleSignIn()">Login/Signup</button>
         </ng-template>
         <ng-template #authenticated>
           <button class="interaction" mat-button (click)="auth.signOut()">Logout</button>
