@@ -3,6 +3,8 @@
 .sponsor-head{
   margin: 60px auto 10px;
   max-width: 800px;
+  color: #aaaaaa;
+  text-shadow: 3px 3px 2px #800601;
 }
 
 .container{
