@@ -1,6 +1,9 @@
 import {Event} from '../event';
 // todo fix categories
-export let categories = [{id: 'cse-0', value: 'CSE'}];
+export let categories = [{id: 'c0', value: 'Cultural'}, {id: 't0', value: 'Technical'}, {
+  id: 'm0',
+  value: 'Management'
+}, {id: 'd0', value: 'Design'}];
 const baseLoc = '../../assets/img/events/640p/';
 const baseLocLarge = '../../assets/img/events/1080p/';
 export let events: Event[] = [
@@ -9,7 +12,7 @@ export let events: Event[] = [
     name: 'STACKITECTURE',
     smallImg: baseLoc + 'SKACKITECTURE1.jpg',
     largeImg: baseLocLarge + 'stackitecture1.jpg',
-    category: 'civil',
+    category: 'd0',
     des: 'Show your creativity with stacks. Pile up the wooden pieces in a ' +
       'creative and stable form using your mind and some techniques without any gum/thread. ',
     judgement: ['Stability', 'Height', 'Looks / aesthetics', 'Interesting / creative', 'Challenging '],
@@ -29,7 +32,7 @@ export let events: Event[] = [
     name: 'FACE MASK CHALLENGE',
     smallImg: baseLoc + 'facemaskchallenge1.jpg',
     largeImg: baseLocLarge + 'facemaskchaleenge.jpg',
-    category: 'civil',
+    category: 'd1',
     des: 'Face painting is a fun way to dress up—no costume required!' +
       'It is the ultimate crowd pleaser and always one of the most popular happenings at any event.' +
       'Participate and transform faces into something magical and memorable.',
@@ -52,7 +55,7 @@ export let events: Event[] = [
     name: 'CLICK-O-GRAPHY',
     smallImg: baseLoc + 'ClickOgraphy1.jpg',
     largeImg: baseLocLarge + 'clickOgraphy.jpg',
-    category: 'civil',
+    category: 'd2',
     des: '“Taking an image, freezing a moment, reveals how rich reality truly is. ”' +
       'SABRANG 2K19 invites you to capture and freeze the moment in Click-O-Graphy: Photography challenge.' +
       'themes: Architecture, Leading lines, Nature and landscape, Emotions, Social environments, ' +
@@ -75,7 +78,7 @@ export let events: Event[] = [
     name: 'DJ WAR ',
     smallImg: baseLoc + 'dj war1.jpg',
     largeImg: baseLocLarge + 'djwar.jpg',
-    category: 'civil',
+    category: 'c0',
     des: 'Think you can spin; here is a live platform for you to do the same. Move ' +
       'the crowd with your beats and get into the grove with War of Dj’s. ' +
       'A live battle with Dj’s from different genres, come spin with us. ',
@@ -97,7 +100,7 @@ export let events: Event[] = [
     name: 'PAGE TO STAGE (Skit)',
     smallImg: baseLoc + 'page2stage1.jpg',
     largeImg: baseLocLarge + 'page2stage.jpg',
-    category: 'civil',
+    category: 'c1',
     des: 'Curtain raises and it’s time to showcase your talent. Actions speak louder than words will just not remain a quote, ' +
       'the spectators and audience will see it on their own and applaud its rise as well. Come with your ideas in ' +
       'form of action on stage, give and share a moment of laughter, a sigh of relief, a sob of sorrow.' +
@@ -129,7 +132,7 @@ export let events: Event[] = [
     name: 'ROCK - O - PHONIX (BAND JAM)',
     smallImg: baseLoc + 'bandjam1.jpg',
     largeImg: baseLocLarge + 'bandjam.jpg',
-    category: 'civil',
+    category: 'c2',
     des: 'Get ready to sway your hands and bang your head to energizing and rocking beats of Rocko-O-Phonix. ',
     judgement: ['Planning/preparedness', 'Originality',
       'Interface with audience', 'Quality of performance', 'Presentation'],
@@ -155,7 +158,7 @@ export let events: Event[] = [
     name: 'SCAVENGERS HUNT (TREASURE HUNT)',
     smallImg: baseLoc + 'treasurehunt1.jpg',
     largeImg: baseLocLarge + 'scavengershunt.jpg',
-    category: 'civil',
+    category: 'c3',
     des:
       'A treasure hunt is one of many different types of games for players ' +
       'who try to find hidden objects or places by following a series of clues. ' +
@@ -191,7 +194,7 @@ export let events: Event[] = [
     smallImg:
       baseLoc + 'talentX1.jpg',
     largeImg: baseLocLarge + 'talentX.jpg',
-    category: 'civil',
+    category: 'c4',
     des:
       'Talent is defined as someone who has a natural ability to be good at something, especially without being taught. ' +
       'A Talent show is an event where participants perform talents across Poetry, ' +
@@ -222,7 +225,7 @@ export let events: Event[] = [
     smallImg:
       baseLoc + 'vogue-gala1.jpg',
     largeImg: baseLocLarge + 'voguegala1.jpg',
-    category: 'civil',
+    category: 'c5',
     des:
       'Fashion show is an event at which collection of designer clothing are modelled for audience.' +
       ' We bring out the best of symbiosis between models and designers to ' +
@@ -261,7 +264,7 @@ export let events: Event[] = [
     smallImg:
       baseLoc + 'autocad1.jpg',
     largeImg: baseLocLarge + 'autocad.jpg',
-    category: 'civil',
+    category: 't0',
     des:
       'This event allows the participants to display their ' +
       'very best technical drawings.this category is for 2D CAD drawings.' +
@@ -288,7 +291,7 @@ export let events: Event[] = [
     smallImg:
       baseLoc + 'codextreme1.jpg',
     largeImg: baseLocLarge + 'codextreme.jpg',
-    category: 'civil',
+    category: 't1',
     des:
       'This event is based on time, complexity, algorithm designing and executing code in ' +
       'which participants are required to solve the given problem set, generating output and debug the code.' +
@@ -322,7 +325,7 @@ export let events: Event[] = [
     smallImg:
       baseLoc + 'robosoccer1.jpg',
     largeImg: baseLocLarge + 'robosoccer.jpg',
-    category: 'civil',
+    category: 't2',
     des:
       'For all those who have passion for Robotics as well as Sports, Sabrang’19 presents Robo-soccer. ' +
       'This competition is to show how tactile and robust your robot is in soccer by competing and scoring more goals.',
@@ -369,7 +372,7 @@ export let events: Event[] = [
     smallImg:
       baseLoc + 'logicians1.jpg',
     largeImg: baseLocLarge + 'logicians.jpg',
-    category: 'civil',
+    category: 'm0',
     des:
       'How logically you debate? Well, if you are an engaging and logical debater, ' +
       'then “The Logicians” provides you a platform to impress, convince, and win the rebuttal. ' +
@@ -405,7 +408,7 @@ export let events: Event[] = [
     name: 'MANAGEMENT QUIZ',
     smallImg: baseLoc + 'managementquiz1.jpg',
     largeImg: baseLocLarge + '',
-    category: 'civil',
+    category: 'm1',
     des:
       'A quiz event which deals with company histories, business strategies, ' +
       'well known deals, people in news, acquisitions and future business developments. ' +
@@ -435,7 +438,7 @@ export let events: Event[] = [
     smallImg:
       baseLoc + 'accounts master1.jpg',
     largeImg: baseLocLarge + 'accountmaster.jpg',
-    category: 'civil',
+    category: 'm2',
     des:
       'Accounts master is the game designed to check the accounting skills of management student and their ability to prepare ' +
       'financial statements from the scratch of business transactions provided to them. ',
@@ -465,7 +468,7 @@ export let events: Event[] = [
     smallImg:
       baseLoc + 'thinkAthon1.jpg',
     largeImg: baseLocLarge + 'thinkathon.jpg',
-    category: 'civil',
+    category: 'm3',
     des:
       'This is an event for entrepreneurs, start-ups, innovators. ' +
       'We welcome creators with their ideas and passion to improve the world around us. ',

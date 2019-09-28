@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {AfterViewInit, Component, OnInit, ViewChildren} from '@angular/core';
 import {Event} from '../event';
 import {categories, events} from '../data/events-data';
 import {FirebaseDatabaseService} from '../firebase-database.service';
@@ -11,9 +11,13 @@ import {Router} from '@angular/router';
   templateUrl: './events.component.html',
   styleUrls: ['./events.component.css']
 })
-export class EventsComponent implements OnInit {
+export class EventsComponent implements OnInit, AfterViewInit {
   events = events;
   categories = categories;
+  cEle;
+  tEle;
+  mEle;
+  dEle;
 
   constructor(private dbService: FirebaseDatabaseService,
               private authService: UserAuthService,
@@ -32,5 +36,24 @@ export class EventsComponent implements OnInit {
     this.router.navigate(['/events/' + event.id]);
   }
 
-// todo: scroll to id when button is clicked.
+  ngAfterViewInit(): void {
+    this.cEle = document.getElementById('c0');
+    this.tEle = document.getElementById('t0');
+    this.mEle = document.getElementById('m0');
+    this.dEle = document.getElementById('d0');
+  }
+
+  scrollToEvent(cat) {
+    if (cat === 'c0') {
+      this.cEle.scrollIntoView({behavior: 'smooth'});
+    } else if (cat === 'd0') {
+      this.dEle.scrollIntoView({behavior: 'smooth'});
+    } else if (cat === 't0') {
+      this.tEle.scrollIntoView({behavior: 'smooth'});
+    } else if (cat === 'm0') {
+      this.mEle.scrollIntoView({behavior: 'smooth'});
+    }
+  }
+
+// todo: sticky bookmarks bar
 }
