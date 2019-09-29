@@ -14,7 +14,8 @@
 <ng-template #authenticated>
   <mat-card class="dash-card">
     <div class="dash-card-container">
-      <img class="dash-avatar wow pulse" src='{{path}}' alt="Avatar" matTooltip='{{tooltipAvatar}}' matTooltipPosition="right">
+      <img class="dash-avatar wow pulse" src='{{path}}' alt="Avatar" matTooltip='{{tooltipAvatar}}'
+           matTooltipPosition="right">
       <mat-card-title style="margin-top:8px">{{userData.name}}</mat-card-title>
       <mat-card-subtitle class="sub">{{userData.college}}</mat-card-subtitle>
       <mat-card-subtitle class="sub">{{userData.address}} | {{userData.city}} | {{userData.state}}</mat-card-subtitle>
@@ -35,7 +36,7 @@
     <div class="dash-card-content-2">
       <mat-card-content>
         <h5 style="padding-bottom: 8px">Registered Events</h5>
-        <p *ngFor="let event of registeredEvents">{{event}}</p>
+        <a [routerLink]="['/events/',event.id]" *ngFor="let event of registeredEvents">{{event.name}}</a>
       </mat-card-content>
     </div>
   </mat-card>

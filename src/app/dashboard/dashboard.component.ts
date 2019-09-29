@@ -18,7 +18,7 @@ export class DashboardComponent implements OnInit {
   basePath = '../../assets/img/avatars/avatar-';
   tooltips = ['Hello there! You naughty Little Devil', 'We all live down here.'
     , 'Come, You do not keep The Devil waiting.', 'Born in Hell, forged in Fire!', 'The Red Floating Guy.',
-    'RIP', 'I cut HUMANS for FUN', 'I am all Stitched Up', 'Meowmpire', 'Let me take your Soul','WOOoooooooo'];
+    'RIP', 'I cut HUMANS for FUN', 'I am all Stitched Up', 'Meowmpire', 'Let me take your Soul', 'WOOoooooooo'];
   randomNo = Math.round(Math.random() * 10);
 
   path: string;
@@ -36,7 +36,7 @@ export class DashboardComponent implements OnInit {
     for (const key in data) {
       if (data[key]) {
         if (this.eventsData.hasOwnProperty(key)) {
-          pEvent.push(this.eventsData[key].name);
+          pEvent.push({name: this.eventsData[key].name, id: this.eventsData[key].id});
         }
       }
     }
