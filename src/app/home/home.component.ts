@@ -8,7 +8,7 @@ import {
   ElementRef,
   ViewChildren, AfterViewInit
 } from '@angular/core';
-import {DynamicScriptLoaderServiceService} from '../dynamic-script-loader-service.service';
+
 import {Router} from '@angular/router';
 
 declare var Parallax: any;
@@ -30,25 +30,15 @@ export class HomeComponent implements OnInit, AfterContentInit, OnDestroy, After
   registerEle;
   boundingClientRect;
 
-  constructor(private dynamicScriptLoader: DynamicScriptLoaderServiceService) {
-    this.headerImg = 'http://via.placeholder.com/1920x1080';
+  constructor() {
 
   }
 
   ngOnInit() {
-    // this.loadScripts();
   }
 
   ngAfterContentInit() {
     // todo replace get element by id with viewchild
-
-  }
-
-  private loadScripts() {
-    this.dynamicScriptLoader.load('pixi', 'pixi-filters', 'hammerjs', 'tweenMax',
-      'pixi-filters', 'leonSans', 'headerFont').then(data => {
-      console.log('script loaded');
-    }).catch(error => console.log(error));
 
   }
 
