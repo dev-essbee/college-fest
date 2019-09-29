@@ -26,7 +26,7 @@
           <div class="d-flex">
             <div class="field" style="margin-right: 2%;">
               <mat-form-field appearance="outline">
-                <mat-select  placeholder="Gender" formControlName="gender">
+                <mat-select placeholder="Gender" formControlName="gender">
                   <mat-option *ngFor="let gender of genders" [value]=gender.id>{{gender.value}}</mat-option>
                 </mat-select>
                 <mat-error *ngFor="let validation of userDetailsValidMsg.gender">
@@ -125,13 +125,15 @@
             <section class="transport-section field">
               <mat-slide-toggle class="example-margin" formControlName="transport"
                                 matTooltip="Free transport is available for Jaipur residents.">
-                Transportation
+                <p style="font-family: 'Gloria Hallelujah', cursive !important;">Transportation</p>
               </mat-slide-toggle>
             </section>
           </div>
 
           <div class="submit-button field" style="margin-top:15px; text-align: right">
-            <button mat-raised-button color="warn" style="color: #aaaaaa; background: #430A06" type="submit" [disabled]="!userDetailsForm.valid">Submit
+            <button mat-raised-button color="warn"
+                    style="color: #aaaaaa; background: #430A06;font-family: 'Gloria Hallelujah', cursive !important;"
+                    type="submit" [disabled]="!userDetailsForm.valid">Submit
             </button>
           </div>
         </form>
