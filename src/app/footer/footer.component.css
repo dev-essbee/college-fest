@@ -104,6 +104,17 @@
   text-shadow: 3px 3px 2px red;
 }
 
+.devs{
+  /*padding-top: 5px;*/
+  color: #aaaaaa;
+  text-shadow: 3px 3px 2px red;
+  opacity: .8;
+}
+
+.devs a:hover{
+  opacity: 1;
+}
+
 @media (max-width: 768px) {
   .row_1_container.d-flex {
     flex-direction: column;

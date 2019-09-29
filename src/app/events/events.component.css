@@ -1,14 +1,44 @@
+.top_button{
+  text-align: center;
+  position: fixed;
+  z-index: 5;
+  width: 32px;
+  height: 32px;
+  bottom: 10%;
+  right: 0;
+  color: white;
+  background: rgb(25,9,9);
+  background: -moz-linear-gradient(360deg, rgba(25,9,9,1) 0%, rgba(110,38,38,1) 92%);
+  background: -webkit-linear-gradient(360deg, rgba(25,9,9,1) 0%, rgba(110,38,38,1) 92%);
+  background: linear-gradient(360deg, rgba(25,9,9,1) 0%, rgba(110,38,38,1) 92%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#190909",endColorstr="#6e2626",GradientType=1);
+  margin-right: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+}
+
+.top_button:hover{
+  box-shadow: 0 4px 8px #88001a;
+}
+
 .event-bookmarks mat-card{
   background-color: rgba(0,0,0,0.9);
   color: #aaaaaa;
-  margin: 140px 15% 60px;
+  width: fit-content;
+  margin: 140px auto 60px;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.4);
   transition: box-shadow .3s;
   opacity: .9;
+  text-align: center;
 }
 
 .bookmark-button{
   font-size: large;
+  color: #aaaaaa;
+}
+
+.bookmark-button:hover{
+  box-shadow: 0 4px 8px 0 #430A06;
+  transition: .3s;
 }
 
 .event-container-1 {

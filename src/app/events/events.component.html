@@ -1,7 +1,10 @@
 <!--Bookmarks card-->
+<div class="top_button">
+  <mat-icon>keyboard_arrow_up</mat-icon>
+</div>
 <div class="event-bookmarks">
   <mat-card>
-    <button mat-button *ngFor="let cate of categories" (click)="scrollToEvent(cate.id)">{{cate.value}}</button>
+    <button class="bookmark-button" mat-button *ngFor="let cate of categories" (click)="scrollToEvent(cate.id)">{{cate.value}}</button>
   </mat-card>
 </div>
 <!--Container Type 1-->
