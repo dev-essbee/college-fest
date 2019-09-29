@@ -1,23 +1,24 @@
 <div class="team_container">
-  <mat-card class="team_card" style="background-color: rgba(0,0,0,0.8) !important;
+  <mat-card class="team_card wow flip" style="background-color: rgba(0,0,0,0.8) !important;
   color: #aaaaaa !important;
-  border-radius: 5px; text-align: center">
+  border-radius: 5px; text-align: center" data-wow-duration="1000ms">
     <mat-card-title style="text-align: center; margin-bottom: 20px"><h3>Our Team</h3></mat-card-title>
     <mat-card-subtitle style="color: #aaaaaa">Faculty Coordinators</mat-card-subtitle>
     <mat-card-content>
-      <div class="faculty wow rotateIn" *ngFor="let f of faculty">
-        <b >{{f.name}}</b> +91 {{f.contact}}<br>
+      <div class="faculty" *ngFor="let f of faculty">
+        <b>{{f.name}}</b> +91 {{f.contact}}<br>
       </div>
     </mat-card-content>
     <mat-card-subtitle style="color: #aaaaaa; padding-top: 8px">Student Coordinators</mat-card-subtitle>
     <mat-card-content>
-      <div class="students wow rotateIn" *ngFor="let s of students">
-        <b>{{s.name}}</b> +91 {{s.contact}} <br>
+      <div class="students" *ngFor="let s of students">
+        <b>{{s.name}}</b>
+        +91 {{s.contact}} <br>
       </div>
     </mat-card-content>
     <mat-card-subtitle style="color: #aaaaaa; padding-top: 8px">Sabrang Web Team</mat-card-subtitle>
     <mat-card-content>
-      <div class="web wow rotateIn" *ngFor="let w of web">
+      <div class="web" *ngFor="let w of web">
         <b><a [href]=w.profile target=" _blank">{{w.name}}</a></b>
         <p><a [href]=w.mailTo target="_top">{{w.mail}}</a></p>
       </div>
