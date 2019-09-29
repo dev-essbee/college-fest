@@ -13,8 +13,8 @@
 </div>
 
 <ng-template #con1 let-event="event">
-  <div class="event-container-1" id="{{event.category}}">
-    <div class="d-flex" (click)="onClickMore(event)" matTooltip="click to know more.">
+  <div class="event-container-1" ngsRevealSet [ngsSelector]="'.event'" id="{{event.category}}">
+    <div class="d-flex event" (click)="onClickMore(event)" matTooltip="click to know more.">
       <div class="p-2 flex-grow-1">
         <img alt='{{event.name}}' class="img-fluid event-img" src={{event.smallImg}}>
       </div>
@@ -33,8 +33,8 @@
 
 <ng-template #con2 let-event="event">
   <!--Container Type 2-->
-  <div class="event-container-2" id="{{event.category}}">
-    <div class="d-flex" (click)="onClickMore(event)" matTooltip="click to know more.">
+  <div class="event-container-2" [ngsRevealSet]="{reset:true}" [ngsSelector]="'.event'" id="{{event.category}}">
+    <div class="d-flex event" (click)="onClickMore(event)" matTooltip="click to know more.">
       <div class="p-2">
         <br>
         <div class="event-text">
