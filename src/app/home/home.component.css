@@ -42,6 +42,15 @@ section.d-flex {
   justify-content: center;
 }
 
+@media(max-width: 425px){
+  .register_container{
+    margin-top: 0 !important;
+  }
+  .home-about{
+    font-size: small !important;
+  }
+}
+
 @media (max-width: 768px) {
   section.d-flex {
     flex-direction: column;

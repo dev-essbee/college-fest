@@ -28,3 +28,12 @@
     font-weight: bold;
   }
 }
+
+@media(max-width: 425px) {
+  .team_container mat-card-title{
+    margin-bottom: 20px !important;
+  }
+  .team_container mat-card-content{
+    font-size: small !important;
+  }
+}

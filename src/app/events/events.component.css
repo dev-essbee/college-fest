@@ -109,6 +109,14 @@
     min-width: 300px;
   }
 }
+@media(max-width: 768px){
+  .event-bookmarks{
+    font-size: small;
+    left:5%;
+    right: 5%;
+    /*width: 100%;*/
+  }
+}
 
 @media(max-width: 1024px) {
   .event-img{
@@ -126,5 +134,14 @@
   .event-text{
     font-size: small;
     text-align: center;
+  }
+  .empty_div{
+    margin-top: 220px !important;
+  }
+}
+
+@media (max-width: 375px) {
+  .empty_div{
+    margin-top: 250px !important;
   }
 }

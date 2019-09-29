@@ -68,3 +68,15 @@
   background-color: black;
   color: #aaaaaa;
 }
+
+@media(max-width: 768px){
+  .dash-card{
+    margin-right: 6% !important;
+    margin-left: 6% !important;
+  }
+  .dash-card-2{
+    margin-right: 6% !important;
+    margin-left: 6% !important;
+    font-size: small;
+  }
+}

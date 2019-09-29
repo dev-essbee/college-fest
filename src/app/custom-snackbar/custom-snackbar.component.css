@@ -1,11 +1,27 @@
+.snack-container{
+  width: fit-content;
+  width: -moz-fit-content;
+}
+
 .snack-avatar {
-  max-width: 20px;
+  width: 24px;
+  height: 24px;
 }
 
 .snack-text {
   text-align: center;
   margin-left: 15px;
   margin-right: 15px
+}
+
+@media(max-width: 1024px) {
+  .snack-text{
+    font-size: small;
+  }
+  .snack-avatar{
+    width: 24px;
+    height: 24px;
+  }
 }
 
 /*TODO: Reduce Text size on smaller screens*/
