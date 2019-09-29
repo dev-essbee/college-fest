@@ -5,30 +5,25 @@
     <mat-card-title style="text-align: center; margin-bottom: 20px"><h3>Our Team</h3></mat-card-title>
     <mat-card-subtitle style="color: #aaaaaa">Faculty Coordinators</mat-card-subtitle>
     <mat-card-content>
-      <b>Dr. Loknath Mishra</b> +91 9999558286<br>
-      <b>Mr. Sami Ur Rehman</b> +91 9982226747
+      <div class="faculty wow rotateIn" *ngFor="let f of faculty">
+        <b >{{f.name}}</b> +91 {{f.contact}}<br>
+      </div>
     </mat-card-content>
     <mat-card-subtitle style="color: #aaaaaa; padding-top: 8px">Student Coordinators</mat-card-subtitle>
     <mat-card-content>
-      <b>Vishnu Agrawal</b> +91 8085194808<br>
-      <b>Somesh Sharma</b> +91 9509703636<br>
-      <b>Payal Sharma</b> +91 8112288381<br>
-      <b>Ashish Kumar</b> +91 9602777992<br>
-      <b>Karan Sharma</b> +91 9958433968<br>
-      <b>Sonashi Jhawar</b> +91 9571547052<br>
-      <b>Saransh Gupta</b> +91 8535008333<br>
-<!--      <b>Name</b> Phone Number<br>-->
+      <div class="students wow rotateIn" *ngFor="let s of students">
+        <b>{{s.name}}</b> +91 {{s.contact}} <br>
+      </div>
     </mat-card-content>
     <mat-card-subtitle style="color: #aaaaaa; padding-top: 8px">Sabrang Web Team</mat-card-subtitle>
     <mat-card-content>
-      <b><a href="#" target="_blank">Shubham Bhandari</a></b>
-      <p> dev-sb@gmail.com</p>
-      <b><a href="#" target="_blank">Rohit Kumar Bindal</a></b>
-      <p> kumarrohitbindal@gmail.com</p>
+      <div class="web wow rotateIn" *ngFor="let w of web">
+        <b><a [href]=w.profile target=" _blank">{{w.name}}</a></b>
+        <p><a [href]=w.mailTo target="_top">{{w.mail}}</a></p>
+      </div>
     </mat-card-content>
   </mat-card>
 </div>
 
-<!--TODO: Add linkedin profile Links of developers
-          Add Names and phone numbers
+<!--TODO: change animation
 -->
