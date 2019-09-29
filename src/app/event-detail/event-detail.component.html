@@ -1,6 +1,6 @@
 <!--<div *ngIf="event">-->
 <div class="main_container" [ngStyle]="{'background':getBgLoc(event)}">
-  <div class="event-detail-card-container">
+  <div class="event-detail-card-container detail">
 
     <div class="d-flex flex-row">
       <div>
@@ -10,7 +10,7 @@
       </div>
     </div>
 
-    <div class="event-detail-content" ngsReveal>
+    <div class="event-detail-content" [ngsRevealSet]="{reset:true}" [ngsSelector]="'.event-detail-card'">
       <mat-card class="event-detail-card">
         <h1 style="text-align: center">{{event.name | titlecase}}</h1>
       </mat-card>

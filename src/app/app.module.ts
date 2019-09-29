@@ -12,7 +12,7 @@ import {TeamComponent} from './team/team.component';
 import {NavigationComponent} from './navigation/navigation.component';
 import {SponsorsComponent} from './sponsors/sponsors.component';
 import {environment} from '../environments/environment';
-
+import { NgwWowModule } from 'ngx-wow';
 
 // firebase
 import {AngularFireModule} from '@angular/fire';
@@ -57,7 +57,8 @@ import { SponsorsHomeComponent } from './home/sponsors-home/sponsors-home.compon
     MaterialModule,
     ReactiveFormsModule,
     FormsModule,
-    NgsRevealModule
+    NgsRevealModule,
+    NgwWowModule
   ],
   providers: [],
   bootstrap: [AppComponent],

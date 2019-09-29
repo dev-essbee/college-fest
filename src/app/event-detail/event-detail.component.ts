@@ -42,7 +42,7 @@ export class EventDetailComponent implements OnInit {
 // todo: set ngsreveal properly
   // todo: register and unregister
   onClickRegister(event: Event) {
-    console.log(event.id);
+    // console.log(event.id);
     const id = event.id;
     const data = {
       participatingEvents: {
@@ -62,7 +62,7 @@ export class EventDetailComponent implements OnInit {
 
   getBgLoc(e) {
     const loc = 'url(' + e.largeImg + ')';
-    console.log(loc);
+    // console.log(loc);
     return loc;
   }
 
