@@ -1,10 +1,7 @@
 .event-home-container{
-  /*max-width: 70%;*/
-  /*margin-top: 60px;*/
   padding-top: 25px;
   margin-left: 10%;
   margin-right: 10%;
-  background: rgba(29,29,29,0.6);
   box-shadow: 0 4px 8px rgba(0,0,0,0.4);
 }
 .event_carousel{
@@ -48,4 +45,9 @@
   }
 }
 
-/*TODO: Add text shadow in the head*/
+@media(max-width: 1366px){
+  .event_carousel{
+    margin:0 auto;
+    max-width: 800px;
+  }
+}

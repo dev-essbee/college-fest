@@ -67,16 +67,13 @@ section.d-flex {
 
 @media (max-width: 1366px){
   .logo_container{
-    margin-top: 200px;
+    margin-top: 80px !important;
   }
 
   .first_page_logo{
-    min-width: 400px;
+    min-width: 300px !important;
   }
 
-  .register_container{
-    margin-top: 30px !important;
-  }
   .register{
     width: 200px !important;
     height: 60px !important;
@@ -144,7 +141,7 @@ section::after {
 }
 
 /*Add the background image here*/
-
+/*TODO: Change the imgae for firstpage*/
 #firstPage_content {
   background: url('../../assets/img/sample.jpg') center;
   background-size: cover;
@@ -154,6 +151,8 @@ section::after {
 
 .scroll {
   padding-top: 70px;
+  height: 70px;
+  width: 60px;
 }
 
 .scroll .scroll-span {
@@ -227,7 +226,11 @@ section::after {
   left: 0;
   bottom: 0;
   right: 0;
-  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  background: rgb(0,38,98);
+  background: -moz-linear-gradient(138deg, rgba(0,38,98,1) 0%, rgba(36,42,8,1) 92%);
+  background: -webkit-linear-gradient(138deg, rgba(0,38,98,1) 0%, rgba(36,42,8,1) 92%);
+  background: linear-gradient(138deg, rgba(0,38,98,1) 0%, rgba(36,42,8,1) 92%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#002662",endColorstr="#242a08",GradientType=1);
   -moz-border-radius: 4px;
   border-radius: 4px;
   -moz-transition: box-shadow 0.5s ease, -moz-transform 0.2s ease;

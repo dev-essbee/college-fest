@@ -24,18 +24,18 @@
   color: #aaaaaa;
   text-decoration: none;
   text-shadow: 2px 2px 1px red;
-  animation-name: pulse;
+  -webkit-animation-name: pulsate_;
   /*font-weight: bold;*/
   font-size: small;
-  animation-direction: normal;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  animation-duration: 2s;
-  animation-fill-mode: none;
+  -webkit-animation-direction: normal;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-duration: .6s;
+  -webkit-animation-fill-mode: none;
   /*opacity: .8;*/
 }
 
-@-webkit-keyframes pulse {
+@-webkit-keyframes pulsate_ {
   0% {
     text-shadow: 1px 1px red;
   }
@@ -84,12 +84,12 @@
   color: #aaaaaa;
   text-shadow: 3px 3px 2px #88001a;
   opacity: .7;
-  animation-name: pulse;
-  animation-direction: normal;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  animation-duration: 2s;
-  animation-fill-mode: none;
+  -webkit-animation-name: pulsate_;
+  -webkit-animation-direction: normal;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-duration: .8s;
+  -webkit-animation-fill-mode: none;
 }
 
 .social a:hover {
