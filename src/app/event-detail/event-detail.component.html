@@ -15,6 +15,7 @@
         <h1 style="text-align: center">{{event.name | titlecase}}</h1>
       </mat-card>
 
+      <div *ngIf="event.des">
       <mat-card class="event-detail-card">
         <mat-card-title>
           Description
@@ -23,20 +24,24 @@
           <p>{{event.des}}</p>
         </mat-card-content>
       </mat-card>
+      </div>
 
-      <mat-card class="event-detail-card">
-        <mat-card-title>
-          Judgement Criteria
-        </mat-card-title>
-        <mat-card-content>
-          <div *ngFor="let e of event.judgement">
-            <ul>
-              <li>{{e}}</li>
-            </ul>
-          </div>
-        </mat-card-content>
-      </mat-card>
+      <div *ngIf="event.judgement.length>0">
+        <mat-card class="event-detail-card">
+          <mat-card-title>
+            Judgement Criteria
+          </mat-card-title>
+          <mat-card-content>
+            <div *ngFor="let e of event.judgement">
+              <ul>
+                <li>{{e}}</li>
+              </ul>
+            </div>
+          </mat-card-content>
+        </mat-card>
+      </div>
 
+      <div *ngIf="event.rules.length>0">
       <mat-card class="event-detail-card">
         <mat-card-title>
           Rules
@@ -49,7 +54,9 @@
           </div>
         </mat-card-content>
       </mat-card>
+      </div>
 
+      <div *ngIf="event.prize || event.fee">
       <mat-card class="event-detail-card">
         <mat-card-title>
           Fees and Prizes
@@ -59,9 +66,9 @@
             <li>The Registration fee for this event is ₹{{event.fee}}</li>
             <li>{{event.prize}}</li>
           </ul>
-
         </mat-card-content>
       </mat-card>
+      </div>
     </div>
     <div class="button-container">
       <button mat-button (click)="onClickRegister(event)">Register</button>
