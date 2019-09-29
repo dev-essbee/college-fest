@@ -39,11 +39,11 @@ export class EventsComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    this.cEle = document.getElementById('c0');
-    this.tEle = document.getElementById('t0');
-    this.mEle = document.getElementById('m0');
-    this.dEle = document.getElementById('d0');
-    this.lEle = document.getElementById('l0');
+    this.cEle = document.getElementById('d2');
+    this.tEle = document.getElementById('c8');
+    this.mEle = document.getElementById('t2');
+    this.dEle = document.getElementById('empty');
+    this.lEle = document.getElementById('m3');
     this.EEle = document.getElementById('empty');
   }
 

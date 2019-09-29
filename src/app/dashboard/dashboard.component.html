@@ -19,7 +19,7 @@
       <mat-card-title style="margin-top:8px">{{userData.name}}</mat-card-title>
       <div *ngIf="!userData.newUser">
         <mat-card-subtitle class="sub">{{userData.college}}</mat-card-subtitle>
-        <mat-card-subtitle class="sub">{{userData.address}} | {{userData.city}} | {{userData.state}}</mat-card-subtitle>
+        <mat-card-subtitle class="sub">{{userData.address}}<br>{{userData.city}} | {{userData.state}}</mat-card-subtitle>
         <mat-card-subtitle class="sub">{{userData.phoneNo}}</mat-card-subtitle>
         <mat-card-subtitle class="sub" style="text-align: center">
           <button mat-button class="edit_button" (click)="editUserDetails()">Edit</button>
