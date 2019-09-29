@@ -7,6 +7,7 @@ import {Observable, of} from 'rxjs';
 import {Router} from '@angular/router';
 import {MatSnackBar} from '@angular/material/snack-bar';
 import {SnackbarService} from './snackbar.service';
+import {CustomSnackbarService} from "./custom-snackbar.service";
 
 
 @Injectable({
@@ -19,7 +20,8 @@ export class FirebaseDatabaseService {
   constructor(private afs: AngularFirestore,
               private afAuth: AngularFireAuth,
               private router: Router,
-              private snackBar: SnackbarService
+              private snackBar: SnackbarService,
+              private customSnackbar: CustomSnackbarService
   ) {
     console.log('read data called-user-db');
     this.readData().subscribe((userData) => {
@@ -61,7 +63,7 @@ export class FirebaseDatabaseService {
       }
 
     };
-    this.snackBar.showSnackBar('Hi ' + user.displayName + ', Welcome Onboard!', '', 3);
+    this.customSnackbar.showSnackBar('Hi ' + user.displayName + ', Welcome Onboard!', '', 3);
     return userRef.set(data, {merge: true});
   }
 
@@ -85,13 +87,13 @@ export class FirebaseDatabaseService {
 
   registerEvent(data) {
     if (this.loggedInUserData.participatingEvents[Object.keys(data.participatingEvents)[0]]) {
-      this.snackBar.showSnackBar('You have already registered for this event', '', 3);
+      this.customSnackbar.showSnackBar('You have already registered for this event', '', 3);
     } else {
       this.updateData(data);
       if (this.loggedInUserData.newUser) {
         this.router.navigate(['/register']);
       } else {
-        this.snackBar.showSnackBar('You have successfully registered for the event.', '', 5);
+        this.customSnackbar.showSnackBar('You have successfully registered for the event.', '', 5);
       }
     }
   }

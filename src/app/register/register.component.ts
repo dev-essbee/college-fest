@@ -7,6 +7,7 @@ import {SnackbarService} from '../snackbar.service';
 import {Router} from '@angular/router';
 import {Location} from '@angular/common';
 import {pinCode} from '../data/pincode-data';
+import {CustomSnackbarService} from "../custom-snackbar.service";
 
 @Component({
   selector: 'app-register',
@@ -40,6 +41,7 @@ export class RegisterComponent implements OnInit {
   constructor(private databaseService: FirebaseDatabaseService,
               private snackBarService: SnackbarService,
               private location: Location,
+              private customSnackbar: CustomSnackbarService
   ) {
     this.userDetailsForm = this.createFormGroup();
   }
@@ -167,7 +169,7 @@ export class RegisterComponent implements OnInit {
     };
     console.log(this.transport.value);
     console.log(this.databaseService.updateData(data));
-    this.snackBarService.showSnackBar('Data Updated Successfully', '', 2);
+    this.customSnackbar.showSnackBar('Data Updated Successfully', '', 2);
     this.location.back();
     //  TODO: Reload Page
   }

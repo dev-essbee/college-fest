@@ -30,6 +30,7 @@ import {FooterComponent} from './footer/footer.component';
 import {NgsRevealModule} from 'ngx-scrollreveal';
 import { SponsorsHomeComponent } from './home/sponsors-home/sponsors-home.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { CustomSnackbarComponent } from './custom-snackbar/custom-snackbar.component';
 
 
 @NgModule({
@@ -47,6 +48,7 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
     FooterComponent,
     SponsorsHomeComponent,
     ContactUsComponent,
+    CustomSnackbarComponent,
   ],
   imports: [
     BrowserModule,
@@ -64,6 +66,7 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
   ],
   providers: [],
   bootstrap: [AppComponent],
+  entryComponents:[CustomSnackbarComponent]
 })
 export class AppModule {
 }

@@ -9,6 +9,7 @@ import {FirebaseDatabaseService} from './firebase-database.service';
 import {User} from './user';
 import {MatSnackBar} from '@angular/material/snack-bar';
 import {SnackbarService} from './snackbar.service';
+import {CustomSnackbarService} from './custom-snackbar.service';
 
 @Injectable({
   providedIn: 'root'
@@ -21,7 +22,8 @@ export class UserAuthService {
     private afs: AngularFirestore,
     private router: Router,
     private dbService: FirebaseDatabaseService,
-    private snackBar: SnackbarService
+    private snackBar: SnackbarService,
+    private customSnackBar: CustomSnackbarService
   ) {
 
   }
@@ -34,7 +36,7 @@ export class UserAuthService {
     try {
       credential = await this.afAuth.auth.signInWithPopup(provider);
       console.log(this.dbService.loggedInUserData);
-      this.snackBar.showSnackBar('Login Successful', '', 3);
+      this.customSnackBar.showSnackBar('Login Successful', '', 3);
       return this.dbService.userSignedIn(credential.user, route);
     } catch (error) {
       const retrySnackbarRef = this.snackBar.showSnackBar('Login Unsuccessful', 'RETRY', 5);
@@ -53,7 +55,7 @@ export class UserAuthService {
     if (route === '/dashboard') {
       route = '/';
     }
-    this.snackBar.showSnackBar('Logout Successful', '', 3);
+    this.customSnackBar.showSnackBar('Logout Successful', '', 3);
     this.router.navigate([route]);
   }
 

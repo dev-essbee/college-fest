@@ -13,11 +13,15 @@ export class SnackbarService {
     if (dur !== 0) {
       return this.snackBar.open(message, action, {
         duration: dur * 1000,
-        panelClass: ['snackbar-login']
+        panelClass: ['snackbar-login'],
+        verticalPosition: 'top',
+        horizontalPosition: 'center',
       });
     } else {
       return this.snackBar.open(message, action, {
-        panelClass: ['snackbar-login']
+        panelClass: ['snackbar-login'],
+        verticalPosition: 'top',
+        horizontalPosition: 'center',
       });
     }
   }
