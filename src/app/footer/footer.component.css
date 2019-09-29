@@ -65,7 +65,7 @@
   text-align: center;
   padding-top: 15px;
   color: #aaaaaa;
-  text-shadow: 4px 4px 2px red;
+  text-shadow: 3px 3px 2px red;
   font-size: small;
 }
 
@@ -101,7 +101,7 @@
 .footer-copyright {
   padding-top: 15px;
   color: #aaaaaa;
-  text-shadow: 4px 4px 2px red;
+  text-shadow: 3px 3px 2px red;
 }
 
 @media (max-width: 768px) {
