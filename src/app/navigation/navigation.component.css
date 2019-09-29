@@ -7,6 +7,7 @@
   left: 0;
   right: 0;
   width: 100%;
+  font-family: 'Gloria Hallelujah', cursive;
 }
 
 .navigation-clean {
@@ -50,6 +51,7 @@
 .interaction {
   margin-left: 25px;
   border: 1px solid #88001a;
+  font-family: 'Gloria Hallelujah', cursive;
 }
 
 .interaction:hover {

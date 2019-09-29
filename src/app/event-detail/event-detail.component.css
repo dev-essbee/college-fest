@@ -7,6 +7,14 @@
   /*width: 100%;*/
 }
 
+.event-detail-card mat-card-title {
+  font-family: 'Gloria Hallelujah', cursive;
+}
+
+.event-detail-card mat-card-content {
+  font-family: 'Mansalva', cursive;
+}
+
 .event-detail-card-container {
   position: relative;
   max-width: 800px;
@@ -17,63 +25,67 @@
 }
 
 @media (max-width: 1200px) {
-  .event-detail-card-container{
+  .event-detail-card-container {
     margin-left: 15%;
     margin-right: 15%;
   }
 }
 
 .event-detail-card {
-  background: rgba(0,0,0,0.7);
+  background: rgba(0, 0, 0, 0.7);
   margin-bottom: 20px;
   color: #aaaaaa;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.4);
 }
-.event-detail-card:hover{
+
+.event-detail-card:hover {
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
-  background:  #333333;
-  color: #aaaaaa;
-}
-
-.button-container button{
-  /*border: 1px solid #88001a;*/
-  border-radius: 2px;
-  background: rgba(0,0,0,0.9);
-  color: #aaaaaa;
-  margin-right: 15px;
-  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
-}
-
-.button-container button:hover{
   background: #333333;
   color: #aaaaaa;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
+}
+
+.button-container button {
+  /*border: 1px solid #88001a;*/
+  border-radius: 2px;
+  background: rgba(0, 0, 0, 0.9);
+  color: #aaaaaa;
+  margin-right: 15px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.button-container button:hover {
+  background: #333333;
+  color: #aaaaaa;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
   transition: .3s;
 }
 
-@media(max-width: 1024px){
-  .event-detail-card{
+@media (max-width: 1024px) {
+  .event-detail-card {
     font-size: small;
   }
 }
 
-@media(max-width: 425px){
-  .event-detail-card{
+@media (max-width: 425px) {
+  .event-detail-card {
     font-size: small;
-    background: rgba(0,0,0,0.85);
+    background: rgba(0, 0, 0, 0.85);
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.4);
   }
-  .button-container button{
+
+  .button-container button {
     background: #222222;
     color: #aaaaaa;
     border-radius: 5px;
   }
-  .event-detail-card h1{
+
+  .event-detail-card h1 {
     font-size: large;
     font-weight: bold;
     text-align: center;
   }
-  .event-detail-card mat-card-title{
+
+  .event-detail-card mat-card-title {
     font-size: medium;
     font-weight: bold;
     text-align: center;

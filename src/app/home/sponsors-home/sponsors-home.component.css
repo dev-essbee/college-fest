@@ -5,24 +5,15 @@
 }
 
 .sponsor-head{
-  /*margin-top: 60px;*/
-  /*margin-left: 10%;*/
-  /*margin-right: 10%;*/
-  /*background: rgba(29,29,29,0.6);*/
-  /*max-width: 800px;*/
+  font-family: 'Gloria Hallelujah', cursive;
   color: #aaaaaa;
   text-shadow: 3px 3px 2px #430A06;
 }
 
 .container{
-  /*margin-left: 10%;*/
-  /*margin-right: 10%;*/
-  /*margin-bottom: 60px;*/
-  /*background: rgba(29,29,29,0.6);*/
   padding-top: 40px;
   padding-bottom: 40px;
   height: 150px;
-  /*box-shadow: 0 2px 4px 0 rgba(0,0,0,0.3);*/
   max-width: 800px;
 }
 
