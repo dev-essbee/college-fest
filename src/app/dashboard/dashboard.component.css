@@ -5,7 +5,16 @@
   color: #aaaaaa;
   box-shadow: 0 4px 8px 0 #400012;
 }
+.event-links{
+  text-decoration: none;
+  color: #aaaaaa;
+  opacity: 0.8;
+}
 
+.event-links:hover{
+  opacity: 1;
+  transition: .3s;
+}
 .dash-card-container{
   text-align: center;
 }
@@ -26,13 +35,13 @@
 }
 
 .edit_button{
-  color: #3f3f3f;
+  color: #aaaaaa;
   margin-top: 10px;
-  opacity: .7;
+  opacity: .8;
 }
 
 .edit_button:hover{
-  color: #5c5c5c;
+  color: #aaaaaa;
   opacity: 1;
   transition: .3s;
 }
