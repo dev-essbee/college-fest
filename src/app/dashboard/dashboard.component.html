@@ -37,8 +37,12 @@
     <div class="dash-card-content-2">
       <mat-card-content>
         <h5 style="padding-bottom: 8px">Registered Events</h5>
-        <a class="event-links" [routerLink]="['/events/',event.id]"
-           *ngFor="let event of registeredEvents">{{event.name}}</a>
+        <ul>
+          <li *ngFor="let event of registeredEvents">
+            <a class="event-links" [routerLink]="['/events/',event.id]"
+            >{{event.name | uppercase}}</a>
+          </li>
+        </ul>
       </mat-card-content>
     </div>
   </mat-card>
