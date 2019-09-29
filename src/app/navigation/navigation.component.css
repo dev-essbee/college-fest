@@ -1,11 +1,6 @@
-/*
-  Blood red = #88001a
-  Orangish-yellow = #bc6e00
- */
-
 .main_header {
   box-sizing: border-box;
-  box-shadow: 0 2px 4px 0 #964f00;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.3);
   z-index: 3;
   position: fixed;
   top: 0;
@@ -36,7 +31,6 @@
 }
 
 .navigation-clean .navbar-toggler {
-  /*border-color: #aaaaaa;*/
   color: #aaaaaa;
 }
 
@@ -50,7 +44,6 @@
 .navigation-clean .navbar-toggler:hover, .navigation-clean .navbar-toggler:focus {
   box-shadow: 0 4px 8px 0 #88001a;
   transition: .3s;
-  /*border-color: #88001a;*/
   color: #88001a;
 }
 

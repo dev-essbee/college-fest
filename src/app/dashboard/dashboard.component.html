@@ -36,7 +36,7 @@
     <div class="dash-card-content-2">
       <mat-card-content>
         <h5 style="padding-bottom: 8px">Registered Events</h5>
-        <a [routerLink]="['/events/',event.id]" *ngFor="let event of registeredEvents">{{event.name}}</a>
+        <a class="event-links" [routerLink]="['/events/',event.id]" *ngFor="let event of registeredEvents">{{event.name}}</a>
       </mat-card-content>
     </div>
   </mat-card>
@@ -52,4 +52,3 @@
     </div>
   </mat-card>
 </ng-template>
-
