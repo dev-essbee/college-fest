@@ -29,7 +29,7 @@ import {EventsSmallComponent} from './home/events-small/events-small.component';
 import {FooterComponent} from './footer/footer.component';
 import {NgsRevealModule} from 'ngx-scrollreveal';
 import { SponsorsHomeComponent } from './home/sponsors-home/sponsors-home.component';
-import { ContactUsComponent } from './dashboard/contact-us/contact-us.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
 
 
 @NgModule({
@@ -46,7 +46,7 @@ import { ContactUsComponent } from './dashboard/contact-us/contact-us.component'
     EventsSmallComponent,
     FooterComponent,
     SponsorsHomeComponent,
-    ContactUsComponent
+    ContactUsComponent,
   ],
   imports: [
     BrowserModule,

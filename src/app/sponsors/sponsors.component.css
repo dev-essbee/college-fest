@@ -5,21 +5,20 @@
 
 .sponsor-card{
   text-align: center;
-  background: black;
+  background: rgba(29,29,29,0.4);
   /*color: #430A06;*/
-  border: 1px solid #430A06;
+  /*border: 1px solid #430A06;*/
   /*border-color: ;*/
 }
 
 .sponsor-card:hover{
-  box-shadow: 0 2px 4px 0 #430A06;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.7);
   transition: .3s;
 }
 
 .sponsor-logo-a{
   margin-bottom: 50px;
   border: none;
-  box-shadow: 0 4px 8px 0 #88001a;
 }
 
 @media (max-width:768px) {
