@@ -30,7 +30,9 @@ export class TeamComponent implements OnInit {
     mailTo: this.emailSb
   },
     {
-      name: 'Rohit Kumar Bindal', mail: 'kumarrohitbindal@gmail.com', profile: '',
+      name: 'Rohit Kumar Bindal',
+      mail: 'kumarrohitbindal@gmail.com',
+      profile: 'https://www.linkedin.com/in/bindal-rohit/',
       mailTo: this.emailRb
     }];
 

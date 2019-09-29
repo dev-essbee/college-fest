@@ -35,5 +35,3 @@ const routerOptions: ExtraOptions = {
 })
 export class AppRoutingModule {
 }
-
-// todo: hyperlink bookmark.

@@ -149,8 +149,6 @@ section::after {
   opacity: .5;
 }
 
-/*Add the background image here*/
-/*TODO: Change the imgae for firstpage*/
 #firstPage_content {
   background: url('../../assets/img/sample.jpg') center;
   background-size: cover;
@@ -227,7 +225,7 @@ section::after {
   color: #fff;
   white-space: nowrap;
 }
-/*todo make register button animation lag free*/
+
 .register::before {
   content: '';
   position: absolute;

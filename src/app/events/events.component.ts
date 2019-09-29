@@ -41,6 +41,7 @@ export class EventsComponent implements OnInit, AfterViewInit {
     this.tEle = document.getElementById('t0');
     this.mEle = document.getElementById('m0');
     this.dEle = document.getElementById('d0');
+    this.dEle = document.getElementById('l0')
   }
 
   scrollToEvent(cat) {
@@ -52,8 +53,9 @@ export class EventsComponent implements OnInit, AfterViewInit {
       this.tEle.scrollIntoView({behavior: 'smooth'});
     } else if (cat === 'm0') {
       this.mEle.scrollIntoView({behavior: 'smooth'});
+    } else if (cat === 'l0') {
+      this.dEle.scrollIntoView({behavior: 'smooth'});
     }
   }
 
-// todo: sticky bookmarks bar
 }

@@ -3,7 +3,6 @@ html{
   height: 100%;
 }
 
-/*TODO: Change background*/
 body {
   max-width: 100%;
   min-height: 100%;
@@ -33,7 +32,6 @@ body {
   background-color: #430A06;
 }
 
-/*todo: snackbar color*/
 .snackbar-login {
   background: #000000;
 }
