@@ -7,7 +7,7 @@ import {SnackbarService} from '../snackbar.service';
 import {Router} from '@angular/router';
 import {Location} from '@angular/common';
 import {pinCode} from '../data/pincode-data';
-import {CustomSnackbarService} from "../custom-snackbar.service";
+import {CustomSnackbarService} from '../custom-snackbar.service';
 
 @Component({
   selector: 'app-register',
