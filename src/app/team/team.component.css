@@ -16,6 +16,15 @@
 .team_container mat-card-subtitle{
   font-size: large;
   font-weight: bold;
+  font-family: 'Gloria Hallelujah', cursive;
+}
+
+.team_container mat-card-title{
+  font-family: 'Gloria Hallelujah', cursive;
+}
+
+.team_container mat-card-content{
+  font-family: 'Mansalva', cursive;
 }
 
 @media (max-width: 768px) {
@@ -25,7 +34,7 @@
   }
   .team_container mat-card-subtitle{
     font-size: medium;
-    font-weight: bold;
+    font-weight: bolder;
   }
 }
 

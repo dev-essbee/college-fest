@@ -3,7 +3,6 @@ html{
   height: 100%;
 }
 
-/*TODO: Change background*/
 body {
   max-width: 100%;
   min-height: 100%;
@@ -11,7 +10,7 @@ body {
   outline: 0;
   margin: 0;
   padding: 0;
-  font-family: "DejaVu Sans", sans-serif;
+  font-family: 'Mansalva', cursive;
   background: url("assets/img/background_img.jpg") center fixed;
   background-size: cover;
   color: #aaaaaa;
@@ -23,7 +22,6 @@ body {
 }
 
 ::-webkit-scrollbar-thumb{
-  /*box-shadow: 0 2px 4px 0 #000000;*/
   border: 1px solid #430A06;
   border-radius: 30%;
   background-color: #430A06;
@@ -33,11 +31,7 @@ body {
   background-color: #430A06;
 }
 
-/*todo: snackbar color*/
 .snackbar-login {
   background: #000000;
 }
 
-/* primary color: blood red
-background : black
-accent color: yellowish orange */

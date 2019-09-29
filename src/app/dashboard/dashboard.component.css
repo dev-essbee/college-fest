@@ -4,7 +4,9 @@
   background-color: black;
   color: #aaaaaa;
   box-shadow: 0 4px 8px 0 #400012;
+  font-family: 'Mansalva', cursive;
 }
+
 .event-links{
   text-decoration: none;
   color: #aaaaaa;
@@ -38,6 +40,7 @@
   color: #aaaaaa;
   margin-top: 10px;
   opacity: .8;
+  font-family: 'Gloria Hallelujah', cursive;
 }
 
 .edit_button:hover{
@@ -61,6 +64,7 @@
   background-color: black;
   color: #aaaaaa;
   box-shadow: 0 4px 8px 0 #400012;
+  font-family: 'Mansalva', cursive;
 }
 
 .dash-card-content-2{

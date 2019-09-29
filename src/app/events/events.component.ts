@@ -18,6 +18,8 @@ export class EventsComponent implements OnInit, AfterViewInit {
   tEle;
   mEle;
   dEle;
+  lEle;
+  EEle;
 
   constructor(private dbService: FirebaseDatabaseService,
               private authService: UserAuthService,
@@ -41,6 +43,8 @@ export class EventsComponent implements OnInit, AfterViewInit {
     this.tEle = document.getElementById('t0');
     this.mEle = document.getElementById('m0');
     this.dEle = document.getElementById('d0');
+    this.lEle = document.getElementById('l0');
+    this.EEle = document.getElementById('empty');
   }
 
   scrollToEvent(cat) {
@@ -52,8 +56,11 @@ export class EventsComponent implements OnInit, AfterViewInit {
       this.tEle.scrollIntoView({behavior: 'smooth'});
     } else if (cat === 'm0') {
       this.mEle.scrollIntoView({behavior: 'smooth'});
+    } else if (cat === 'l0') {
+      this.lEle.scrollIntoView({behavior: 'smooth'});
+    } else if (cat === 'empty') {
+      this.EEle.scrollIntoView({behavior: 'smooth'});
     }
   }
 
-// todo: sticky bookmarks bar
 }

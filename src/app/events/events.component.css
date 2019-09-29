@@ -1,5 +1,6 @@
 .top_button{
   text-align: center;
+  cursor: pointer;
   position: fixed;
   z-index: 5;
   width: 32px;
@@ -25,6 +26,7 @@
   left:25%;
   right: 25%;
   top:98px;
+  font-family: 'Gloria Hallelujah', cursive;
   /*width: 100%;*/
 }
 .event-bookmarks mat-card{
@@ -136,12 +138,12 @@
     text-align: center;
   }
   .empty_div{
-    margin-top: 220px !important;
+    height: 220px !important;
   }
 }
 
 @media (max-width: 375px) {
   .empty_div{
-    margin-top: 250px !important;
+    height: 250px !important;
   }
 }

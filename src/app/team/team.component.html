@@ -2,21 +2,20 @@
   <mat-card class="team_card wow flip" style="background-color: rgba(0,0,0,0.8) !important;
   color: #aaaaaa !important;
   border-radius: 5px; text-align: center" data-wow-duration="1000ms">
-    <mat-card-title style="text-align: center; margin-bottom: 20px"><h3>Our Team</h3></mat-card-title>
+    <mat-card-title style="text-align: center;margin-top:15px; margin-bottom: 25px;"><h3>Our Team</h3></mat-card-title>
     <mat-card-subtitle style="color: #aaaaaa">Faculty Coordinators</mat-card-subtitle>
     <mat-card-content>
-      <div class="faculty" *ngFor="let f of faculty">
-        <b>{{f.name}}</b> +91 {{f.contact}}<br>
+      <div class="faculty" style="padding-bottom: 10px;" *ngFor="let f of faculty">
+        <b>{{f.name}}</b><br>+91-{{f.contact}}<br>
       </div>
     </mat-card-content>
-    <mat-card-subtitle style="color: #aaaaaa; padding-top: 8px">Student Coordinators</mat-card-subtitle>
+    <mat-card-subtitle style="color: #aaaaaa; padding-top: 5px">Student Coordinators</mat-card-subtitle>
     <mat-card-content>
-      <div class="students" *ngFor="let s of students">
-        <b>{{s.name}}</b>
-        +91 {{s.contact}} <br>
+      <div class="students" style="padding-bottom: 10px" *ngFor="let s of students">
+        <b>{{s.name}}</b><br>+91-{{s.contact}} <br>
       </div>
     </mat-card-content>
-    <mat-card-subtitle style="color: #aaaaaa; padding-top: 8px">Sabrang Web Team</mat-card-subtitle>
+    <mat-card-subtitle style="color: #aaaaaa;">Sabrang Web Team</mat-card-subtitle>
     <mat-card-content>
       <div class="web" *ngFor="let w of web">
         <b><a [href]=w.profile target=" _blank">{{w.name}}</a></b>
@@ -25,6 +24,3 @@
     </mat-card-content>
   </mat-card>
 </div>
-
-<!--TODO: change animation
--->
