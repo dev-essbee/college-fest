@@ -12,7 +12,7 @@ import {TeamComponent} from './team/team.component';
 import {NavigationComponent} from './navigation/navigation.component';
 import {SponsorsComponent} from './sponsors/sponsors.component';
 import {environment} from '../environments/environment';
-import { NgwWowModule } from 'ngx-wow';
+import {NgwWowModule} from 'ngx-wow';
 
 // firebase
 import {AngularFireModule} from '@angular/fire';
@@ -28,9 +28,8 @@ import {EventDetailComponent} from './event-detail/event-detail.component';
 import {EventsSmallComponent} from './home/events-small/events-small.component';
 import {FooterComponent} from './footer/footer.component';
 import {NgsRevealModule} from 'ngx-scrollreveal';
-import { SponsorsHomeComponent } from './home/sponsors-home/sponsors-home.component';
-import { ContactUsComponent } from './contact-us/contact-us.component';
-import { CustomSnackbarComponent } from './custom-snackbar/custom-snackbar.component';
+import {SponsorsHomeComponent} from './home/sponsors-home/sponsors-home.component';
+import {CustomSnackbarComponent} from './custom-snackbar/custom-snackbar.component';
 
 
 @NgModule({
@@ -47,8 +46,9 @@ import { CustomSnackbarComponent } from './custom-snackbar/custom-snackbar.compo
     EventsSmallComponent,
     FooterComponent,
     SponsorsHomeComponent,
-    ContactUsComponent,
     CustomSnackbarComponent,
+
+
   ],
   imports: [
     BrowserModule,
@@ -66,7 +66,7 @@ import { CustomSnackbarComponent } from './custom-snackbar/custom-snackbar.compo
   ],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents:[CustomSnackbarComponent]
+  entryComponents: [CustomSnackbarComponent]
 })
 export class AppModule {
 }

@@ -226,11 +226,11 @@ section::after {
   left: 0;
   bottom: 0;
   right: 0;
-  background: rgb(0,38,98);
-  background: -moz-linear-gradient(138deg, rgba(0,38,98,1) 0%, rgba(36,42,8,1) 92%);
-  background: -webkit-linear-gradient(138deg, rgba(0,38,98,1) 0%, rgba(36,42,8,1) 92%);
-  background: linear-gradient(138deg, rgba(0,38,98,1) 0%, rgba(36,42,8,1) 92%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#002662",endColorstr="#242a08",GradientType=1);
+  background: rgb(4,37,57);
+  background: -moz-linear-gradient(360deg, rgba(4,37,57,1) 0%, rgba(108,100,64,1) 100%);
+  background: -webkit-linear-gradient(360deg, rgba(4,37,57,1) 0%, rgba(108,100,64,1) 100%);
+  background: linear-gradient(360deg, rgba(4,37,57,1) 0%, rgba(108,100,64,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#042539",endColorstr="#6c6440",GradientType=1);
   -moz-border-radius: 4px;
   border-radius: 4px;
   -moz-transition: box-shadow 0.5s ease, -moz-transform 0.2s ease;
