@@ -1,13 +1,13 @@
 <!--Bookmarks card-->
 <div class="top_button">
-  <mat-icon (click)="scrollToEvent('d0')">keyboard_arrow_up</mat-icon>
+  <mat-icon (click)="scrollToEvent('empty')">keyboard_arrow_up</mat-icon>
 </div>
 <div class="event-bookmarks">
   <mat-card>
     <button class="bookmark-button" mat-button *ngFor="let cate of categories" (click)="scrollToEvent(cate.id)">{{cate.value}}</button>
   </mat-card>
 </div>
-<div class="empty_div" style="margin-top:200px"></div>
+<div id="empty" class="empty_div" style="height:200px"></div>
 <!--Container Type 1-->
 <div *ngFor="let event of events">
   <ng-container

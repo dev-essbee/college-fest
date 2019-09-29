@@ -1,5 +1,6 @@
 .top_button{
   text-align: center;
+  cursor: pointer;
   position: fixed;
   z-index: 5;
   width: 32px;
@@ -136,12 +137,12 @@
     text-align: center;
   }
   .empty_div{
-    margin-top: 220px !important;
+    height: 220px !important;
   }
 }
 
 @media (max-width: 375px) {
   .empty_div{
-    margin-top: 250px !important;
+    height: 250px !important;
   }
 }
