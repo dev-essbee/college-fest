@@ -60,18 +60,18 @@ section.d-flex {
   }
   .register{
     width: 150px !important;
-    height: 50px !important;
+    height: 55px !important;
     font-size: small !important;
   }
 }
 
 @media (max-width: 1366px){
   .logo_container{
-    margin-top: 250px;
+    margin-top: 200px;
   }
 
   .first_page_logo{
-    min-width: 500px;
+    min-width: 400px;
   }
 
   .register_container{

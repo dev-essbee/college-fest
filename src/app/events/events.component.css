@@ -27,12 +27,12 @@
   background-color: black;
   color: #aaaaaa;
   margin: 40px 15%;
-  box-shadow: 0 16px 24px 0 #430A06;
+  box-shadow: 0 16px 24px 0 rgba(0,0,0,0.4);
   transition: box-shadow .3s;
 }
 
 .event-container-1:hover {
-  box-shadow: 0 0 11px #ffae00;
+  box-shadow: 0 0 11px rgba(0,0,0,0.4);
   cursor: pointer;
   color: #6e4c00;
 }
@@ -41,12 +41,12 @@
   background-color: black;
   color: #aaaaaa;
   margin: 30px 15%;
-  box-shadow: 0 16px 24px 0 #430A06;
+  box-shadow: 0 16px 24px 0 rgba(0,0,0,0.4);
   transition: box-shadow .3s
 }
 
 .event-container-2:hover {
-  box-shadow: 0 0 11px #ffae00;
+  box-shadow: 0 0 11px rgba(0,0,0,0.4);
   cursor: pointer;
   color: #6e4c00;
 }
