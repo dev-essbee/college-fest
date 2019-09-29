@@ -12,9 +12,9 @@
 </ng-template>
 <!-- User logged in -->
 <ng-template #authenticated>
-  <mat-card class="dash-card">
+  <mat-card class="dash-card wow bounceInDown">
     <div class="dash-card-container">
-      <img class="dash-avatar" #avatar src='{{path}}' alt="Avatar" matTooltip='{{tooltipAvatar}}'
+      <img class="dash-avatar wow pulse" #avatar src='{{path}}' alt="Avatar" matTooltip='{{tooltipAvatar}}'
            matTooltipPosition="right" data-wow-iteration="infinite" data-wow-duration="1500ms">
       <mat-card-title style="margin-top:8px">{{userData.name}}</mat-card-title>
       <mat-card-subtitle class="sub">{{userData.college}}</mat-card-subtitle>
@@ -32,7 +32,7 @@
 </ng-template>
 
 <ng-template #events>
-  <mat-card class="dash-card-2">
+  <mat-card class="dash-card-2 wow bounceInUp" >
     <div class="dash-card-content-2">
       <mat-card-content>
         <h5 style="padding-bottom: 8px">Registered Events</h5>
@@ -42,7 +42,7 @@
   </mat-card>
 </ng-template>
 <ng-template #noEvents>
-  <mat-card class="dash-card-2">
+  <mat-card class="dash-card-2 wow bounceInUp">
     <div class="dash-card-content-2">
       <mat-card-content>
         <p>You have not registered for any event.
