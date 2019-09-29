@@ -74,13 +74,6 @@
           ctx.scale(pixelRatio, pixelRatio);
       }
 
-      function pixiResize() {
-          sw = document.body.clientWidth;
-          sh = document.body.clientHeight;
-
-          renderer.resize(sw, sh);
-      }
-
       function moveEvent(canvas) {
           const hammer = new Hammer(canvas);
           hammer.add(new Hammer.Pan({direction: Hammer.DIRECTION_ALL, threshold: 0}));
@@ -191,7 +184,7 @@
       }
 
       // window.onload = () => {
-          init();
+      init();
       // };
   </script>
 </app-root>
