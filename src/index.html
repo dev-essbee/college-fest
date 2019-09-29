@@ -16,7 +16,184 @@
   <link href="https://fonts.googleapis.com/css?family=Vibes&display=swap" rel="stylesheet">
 </head>
 <body>
-<app-root></app-root>
+<app-root>
+  <script>
+
+  </script>
+  <style>
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      outline: 0;
+      margin: 0;
+      padding: 0;
+      background-color: #121212;
+      cursor: pointer;
+    }
+  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+  <script src="/assets/js/leon.js"></script>
+  <script>
+      console.log('in script');
+      const speed = 8;
+      const fps = 1000 / 30;
+      const PI2 = 2 * Math.PI;
+      let cValue = 0, mode;
+      let leon, controll, time;
+      const pixelRatio = 2;
+      let isDown = false, moveX = 0, moveY = 0, offsetX = 0, offsetY = 0;
+      let canvas, ctx;
+      let renderer, stage;
+      let sw = document.body.clientWidth;
+      let sh = document.body.clientHeight;
+
+      function generateCanvas() {
+          canvas = document.createElement('canvas');
+          canvas.id = 'fontCanvas';
+          document.body.appendChild(canvas);
+          ctx = canvas.getContext("2d");
+
+          window.addEventListener('resize', canvasResize, false);
+          canvasResize();
+          console.log('canvas created');
+          moveEvent(canvas);
+      }
+
+      function canvasResize() {
+          sw = document.body.clientWidth;
+          sh = document.body.clientHeight;
+
+          canvas.width = sw * pixelRatio;
+          canvas.height = sh * pixelRatio;
+          canvas.style.width = sw + 'px';
+          canvas.style.height = sh + 'px';
+          ctx.scale(pixelRatio, pixelRatio);
+      }
+
+      function pixiResize() {
+          sw = document.body.clientWidth;
+          sh = document.body.clientHeight;
+
+          renderer.resize(sw, sh);
+      }
+
+      function moveEvent(canvas) {
+          const hammer = new Hammer(canvas);
+          hammer.add(new Hammer.Pan({direction: Hammer.DIRECTION_ALL, threshold: 0}));
+          hammer.on("pan", (e) => {
+              moveX = e.deltaX + offsetX;
+              moveY = e.deltaY + offsetY;
+              if (e.isFinal) {
+                  offsetX = moveX;
+                  offsetY = moveY;
+              }
+          });
+      }
+
+      function getSize(size) {
+          let ratio = Math.sqrt(sw * sw + sh * sh) / 1800;
+          if (ratio > 1) ratio = 1;
+          else if (ratio < 0.5) ratio = 0.5;
+          return size * ratio;
+      }
+
+      function init() {
+          generateCanvas();
+
+          controll = {
+              size: 200,
+              pathGap: -1,
+              patternWidth: 40,
+              visual: {},
+              drawing: () => {
+                  let i, total = leon.drawing.length;
+                  for (i = 0; i < total; i++) {
+                      TweenMax.killTweensOf(leon.drawing[i]);
+                      TweenMax.fromTo(leon.drawing[i], 2, {
+                          value: 0
+                      }, {
+                          delay: i * 0.1,
+                          value: 1,
+                          ease: Power4.easeOut
+                      });
+                  }
+              }
+          };
+
+          leon = new LeonSans({
+              text: 'Sabrang',
+              size: getSize(180),
+              weight: 600,
+              pathGap: -1,
+              isPath: true
+          });
+          leon.pathGap = -1;
+          leon.tracking = 1;
+          requestAnimationFrame(animate);
+
+          function clicked() {
+              console.log('clicked');
+          }
+
+          c = document.getElementById('fontCanvas');
+          document.addEventListener('click', function () {
+              controll.drawing();
+          }, false);
+      }
+
+      function update() {
+          ctx.clearRect(0, 0, sw, sh);
+          ctx.lineWidth = 0.2;
+          const w = controll.patternWidth * leon.scale;
+          const total = leon.data.length;
+          let i, p, pos, no = 0;
+          let d, j, j_total;
+
+          for (i = 0; i < total; i++) {
+              d = leon.data[i].paths;
+              j_total = Math.round(d.length * leon.drawing[i].value);
+              for (j = 0; j < j_total; j++) {
+                  pos = d[j];
+                  ctx.fillStyle = randomColor(no);
+                  ctx.strokeStyle = randomColor(no);
+                  ctx.beginPath();
+                  ctx.arc(pos.x, pos.y, w, 0, PI2);
+                  ctx.stroke();
+                  no += 1;
+              }
+          }
+
+          cValue -= speed;
+      }
+
+      function randomColor(no) {
+          return "hsl(" + (no + cValue) + ',' + '70%,' + '50%)';
+      }
+
+      function animate(t) {
+          requestAnimationFrame(animate);
+
+          const x = (sw - leon.rect.w) / 2;
+          const y = (sh - leon.rect.h) / 2;
+          leon.position(x + moveX, y + moveY);
+
+          if (t) {
+              if (!time) time = t;
+              if (t - time > fps) {
+                  time = t;
+                  update();
+              }
+          }
+      }
+
+      // window.onload = () => {
+          init();
+      // };
+  </script>
+</app-root>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
