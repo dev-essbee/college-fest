@@ -7,6 +7,7 @@
     <button class="bookmark-button" mat-button *ngFor="let cate of categories" (click)="scrollToEvent(cate.id)">{{cate.value}}</button>
   </mat-card>
 </div>
+<div style="margin-top:200px"></div>
 <!--Container Type 1-->
 <div *ngFor="let event of events">
   <ng-container

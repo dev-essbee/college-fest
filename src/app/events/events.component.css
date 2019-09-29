@@ -20,11 +20,18 @@
   box-shadow: 0 4px 8px #88001a;
 }
 
+.event-bookmarks{
+  position: fixed;
+  left:25%;
+  right: 25%;
+  top:98px;
+  /*width: 100%;*/
+}
 .event-bookmarks mat-card{
   background-color: rgba(0,0,0,0.9);
   color: #aaaaaa;
-  width: fit-content;
-  margin: 140px auto 60px;
+  width: 100%;
+  /*margin: 140px auto 60px;*/
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.4);
   transition: box-shadow .3s;
   opacity: .9;
