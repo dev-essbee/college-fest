@@ -10,7 +10,7 @@
          (mouseup)="onMouseUp()" (mouseleave)="onMouseLeave()"></a>
     </div>
     <div class="d-flex flex-row scroll_container">
-      <a class="scroll" href='' (click)="!!scrollToAbout()"><span class="scroll-span"></span></a>
+      <a class="scroll" [routerLink]='' (click)="scrollToAbout()"><span class="scroll-span"></span></a>
     </div>
   </div>
 </section>
