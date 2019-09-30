@@ -15,23 +15,22 @@ import {CustomSnackbarService} from '../custom-snackbar.service';
   styleUrls: ['./register.component.css']
 })
 
-// todo: fix error messages, autofill state and city from pincode
 export class RegisterComponent implements OnInit {
   userDetailsForm: FormGroup;
   genders = [{id: 'f', value: 'Female'}, {id: 'm', value: 'Male'}, {id: 'o', value: 'Other'}];
   userDetailsValidMsg = {
-    name: [{type: 'required', message: 'Please enter your full name'},
-      {type: 'pattern', message: 'Should not start with space and special Characters not allowed'}],
+    name: [{type: 'required', message: 'Enter your Full Name'},
+      {type: 'pattern', message: 'Special Characters not allowed'}],
     phoneNo: [{type: 'required', message: 'Please enter your mobile number'},
       {type: 'pattern', message: 'Enter valid mobile number'}],
     pinCode: [{type: 'required', message: 'Please enter your pincode'},
       {type: 'pattern', message: 'Enter valid pincode'}],
     gender: [{type: 'required', message: 'Please select a gender'}],
-    city: [{type: 'required', message: 'Please enter your city name'},
+    city: [{type: 'required', message: 'Enter your city name'},
       {type: 'pattern', message: 'Special Characters not allowed'}],
-    state: [{type: 'required', message: 'Please enter your state name'},
+    state: [{type: 'required', message: 'Enter your state name'},
       {type: 'pattern', message: 'Special Characters not allowed'}],
-    college: [{type: 'required', message: 'Please enter your College/University name'},
+    college: [{type: 'required', message: 'Enter your College name'},
       {type: 'pattern', message: 'Special Characters not allowed'}],
     address: [{type: 'required', message: 'Please enter your address'},
       {type: 'pattern', message: 'Special Characters not allowed'}]
@@ -82,7 +81,7 @@ export class RegisterComponent implements OnInit {
       gender: new FormControl(data.gender, [Validators.required]),
       city: new FormControl(toTitleCase(data.city), [Validators.required, Validators.pattern('[a-zA-Z][a-zA-Z\\s.]*')]),
       state: new FormControl(toTitleCase(data.state), [Validators.required, Validators.pattern('[a-zA-Z][a-zA-Z\\s.]*')]),
-      college: new FormControl(toTitleCase(data.college), [Validators.required, Validators.pattern('[a-zA-Z][a-zA-Z\\s.]*')]),
+      college: new FormControl(toTitleCase(data.college), [Validators.required, Validators.pattern('[a-zA-Z][a-zA-Z\\s.,]*')]),
       address: new FormControl(toTitleCase(data.address), [Validators.required, Validators.pattern('[a-zA-Z0-9][a-zA-Z0-9\\s.,/()]*')]),
       transport: new FormControl({
           value: this.transStringToBool(data.transport),
@@ -169,6 +168,7 @@ export class RegisterComponent implements OnInit {
     };
     // console.log(this.transport.value);
     // console.log(this.databaseService.updateData(data));
+    this.databaseService.updateData(data);
     this.customSnackbar.showSnackBar('Data Updated Successfully', '', 2);
     this.location.back();
     //  TODO: Reload Page

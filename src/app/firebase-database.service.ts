@@ -23,9 +23,7 @@ export class FirebaseDatabaseService {
               private customSnackbar: CustomSnackbarService
   ) {
     // console.log('read data called-user-db');
-    this.readData().subscribe((userData) => {
-      this.loggedInUserData = userData;
-    });
+    this.subscribeData();
   }
 
   createUserData(userRef, user) {
@@ -51,6 +49,12 @@ export class FirebaseDatabaseService {
     };
     this.customSnackbar.showSnackBar('Hi ' + user.displayName + ', Welcome Onboard!', '', 3);
     return userRef.set(data, {merge: true});
+  }
+
+  subscribeData() {
+    this.readData().subscribe((userData) => {
+      this.loggedInUserData = userData;
+    });
   }
 
   readData(): Observable<User> {

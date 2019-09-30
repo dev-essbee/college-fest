@@ -39,7 +39,6 @@ export class EventDetailComponent implements OnInit {
     this.location.back();
   }
 
-  // todo: register and unregister
   onClickRegister(event: Event) {
     // console.log(event.id);
     const id = event.id;

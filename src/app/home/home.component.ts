@@ -38,7 +38,7 @@ export class HomeComponent implements OnInit, AfterContentInit, OnDestroy, After
   }
 
   ngAfterContentInit() {
-    // todo replace get element by id with viewchild
+
 
   }
 

@@ -36,7 +36,8 @@
     margin-left: 3%;
     margin-right: 3%;
   }
-  .d-flex{
+
+  .d-flex {
     text-align: center;
     text-align: -moz-center;
     text-align: -webkit-center;
@@ -102,4 +103,23 @@
 /*// mat-label error style*/
 ::ng-deep .mat-form-field.mat-form-field-invalid .mat-form-field-label {
   color: #aaaaaa !important;
+}
+
+::ng-deep .mat-hint {
+  color: #aaaaaa !important;
+}
+
+::ng-deep .mat-select-placeholder {
+  color: #aaaaaa !important;
+}
+
+.mat-raised-button:disabled{
+  color: #aaaaaa !important;
+  border: 1px solid #430A06;
+}
+
+.mat-raised-button {
+  color: #aaaaaa;
+  background: #430A06;
+  font-family: 'Gloria Hallelujah', cursive !important;
 }

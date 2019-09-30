@@ -1,4 +1,4 @@
-import { Component, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {UserAuthService} from '../user-auth.service';
 import {FirebaseDatabaseService} from '../firebase-database.service';
 import {events} from '../data/events-data';
