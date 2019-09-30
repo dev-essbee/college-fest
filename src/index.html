@@ -34,7 +34,6 @@
       cursor: pointer;
     }
   </style>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
   <script src="/assets/js/leon.js"></script>
   <script>
@@ -60,7 +59,7 @@
           window.addEventListener('resize', canvasResize, false);
           canvasResize();
           console.log('canvas created');
-          moveEvent(canvas);
+          // moveEvent(canvas);
       }
 
       function canvasResize() {
@@ -74,18 +73,6 @@
           ctx.scale(pixelRatio, pixelRatio);
       }
 
-      function moveEvent(canvas) {
-          const hammer = new Hammer(canvas);
-          hammer.add(new Hammer.Pan({direction: Hammer.DIRECTION_ALL, threshold: 0}));
-          hammer.on("pan", (e) => {
-              moveX = e.deltaX + offsetX;
-              moveY = e.deltaY + offsetY;
-              if (e.isFinal) {
-                  offsetX = moveX;
-                  offsetY = moveY;
-              }
-          });
-      }
 
       function getSize(size) {
           let ratio = Math.sqrt(sw * sw + sh * sh) / 1800;
