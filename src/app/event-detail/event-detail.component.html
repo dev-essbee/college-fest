@@ -9,24 +9,28 @@
         </button>
       </div>
     </div>
-
-    <div class="event-detail-content" [ngsRevealSet]="{reset:true}" [ngsSelector]="'.event-detail-card'">
-      <mat-card class="event-detail-card">
-        <h1 style="text-align: center; font-family: 'Griffy', cursive;">{{event.name | titlecase}}</h1>
-      </mat-card>
-
-      <div *ngIf="event.des">
-      <mat-card class="event-detail-card">
-        <mat-card-title class="event-detail-title">
-          Description
-        </mat-card-title>
-        <mat-card-content>
-          <p>{{event.des}}</p>
-        </mat-card-content>
-      </mat-card>
+    <div class="event-detail-content" [ngsRevealSet]="{reset:true}" [ngsSelector]="'.details'">
+      <div class="details">
+        <mat-card class="event-detail-card">
+          <h1 style="text-align: center; font-family: 'Griffy', cursive;">{{event.name | titlecase}}</h1>
+        </mat-card>
       </div>
 
-      <div *ngIf="event.judgement.length>0">
+      <div class="details">
+      <div *ngIf="event.des" >
+        <mat-card class="event-detail-card">
+          <mat-card-title>
+            Description
+          </mat-card-title>
+          <mat-card-content>
+            <p>{{event.des}}</p>
+          </mat-card-content>
+        </mat-card>
+      </div>
+      </div>
+
+      <div class="details">
+      <div *ngIf="event.judgement.length>0" >
         <mat-card class="event-detail-card">
           <mat-card-title>
             Judgement Criteria
@@ -40,35 +44,41 @@
           </mat-card-content>
         </mat-card>
       </div>
+      </div>
 
-      <div *ngIf="event.rules.length>0">
-      <mat-card class="event-detail-card">
-        <mat-card-title>
-          Rules
-        </mat-card-title>
-        <mat-card-content>
-          <div *ngFor="let e of event.rules">
+      <div class="details">
+      <div *ngIf="event.rules.length>0" >
+        <mat-card class="event-detail-card">
+          <mat-card-title>
+            Rules
+          </mat-card-title>
+          <mat-card-content>
+            <div *ngFor="let e of event.rules">
+              <ul>
+                <li>{{e}}</li>
+              </ul>
+            </div>
+          </mat-card-content>
+        </mat-card>
+      </div>
+      </div>
+
+      <div class="details">
+      <div  *ngIf="event.prize || event.fee">
+        <mat-card class="event-detail-card">
+          <mat-card-title>
+            Fees and Prizes
+          </mat-card-title>
+          <mat-card-content>
             <ul>
-              <li>{{e}}</li>
+              <li>The Registration fee for this event is ₹{{event.fee}}</li>
+              <li>{{event.prize}}</li>
             </ul>
-          </div>
-        </mat-card-content>
-      </mat-card>
+          </mat-card-content>
+        </mat-card>
       </div>
+    </div>
 
-      <div *ngIf="event.prize || event.fee">
-      <mat-card class="event-detail-card">
-        <mat-card-title>
-          Fees and Prizes
-        </mat-card-title>
-        <mat-card-content>
-          <ul>
-            <li>The Registration fee for this event is ₹{{event.fee}}</li>
-            <li>{{event.prize}}</li>
-          </ul>
-        </mat-card-content>
-      </mat-card>
-      </div>
     </div>
     <div class="button-container">
       <button mat-button (click)="onClickRegister(event)">Register</button>
