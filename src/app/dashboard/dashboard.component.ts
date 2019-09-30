@@ -15,7 +15,7 @@ export class DashboardComponent implements OnInit {
   registeredEvents = [];
   userData: User = {};
 
-  basePath = '../../assets/img/avatars/avatar-';
+  basePath = '../../assets/minimg/avatars/avatar-';
   tooltips = ['Hello there! You naughty Little Devil', 'We all live down here.'
     , 'Come, You do not keep The Devil waiting.', 'Born in Hell, forged in Fire!', 'The Red Floating Guy.',
     'RIP', 'I cut HUMANS for FUN', 'I am all Stitched Up', 'Meowmpire', 'Let me take your Soul', 'WOOoooooooo'];

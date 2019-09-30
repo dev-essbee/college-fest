@@ -3,8 +3,8 @@ export let categories = [{id: 'c0', value: 'Cultural'}, {id: 't0', value: 'Techn
   id: 'm0',
   value: 'Management'
 }, {id: 'd0', value: 'Design'}, {id: 'l0', value: 'LAN Gaming'}];
-const baseLoc = '../../assets/img/events/640p/';
-const baseLocLarge = '../../assets/img/events/1080p/';
+const baseLoc = '../../assets/minimg/events/640p/';
+const baseLocLarge = '../../assets/minimg/events/1080p/';
 export let events: Event[] = [
     {
       id: '0',

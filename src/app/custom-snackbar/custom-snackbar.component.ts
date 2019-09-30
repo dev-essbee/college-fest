@@ -17,9 +17,9 @@ export class CustomSnackbarComponent implements OnInit {
 
   getIcon(type) {
     if (type === 'left') {
-      return '../../assets/img/avatar-snackbar/grim-reaper-right.png';
+      return '../../assets/minimg/avatar-snackbar/grim-reaper-right.png';
     } else {
-      return '../../assets/img/avatar-snackbar/grim-reaper-left.png';
+      return '../../assets/minimg/avatar-snackbar/grim-reaper-left.png';
     }
   }
 }
