@@ -65,7 +65,8 @@
 .event-container-1:hover {
   box-shadow: 0 0 11px rgba(0, 0, 0, 0.4);
   cursor: pointer;
-  color: #6e4c00;
+  color: white;
+  transition: 0.3s;
 }
 
 .event-container-2 {
@@ -79,7 +80,8 @@
 .event-container-2:hover {
   box-shadow: 0 0 11px rgba(0, 0, 0, 0.4);
   cursor: pointer;
-  color: #6e4c00;
+  color: white;
+  transition: 0.3s;
 }
 
 .event-text {
