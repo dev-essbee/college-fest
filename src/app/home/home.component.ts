@@ -57,8 +57,9 @@ export class HomeComponent implements OnInit, AfterContentInit, OnDestroy, After
     this.parallaxInst.destroy();
   }
 
-  scrollToAbout(): void {
+  scrollToAbout(): boolean {
     this.aboutRef.nativeElement.scrollIntoView({behavior: 'smooth'});
+    return true;
   }
 
   onMouseMove(e) {
