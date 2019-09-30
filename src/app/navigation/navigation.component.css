@@ -1,13 +1,15 @@
 .main_header {
   box-sizing: border-box;
-  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.3);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
   z-index: 3;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   width: 100%;
-  font-family: 'Gloria Hallelujah', cursive;
+  font-family: 'Griffy', cursive;
+  font-size: large;
+  font-weight: bold;
 }
 
 .navigation-clean {
@@ -22,6 +24,16 @@
   .navigation-clean {
     padding-top: 1rem;
     padding-bottom: 1rem;
+  }
+}
+
+@media (max-width: 425px) {
+  .main_header {
+    font-size: medium;
+  }
+
+  .interaction {
+    font-size: medium;
   }
 }
 
@@ -51,7 +63,9 @@
 .interaction {
   margin-left: 25px;
   border: 1px solid #88001a;
-  font-family: 'Gloria Hallelujah', cursive;
+  font-family: 'Griffy', cursive;
+  font-weight: bold;
+  font-size: large;
 }
 
 .interaction:hover {

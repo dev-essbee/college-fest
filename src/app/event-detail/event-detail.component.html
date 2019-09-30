@@ -12,12 +12,12 @@
 
     <div class="event-detail-content" [ngsRevealSet]="{reset:true}" [ngsSelector]="'.event-detail-card'">
       <mat-card class="event-detail-card">
-        <h1 style="text-align: center">{{event.name | titlecase}}</h1>
+        <h1 style="text-align: center; font-family: 'Griffy', cursive;">{{event.name | titlecase}}</h1>
       </mat-card>
 
       <div *ngIf="event.des">
       <mat-card class="event-detail-card">
-        <mat-card-title>
+        <mat-card-title class="event-detail-title">
           Description
         </mat-card-title>
         <mat-card-content>

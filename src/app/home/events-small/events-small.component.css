@@ -24,7 +24,8 @@
   text-align: center;
   color: #aaaaaa;
   text-shadow: 3px 3px 2px #430A06;
-  font-family: 'Gloria Hallelujah', cursive;
+  font-family: 'Griffy', cursive;
+  /*font-size: large;*/
 }
 
 .carousel-item{

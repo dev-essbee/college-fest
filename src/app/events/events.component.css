@@ -1,4 +1,4 @@
-.top_button{
+.top_button {
   text-align: center;
   cursor: pointer;
   position: fixed;
@@ -8,77 +8,81 @@
   bottom: 10%;
   right: 0;
   color: white;
-  background: rgb(25,9,9);
-  background: -moz-linear-gradient(360deg, rgba(25,9,9,1) 0%, rgba(110,38,38,1) 92%);
-  background: -webkit-linear-gradient(360deg, rgba(25,9,9,1) 0%, rgba(110,38,38,1) 92%);
-  background: linear-gradient(360deg, rgba(25,9,9,1) 0%, rgba(110,38,38,1) 92%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#190909",endColorstr="#6e2626",GradientType=1);
+  background: rgb(25, 9, 9);
+  background: -moz-linear-gradient(360deg, rgba(25, 9, 9, 1) 0%, rgba(110, 38, 38, 1) 92%);
+  background: -webkit-linear-gradient(360deg, rgba(25, 9, 9, 1) 0%, rgba(110, 38, 38, 1) 92%);
+  background: linear-gradient(360deg, rgba(25, 9, 9, 1) 0%, rgba(110, 38, 38, 1) 92%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#190909", endColorstr="#6e2626", GradientType=1);
   margin-right: 20px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
 
-.top_button:hover{
+.top_button:hover {
   box-shadow: 0 4px 8px #88001a;
 }
 
-.event-bookmarks{
+.event-bookmarks {
   position: fixed;
-  left:25%;
+  left: 25%;
   right: 25%;
-  top:98px;
-  font-family: 'Gloria Hallelujah', cursive;
-  /*width: 100%;*/
+  top: 98px;
 }
-.event-bookmarks mat-card{
-  background-color: rgba(0,0,0,0.9);
+
+.event-bookmarks mat-card {
+  background-color: rgba(0, 0, 0, 0.9);
+  font-family: 'Griffy', cursive !important;
+  font-weight: bold;
+  font-size: large;
   color: #aaaaaa;
   width: 100%;
   /*margin: 140px auto 60px;*/
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.4);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.4);
   transition: box-shadow .3s;
   opacity: .9;
   text-align: center;
 }
 
-.bookmark-button{
+.bookmark-button {
+  font-family: 'Griffy', cursive !important;
   font-size: large;
+  font-weight: bold;
   color: #aaaaaa;
 }
 
-.bookmark-button:hover{
+.bookmark-button:hover {
   box-shadow: 0 4px 8px 0 #430A06;
   transition: .3s;
 }
 
 .event-container-1 {
-  background-color: rgba(0,0,0,0.7);
+  background-color: rgba(0, 0, 0, 0.7);
   color: #aaaaaa;
   margin: 40px 15%;
-  box-shadow: 0 16px 24px 0 rgba(0,0,0,0.4);
+  box-shadow: 0 16px 24px 0 rgba(0, 0, 0, 0.4);
   transition: box-shadow .3s;
 }
 
 .event-container-1:hover {
-  box-shadow: 0 0 11px rgba(0,0,0,0.4);
+  box-shadow: 0 0 11px rgba(0, 0, 0, 0.4);
   cursor: pointer;
   color: #6e4c00;
 }
 
 .event-container-2 {
-  background-color: rgba(0,0,0,0.7);
+  background-color: rgba(0, 0, 0, 0.7);
   color: #aaaaaa;
   margin: 30px 15%;
-  box-shadow: 0 16px 24px 0 rgba(0,0,0,0.4);
+  box-shadow: 0 16px 24px 0 rgba(0, 0, 0, 0.4);
   transition: box-shadow .3s
 }
 
 .event-container-2:hover {
-  box-shadow: 0 0 11px rgba(0,0,0,0.4);
+  box-shadow: 0 0 11px rgba(0, 0, 0, 0.4);
   cursor: pointer;
   color: #6e4c00;
 }
 
-.event-text{
+.event-text {
   padding-right: 10px;
   padding-left: 10px;
 }
@@ -87,63 +91,71 @@
   padding: 0 !important;
 }
 
-.event-img{
+.event-img {
   min-width: 600px;
 }
 
 @media (max-width: 919px) {
-  .event-container-1 .d-flex{
+  .event-container-1 .d-flex {
     flex-direction: column;
     flex: auto;
   }
 
-  .event-container-2 .d-flex{
+  .event-container-2 .d-flex {
     flex-direction: column-reverse;
     flex: auto;
   }
 
-  .event-text{
+  .event-text {
     font-size: small;
     text-align: center;
   }
 
-  .event-img{
+  .event-img {
     min-width: 300px;
   }
 }
-@media(max-width: 768px){
-  .event-bookmarks{
-    font-size: small;
-    left:5%;
+
+@media (max-width: 768px) {
+  .event-bookmarks {
+    font-size: small !important;
+    left: 5%;
     right: 5%;
     /*width: 100%;*/
   }
 }
 
-@media(max-width: 1024px) {
-  .event-img{
+@media (max-width: 1024px) {
+  .event-img {
     min-width: 430px;
   }
-  .event-text{
+
+  .event-text {
     font-size: small;
+  }
+
+  .event-bookmarks {
+    font-size: large;
   }
 }
 
 @media (max-width: 425px) {
-  .event-img{
+  .event-img {
     min-width: 215px;
   }
-  .event-text{
+
+  .event-text {
     font-size: small;
     text-align: center;
   }
-  .empty_div{
+
+  .empty_div {
     height: 220px !important;
   }
 }
 
 @media (max-width: 375px) {
-  .empty_div{
+  .empty_div {
     height: 250px !important;
   }
 }

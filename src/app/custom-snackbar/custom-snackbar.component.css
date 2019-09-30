@@ -11,7 +11,9 @@
 .snack-text {
   text-align: center;
   margin-left: 15px;
-  margin-right: 15px
+  margin-right: 15px;
+  font-family: "DejaVu Sans", sans-serif;
+  /*font-family: 'Eater', cursive;*/
 }
 
 @media(max-width: 1024px) {

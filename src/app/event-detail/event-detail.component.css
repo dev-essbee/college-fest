@@ -1,19 +1,16 @@
 .main_container {
-  /*background: url('../../assets/img/events/1080p/singingpalooza.jpg') center;*/
   background-position: center center !important;
   background-repeat: no-repeat !important;
   background-size: cover !important;
   background-attachment: fixed !important;
-  /*width: 100%;*/
 }
-
 .event-detail-card mat-card-title {
-  font-family: 'Gloria Hallelujah', cursive;
+  font-family: 'Griffy', cursive;
+  font-weight: bold;
 }
-
-.event-detail-card mat-card-content {
-  font-family: 'Mansalva', cursive;
-}
+/*.event-detail-card mat-card-content{*/
+/*  font-size: large;*/
+/*}*/
 
 .event-detail-card-container {
   position: relative;

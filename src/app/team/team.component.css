@@ -16,15 +16,15 @@
 .team_container mat-card-subtitle{
   font-size: large;
   font-weight: bold;
-  font-family: 'Gloria Hallelujah', cursive;
+  font-family: 'Griffy', cursive !important;
 }
 
 .team_container mat-card-title{
-  font-family: 'Gloria Hallelujah', cursive;
+  font-family: 'Griffy', cursive !important;
 }
 
 .team_container mat-card-content{
-  font-family: 'Mansalva', cursive;
+  font-family: 'Open Sans', sans-serif !important;
 }
 
 @media (max-width: 768px) {
