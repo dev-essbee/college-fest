@@ -36,7 +36,7 @@
   <mat-card class="dash-card-2 wow bounceInUp">
     <div class="dash-card-content-2">
       <mat-card-content>
-        <h5 style="padding-bottom: 8px">Registered Events</h5>
+        <h5 style="padding-bottom: 8px; font-family: 'Griffy', cursive;">Registered Events</h5>
         <ul>
           <li *ngFor="let event of registeredEvents">
             <a class="event-links" [routerLink]="['/events/',event.id]"

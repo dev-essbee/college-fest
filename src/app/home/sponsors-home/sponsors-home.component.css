@@ -5,7 +5,8 @@
 }
 
 .sponsor-head{
-  font-family: 'Gloria Hallelujah', cursive;
+  font-family: 'Griffy', cursive;
+  font-size: large;
   color: #aaaaaa;
   text-shadow: 3px 3px 2px #430A06;
 }
@@ -39,5 +40,8 @@
 @media (max-width: 768px){
   .sponsor-home-container{
     display: none;
+  }
+  .sponsor-head{
+    font-size: medium !important;
   }
 }

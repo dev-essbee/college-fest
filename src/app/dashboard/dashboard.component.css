@@ -4,7 +4,9 @@
   background-color: black;
   color: #aaaaaa;
   box-shadow: 0 4px 8px 0 #400012;
-  font-family: 'Mansalva', cursive;
+  font-family: 'Griffy', cursive;
+  font-weight: bold;
+  /*font-family: 'Eater', cursive;*/
 }
 
 .event-links{
@@ -40,7 +42,7 @@
   color: #aaaaaa;
   margin-top: 10px;
   opacity: .8;
-  font-family: 'Gloria Hallelujah', cursive;
+  font-family: 'Griffy', cursive;
 }
 
 .edit_button:hover{
@@ -64,7 +66,7 @@
   background-color: black;
   color: #aaaaaa;
   box-shadow: 0 4px 8px 0 #400012;
-  font-family: 'Mansalva', cursive;
+  font-size: large;
 }
 
 .dash-card-content-2{
@@ -77,10 +79,11 @@
   .dash-card{
     margin-right: 6% !important;
     margin-left: 6% !important;
+    font-size: medium;
   }
   .dash-card-2{
     margin-right: 6% !important;
     margin-left: 6% !important;
-    font-size: small;
+    font-size: medium;
   }
 }

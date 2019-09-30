@@ -1,4 +1,5 @@
 import {Event} from '../event';
+
 export let categories = [{id: 'c0', value: 'Cultural'}, {id: 't0', value: 'Technical'}, {
   id: 'm0',
   value: 'Management'
@@ -256,112 +257,112 @@ export let events: Event[] = [
       prize:
         'Expected prize money will be 8-10 times of registration fee. '
     },
-  {
-    id: '9',
-    name:
-      'Beats N Steps (Solo Dance)',
-    smallImg:
-      baseLoc + 'bnsSolo.jpg',
-    largeImg:
-      baseLocLarge + 'bnsSolo.jpg',
-    category:
-      'c6',
-    des:
-      'Dance is not merely body movement – it is like poetry in motion as someone said. ' +
-      'With thoughts, emotions, expressions and elegant movements. It brings alive the meaning.' +
-      'Dance is an art which is done with body, mind and soul.',
-    judgement:
-      ['Rhythm ', 'Formation ', 'Synchronization ', 'Expressions ', 'Costumes ', 'Makeup ', 'Setup ', 'Overall effects '],
-    rules:
-      ['Time limit is 6-10 minutes for each performance. Negative marking for exceeding the time limit.',
-        'No props will be provided by the coordinators. Participants can carry their own props. ' +
-        'The participants are requested to bring a backup of their song to avoid technical disturbance.' +
-        'Out of which, they are also requested to submit a copy of the song with the coordinator of the event. ',
-        'Green room would be given for changing purpose. ',
-        'Dance performance should not convey any indecent gestures. ',
-        'Each entry must be completed with a non-refundable cash as per the registration guidelines. ',
-        'Decision of the judges will be final. '],
-    startTime:
-      '12:12',
-    endTime:
-      '18:18',
-    fee:
-      '150',
-    prize:
-      'Expected prize money will be 8-10 times of registration fee. '
-  },
+    {
+      id: '9',
+      name:
+        'Beats N Steps (Solo Dance)',
+      smallImg:
+        baseLoc + 'bnsSolo.jpg',
+      largeImg:
+        baseLocLarge + 'bnsSolo.jpg',
+      category:
+        'c6',
+      des:
+        'Dance is not merely body movement – it is like poetry in motion as someone said. ' +
+        'With thoughts, emotions, expressions and elegant movements. It brings alive the meaning.' +
+        'Dance is an art which is done with body, mind and soul.',
+      judgement:
+        ['Rhythm ', 'Formation ', 'Synchronization ', 'Expressions ', 'Costumes ', 'Makeup ', 'Setup ', 'Overall effects '],
+      rules:
+        ['Time limit is 6-10 minutes for each performance. Negative marking for exceeding the time limit.',
+          'No props will be provided by the coordinators. Participants can carry their own props. ' +
+          'The participants are requested to bring a backup of their song to avoid technical disturbance.' +
+          'Out of which, they are also requested to submit a copy of the song with the coordinator of the event. ',
+          'Green room would be given for changing purpose. ',
+          'Dance performance should not convey any indecent gestures. ',
+          'Each entry must be completed with a non-refundable cash as per the registration guidelines. ',
+          'Decision of the judges will be final. '],
+      startTime:
+        '12:12',
+      endTime:
+        '18:18',
+      fee:
+        '150',
+      prize:
+        'Expected prize money will be 8-10 times of registration fee. '
+    },
 
-  {
-    id: '10',
-    name:
-      'Beats N Steps (Group Dance)',
-    smallImg:
-      baseLoc + 'bnsgroup.jpg',
-    largeImg:
-      baseLocLarge + 'bnsgroup.jpg',
-    category:
-      'c7',
-    des:
-      'Dance is not merely body movement – it is like poetry in motion as someone said. ' +
-      'With thoughts, emotions, expressions and elegant movements. It brings alive the meaning.' +
-      'Dance is an art which is done with body, mind and soul. ',
-    judgement:
-      ['Rhythm ', 'Formation ', 'Synchronization ', 'Expressions ', 'Costumes ', 'Makeup ', 'Setup ', 'Overall effects '],
-    rules:
-      ['Time limit is 3-4 minutes for each performance. Negative marking for exceeding the time limit.',
-        'Each team may have 4-15 members. ' +
-        'The participants are requested to bring a backup of their song to avoid technical disturbance.' +
-        'Out of which, they are also requested to submit a copy of the song with the coordinator of the event. ',
-        'No props will be provided by the coordinators. Participants can carry their own props. ',
-        'Green room would be given for changing purpose. ',
-        'Dance performance should not convey any indecent gestures. ',
-        'Each entry must be completed with a non-refundable cash as per the registration guidelines. ',
-        'Decision of the judges will be final. '],
-    startTime:
-      '12:12',
-    endTime:
-      '18:18',
-    fee:
-      '300',
-    prize:
-      'Expected prize money will be 8-10 times of registration fee. '
-  },
+    {
+      id: '10',
+      name:
+        'Beats N Steps (Group Dance)',
+      smallImg:
+        baseLoc + 'bnsgroup.jpg',
+      largeImg:
+        baseLocLarge + 'bnsgroup.jpg',
+      category:
+        'c7',
+      des:
+        'Dance is not merely body movement – it is like poetry in motion as someone said. ' +
+        'With thoughts, emotions, expressions and elegant movements. It brings alive the meaning.' +
+        'Dance is an art which is done with body, mind and soul. ',
+      judgement:
+        ['Rhythm ', 'Formation ', 'Synchronization ', 'Expressions ', 'Costumes ', 'Makeup ', 'Setup ', 'Overall effects '],
+      rules:
+        ['Time limit is 3-4 minutes for each performance. Negative marking for exceeding the time limit.',
+          'Each team may have 4-15 members. ' +
+          'The participants are requested to bring a backup of their song to avoid technical disturbance.' +
+          'Out of which, they are also requested to submit a copy of the song with the coordinator of the event. ',
+          'No props will be provided by the coordinators. Participants can carry their own props. ',
+          'Green room would be given for changing purpose. ',
+          'Dance performance should not convey any indecent gestures. ',
+          'Each entry must be completed with a non-refundable cash as per the registration guidelines. ',
+          'Decision of the judges will be final. '],
+      startTime:
+        '12:12',
+      endTime:
+        '18:18',
+      fee:
+        '300',
+      prize:
+        'Expected prize money will be 8-10 times of registration fee. '
+    },
 
-  {
-    id: '11',
-    name:
-      'BATALLA DE CYPHERS (RAP & BEAT BOXING)',
-    smallImg:
-      baseLoc + 'bdc.jpg',
-    largeImg:
-      baseLocLarge + 'bdc.jpg',
-    category:
-      'c8',
-    des:
-      'Dance is not merely body movement – it is like poetry in motion as someone said. ' +
-      'With thoughts, emotions, expressions and elegant movements. It brings alive the meaning.' +
-      'Dance is an art which is done with body, mind and soul. ',
-    judgement:
-      ['Rhythm ', 'Formation ', 'Synchronization ', 'Expressions ', 'Costumes ', 'Makeup ', 'Setup ', 'Overall effects '],
-    rules:
-      ['Time limit is 3-4 minutes for each performance. Negative marking for exceeding the time limit.',
-        'Each team may have 4-15 members. ' +
-        'The participants are requested to bring a backup of their song to avoid technical disturbance.' +
-        'Out of which, they are also requested to submit a copy of the song with the coordinator of the event. ',
-        'No props will be provided by the coordinators. Participants can carry their own props. ',
-        'Green room would be given for changing purpose. ',
-        'Dance performance should not convey any indecent gestures. ',
-        'Each entry must be completed with a non-refundable cash as per the registration guidelines. ',
-        'Decision of the judges will be final. '],
-    startTime:
-      '12:12',
-    endTime:
-      '18:18',
-    fee:
-      '300',
-    prize:
-      'Expected prize money will be 8-10 times of registration fee. '
-  },
+    {
+      id: '11',
+      name:
+        'BATALLA DE CYPHERS (RAP & BEAT BOXING)',
+      smallImg:
+        baseLoc + 'bdc.jpg',
+      largeImg:
+        baseLocLarge + 'bdc.jpg',
+      category:
+        'c8',
+      des:
+        'Dance is not merely body movement – it is like poetry in motion as someone said. ' +
+        'With thoughts, emotions, expressions and elegant movements. It brings alive the meaning.' +
+        'Dance is an art which is done with body, mind and soul. ',
+      judgement:
+        ['Rhythm ', 'Formation ', 'Synchronization ', 'Expressions ', 'Costumes ', 'Makeup ', 'Setup ', 'Overall effects '],
+      rules:
+        ['Time limit is 3-4 minutes for each performance. Negative marking for exceeding the time limit.',
+          'Each team may have 4-15 members. ' +
+          'The participants are requested to bring a backup of their song to avoid technical disturbance.' +
+          'Out of which, they are also requested to submit a copy of the song with the coordinator of the event. ',
+          'No props will be provided by the coordinators. Participants can carry their own props. ',
+          'Green room would be given for changing purpose. ',
+          'Dance performance should not convey any indecent gestures. ',
+          'Each entry must be completed with a non-refundable cash as per the registration guidelines. ',
+          'Decision of the judges will be final. '],
+      startTime:
+        '12:12',
+      endTime:
+        '18:18',
+      fee:
+        '300',
+      prize:
+        'Expected prize money will be 8-10 times of registration fee. '
+    },
     {
       id: '12',
       name:
@@ -569,39 +570,31 @@ export let events: Event[] = [
     },
     {
       id: '18',
-      name:
-        'THINK A THON',
-      smallImg:
-        baseLoc + 'thinkAthon1.jpg',
+      name: 'THINK A THON',
+      smallImg: baseLoc + 'thinkAthon1.jpg',
       largeImg: baseLocLarge + 'thinkathon.jpg',
       category: 'm3',
-      des:
-        'This is an event for entrepreneurs, start-ups, innovators. ' +
+      des: 'This is an event for entrepreneurs, start-ups, innovators. ' +
         'We welcome creators with their ideas and passion to improve the world around us. ',
-      judgement:
-        [],
-      rules:
-        ['1.	There can be 4 to 5 members in a team.',
-          '2.	Each team will get 60 seconds to pitch their ideas in 1st round.' +
-          '3.	The selected teams will then get time of 6 minutes to present their full report in 2nd round to members and the jury.'],
-      startTime:
-        '12:12',
-      endTime:
-        '18:18',
-      fee:
-        '200',
-      prize:
-        'Expected prize money will be 8-10 times of registration fee. '
+      judgement: [],
+      rules: ['1.	There can be 4 to 5 members in a team.',
+        '2.	Each team will get 60 seconds to pitch their ideas in 1st round.' +
+        '3.	The selected teams will then get time of 6 minutes to present their full report in 2nd round to members and the jury.'],
+      startTime: '12:12',
+      endTime: '18:18',
+      fee: '200',
+      prize: 'Expected prize money will be 8-10 times of registration fee. '
     },
 
     {
       id: '19',
-      name: 'LAN Gaming - Counter Strike:GO ',
+      name: 'LAN Gaming - Counter Strike: Global Offensive ',
       smallImg: baseLoc + 'csgo.jpg',
       largeImg: baseLocLarge + 'csgo.jpg',
       category: 'l0',
-      des: 'Shop Ready Fire' +
-        'Knockdown your opponents.',
+      des: 'Gather your team and and go Terrorist hunting, sneak in to plant a Bomb' +
+        ', defend the Hostages or rescue them.' +
+        ' Maps: de_mirage, de_inferno and de_dust2.',
       judgement: ['Team with highest points wins. '],
       rules: ['Each team must have 5 players and 1 stand-in player (optional) but cannot be an existing player in the tournament.',
         'Friendly fire will be on by default. ',
@@ -613,92 +606,37 @@ export let events: Event[] = [
         ' the same score. The start money given to all the players will be 2000 instead of 800. ',
         'If a player drops the server will be paused at the end of the current round. ',
         'In general, all scripts are illegal except for buy, toggle and demo scripts.',
-//       1. Jump throw
-//         2. Stop shoot scripts(Use or AWP scripts
-// )
-// 3.
-// Center
-// view
-// scripts
-// 4.
-// Turn
-// scripts(180° or
-// similar
-// )
-// 5.
-// No
-// recoil
-// scripts
-// 6.
-// Burst
-// fire
-// scripts
-// 7.
-// Rate
-// changers(Lag
-// scripts
-// )
-// 8.
-// FPS
-// scripts
-// 9.
-// Anti - flash
-// scripts
-// or
-// binding(snd_ * bindings)
-// 10.
-// Bunny
-// hop
-// scripts
-// 11.
-// Stop
-// sound
-// scripts
       ],
       startTime: '12:12',
-      endTime:
-        '18:18',
-      fee:
-        '250',
-      prize:
-        'Expected prize money will be 8-10 times of registration fee. '
+      endTime: '18:18',
+      fee: '250',
+      prize: 'Expected prize money will be 8-10 times of registration fee. '
     },
 
     {
       id: '20',
-      name:
-        'LAN Gaming - PUBG Mobile ',
-      smallImg:
-        baseLoc + 'pubg1.jpg',
-      largeImg:
-        baseLocLarge + 'pubg1.jpg',
-      category:
-        'l1',
-      des:
-        'Pick up your guns.' +
-        'Knockdown your opponents',
-      judgement:
-        ['Last one standing wins.'],
-      rules:
-        ['A custom room will be created, and the players will be invited by a code. ',
-          'All the participants will play solo. ' +
-          'Map to be played will be randomized. ',
-          'Use of emulator is strictly prohibited. ',
-          'Kindly carry power banks with you if possible and keep your device charged. ',
-          'Use of gfx tool is allowed.',
-          'Use of mobile gaming controller and trigger controllers are prohibited. ',
-          'If you disconnect from the game, bad luck! ',
-          'The last one standing will win. ',
-          'The intentional use of any bug, glitches or error in the game is strictly prohibited. ',
-          'All participants must obey the coordinator and follow the rules. '],
-      startTime:
-        '12:12',
-      endTime:
-        '18:18',
-      fee:
-        '100',
-      prize:
-        'Expected prize money will be 8-10 times of registration fee. '
+      name: 'LAN Gaming - PUBG Mobile ',
+      smallImg: baseLoc + 'pubg1.jpg',
+      largeImg: baseLocLarge + 'pubg1.jpg',
+      category: 'l1',
+      des: 'Stay Low, Go Fast. Kill First, Die Last' +
+      'One Shot, One Kill. No Luck, All Skill.',
+      judgement: ['Last one standing wins.'],
+      rules: ['A custom room will be created, and the players will be invited by a code. ',
+        'All the participants will play solo. ' +
+        'Map to be played will be randomized. ',
+        'Use of emulator is strictly prohibited. ',
+        'Kindly carry power banks with you if possible and keep your device charged. ',
+        'Use of gfx tool is allowed.',
+        'Use of mobile gaming controller and trigger controllers are prohibited. ',
+        'If you disconnect from the game, bad luck! ',
+        'The last one standing will win. ',
+        'The intentional use of any bug, glitches or error in the game is strictly prohibited. ',
+        'All participants must obey the coordinator and follow the rules. '],
+      startTime: '12:12',
+      endTime: '18:18',
+      fee: '100',
+      prize: 'Expected prize money will be 8-10 times of registration fee. '
     },
 
     {
@@ -707,59 +645,44 @@ export let events: Event[] = [
       smallImg: baseLoc + 'blur1.jpg',
       largeImg: baseLocLarge + 'blur1.jpg',
       category: 'l2',
-      des: 'Show your driving skills ' + 'Knockout your opponent. ',
+      des: 'Race through the track dodging the attacks of your opponents while attacking them with power ups.' +
+      'Make sure to hone your drifting skills.',
       judgement: ['Finishing Position'],
-      rules:
-        ['A total of six players will play the game at a time. The player that wins the match will advance to the next round. ',
-          'The game will be of 3 laps. ' +
-          'The damaged will be high. ',
-          'Any class of cars can be selected by the participants. ',
-          'All power-ups can be used. ',
-          'Mods will be disabled by default. ',
-          'Maps will be randomized. ',
-          'One shot wreck will be disabled. '],
-      startTime:
-        '12:12',
-      endTime:
-        '18:18',
-      fee:
-        '100',
-      prize:
-        'Expected prize money will be 8-10 times of registration fee. '
+      rules: ['A total of six players will play the game at a time. The player that wins the match will advance to the next round. ',
+        'The game will be of 3 laps. ' +
+        'The damaged will be high. ',
+        'Any class of cars can be selected by the participants. ',
+        'All power-ups can be used. ',
+        'Mods will be disabled by default. ',
+        'Maps will be randomized. ',
+        'One shot wreck will be disabled. '],
+      startTime: '12:12',
+      endTime: '18:18',
+      fee: '100',
+      prize: 'Expected prize money will be 8-10 times of registration fee. '
     },
 
     {
       id: '22',
-      name:
-        'FIFA 18',
-      smallImg:
-        baseLoc + 'fifa.jpg',
-      largeImg:
-        baseLocLarge + 'fifa.jpg',
-      category:
-        'l3',
-      des:
-        'Show your skills. ' +
-        'Showdown your opponent. ',
-      judgement:
-        ['Win/Lose'],
-      rules:
-        ['The half time will be of 5 minutes. ',
-          'The difficulty will be set to legendary. ' +
-          'Camera settings will be set to tele broadcast. ',
-          'In case of a draw there will be direct penalties. ',
-          'Choosing Same teams are allowed. ',
-          'Defending can be of your choice. ',
-          'You can customize your own controls as per your need. ',
-          'If you want to play with a controller, you should bring up your own. '],
-      startTime:
-        '12:12',
-      endTime:
-        '18:18',
-      fee:
-        '100',
-      prize:
-        'Expected prize money will be 8-10 times of registration fee. '
+      name: 'FIFA 18',
+      smallImg: baseLoc + 'fifa.jpg',
+      largeImg: baseLocLarge + 'fifa.jpg',
+      category: 'l3',
+      des: 'Enter and rule the world of Fifa with ' +
+      'Power, skills and stamina',
+      judgement: ['Win/Lose'],
+      rules: ['The half time will be of 5 minutes. ',
+        'The difficulty will be set to legendary. ' +
+        'Camera settings will be set to tele broadcast. ',
+        'In case of a draw there will be direct penalties. ',
+        'Choosing Same teams are allowed. ',
+        'Defending can be of your choice. ',
+        'You can customize your own controls as per your need. ',
+        'If you want to play with a controller, you should bring up your own. '],
+      startTime: '12:12',
+      endTime: '18:18',
+      fee: '100',
+      prize: 'Expected prize money will be 8-10 times of registration fee. '
     },
   ]
 ;
