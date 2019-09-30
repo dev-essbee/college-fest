@@ -5,13 +5,13 @@ export let categories = [{id: 'c0', value: 'Cultural'}, {id: 't0', value: 'Techn
   value: 'Management'
 }, {id: 'd0', value: 'Design'}, {id: 'l0', value: 'LAN Gaming'}];
 const baseLoc = '../../assets/minimg/events/640p/';
-const baseLocLarge = '../../assets/minimg/events/1080p/';
+// const baseLocLarge = '../../assets/minimg/events/1080p/';
 export let events: Event[] = [
     {
       id: '0',
       name: 'STACKITECTURE',
       smallImg: baseLoc + 'SKACKITECTURE1.jpg',
-      largeImg: baseLocLarge + 'stackitecture1.jpg',
+      // largeImg: baseLocLarge + 'stackitecture1.jpg',
       category: 'd0',
       des: 'Show your creativity with stacks. Pile up the wooden pieces in a ' +
         'creative and stable form using your mind and some techniques without any gum/thread. ',
@@ -31,7 +31,7 @@ export let events: Event[] = [
       id: '1',
       name: 'FACE MASK CHALLENGE',
       smallImg: baseLoc + 'facemaskchallenge1.jpg',
-      largeImg: baseLocLarge + 'facemaskchaleenge.jpg',
+      // largeImg: baseLocLarge + 'facemaskchaleenge.jpg',
       category: 'd1',
       des: 'Face painting is a fun way to dress up—no costume required!' +
         'It is the ultimate crowd pleaser and always one of the most popular happenings at any event.' +
@@ -54,7 +54,7 @@ export let events: Event[] = [
       id: '2',
       name: 'CLICK-O-GRAPHY',
       smallImg: baseLoc + 'ClickOgraphy1.jpg',
-      largeImg: baseLocLarge + 'clickOgraphy.jpg',
+      // largeImg: baseLocLarge + 'clickOgraphy.jpg',
       category: 'd2',
       des: '“Taking an image, freezing a moment, reveals how rich reality truly is. ”' +
         'SABRANG 2K19 invites you to capture and freeze the moment in Click-O-Graphy: Photography challenge.' +
@@ -77,7 +77,7 @@ export let events: Event[] = [
       id: '3',
       name: 'DJ WAR ',
       smallImg: baseLoc + 'dj war1.jpg',
-      largeImg: baseLocLarge + 'djwar.jpg',
+      // largeImg: baseLocLarge + 'djwar.jpg',
       category: 'c0',
       des: 'Think you can spin; here is a live platform for you to do the same. Move ' +
         'the crowd with your beats and get into the grove with War of Dj’s. ' +
@@ -99,7 +99,7 @@ export let events: Event[] = [
       id: '4',
       name: 'PAGE TO STAGE (Skit)',
       smallImg: baseLoc + 'page2stage1.jpg',
-      largeImg: baseLocLarge + 'page2stage.jpg',
+      // largeImg: baseLocLarge + 'page2stage.jpg',
       category: 'c1',
       des: 'Curtain raises and it’s time to showcase your talent. Actions speak louder than words will just not remain a quote, ' +
         'the spectators and audience will see it on their own and applaud its rise as well. Come with your ideas in ' +
@@ -131,7 +131,7 @@ export let events: Event[] = [
       id: '5',
       name: 'ROCK - O - PHONIX (BAND JAM)',
       smallImg: baseLoc + 'bandjam1.jpg',
-      largeImg: baseLocLarge + 'bandjam.jpg',
+      // largeImg: baseLocLarge + 'bandjam.jpg',
       category: 'c2',
       des: 'Get ready to sway your hands and bang your head to energizing and rocking beats of Rocko-O-Phonix. ',
       judgement: ['Planning/preparedness', 'Originality',
@@ -157,7 +157,7 @@ export let events: Event[] = [
       id: '6',
       name: 'SCAVENGERS HUNT (TREASURE HUNT)',
       smallImg: baseLoc + 'treasurehunt1.jpg',
-      largeImg: baseLocLarge + 'scavengershunt.jpg',
+      // largeImg: baseLocLarge + 'scavengershunt.jpg',
       category: 'c3',
       des:
         'A treasure hunt is one of many different types of games for players ' +
@@ -193,7 +193,7 @@ export let events: Event[] = [
         'TALENTX',
       smallImg:
         baseLoc + 'talentX1.jpg',
-      largeImg: baseLocLarge + 'talentX.jpg',
+      // largeImg: baseLocLarge + 'talentX.jpg',
       category: 'c4',
       des:
         'Talent is defined as someone who has a natural ability to be good at something, especially without being taught. ' +
@@ -224,7 +224,7 @@ export let events: Event[] = [
         'VOGUE GALA - THE FASHION SHOW',
       smallImg:
         baseLoc + 'vogue-gala1.jpg',
-      largeImg: baseLocLarge + 'voguegala1.jpg',
+      // largeImg: baseLocLarge + 'voguegala1.jpg',
       category: 'c5',
       des:
         'Fashion show is an event at which collection of designer clothing are modelled for audience.' +
@@ -263,8 +263,7 @@ export let events: Event[] = [
         'Beats N Steps (Solo Dance)',
       smallImg:
         baseLoc + 'bnsSolo.jpg',
-      largeImg:
-        baseLocLarge + 'bnsSolo.jpg',
+      // largeImg:baseLocLarge + 'bnsSolo.jpg',
       category:
         'c6',
       des:
@@ -298,8 +297,7 @@ export let events: Event[] = [
         'Beats N Steps (Group Dance)',
       smallImg:
         baseLoc + 'bnsgroup.jpg',
-      largeImg:
-        baseLocLarge + 'bnsgroup.jpg',
+      // largeImg:baseLocLarge + 'bnsgroup.jpg',
       category:
         'c7',
       des:
@@ -332,7 +330,7 @@ export let events: Event[] = [
       id: '11',
       name: 'BATALLA DE CYPHERS - RAP',
       smallImg: baseLoc + 'bdc.jpg',
-      largeImg: baseLocLarge + 'bdc.jpg',
+      // largeImg: baseLocLarge + 'bdc.jpg',
       category: 'c8',
       des: 'Rapping is a musical form of vocal delivery that incorporates rhyme, rhythmic speech,' +
         ' and street vernacular, which is performed or chanted in a variety of ways, usually over a ' +
@@ -351,7 +349,7 @@ export let events: Event[] = [
       id: '12',
       name: 'BATALLA DE CYPHERS - Beat Boxing',
       smallImg: baseLoc + 'beatbox.jpg',
-      largeImg: baseLocLarge + 'beatboxing.jpg',
+      // largeImg: baseLocLarge + 'beatboxing.jpg',
       category: 'c9',
       des: 'Beat-boxing is a form of vocal percussion which primarily involves the art of producing drum beats, ' +
         'rhythm and musical sounds using one’s mouth, lips, tongue and voice. It may also involve singing, ' +
@@ -372,7 +370,7 @@ export let events: Event[] = [
         'AUTOCAD',
       smallImg:
         baseLoc + 'autocad1.jpg',
-      largeImg: baseLocLarge + 'autocad.jpg',
+      // largeImg: baseLocLarge + 'autocad.jpg',
       category: 't0',
       des:
         'This event allows the participants to display their ' +
@@ -399,7 +397,7 @@ export let events: Event[] = [
         'CODEXTREME',
       smallImg:
         baseLoc + 'codextreme1.jpg',
-      largeImg: baseLocLarge + 'codextreme.jpg',
+      // largeImg: baseLocLarge + 'codextreme.jpg',
       category: 't1',
       des:
         'This event is based on time, complexity, algorithm designing and executing code in ' +
@@ -433,7 +431,7 @@ export let events: Event[] = [
         'Robo-Soccer',
       smallImg:
         baseLoc + 'robosoccer1.jpg',
-      largeImg: baseLocLarge + 'robosoccer.jpg',
+      // largeImg: baseLocLarge + 'robosoccer.jpg',
       category: 't2',
       des:
         'For all those who have passion for Robotics as well as Sports, Sabrang’19 presents Robo-soccer. ' +
@@ -480,7 +478,7 @@ export let events: Event[] = [
         'THE LOGICIANS',
       smallImg:
         baseLoc + 'logicians1.jpg',
-      largeImg: baseLocLarge + 'logicians.jpg',
+      // largeImg: baseLocLarge + 'logicians.jpg',
       category: 'm0',
       des:
         'How logically you debate? Well, if you are an engaging and logical debater, ' +
@@ -517,7 +515,7 @@ export let events: Event[] = [
       id: '17',
       name: 'MANAGEMENT QUIZ',
       smallImg: baseLoc + 'managementquiz1.jpg',
-      largeImg: baseLocLarge + '',
+      // largeImg: baseLocLarge + '',
       category: 'm1',
       des:
         'A quiz event which deals with company histories, business strategies, ' +
@@ -547,7 +545,7 @@ export let events: Event[] = [
         'ACCOUNTS MASTER',
       smallImg:
         baseLoc + 'accounts master1.jpg',
-      largeImg: baseLocLarge + 'accountmaster.jpg',
+      // largeImg: baseLocLarge + 'accountmaster.jpg',
       category: 'm2',
       des:
         'Accounts master is the game designed to check the accounting skills of management student and their ability to prepare ' +
@@ -575,7 +573,7 @@ export let events: Event[] = [
       id: '19',
       name: 'THINK A THON',
       smallImg: baseLoc + 'thinkAthon1.jpg',
-      largeImg: baseLocLarge + 'thinkathon.jpg',
+      // largeImg: baseLocLarge + 'thinkathon.jpg',
       category: 'm3',
       des: 'This is an event for entrepreneurs, start-ups, innovators. ' +
         'We welcome creators with their ideas and passion to improve the world around us. ',
@@ -593,7 +591,7 @@ export let events: Event[] = [
       id: '20',
       name: 'LAN Gaming - Counter Strike: Global Offensive ',
       smallImg: baseLoc + 'csgo.jpg',
-      largeImg: baseLocLarge + 'csgo.jpg',
+      // largeImg: baseLocLarge + 'csgo.jpg',
       category: 'l0',
       des: 'Gather your team and and go Terrorist hunting, sneak in to plant a Bomb' +
         ', defend the Hostages or rescue them.' +
@@ -620,7 +618,7 @@ export let events: Event[] = [
       id: '21',
       name: 'LAN Gaming - PUBG Mobile ',
       smallImg: baseLoc + 'pubg1.jpg',
-      largeImg: baseLocLarge + 'pubg1.jpg',
+      // largeImg: baseLocLarge + 'pubg1.jpg',
       category: 'l1',
       des: 'Stay Low, Go Fast. Kill First, Die Last' +
         'One Shot, One Kill. No Luck, All Skill.',
@@ -646,7 +644,7 @@ export let events: Event[] = [
       id: '22',
       name: 'LAN Gaming - BLUR',
       smallImg: baseLoc + 'blur1.jpg',
-      largeImg: baseLocLarge + 'blur1.jpg',
+      // largeImg: baseLocLarge + 'blur1.jpg',
       category: 'l2',
       des: 'Race through the track dodging the attacks of your opponents while attacking them with power ups.' +
         'Make sure to hone your drifting skills.',
@@ -669,7 +667,7 @@ export let events: Event[] = [
       id: '23',
       name: 'FIFA 18',
       smallImg: baseLoc + 'fifa.jpg',
-      largeImg: baseLocLarge + 'fifa.jpg',
+      // largeImg: baseLocLarge + 'fifa.jpg',
       category: 'l3',
       des: 'Enter and rule the world of Fifa with ' +
         'Power, skills and stamina',

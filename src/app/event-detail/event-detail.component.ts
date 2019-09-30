@@ -5,7 +5,6 @@ import {EventService} from '../event.service';
 import {Location} from '@angular/common';
 import {FirebaseDatabaseService} from '../firebase-database.service';
 import {UserAuthService} from '../user-auth.service';
-import {MatSnackBar} from '@angular/material/snack-bar';
 import {SnackbarService} from '../snackbar.service';
 
 @Component({
@@ -59,7 +58,7 @@ export class EventDetailComponent implements OnInit {
   }
 
   getBgLoc(e) {
-    const loc = 'url(' + e.largeImg + ')';
+    const loc = 'url(' + e.smallImg + ')';
     // console.log(loc);
     return loc;
   }

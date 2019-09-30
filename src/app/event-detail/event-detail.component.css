@@ -4,10 +4,12 @@
   background-size: cover !important;
   background-attachment: fixed !important;
 }
+
 .event-detail-card mat-card-title {
   font-family: 'Griffy', cursive;
   font-weight: bold;
 }
+
 /*.event-detail-card mat-card-content{*/
 /*  font-size: large;*/
 /*}*/
