@@ -29,7 +29,7 @@ export class EventsComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit() {
-    console.log();
+    // console.log();
     // todo implement scroll to previous position
     window.scrollTo(0, 0);
   }

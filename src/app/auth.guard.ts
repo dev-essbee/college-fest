@@ -25,7 +25,7 @@ export class AuthGuard implements CanActivate {
       map(user => !!user),
       tap(loggedIn => {
         if (!loggedIn) {
-          console.log('access denied');
+          // console.log('access denied');
           // this.router.navigate(['/login']);
           // this.auth.googleSignIn();
           const loginSnackbarRef = this.snackBarService.showSnackBar('Please Login to continue', 'LOGIN', 0);

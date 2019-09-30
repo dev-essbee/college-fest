@@ -5,9 +5,8 @@ import {AngularFireAuth} from '@angular/fire/auth';
 import {first, switchMap} from 'rxjs/operators';
 import {Observable, of} from 'rxjs';
 import {Router} from '@angular/router';
-import {MatSnackBar} from '@angular/material/snack-bar';
 import {SnackbarService} from './snackbar.service';
-import {CustomSnackbarService} from "./custom-snackbar.service";
+import {CustomSnackbarService} from './custom-snackbar.service';
 
 
 @Injectable({
@@ -23,7 +22,7 @@ export class FirebaseDatabaseService {
               private snackBar: SnackbarService,
               private customSnackbar: CustomSnackbarService
   ) {
-    console.log('read data called-user-db');
+    // console.log('read data called-user-db');
     this.readData().subscribe((userData) => {
       this.loggedInUserData = userData;
     });
@@ -55,7 +54,7 @@ export class FirebaseDatabaseService {
   }
 
   readData(): Observable<User> {
-    console.log('read data called');
+    // console.log('read data called');
     return this.afAuth.authState.pipe(
       switchMap(user => {
           if (user) {
@@ -87,11 +86,11 @@ export class FirebaseDatabaseService {
 
   userSignedIn(user, route) {
     const userRef: AngularFirestoreDocument<User> = this.afs.collection('users').doc(`${user.uid}`);
-    console.log('create user data');
+    // console.log('create user data');
     userRef.ref.get().then((snapshot) => {
       if (!snapshot.exists) {
-        console.log('in');
-        console.log(snapshot.exists);
+        // console.log('in');
+        // console.log(snapshot.exists);
         return this.createUserData(userRef, user);
       }
     });

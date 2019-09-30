@@ -47,10 +47,10 @@ export class RegisterComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log('subscribed');
+    // console.log('subscribed');
     this.city.valueChanges
       .subscribe((city) => {
-        console.log(this.transport);
+        // console.log(this.transport);
         if (city.toString().trim().toLowerCase() === 'jaipur') {
           this.transport.enable();
         } else {
@@ -60,9 +60,9 @@ export class RegisterComponent implements OnInit {
     this.pinCode.valueChanges
       .subscribe((pin) => {
         if (pin.toString().trim().length === 3) {
-          console.log(pin);
+          // console.log(pin);
           if (pinCode.hasOwnProperty(pin)) {
-            console.log(pinCode[pin][1].toString());
+            // console.log(pinCode[pin][1].toString());
             this.userDetailsForm.get('city').setValue(toTitleCase(pinCode[pin][1].toString().trim()));
             this.userDetailsForm.get('state').setValue(toTitleCase(pinCode[pin][0].toString().trim()));
 
@@ -149,8 +149,8 @@ export class RegisterComponent implements OnInit {
   }
 
   get transport() {
-    console.log('trans');
-    console.log(this.userDetailsForm.get('transport'));
+    // console.log('trans');
+    // console.log(this.userDetailsForm.get('transport'));
     return this.userDetailsForm.get('transport');
   }
 
@@ -167,8 +167,8 @@ export class RegisterComponent implements OnInit {
       transport: this.transBoolToString(this.transport),
       newUser: false
     };
-    console.log(this.transport.value);
-    console.log(this.databaseService.updateData(data));
+    // console.log(this.transport.value);
+    // console.log(this.databaseService.updateData(data));
     this.customSnackbar.showSnackBar('Data Updated Successfully', '', 2);
     this.location.back();
     //  TODO: Reload Page

@@ -10,7 +10,7 @@ body {
   outline: 0;
   margin: 0;
   padding: 0;
-  background: url("assets/img/background_img.jpg") center fixed;
+  background: url("assets/minimg/background_img.jpg") center fixed;
   background-size: cover;
   font-family: 'Open Sans', sans-serif;
   font-weight: bold;

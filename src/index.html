@@ -37,7 +37,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
   <script src="/assets/js/leon.js"></script>
   <script>
-      console.log('in script');
+      // console.log('in script');
       const speed = 8;
       const fps = 1000 / 30;
       const PI2 = 2 * Math.PI;
@@ -58,7 +58,7 @@
 
           window.addEventListener('resize', canvasResize, false);
           canvasResize();
-          console.log('canvas created');
+          // console.log('canvas created');
           // moveEvent(canvas);
       }
 
@@ -115,9 +115,7 @@
           leon.tracking = 1;
           requestAnimationFrame(animate);
 
-          function clicked() {
-              console.log('clicked');
-          }
+
 
           c = document.getElementById('fontCanvas');
           document.addEventListener('click', function () {

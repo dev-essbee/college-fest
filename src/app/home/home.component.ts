@@ -50,7 +50,7 @@ export class HomeComponent implements OnInit, AfterContentInit, OnDestroy, After
     this.docStyle = document.documentElement.style;
     this.registerEle = document.querySelector('.register');
     this.boundingClientRect = this.registerEle.getBoundingClientRect();
-    console.log(this.boundingClientRect);
+    // console.log(this.boundingClientRect);
   }
 
   ngOnDestroy(): void {
@@ -62,7 +62,7 @@ export class HomeComponent implements OnInit, AfterContentInit, OnDestroy, After
   }
 
   onMouseMove(e) {
-    console.log('move');
+    // console.log('move');
     const innerWth = window.innerWidth;
     const innerHt = window.innerHeight;
     const resW = (340 * innerWth) / 1920;
@@ -76,7 +76,7 @@ export class HomeComponent implements OnInit, AfterContentInit, OnDestroy, After
     }
     const dx = x - (xc + resH);
     const dy = y - (yc + resW);
-    console.log(innerHt);
+    // console.log(innerHt);
 
     this.docStyle.setProperty('--rx', `${dy / -1}deg`);
     this.docStyle.setProperty('--ry', `${dx / 10}deg`);
@@ -84,19 +84,19 @@ export class HomeComponent implements OnInit, AfterContentInit, OnDestroy, After
   }
 
   onMouseUp() {
-    console.log('up');
+    // console.log('up');
     this.docStyle.setProperty('--tz', '-12px');
   }
 
   onMouseLeave() {
-    console.log('leave');
+    // console.log('leave');
     this.docStyle.setProperty('--ty', '0');
     this.docStyle.setProperty('--rx', '0');
     this.docStyle.setProperty('--ry', '0');
   }
 
   onMouseDown() {
-    console.log('down');
+    // console.log('down');
     this.docStyle.setProperty('--tz', '-25px');
 
   }

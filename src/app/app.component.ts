@@ -19,7 +19,7 @@ export class AppComponent implements OnInit, OnDestroy {
 
 
   ngOnInit(): void {
-    console.log('app-component-on-init');
+    // console.log('app-component-on-init');
     this.wowService.init();
   }
 

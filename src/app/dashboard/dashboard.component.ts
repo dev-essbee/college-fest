@@ -32,7 +32,7 @@ export class DashboardComponent implements OnInit {
   getEvents() {
     const pEvent = [];
     const data = this.userData.participatingEvents;
-    console.log(data);
+    // console.log(data);
     for (const key in data) {
       if (data[key]) {
         if (this.eventsData.hasOwnProperty(key)) {
@@ -48,7 +48,7 @@ export class DashboardComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log(this.randomNo);
+    // console.log(this.randomNo);
     this.path = this.basePath + this.randomNo + '.png';
     this.tooltipAvatar = this.tooltips[this.randomNo];
     this.userData = this.dbService.loggedInUserData;

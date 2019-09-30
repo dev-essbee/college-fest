@@ -30,12 +30,12 @@ export class UserAuthService {
 
   async googleSignIn() {
     const route = this.router.url;
-    console.log(route);
+    // console.log(route);
     const provider = new auth.GoogleAuthProvider();
     let credential;
     try {
       credential = await this.afAuth.auth.signInWithPopup(provider);
-      console.log(this.dbService.loggedInUserData);
+      // console.log(this.dbService.loggedInUserData);
       this.customSnackBar.showSnackBar('Login Successful', '', 3);
       return this.dbService.userSignedIn(credential.user, route);
     } catch (error) {

@@ -150,7 +150,7 @@ section::after {
 }
 
 #firstPage_content {
-  background: url('../../assets/img/sample.jpg') center;
+  background: url('../../assets/minimg/sample.jpg') center;
   background-size: cover;
   width: 100%;
 }
