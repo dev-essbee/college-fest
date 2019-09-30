@@ -330,41 +330,44 @@ export let events: Event[] = [
 
     {
       id: '11',
-      name:
-        'BATALLA DE CYPHERS (RAP & BEAT BOXING)',
-      smallImg:
-        baseLoc + 'bdc.jpg',
-      largeImg:
-        baseLocLarge + 'bdc.jpg',
-      category:
-        'c8',
-      des:
-        'Dance is not merely body movement – it is like poetry in motion as someone said. ' +
-        'With thoughts, emotions, expressions and elegant movements. It brings alive the meaning.' +
-        'Dance is an art which is done with body, mind and soul. ',
-      judgement:
-        ['Rhythm ', 'Formation ', 'Synchronization ', 'Expressions ', 'Costumes ', 'Makeup ', 'Setup ', 'Overall effects '],
-      rules:
-        ['Time limit is 3-4 minutes for each performance. Negative marking for exceeding the time limit.',
-          'Each team may have 4-15 members. ' +
-          'The participants are requested to bring a backup of their song to avoid technical disturbance.' +
-          'Out of which, they are also requested to submit a copy of the song with the coordinator of the event. ',
-          'No props will be provided by the coordinators. Participants can carry their own props. ',
-          'Green room would be given for changing purpose. ',
-          'Dance performance should not convey any indecent gestures. ',
-          'Each entry must be completed with a non-refundable cash as per the registration guidelines. ',
-          'Decision of the judges will be final. '],
-      startTime:
-        '12:12',
-      endTime:
-        '18:18',
-      fee:
-        '300',
-      prize:
-        'Expected prize money will be 8-10 times of registration fee. '
+      name: 'BATALLA DE CYPHERS - RAP',
+      smallImg: baseLoc + 'bdc.jpg',
+      largeImg: baseLocLarge + 'bdc.jpg',
+      category: 'c8',
+      des: 'Rapping is a musical form of vocal delivery that incorporates rhyme, rhythmic speech,' +
+        ' and street vernacular, which is performed or chanted in a variety of ways, usually over a ' +
+        'backing beat or musical accompaniment.',
+      judgement: ['WConfidence', 'Voice quality', 'Clarity', 'Rhythm', 'Their appeal to the audience.'],
+      rules: ['Time allotted for each performance is 3-4 minutes. ',
+        'Participants will not be allowed to refer to the lyrics while raping.',
+        'The rap should not be bite (COPY) from anywhere.',
+        'The rap should not have any slangs or derogatory language else the contestant will be considered as disqualify.'],
+      startTime: '12:12',
+      endTime: '18:18',
+      fee: '150',
+      prize: 'Expected prize money will be 8-10 times of registration fee. '
     },
     {
       id: '12',
+      name: 'BATALLA DE CYPHERS - Beat Boxing',
+      smallImg: baseLoc + 'beatbox.jpg',
+      largeImg: baseLocLarge + 'beatboxing.jpg',
+      category: 'c9',
+      des: 'Beat-boxing is a form of vocal percussion which primarily involves the art of producing drum beats, ' +
+        'rhythm and musical sounds using one’s mouth, lips, tongue and voice. It may also involve singing, ' +
+        'vocal imitation of turntablism, the simulation of hours, strings and other musical instruments.',
+      judgement: ['WConfidence', 'Voice quality', 'Clarity', 'Rhythm', 'Their appeal to the audience.'],
+      rules: ['Time allotted for each performance is 3-4 minutes ',
+        'The competition is open to beat boxers only.',
+        'The beats should not be bite (COPY) from anywhere.',
+        'There should not be any slangs or derogatory language else the contestant will be considered as disqualify.'],
+      startTime: '12:12',
+      endTime: '18:18',
+      fee: '150',
+      prize: 'Expected prize money will be 8-10 times of registration fee. '
+    },
+    {
+      id: '13',
       name:
         'AUTOCAD',
       smallImg:
@@ -391,7 +394,7 @@ export let events: Event[] = [
       prize:
         'Expected prize money will be 8-10 times of registration fee. '
     }, {
-      id: '13',
+      id: '14',
       name:
         'CODEXTREME',
       smallImg:
@@ -425,7 +428,7 @@ export let events: Event[] = [
         'Expected prize money will be 8-10 times of registration fee. '
     },
     {
-      id: '14',
+      id: '15',
       name:
         'Robo-Soccer',
       smallImg:
@@ -472,7 +475,7 @@ export let events: Event[] = [
         'Expected prize money will be 8-10 times of registration fee. '
     },
     {
-      id: '15',
+      id: '16',
       name:
         'THE LOGICIANS',
       smallImg:
@@ -511,7 +514,7 @@ export let events: Event[] = [
         'Expected prize money will be 8-10 times of registration fee. '
     },
     {
-      id: '16',
+      id: '17',
       name: 'MANAGEMENT QUIZ',
       smallImg: baseLoc + 'managementquiz1.jpg',
       largeImg: baseLocLarge + '',
@@ -539,7 +542,7 @@ export let events: Event[] = [
         'Expected prize money will be 8-10 times of registration fee. '
     },
     {
-      id: '17',
+      id: '18',
       name:
         'ACCOUNTS MASTER',
       smallImg:
@@ -569,7 +572,7 @@ export let events: Event[] = [
         'Expected prize money will be 8-10 times of registration fee. '
     },
     {
-      id: '18',
+      id: '19',
       name: 'THINK A THON',
       smallImg: baseLoc + 'thinkAthon1.jpg',
       largeImg: baseLocLarge + 'thinkathon.jpg',
@@ -587,7 +590,7 @@ export let events: Event[] = [
     },
 
     {
-      id: '19',
+      id: '20',
       name: 'LAN Gaming - Counter Strike: Global Offensive ',
       smallImg: baseLoc + 'csgo.jpg',
       largeImg: baseLocLarge + 'csgo.jpg',
@@ -614,13 +617,13 @@ export let events: Event[] = [
     },
 
     {
-      id: '20',
+      id: '21',
       name: 'LAN Gaming - PUBG Mobile ',
       smallImg: baseLoc + 'pubg1.jpg',
       largeImg: baseLocLarge + 'pubg1.jpg',
       category: 'l1',
       des: 'Stay Low, Go Fast. Kill First, Die Last' +
-      'One Shot, One Kill. No Luck, All Skill.',
+        'One Shot, One Kill. No Luck, All Skill.',
       judgement: ['Last one standing wins.'],
       rules: ['A custom room will be created, and the players will be invited by a code. ',
         'All the participants will play solo. ' +
@@ -640,13 +643,13 @@ export let events: Event[] = [
     },
 
     {
-      id: '21',
+      id: '22',
       name: 'LAN Gaming - BLUR',
       smallImg: baseLoc + 'blur1.jpg',
       largeImg: baseLocLarge + 'blur1.jpg',
       category: 'l2',
       des: 'Race through the track dodging the attacks of your opponents while attacking them with power ups.' +
-      'Make sure to hone your drifting skills.',
+        'Make sure to hone your drifting skills.',
       judgement: ['Finishing Position'],
       rules: ['A total of six players will play the game at a time. The player that wins the match will advance to the next round. ',
         'The game will be of 3 laps. ' +
@@ -663,13 +666,13 @@ export let events: Event[] = [
     },
 
     {
-      id: '22',
+      id: '23',
       name: 'FIFA 18',
       smallImg: baseLoc + 'fifa.jpg',
       largeImg: baseLocLarge + 'fifa.jpg',
       category: 'l3',
       des: 'Enter and rule the world of Fifa with ' +
-      'Power, skills and stamina',
+        'Power, skills and stamina',
       judgement: ['Win/Lose'],
       rules: ['The half time will be of 5 minutes. ',
         'The difficulty will be set to legendary. ' +
@@ -683,6 +686,6 @@ export let events: Event[] = [
       endTime: '18:18',
       fee: '100',
       prize: 'Expected prize money will be 8-10 times of registration fee. '
-    },
+    }
   ]
 ;
