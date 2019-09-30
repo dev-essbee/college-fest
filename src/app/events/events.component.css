@@ -141,7 +141,7 @@
 
 @media (max-width: 425px) {
   .event-img {
-    min-width: 215px;
+    min-width: 150px;
   }
 
   .event-text {
@@ -159,3 +159,17 @@
     height: 250px !important;
   }
 }
+  @media(max-width: 250px){
+    .event-img{
+      min-width: 100px;
+    }
+    .event-container-1 h4{
+      font-size: small;
+    }
+    .event-container-2 h4{
+      font-size: small;
+    }
+    .empty_div{
+      height: 300px !important;
+    }
+  }
