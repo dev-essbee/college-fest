@@ -1,0 +1,96 @@
+.team-register-container {
+  padding: 5px;
+  justify-content: center;
+  margin: 140px 15% 5%;
+  display: flex;
+}
+.team-note{
+  opacity: .8;
+  font-weight: unset;
+  margin-top: 20px !important;
+  margin-bottom: 20px;
+  text-wrap: normal;
+  text-align: center;
+}
+.team-register-card{
+  background-color: black;
+  box-shadow: 0 2px 4px #400012;
+  color: #aaaaaa;
+}
+
+.team-email-field mat-form-field{
+  width: 412px;
+}
+.d-flex{
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .d-flex{
+    flex-direction: column;
+    text-align: center;
+    flex: auto;
+  }
+}
+
+@media(max-width: 600px) {
+  .d-flex{
+    flex-direction: column;
+    flex: auto;
+    text-align: center;
+  }
+  .full-width{
+    width: auto !important;
+  }
+  .team-register-fields p{
+    font-size: small;
+  }
+  .team-register-card mat-card-title{
+    font-size: medium;
+  }
+}
+
+@media(max-width: 425px) {
+  .team-note{
+    font-size: small !important;
+  }
+}
+
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+  color: #400012 !important;
+}
+::ng-deep .mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
+  color: #400012 !important;
+}
+::ng-deep .mat-form-field-invalid .mat-input-element, .mat-warn .mat-input-element {
+  caret-color: #400012 !important;
+}
+::ng-deep .mat-form-field-appearance-outline.mat-form-field-invalid.mat-form-field-invalid .mat-form-field-outline-thick {
+  color: #400012 !important;
+  opacity: 0.8 !important;
+}
+::ng-deep .mat-hint {
+  color: #aaaaaa !important;
+}
+::ng-deep .mat-form-field.mat-form-field-invalid .mat-form-field-label {
+  color: #aaaaaa !important;
+}
+::ng-deep .mat-form-field.mat-focused .mat-form-field-label {
+  color: #aaaaaa !important;
+}
+::ng-deep .mat-form-field-label {
+  color: #aaaaaa !important;
+}
+.mat-raised-button:disabled{
+  color: #aaaaaa;
+  opacity: .7;
+  border: 1px solid #aaaaaa;
+}
+.mat-raised-button{
+  color: #aaaaaa;
+  background: #430A06;
+}
+.mat-raised-button:hover{
+  box-shadow:0 4px 8px 0 #88001a;
+  transition: .3s;
+}

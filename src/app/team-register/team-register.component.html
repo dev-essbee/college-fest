@@ -1,1 +1,35 @@
-<p>team-register works!</p>
+<div class="team-register-container">
+  <mat-card class="team-register-card">
+    <mat-card-title><h2 style="text-align: center">Register Your Team</h2></mat-card-title>
+
+    <mat-card-content class="team-register-fields">
+      <p class="team-note">Note: Make Sure all the Team Members are registered on the Sabrang2k19 Website.</p>
+
+      <div class="d-flex">
+        <div class="full-width field">
+          <mat-form-field class="team-name-field full-width" appearance="outline">
+            <mat-label>Team Name</mat-label>
+            <input matInput placeholder="Team Name" formControlName="teamName">
+            <mat-error>
+              <mat-error></mat-error>
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="d-flex">
+        <div class="full-width field" class="team-email-field">
+          <mat-form-field class="team-email-id-field full-width" appearance="outline">
+            <mat-label>Email id</mat-label>
+            <input style="color: #aaaaaa" matInput #email placeholder="Email id" formControlName="email">
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="submit-button field" style="margin-top:15px; text-align: center">
+        <button mat-raised-button type="submit">Submit
+        </button>
+      </div>
+    </mat-card-content>
+
+  </mat-card>
+</div>
