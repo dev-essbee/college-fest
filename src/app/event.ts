@@ -2,6 +2,9 @@ export class Event {
   id: string;
   name: string;
   smallImg: string;
+  team: number;
+  teammembers: number;
+  minTeamMembers: number;
   // largeImg: string;
   des: string;
   judgement: string[];

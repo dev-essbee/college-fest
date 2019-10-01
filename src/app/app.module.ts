@@ -30,6 +30,7 @@ import {FooterComponent} from './footer/footer.component';
 import {NgsRevealModule} from 'ngx-scrollreveal';
 import {SponsorsHomeComponent} from './home/sponsors-home/sponsors-home.component';
 import {CustomSnackbarComponent} from './custom-snackbar/custom-snackbar.component';
+import { TeamRegisterComponent } from './team-register/team-register.component';
 
 
 @NgModule({
@@ -47,6 +48,7 @@ import {CustomSnackbarComponent} from './custom-snackbar/custom-snackbar.compone
     FooterComponent,
     SponsorsHomeComponent,
     CustomSnackbarComponent,
+    TeamRegisterComponent,
 
 
   ],

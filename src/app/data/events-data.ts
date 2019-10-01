@@ -9,6 +9,9 @@ const baseLoc = '../../assets/minimg/events/640p/';
 export let events: Event[] = [
     {
       id: '0',
+      team: 0,
+      teammembers: 0,
+      minTeamMembers: 0,
       name: 'STACKITECTURE',
       smallImg: baseLoc + 'SKACKITECTURE1.jpg',
       // largeImg: baseLocLarge + 'stackitecture1.jpg',
@@ -29,6 +32,9 @@ export let events: Event[] = [
     },
     {
       id: '1',
+      team: 1,
+      teammembers: 2,
+      minTeamMembers: 2,
       name: 'FACE MASK CHALLENGE',
       smallImg: baseLoc + 'facemaskchallenge1.jpg',
       // largeImg: baseLocLarge + 'facemaskchaleenge.jpg',
@@ -52,6 +58,9 @@ export let events: Event[] = [
     },
     {
       id: '2',
+      team: 0,
+      teammembers: 0,
+      minTeamMembers: 0,
       name: 'CLICK-O-GRAPHY',
       smallImg: baseLoc + 'ClickOgraphy1.jpg',
       // largeImg: baseLocLarge + 'clickOgraphy.jpg',
@@ -75,6 +84,9 @@ export let events: Event[] = [
     },
     {
       id: '3',
+      team: 0,
+      teammembers: 0,
+      minTeamMembers: 0,
       name: 'DJ WAR ',
       smallImg: baseLoc + 'dj war1.jpg',
       // largeImg: baseLocLarge + 'djwar.jpg',
@@ -97,6 +109,9 @@ export let events: Event[] = [
     },
     {
       id: '4',
+      team: 1,
+      teammembers: 20,
+      minTeamMembers: 1,
       name: 'PAGE TO STAGE (Skit)',
       smallImg: baseLoc + 'page2stage1.jpg',
       // largeImg: baseLocLarge + 'page2stage.jpg',
@@ -129,6 +144,9 @@ export let events: Event[] = [
     },
     {
       id: '5',
+      team: 1,
+      teammembers: 8,
+      minTeamMembers: 3,
       name: 'ROCK - O - PHONIX (BAND JAM)',
       smallImg: baseLoc + 'bandjam1.jpg',
       // largeImg: baseLocLarge + 'bandjam.jpg',
@@ -155,6 +173,9 @@ export let events: Event[] = [
     },
     {
       id: '6',
+      team: 1,
+      teammembers: 4,
+      minTeamMembers: 4,
       name: 'SCAVENGERS HUNT (TREASURE HUNT)',
       smallImg: baseLoc + 'treasurehunt1.jpg',
       // largeImg: baseLocLarge + 'scavengershunt.jpg',
@@ -187,8 +208,12 @@ export let events: Event[] = [
         '250',
       prize:
         'Expected prize money will be 8-10 times of registration fee. '
-    }, {
+    },
+    {
       id: '7',
+      team: 0,
+      teammembers: 0,
+      minTeamMembers: 0,
       name:
         'TALENTX',
       smallImg:
@@ -220,6 +245,9 @@ export let events: Event[] = [
     },
     {
       id: '8',
+      team: 1,
+      teammembers: 15,
+      minTeamMembers: 11,
       name:
         'VOGUE GALA - THE FASHION SHOW',
       smallImg:
@@ -259,6 +287,9 @@ export let events: Event[] = [
     },
     {
       id: '9',
+      team: 0,
+      teammembers: 0,
+      minTeamMembers: 0,
       name:
         'Beats N Steps (Solo Dance)',
       smallImg:
@@ -293,6 +324,9 @@ export let events: Event[] = [
 
     {
       id: '10',
+      team: 1,
+      teammembers: 15,
+      minTeamMembers: 4,
       name:
         'Beats N Steps (Group Dance)',
       smallImg:
@@ -328,6 +362,9 @@ export let events: Event[] = [
 
     {
       id: '11',
+      team: 0,
+      teammembers: 0,
+      minTeamMembers: 0,
       name: 'BATALLA DE CYPHERS - RAP',
       smallImg: baseLoc + 'bdc.jpg',
       // largeImg: baseLocLarge + 'bdc.jpg',
@@ -347,6 +384,9 @@ export let events: Event[] = [
     },
     {
       id: '12',
+      team: 0,
+      teammembers: 0,
+      minTeamMembers: 0,
       name: 'BATALLA DE CYPHERS - Beat Boxing',
       smallImg: baseLoc + 'beatbox.jpg',
       // largeImg: baseLocLarge + 'beatboxing.jpg',
@@ -366,6 +406,9 @@ export let events: Event[] = [
     },
     {
       id: '13',
+      team: 0,
+      teammembers: 0,
+      minTeamMembers: 0,
       name:
         'AUTOCAD',
       smallImg:
@@ -393,6 +436,9 @@ export let events: Event[] = [
         'Expected prize money will be 8-10 times of registration fee. '
     }, {
       id: '14',
+    team: 1,
+    teammembers: 2,
+    minTeamMembers: 2,
       name:
         'CODEXTREME',
       smallImg:
@@ -427,6 +473,9 @@ export let events: Event[] = [
     },
     {
       id: '15',
+      team: 1,
+      teammembers: 4,
+      minTeamMembers: 2,
       name:
         'Robo-Soccer',
       smallImg:
@@ -474,6 +523,9 @@ export let events: Event[] = [
     },
     {
       id: '16',
+      team: 1,
+      teammembers: 2,
+      minTeamMembers: 2,
       name:
         'THE LOGICIANS',
       smallImg:
@@ -513,6 +565,9 @@ export let events: Event[] = [
     },
     {
       id: '17',
+      team: 1,
+      teammembers: 2,
+      minTeamMembers: 2,
       name: 'MANAGEMENT QUIZ',
       smallImg: baseLoc + 'managementquiz1.jpg',
       // largeImg: baseLocLarge + '',
@@ -541,6 +596,9 @@ export let events: Event[] = [
     },
     {
       id: '18',
+      team: 1,
+      teammembers: 2,
+      minTeamMembers: 2,
       name:
         'ACCOUNTS MASTER',
       smallImg:
@@ -571,6 +629,9 @@ export let events: Event[] = [
     },
     {
       id: '19',
+      team: 1,
+      teammembers: 5,
+      minTeamMembers: 4,
       name: 'THINK A THON',
       smallImg: baseLoc + 'thinkAthon1.jpg',
       // largeImg: baseLocLarge + 'thinkathon.jpg',
@@ -589,6 +650,9 @@ export let events: Event[] = [
 
     {
       id: '20',
+      team: 1,
+      teammembers: 5,
+      minTeamMembers: 5,
       name: 'LAN Gaming - Counter Strike: Global Offensive ',
       smallImg: baseLoc + 'csgo.jpg',
       // largeImg: baseLocLarge + 'csgo.jpg',
@@ -616,6 +680,9 @@ export let events: Event[] = [
 
     {
       id: '21',
+      team: 0,
+      teammembers: 0,
+      minTeamMembers: 0,
       name: 'LAN Gaming - PUBG Mobile ',
       smallImg: baseLoc + 'pubg1.jpg',
       // largeImg: baseLocLarge + 'pubg1.jpg',
@@ -642,6 +709,9 @@ export let events: Event[] = [
 
     {
       id: '22',
+      team: 0,
+      teammembers: 0,
+      minTeamMembers: 0,
       name: 'LAN Gaming - BLUR',
       smallImg: baseLoc + 'blur1.jpg',
       // largeImg: baseLocLarge + 'blur1.jpg',
@@ -665,6 +735,9 @@ export let events: Event[] = [
 
     {
       id: '23',
+      team: 0,
+      teammembers: 0,
+      minTeamMembers: 0,
       name: 'FIFA 18',
       smallImg: baseLoc + 'fifa.jpg',
       // largeImg: baseLocLarge + 'fifa.jpg',
