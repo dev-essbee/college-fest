@@ -2,8 +2,8 @@ export class Event {
   id: string;
   name: string;
   smallImg: string;
-  team: number;
-  teammembers: number;
+  team: any;
+  maxTeamMembers: number;
   minTeamMembers: number;
   // largeImg: string;
   des: string;
