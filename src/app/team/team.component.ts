@@ -9,13 +9,13 @@ export class TeamComponent implements OnInit {
   emailSb = 'mailto:dev.sb18@gmail.com?cc=kumarrohitbindal@gmail.com&subject=Regarding sabrang website&body=Hi';
   emailRb = 'mailto:kumarrohitbindal@gmail.com?cc=dev.sb18@gmail.com&subject=Regarding sabrang website&body=Hi';
 
-  faculty = [{name: 'Dr. Lokanath Mishra', contact: '+91-9999558286'}, {
+  faculty = [{name: 'Dr. Lokanath Mishra', contact: '9999558286'}, {
     name: 'Mr. Sami Ur Rehman',
     contact: '9982226747'
   }];
   students = [{name: 'Vishnu Agarwal', contact: '+91-8085194808'}, {
     name: 'Somesh Sharma',
-    contact: '9509703636'
+    contact: '+91-9509703636'
   }, {name: 'Payal Sharma', contact: '+91-8112288381'}, {
     name: 'Ashish Kumar',
     contact: ''
