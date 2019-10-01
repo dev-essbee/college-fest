@@ -39,7 +39,7 @@ export class UserAuthService {
       this.customSnackBar.showSnackBar('Login Successful', '', 3);
       return this.dbService.userSignedIn(credential.user, route);
     } catch (error) {
-      const retrySnackbarRef = this.snackBar.showSnackBar('Login Unsuccessful', 'RETRY', 5);
+      const retrySnackbarRef = this.snackBar.showSnackBar('Login Unsuccessful \n Please Allow Popups', 'RETRY', 5);
       retrySnackbarRef.onAction().subscribe(() => {
         retrySnackbarRef.dismiss();
         this.googleSignIn();
