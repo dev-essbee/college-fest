@@ -14,7 +14,6 @@ export class DashboardComponent implements OnInit {
   eventsData = events;
   registeredEvents = [];
   userData: User = {};
-
   basePath = '../../assets/minimg/avatars/avatar-';
   tooltips = ['Hello there! You naughty Little Devil', 'We all live down here.'
     , 'Come, You do not keep The Devil waiting.', 'Born in Hell, forged in Fire!', 'The Red Floating Guy.',
@@ -34,10 +33,8 @@ export class DashboardComponent implements OnInit {
     const data = this.userData.participatingEvents;
     // console.log(data);
     for (const key in data) {
-      if (data[key]) {
-        if (this.eventsData.hasOwnProperty(key)) {
-          pEvent.push({name: this.eventsData[key].name, id: this.eventsData[key].id});
-        }
+      if (data[key] !== false) {
+        pEvent.push(key);
       }
     }
     return pEvent;

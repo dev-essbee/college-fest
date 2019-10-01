@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-team-register',
@@ -6,10 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./team-register.component.css']
 })
 export class TeamRegisterComponent implements OnInit {
+  @Input('eventDet') eventDet: any;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
+    console.log(this.eventDet);
   }
 
 }
