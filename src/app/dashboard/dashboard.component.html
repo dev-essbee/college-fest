@@ -45,7 +45,7 @@
             >{{eventsData[key].name | uppercase}}</a>
             <div [ngSwitch]="eventsData[key].team">
               <div *ngSwitchCase="true">
-                <a class="create_team_button" routerLink="/team-register">Create Team</a>
+                <a class="create_team_button" (click)="onCreateTeam(key)">Create Team</a>
               </div>
               <div *ngSwitchCase="false">
               </div>
