@@ -41,6 +41,7 @@
           <li *ngFor="let event of registeredEvents">
             <a class="event-links" [routerLink]="['/events/',event.id]"
             >{{event.name | uppercase}}</a>
+            <a class="create_team_button" routerLink="/team-register">Create Team</a>
           </li>
         </ul>
       </mat-card-content>
