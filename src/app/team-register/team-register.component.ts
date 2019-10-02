@@ -17,7 +17,9 @@ import {FirebaseDatabaseService} from '../firebase-database.service';
 import {User} from '../user';
 import {CustomSnackbarService} from '../custom-snackbar.service';
 import {Observable, of} from 'rxjs';
-import {max} from "rxjs/operators";
+import {max} from 'rxjs/operators';
+import {TeamNameValidator} from '../validators/team-name.validator';
+import {AngularFirestore} from '@angular/fire/firestore';
 
 @Component({
   selector: 'app-team-register',
@@ -44,7 +46,9 @@ export class TeamRegisterComponent implements OnInit {
               private eventService: EventService,
               private fb: FormBuilder,
               private dbService: FirebaseDatabaseService,
-              private customSnackBar: CustomSnackbarService
+              private customSnackBar: CustomSnackbarService,
+              private teamNameValidator: TeamNameValidator,
+              private afs: AngularFirestore
   ) {
   }
 
@@ -160,9 +164,9 @@ export class TeamRegisterComponent implements OnInit {
   maxMembers() {
     // console.log(this.teamForm.value.teamMembers.length);
     const maxMem = this.event.maxTeamMembers;
-    console.log(maxMem);
+    // console.log(maxMem);
     const size = this.teamForm.value.teamMembers.length;
-    console.log(size);
+    // console.log(size);
     if (maxMem === size) {
       return true;
     } else {
