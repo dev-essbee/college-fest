@@ -17,9 +17,12 @@
   box-shadow: 0 2px 4px #400012;
   color: #aaaaaa;
 }
-
-.team-email-field mat-form-field{
-  width: 412px;
+.add-remove-buttons:hover{
+  color: #aaaaaa !important;
+  transition: .3s;
+}
+.full-width{
+  width: 300px !important;
 }
 .d-flex{
   justify-content: center;

@@ -21,20 +21,15 @@
             </mat-form-field>
           </div>
 
-          <h2>Team Members</h2>
-
+          <h2 style="margin-bottom: 10px">Team Members</h2>
           <div formArrayName="teamMembers">
-
             <div *ngFor="let teamMember of teamMembers.controls; let i=index" [formGroupName]="i">
-
               <div>
               <span>
                 Member {{i + 1}}
               </span>
                 <span *ngIf="teamMembers.controls.length>1" (click)="deleteTeamMember(i)"></span>
               </div>
-
-
               <div class="full-width field">
                 <mat-form-field class="full-width" appearance="outline">
                   <mat-label>Email</mat-label>
@@ -46,33 +41,28 @@
                   </mat-error>
                 </mat-form-field>
               </div>
-
-
               <div class="full-width field">
                 <mat-form-field class="full-width" appearance="outline">
                   <mat-label>Name</mat-label>
                   <input matInput placeholder="Name" formControlName="name">
                 </mat-form-field>
+                <button style="color: #430A06" class="add-remove-buttons" mat-button (click)="deleteTeamMember(i)">
+                  <mat-icon>remove_circle_outline</mat-icon>
+                </button>
               </div>
-
-              <button type="button" (click)="deleteTeamMember(i)">Delete Team Member {{i}}</button>
-
             </div>
-
-            <button type="button" (click)="addTeamMember()">Add Team Member</button>
-
+            <button style="color: #430A06;" class="add-remove-buttons" mat-button (click)="addTeamMember()">
+              <mat-icon>add_circle_outline</mat-icon>
+            </button>
           </div>
-
           <div class="submit-button field" style="margin-top:15px; text-align: right">
             <button mat-raised-button type="submit" [disabled]="!teamForm.valid">Submit
             </button>
           </div>
-
         </form>
-
       </div>
-      {{this.teamForm.value|json}}
-      {{this.teamForm.status}}
+            {{this.teamForm.value|json}}
+            {{this.teamForm.status}}
 
     </mat-card-content>
   </mat-card>
