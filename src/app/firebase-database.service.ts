@@ -2,8 +2,8 @@ import {Injectable} from '@angular/core';
 import {User} from './user';
 import {AngularFirestore, AngularFirestoreDocument} from '@angular/fire/firestore';
 import {AngularFireAuth} from '@angular/fire/auth';
-import {first, reduce, switchMap} from 'rxjs/operators';
-import {Observable, of} from 'rxjs';
+import {debounceTime, first, reduce, switchMap} from 'rxjs/operators';
+import {Observable, of, OperatorFunction} from 'rxjs';
 import {Router} from '@angular/router';
 import {SnackbarService} from './snackbar.service';
 import {CustomSnackbarService} from './custom-snackbar.service';
@@ -105,6 +105,14 @@ export class FirebaseDatabaseService {
   findUser(email) {
     return this.afs.collection('users',
       ref => ref.where('email', '==', email).limit(1))
-      .valueChanges();
+      .valueChanges().pipe(debounceTime(500) as OperatorFunction);
+  }
+
+  // todo: .then after update data for confirmation
+
+  teamRegister(id, event) {
+    // const eveOb= 'registeredEvents['+id+']/'
+    // his.afs.collection('users').doc(id).set(event, {merge: true});
   }
 }
+

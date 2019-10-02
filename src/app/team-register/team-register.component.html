@@ -8,7 +8,7 @@
       <p class="team-note">Note: Make Sure all the Team Members are registered on the Sabrang2k19 Website.</p>
 
       <div class="form-fields d-flex flex-column">
-        <form [formGroup]="teamForm" (ngSubmit)="save()">
+        <form [formGroup]="teamForm" >
           <div class="full-width field">
             <mat-form-field class="full-width" appearance="outline">
               <mat-label>Team Name</mat-label>
@@ -44,7 +44,7 @@
               <div class="full-width field">
                 <mat-form-field class="full-width" appearance="outline">
                   <mat-label>Name</mat-label>
-                  <input matInput placeholder="Name" formControlName="name">
+                  <input matInput placeholder="Name" readonly formControlName="name" >
                 </mat-form-field>
                 <button style="color: #430A06" class="add-remove-buttons" mat-button (click)="deleteTeamMember(i)">
                   <mat-icon>remove_circle_outline</mat-icon>
@@ -56,7 +56,7 @@
             </button>
           </div>
           <div class="submit-button field" style="margin-top:15px; text-align: right">
-            <button mat-raised-button type="submit" [disabled]="!teamForm.valid">Submit
+            <button mat-raised-button type="submit" [disabled]="!teamForm.valid" (click)="saveMethod()">Submit
             </button>
           </div>
         </form>
