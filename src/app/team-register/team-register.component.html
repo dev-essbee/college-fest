@@ -1,35 +1,79 @@
 <div class="team-register-container">
   <mat-card class="team-register-card">
-    <mat-card-title><h2 style="text-align: center">Register Your Team</h2></mat-card-title>
+    <mat-card-header>
+      <mat-card-title><h2 style="text-align: center">Register Your Team</h2></mat-card-title>
+    </mat-card-header>
 
     <mat-card-content class="team-register-fields">
       <p class="team-note">Note: Make Sure all the Team Members are registered on the Sabrang2k19 Website.</p>
 
-      <div class="d-flex">
-        <div class="full-width field">
-          <mat-form-field class="team-name-field full-width" appearance="outline">
-            <mat-label>Team Name</mat-label>
-            <input matInput placeholder="Team Name" formControlName="teamName">
-            <mat-error>
-              <mat-error></mat-error>
-            </mat-error>
-          </mat-form-field>
-        </div>
-      </div>
+      <div class="form-fields d-flex flex-column">
+        <form [formGroup]="teamForm" (ngSubmit)="save()">
+          <div class="full-width field">
+            <mat-form-field class="full-width" appearance="outline">
+              <mat-label>Team Name</mat-label>
+              <input matInput placeholders="Team Name" formControlName="teamName">
+              <mat-error *ngFor="let validation of teamMemberValidMsg.teamName">
+                <mat-error *ngIf="(teamName.dirty|| teamName.touched)&& teamName.hasError(validation.type)">
+                  {{validation.message}}
+                </mat-error>
+              </mat-error>
+            </mat-form-field>
+          </div>
 
-      <div class="d-flex">
-        <div class="full-width field" class="team-email-field">
-          <mat-form-field class="team-email-id-field full-width" appearance="outline">
-            <mat-label>Email id</mat-label>
-            <input style="color: #aaaaaa" matInput #email placeholder="Email id" formControlName="email">
-          </mat-form-field>
-        </div>
+          <h2>Team Members</h2>
+
+          <div formArrayName="teamMembers">
+
+            <div *ngFor="let teamMember of teamMembers.controls; let i=index" [formGroupName]="i">
+
+              <div>
+              <span>
+                Member {{i + 1}}
+              </span>
+                <span *ngIf="teamMembers.controls.length>1" (click)="deleteTeamMember(i)"></span>
+              </div>
+
+
+              <div class="full-width field">
+                <mat-form-field class="full-width" appearance="outline">
+                  <mat-label>Email</mat-label>
+                  <input matInput placeholder="Email" formControlName="email">
+                  <mat-error *ngFor="let validation of teamMemberValidMsg.email">
+                    <mat-error
+                      *ngIf="(teamMember.get('email').dirty || teamMember.get('email').touched)&&
+                      teamMember.get('email').hasError(validation.type)">{{validation.message}}</mat-error>
+                  </mat-error>
+                </mat-form-field>
+              </div>
+
+
+              <div class="full-width field">
+                <mat-form-field class="full-width" appearance="outline">
+                  <mat-label>Name</mat-label>
+                  <input matInput placeholder="Name" formControlName="name">
+                </mat-form-field>
+              </div>
+
+              <button type="button" (click)="deleteTeamMember(i)">Delete Team Member {{i}}</button>
+
+            </div>
+
+            <button type="button" (click)="addTeamMember()">Add Team Member</button>
+
+          </div>
+
+          <div class="submit-button field" style="margin-top:15px; text-align: right">
+            <button mat-raised-button type="submit" [disabled]="!teamForm.valid">Submit
+            </button>
+          </div>
+
+        </form>
+
       </div>
-      <div class="submit-button field" style="margin-top:15px; text-align: center">
-        <button mat-raised-button type="submit">Submit
-        </button>
-      </div>
+      {{this.teamForm.value|json}}
+      {{this.teamForm.status}}
+
     </mat-card-content>
-
   </mat-card>
 </div>

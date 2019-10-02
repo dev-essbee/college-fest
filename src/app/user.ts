@@ -7,7 +7,7 @@ export interface User {
   college?: string;
   address?: string;
   pinCode?: number;
-  participatingEvents?: Array<string>;
+  participatingEvents?: Array<any>;
   transport?: string;
   gender?: string;
   city?: string;

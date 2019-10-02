@@ -2,7 +2,7 @@ import {Injectable} from '@angular/core';
 import {User} from './user';
 import {AngularFirestore, AngularFirestoreDocument} from '@angular/fire/firestore';
 import {AngularFireAuth} from '@angular/fire/auth';
-import {first, switchMap} from 'rxjs/operators';
+import {first, reduce, switchMap} from 'rxjs/operators';
 import {Observable, of} from 'rxjs';
 import {Router} from '@angular/router';
 import {SnackbarService} from './snackbar.service';
@@ -79,10 +79,10 @@ export class FirebaseDatabaseService {
     if (this.loggedInUserData.participatingEvents[Object.keys(data.participatingEvents)[0]]) {
       this.customSnackbar.showSnackBar('You have already registered for this event', '', 3);
     } else {
-      this.updateData(data);
       if (this.loggedInUserData.newUser) {
         this.router.navigate(['/register']);
       } else {
+        this.updateData(data);
         this.customSnackbar.showSnackBar('You have successfully registered for the event.', '', 5);
       }
     }
@@ -100,5 +100,11 @@ export class FirebaseDatabaseService {
     });
     // this.router.navigate([route]);
 
+  }
+
+  findUser(email) {
+    return this.afs.collection('users',
+      ref => ref.where('email', '==', email).limit(1))
+      .valueChanges();
   }
 }
