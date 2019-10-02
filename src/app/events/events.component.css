@@ -1,3 +1,8 @@
+.event{
+  touch-action: auto !important;
+  -ms-touch-action: unset;
+}
+
 .top_button {
   text-align: center;
   cursor: pointer;
@@ -26,6 +31,7 @@
   left: 25%;
   right: 25%;
   top: 98px;
+  z-index: 2;
 }
 
 .event-bookmarks mat-card {
