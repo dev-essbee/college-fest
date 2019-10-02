@@ -17,6 +17,7 @@ import {FirebaseDatabaseService} from '../firebase-database.service';
 import {User} from '../user';
 import {CustomSnackbarService} from '../custom-snackbar.service';
 import {Observable, of} from 'rxjs';
+import {max} from "rxjs/operators";
 
 @Component({
   selector: 'app-team-register',
@@ -144,7 +145,6 @@ export class TeamRegisterComponent implements OnInit {
         console.log(' user has not registered for the event');
         return of({notRegistered: true});
       } else if (eventStatus === true) {
-        this.teamForm.value.teamMembers;
         return of(null);
       } else {
         console.log('user already part of a team');
@@ -160,8 +160,14 @@ export class TeamRegisterComponent implements OnInit {
   maxMembers() {
     // console.log(this.teamForm.value.teamMembers.length);
     const maxMem = this.event.maxTeamMembers;
+    console.log(maxMem);
     const size = this.teamForm.value.teamMembers.length;
-    return maxMem !== size + 1;
+    console.log(size);
+    if (maxMem === size) {
+      return true;
+    } else {
+      return false;
+    }
 
   }
 }
