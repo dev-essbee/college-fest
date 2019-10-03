@@ -1,56 +1,59 @@
 <!--Bookmarks card-->
-<div class="top_button">
-  <mat-icon (click)="scrollToEvent('empty')">keyboard_arrow_up</mat-icon>
-</div>
-<div class="event-bookmarks">
-  <mat-card>
-    <button class="bookmark-button" mat-button *ngFor="let cate of categories" (click)="scrollToEvent(cate.id)">{{cate.value}}</button>
-  </mat-card>
-</div>
-<div id="empty" class="empty_div" style="height:200px"></div>
-<!--Container Type 1-->
-<div *ngFor="let event of events">
-  <ng-container
-    [ngTemplateOutlet]="event.id%2==0? con1 : con2"
-    [ngTemplateOutletContext]="{event:event}">
-  </ng-container>
-</div>
-<!--ngsRevealSet [ngsSelector]="'.event'"-->
-<ng-template #con1 let-event="event">
-  <div class="event-container-1 wow rotateInDownLeft"  id="{{event.category}}">
-    <div class="d-flex event" (click)="onClickMore(event)" matTooltip="click to know more.">
-      <div class="p-2 flex-grow-1">
-        <img alt='{{event.name}}' class="img-fluid event-img" src={{event.smallImg}}>
-      </div>
-      <div class="p-2 bd-highlight">
-        <br>
-        <div class="event-text">
-          <h4 style="font-family: 'Griffy', cursive;">{{event.name}}</h4>
-          <p>{{event.des}}
-          </p>
-          <!--        <h6 class="card-subtitle">{{event.startTime}}-{{event.endTime}}</h6>-->
+<div class="events-container">
+  <div class="top_button">
+    <mat-icon (click)="scrollToEvent('empty')">keyboard_arrow_up</mat-icon>
+  </div>
+  <div class="event-bookmarks">
+    <mat-card>
+      <button class="bookmark-button" mat-button *ngFor="let cate of categories"
+              (click)="scrollToEvent(cate.id)">{{cate.value}}</button>
+    </mat-card>
+  </div>
+  <div id="empty" class="empty_div" style="height:200px"></div>
+  <!--Container Type 1-->
+  <div *ngFor="let event of events">
+    <ng-container
+      [ngTemplateOutlet]="event.id%2==0? con1 : con2"
+      [ngTemplateOutletContext]="{event:event}">
+    </ng-container>
+  </div>
+  <!--ngsRevealSet [ngsSelector]="'.event'"-->
+  <ng-template #con1 let-event="event">
+    <div class="event-container-1 wow rotateInDownLeft" id="{{event.category}}">
+      <div class="d-flex event" (click)="onClickMore(event)" matTooltip="click to know more.">
+        <div class="p-2 flex-grow-1">
+          <img alt='{{event.name}}' class="img-fluid event-img" src={{event.smallImg}}>
+        </div>
+        <div class="p-2 bd-highlight">
+          <br>
+          <div class="event-text">
+            <h4 style="font-family: 'Griffy', cursive;">{{event.name}}</h4>
+            <p>{{event.des}}
+            </p>
+            <!--        <h6 class="card-subtitle">{{event.startTime}}-{{event.endTime}}</h6>-->
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</ng-template>
+  </ng-template>
 
-<ng-template #con2 let-event="event">
-  <!--Container Type 2-->
-  <div class="event-container-2 wow rotateInDownRight" id="{{event.category}}">
-    <div class="d-flex event" (click)="onClickMore(event)" matTooltip="click to know more.">
-      <div class="p-2 bd-highlight">
-        <br>
-        <div class="event-text">
-          <h4 style="font-family: 'Griffy', cursive;">{{event.name}}</h4>
-          <p>{{event.des}}
-          </p>
-          <!--        <h6 class="card-subtitle">{{event.startTime}}-{{event.endTime}}</h6>-->
+  <ng-template #con2 let-event="event">
+    <!--Container Type 2-->
+    <div class="event-container-2 wow rotateInDownRight" id="{{event.category}}">
+      <div class="d-flex event" (click)="onClickMore(event)" matTooltip="click to know more.">
+        <div class="p-2 bd-highlight">
+          <br>
+          <div class="event-text">
+            <h4 style="font-family: 'Griffy', cursive;">{{event.name}}</h4>
+            <p>{{event.des}}
+            </p>
+            <!--        <h6 class="card-subtitle">{{event.startTime}}-{{event.endTime}}</h6>-->
+          </div>
+        </div>
+        <div class="p-2 flex-grow-1">
+          <img alt='{{event.name}}' class="img-fluid event-img " src={{event.smallImg}}>
         </div>
       </div>
-      <div class="p-2 flex-grow-1">
-        <img alt='{{event.name}}' class="img-fluid event-img " src={{event.smallImg}}>
-      </div>
     </div>
-  </div>
-</ng-template>
+  </ng-template>
+</div>
