@@ -59,12 +59,31 @@
   .team-register-card mat-card-title{
     font-size: medium;
   }
+  .name-email.d-flex{
+    flex-direction: column !important;
+    text-align: center;
+    flex: auto;
+    flex-wrap: nowrap;
+  }
 }
 
 @media(max-width: 425px) {
   .team-note{
     font-size: small !important;
   }
+  .name-email.d-flex{
+    flex-direction: column !important;
+    text-align: center;
+    flex: auto;
+    flex-wrap: nowrap;
+  }
+  /*.rmvbtn{*/
+  /*  width: fit-content;*/
+  /*}*/
+  /*.remove.d-flex{*/
+  /*  justify-content: center;*/
+  /*  width: 100%;*/
+  /*}*/
 }
 
 ::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {

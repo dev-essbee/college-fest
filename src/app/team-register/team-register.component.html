@@ -1,7 +1,7 @@
 <div class="team-register-container">
   <mat-card class="team-register-card">
-    <mat-card-header>
-      <mat-card-title><h2 style="text-align: center">Register Your Team</h2></mat-card-title>
+    <mat-card-header style="justify-content: center">
+      <mat-card-title><h2>Register Your Team</h2></mat-card-title>
     </mat-card-header>
 
     <mat-card-content class="team-register-fields">
@@ -49,29 +49,37 @@
               </div>
 
               <div class="d-flex flex-row flex-wrap name-email justify-content-center">
-
-                <div class="full-width field">
-                  <mat-form-field class="full-width" appearance="outline">
-                    <mat-label>Email</mat-label>
-                    <input matInput placeholder="Email" formControlName="email">
-                    <mat-error *ngFor="let validation of teamMemberValidMsg.email">
-                      <mat-error
-                        *ngIf="(teamMember.get('email').dirty || teamMember.get('email').touched)&&
+                <div class="d-flex flex-col">
+                  <div class="full-width field">
+                    <mat-form-field class="full-width" appearance="outline">
+                      <mat-label>Email</mat-label>
+                      <input matInput placeholder="Email" formControlName="email">
+                      <mat-error *ngFor="let validation of teamMemberValidMsg.email">
+                        <mat-error
+                          *ngIf="(teamMember.get('email').dirty || teamMember.get('email').touched)&&
                       teamMember.get('email').hasError(validation.type)">{{validation.message}}</mat-error>
-                    </mat-error>
-                  </mat-form-field>
+                      </mat-error>
+                    </mat-form-field>
+                  </div>
                 </div>
 
-                <div class="full-width field">
-                  <mat-form-field style="margin-left: 2%" class="full-width" appearance="outline">
-                    <mat-label>Name</mat-label>
-                    <input matInput placeholder="Name" readonly formControlName="name">
-                  </mat-form-field>
+                <div class="d-flex flex-col">
+                  <div class="full-width field">
+                    <mat-form-field style="margin-left: 2%" class="full-width" appearance="outline">
+                      <mat-label>Name</mat-label>
+                      <input matInput placeholder="Name" readonly formControlName="name">
+                    </mat-form-field>
+                  </div>
                 </div>
 
-                <button style="color: #430A06" class="add-remove-buttons" mat-button (click)="deleteTeamMember(i)">
-                  <mat-icon>remove_circle_outline</mat-icon>
-                </button>
+
+                <div style="align-items: center" class="d-flex flex-col flex-fill flex-wrap">
+                  <button style="color: #430A06; max-width: fit-content" class="add-remove-buttons" mat-button
+                          (click)="deleteTeamMember(i)">
+                    <mat-icon style="vertical-align: baseline">remove_circle_outline</mat-icon>
+                  </button>
+                </div>
+                
               </div>
 
             </div>
