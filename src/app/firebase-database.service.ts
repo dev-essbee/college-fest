@@ -2,7 +2,7 @@ import {Injectable} from '@angular/core';
 import {User} from './user';
 import {AngularFirestore, AngularFirestoreDocument} from '@angular/fire/firestore';
 import {AngularFireAuth} from '@angular/fire/auth';
-import {debounceTime, first, reduce, switchMap} from 'rxjs/operators';
+import {debounceTime, first, reduce, switchMap, take} from 'rxjs/operators';
 import {Observable, of, OperatorFunction} from 'rxjs';
 import {Router} from '@angular/router';
 import {SnackbarService} from './snackbar.service';
@@ -116,10 +116,9 @@ export class FirebaseDatabaseService {
   }
 
   findTeam(teamName) {
-    return this.afs.collection('teams').doc(teamName).valueChanges();
+    return this.afs.collection('teams').doc(teamName).valueChanges().pipe();
   }
 
-  // todo: .then after update data for confirmation
 
   teamRegister(event, teamName, data) {
     const id = data.id;
@@ -132,15 +131,17 @@ export class FirebaseDatabaseService {
     // console.log(signObj);
     this.afs.collection('users').doc(id).set(eveObj);
     this.afs.collection('users').doc(this.loggedInUserData.id).set(signObj);
-    this.findTeam(teamName).subscribe(team => {
+    let teamStatus = [];
+    this.findTeam(teamName).pipe(take(1)).subscribe(team => {
       // console.log(team);
       if (team) {
-        let eventStatus;
         if (team.hasOwnProperty('id')) {
-          eventStatus = (team as any).id;
+          teamStatus = (team as any).id;
         }
-        console.log(eventStatus);
       }
+      const teamStatusArr = Object.keys(teamStatus).map(key => teamStatus[key]);
+      teamStatusArr.push(event);
+      this.afs.collection('teams').doc(teamName).set({id: teamStatusArr}, {merge: true});
     });
   }
 }

@@ -32,14 +32,14 @@ export class TeamRegisterComponent implements OnInit {
   eventId: number;
   teamMemberValidMsg = {
     teamName: [{type: 'required', message: 'Enter Team Name'},
-      {type: 'duplicate', message: 'Team already registered for the event.'}],
+      {type: 'duplicate', message: 'Team name not available'}],
     email: [{type: 'required', message: 'Enter email id of a team member'},
       {type: 'email', message: 'Enter valid email id'},
       {type: 'noAccount', message: 'User not registered for Sabrang 2k19'},
       {type: 'teamAlready', message: 'User already part of a team'},
-      {type: 'notRegistered', message: 'User not registered for this event.'},
-      {type: 'invalidId', message: 'Enter valid registered email id.'},
-      {type: 'duplicate', message: 'Duplicate members not allowed.'}]
+      {type: 'notRegistered', message: 'User not registered for this event'},
+      {type: 'invalidId', message: 'Enter valid registered email id'},
+      {type: 'duplicate', message: 'Duplicate members not allowed'}]
   };
 
 
