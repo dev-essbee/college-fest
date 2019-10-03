@@ -117,11 +117,15 @@ export class FirebaseDatabaseService {
 
   teamRegister(event, teamName, data) {
     const id = data.id;
-    const eveObj = data.participatingEvents;
-    eveObj[event] = teamName;
+    const eveObj = data;
+    eveObj.participatingEvents[event] = teamName;
+    console.log('eve');
     console.log(eveObj);
-    this.afs.collection('users').doc(id).update(eveObj);
-
+    const signObj = this.loggedInUserData;
+    signObj.participatingEvents[event] = teamName;
+    console.log(signObj);
+    this.afs.collection('users').doc(id).set(eveObj);
+    this.afs.collection('users').doc(this.loggedInUserData.id).set(signObj);
   }
 }
 

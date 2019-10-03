@@ -23,6 +23,7 @@ export class DashboardComponent implements OnInit {
 
   path: string;
   tooltipAvatar: string;
+  eventStatusValue: string;
 
   constructor(public auth: UserAuthService,
               public dbService: FirebaseDatabaseService,
@@ -59,5 +60,18 @@ export class DashboardComponent implements OnInit {
 
   navigateToEvents() {
     this.router.navigate(['/events']);
+  }
+
+  eventStatus(key) {
+    if (this.eventsData[key].team) {
+      status = this.userData.participatingEvents[key];
+      if (status === true) {
+        return 'Create Team';
+      } else {
+        return status;
+      }
+    } else {
+      return null;
+    }
   }
 }

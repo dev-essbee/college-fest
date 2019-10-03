@@ -23,13 +23,27 @@
               </mat-form-field>
             </div>
           </div>
+          <div class="d-flex flex-row flex-wrap name-email justify-content-center">
+            <div class="full-width field">
+              <mat-form-field class="full-width" appearance="outline">
+                <mat-label>Email</mat-label>
+                <input matInput placeholder="Email" readonly formControlName="firstEmail">
+              </mat-form-field>
+            </div>
 
+            <div class="full-width field">
+              <mat-form-field style="margin-left: 2%" class="full-width" appearance="outline">
+                <mat-label>Name</mat-label>
+                <input matInput placeholder="Name" readonly formControlName="firstName">
+              </mat-form-field>
+            </div>
+          </div>
           <h2 style="margin-bottom: 10px">Team Members</h2>
           <div formArrayName="teamMembers">
             <div *ngFor="let teamMember of teamMembers.controls; let i=index" [formGroupName]="i">
               <div>
               <span>
-                Member {{i + 1}}
+                Member {{i + 2}}
               </span>
                 <span *ngIf="teamMembers.controls.length>1" (click)="deleteTeamMember(i)"></span>
               </div>
@@ -58,7 +72,6 @@
                 <button style="color: #430A06" class="add-remove-buttons" mat-button (click)="deleteTeamMember(i)">
                   <mat-icon>remove_circle_outline</mat-icon>
                 </button>
-
               </div>
 
             </div>
@@ -68,10 +81,12 @@
               </button>
             </div>
           </div>
+
           <div class="submit-button field" style="margin-top:15px; text-align: right">
             <button mat-raised-button type="submit" [disabled]="!teamForm.valid" (click)="saveMethod()">Submit
             </button>
           </div>
+
         </form>
       </div>
       <!--      {{this.teamForm.value|json}}-->

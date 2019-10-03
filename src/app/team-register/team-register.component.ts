@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {ActivatedRoute, Route} from '@angular/router';
+import {ActivatedRoute, Route, Router} from '@angular/router';
 import {EventService} from '../event.service';
 import {Event} from '../event';
 
@@ -48,14 +48,14 @@ export class TeamRegisterComponent implements OnInit {
               private fb: FormBuilder,
               private dbService: FirebaseDatabaseService,
               private customSnackBar: CustomSnackbarService,
-              private afs: AngularFirestore
+              private firebaseService: FirebaseDatabaseService,
+              private router: Router
   ) {
   }
 
   ngOnInit() {
     this.getEvent();
     this.createTeamForm();
-
   }
 
   get teamName() {
@@ -75,6 +75,8 @@ export class TeamRegisterComponent implements OnInit {
   createTeamForm() {
     this.teamForm = this.fb.group({
       teamName: ['', Validators.required, [this.checkTeamName.bind(this)]],
+      firstEmail: [this.firebaseService.loggedInUserData.email],
+      firstName: [this.firebaseService.loggedInUserData.name],
       teamMembers: this.fb.array([this.initTeamMember()]),
     });
   }
@@ -84,14 +86,16 @@ export class TeamRegisterComponent implements OnInit {
       this.dbService.findTeam(control.value.toString().trim().toLowerCase()).subscribe(team => {
         console.log(team);
         if (team) {
-          const eventStatus = team.id;
-          for (const i of eventStatus) {
-            console.log(i);
-            console.log(this.eventId);
-            if (i === this.eventId) {
+          if (team.hasOwnProperty('id')) {
+            const eventStatus = team.id;
+            for (const i of eventStatus) {
               console.log(i);
-              res({duplicate: true});
-              break;
+              console.log(this.eventId);
+              if (i === this.eventId) {
+                console.log(i);
+                res({duplicate: true});
+                break;
+              }
             }
           }
           res(null);
@@ -143,6 +147,9 @@ export class TeamRegisterComponent implements OnInit {
 
   checkDuplicate(control: AbstractControl) {
     const email = control.value.toString().trim().toLowerCase();
+    if (email === this.firebaseService.loggedInUserData.email) {
+      return of({duplicate: true});
+    }
     for (const key in this.teamForm.value.teamMembers) {
       if (this.teamForm.value.teamMembers[key].email === email) {
         return of({duplicate: true});
@@ -182,20 +189,22 @@ export class TeamRegisterComponent implements OnInit {
 
   saveMethod() {
     // console.log(this.teamMembers.value);
-    if (this.teamForm.value.teamMembers.length >= this.event.minTeamMembers) {
+    if (this.teamForm.value.teamMembers.length + 1 >= this.event.minTeamMembers) {
       console.log('save');
       console.log(this.teamForm.value.teamMembers);
       console.log(this.teamForm);
-      const team = this.teamForm.value.teamName.toString().trim();
+      const team = this.teamForm.controls.teamName.value.toString().trim();
       for (const key in this.teamForm.value.teamMembers) {
         console.log(this.teamForm.value.teamMembers[key]);
         this.dbService.findUser(this.teamForm.value.teamMembers[key].email).subscribe(user => {
           console.log(user);
           const data = user[0];
+          console.log(data);
           this.dbService.teamRegister(this.eventId,
-            this.teamForm.controls.teamName.value, data);
+            team, data);
         });
       }
+      this.router.navigate(['/dashboard']);
     } else {
       console.log('called');
       this.customSnackBar.showSnackBar('Minimum ' + this.event.minTeamMembers +
@@ -203,7 +212,4 @@ export class TeamRegisterComponent implements OnInit {
     }
   }
 
-  disableName() {
-    return true;
-  }
 }

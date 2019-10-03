@@ -41,17 +41,15 @@
         <h5 style="padding-bottom: 8px; font-family: 'Griffy', cursive;">Registered Events</h5>
         <ul>
           <li *ngFor="let key of registeredEvents">
-            <div class="d-flex flex-row justify-content-between event-team-container" >
+            <div class="d-flex flex-row justify-content-between event-team-container">
               <a class="event-links"
                  [routerLink]="['/events/',eventsData[key].id]">{{eventsData[key].name | uppercase}}</a>
               <div [ngSwitch]="eventsData[key].team">
-                <div *ngSwitchCase="true">
-                  <a class="create_team_button" (click)="onCreateTeam(key)">Create Team</a>
+                <div *ngIf="eventStatus(key)==='Create Team'">
+                  <a class="create_team_button" (click)="onCreateTeam(key)">{{eventStatus(key)}}</a>
                 </div>
-                <div *ngSwitchCase="false">
-                </div>
-                <div *ngSwitchDefault>
-                  {{eventsData[key].team}}
+                <div *ngIf="eventStatus(key)!=='Create Team'">
+                  <p>Team Name: {{eventStatus(key)}}</p>
                 </div>
               </div>
             </div>
