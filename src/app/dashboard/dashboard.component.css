@@ -101,4 +101,9 @@
     margin-left: 6% !important;
     font-size: medium;
   }
+  .event-team-container.d-flex{
+    flex-direction: column !important;
+    justify-content: center !important;
+    flex: auto;
+  }
 }

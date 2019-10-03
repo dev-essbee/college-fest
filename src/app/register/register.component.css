@@ -17,6 +17,14 @@
   display: flex;
 }
 
+.note{
+  margin-top: 10px;
+  color: #aaaaaa;
+  opacity: .7;
+  font-size: small;
+  font-weight: unset;
+}
+
 @media (max-width: 768px) {
   .d-flex {
     flex-direction: column;
@@ -77,7 +85,7 @@
 
 /*// mat-input carent color*/
 ::ng-deep .mat-input-element {
-  caret-color: #400012 !important;
+  caret-color: #aaaaaa !important;
   color: #aaaaaa !important;
 }
 
@@ -87,7 +95,7 @@
 
 /*// mat-input error carent color*/
 ::ng-deep .mat-form-field-invalid .mat-input-element, .mat-warn .mat-input-element {
-  caret-color: #400012 !important;
+  caret-color: #aaaaaa !important;
 }
 
 /*// mat-label normal state style*/
