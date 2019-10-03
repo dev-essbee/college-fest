@@ -64,9 +64,9 @@ export class DashboardComponent implements OnInit {
 
   eventStatus(key) {
     if (this.eventsData[key].team) {
-      status = this.userData.participatingEvents[key];
-      // tslint:disable-next-line:triple-equals
-      if (status as any == true) {
+      status = this.userData.participatingEvents[key] as string;
+      console.log(typeof (status));
+      if (status === 'true') {
         return 'Create Team';
       } else {
         return ('Team Name:' + status);
