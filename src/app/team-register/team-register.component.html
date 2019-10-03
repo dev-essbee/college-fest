@@ -1,7 +1,7 @@
 <div class="team-register-container">
   <mat-card class="team-register-card">
     <mat-card-header style="justify-content: center">
-      <mat-card-title><h2>Register Your Team</h2></mat-card-title>
+      <mat-card-title><h2 style="font-family: 'Griffy', cursive;">Register Your Team</h2></mat-card-title>
     </mat-card-header>
 
     <mat-card-content class="team-register-fields">
@@ -38,7 +38,7 @@
               </mat-form-field>
             </div>
           </div>
-          <h2 style="margin-bottom: 10px">Team Members</h2>
+          <h4 style="text-align: center; margin: 20px; font-family: 'Griffy', cursive;">Team Members</h4>
           <div formArrayName="teamMembers">
             <div *ngFor="let teamMember of teamMembers.controls; let i=index" [formGroupName]="i">
               <div>
