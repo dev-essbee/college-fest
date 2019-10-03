@@ -72,7 +72,7 @@ export class DashboardComponent implements OnInit {
         return ('Team Name: ' + status);
       }
     } else {
-      return null;
+      return 'Individual';
     }
   }
 }

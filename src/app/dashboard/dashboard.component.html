@@ -41,10 +41,11 @@
                   <a class="create_team_button" (click)="onCreateTeam(key)">{{eventStatus(key)}}</a>
                 </div>
                 <div *ngIf="eventStatus(key)!=='Create Team'">
-                  <p>{{eventStatus(key)}}</p>
+                  <div>{{eventStatus(key)}}</div>
                 </div>
               </div>
             </div>
+            <br>
           </li>
         </ul>
       </mat-card-content>
