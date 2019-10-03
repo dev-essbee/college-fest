@@ -105,7 +105,7 @@ export class FirebaseDatabaseService {
   findUser(email) {
     return this.afs.collection('users',
       ref => ref.where('email', '==', email).limit(1))
-      .valueChanges().pipe(debounceTime(500) as OperatorFunction);
+      .valueChanges().pipe();
   }
 
   // todo: .then after update data for confirmation

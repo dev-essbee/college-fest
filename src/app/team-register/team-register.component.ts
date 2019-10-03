@@ -88,11 +88,12 @@ export class TeamRegisterComponent implements OnInit {
 
   checkUser(control: AbstractControl) {
     let userDet;
+    control.parent.controls['name'].setValue('');
     return new Promise(res => {
       this.dbService.findUser(control.value.toString().trim().toLowerCase()).subscribe(user => {
         userDet = user[0];
         console.log(userDet);
-        control.parent.controls['name'].setValue('');
+
         if (userDet) {
           const eventStatus = userDet.participatingEvents[this.eventId];
           console.log(eventStatus);
@@ -162,11 +163,11 @@ export class TeamRegisterComponent implements OnInit {
       console.log(this.teamForm.value.teamMembers);
       console.log(this.teamForm);
       const team = this.teamForm.value.teamName.toString().trim();
-      for (const key in this.teamForm.value.teamMembers) {
+      /*for (const key in this.teamForm.value.teamMembers) {
         this.dbService.findUser(this.teamForm.value.teamMembers[key].email).subscribe(user => {
           this.dbService.teamRegister(user.id, this.eventId);
         });
-      }
+      }*/
     } else {
       console.log('called');
       this.customSnackBar.showSnackBar('Minimum ' + this.event.minTeamMembers +
