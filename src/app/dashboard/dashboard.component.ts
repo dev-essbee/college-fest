@@ -4,7 +4,7 @@ import {FirebaseDatabaseService} from '../firebase-database.service';
 import {events} from '../data/events-data';
 import {User} from '../user';
 import {Router} from '@angular/router';
-import {Event} from "../event";
+
 
 @Component({
   selector: 'app-dashboard',
