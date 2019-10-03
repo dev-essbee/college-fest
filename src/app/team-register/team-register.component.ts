@@ -164,7 +164,7 @@ export class TeamRegisterComponent implements OnInit {
 
   addTeamMember() {
     if (this.maxMembers()) {
-      this.customSnackBar.showSnackBar('Maximum team size reached', '', 3);
+      this.customSnackBar.showSnackBar('No more members allowed', '', 3);
     } else {
       const control = this.teamForm.controls.teamMembers as FormArray;
       control.push(this.initTeamMember());
@@ -212,7 +212,7 @@ export class TeamRegisterComponent implements OnInit {
     } else {
       // console.log('called');
       this.customSnackBar.showSnackBar('Minimum ' + this.event.minTeamMembers +
-        ' team members required', '', 5);
+        ' team members required', '', 3);
     }
   }
 
