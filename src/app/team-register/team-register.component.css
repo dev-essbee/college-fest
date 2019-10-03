@@ -26,6 +26,7 @@
 }
 .d-flex{
   justify-content: center;
+  flex-direction: column;
 }
 
 @media (max-width: 768px) {
@@ -33,6 +34,13 @@
     flex-direction: column;
     text-align: center;
     flex: auto;
+  }
+
+  .name-email.d-flex{
+    flex-direction: column !important;
+    text-align: center;
+    flex: auto;
+    flex-wrap: nowrap;
   }
 }
 
@@ -66,7 +74,7 @@
   color: #400012 !important;
 }
 ::ng-deep .mat-form-field-invalid .mat-input-element, .mat-warn .mat-input-element {
-  caret-color: #400012 !important;
+  caret-color: #aaaaaa !important;
 }
 ::ng-deep .mat-form-field-appearance-outline.mat-form-field-invalid.mat-form-field-invalid .mat-form-field-outline-thick {
   color: #400012 !important;
