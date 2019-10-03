@@ -129,5 +129,7 @@
 .mat-raised-button {
   color: #aaaaaa;
   background: #430A06;
-  font-family: 'Gloria Hallelujah', cursive !important;
+  font-family: 'Griffy', cursive !important;
+  /*font-weight: bold;*/
+  font-size: x-large;
 }

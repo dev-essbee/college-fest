@@ -1,16 +1,16 @@
-<div class="registration-form" style="padding: 5px; justify-content: center; margin-top: 3%; margin-bottom: 5% ">
+<div class="registration-form" style="padding: 5px; justify-content: center; margin-top: 3%; margin-bottom: 5%;">
   <mat-card class='registration-card' tabindex="1">
-    <div class="form-title">
+    <div class="form-title wow fadeInDown">
       <mat-card-header>
         <mat-card-title>
-          <h2 style="text-align: center">Registration Form</h2>
+          <h2 style="text-align: center;font-family: 'Griffy', cursive;">Registration Form</h2>
         </mat-card-title>
       </mat-card-header>
     </div>
     <mat-divider></mat-divider>
     <mat-card-content style="padding-top: 15px">
 
-      <div class="form-fields d-flex flex-column">
+      <div class="form-fields d-flex flex-column wow fadeInDown">
         <form [formGroup]="userDetailsForm" (ngSubmit)="onSubmit()">
           <div class="full-width field">
             <mat-form-field class="full-width" appearance="outline">
@@ -24,7 +24,7 @@
           </div>
 
           <div class="d-flex">
-            <div class="field" style="margin-right: 2%;">
+            <div class="field wow fadeInDown" style="margin-right: 2%;">
               <mat-form-field appearance="outline">
                 <mat-select placeholder="Gender" formControlName="gender">
                   <mat-option *ngFor="let gender of genders" [value]=gender.id>{{gender.value}}</mat-option>
@@ -37,7 +37,7 @@
             </div>
 
             <div class="field">
-              <mat-form-field class="phone-no-field" appearance="outline">
+              <mat-form-field class="phone-no-field wow fadeInDown" appearance="outline">
                 <mat-label>Mobile Number</mat-label>
                 <input matInput #phoneno maxlength="10" placeholder="1234567890" formControlName="phoneNo">
                 <mat-hint align="end">{{phoneno.value.length}} / 10</mat-hint>
@@ -50,7 +50,7 @@
           </div>
 
           <div class="d-flex">
-            <div class="full-width field" class="email-field">
+            <div class="full-width field wow fadeInDown" class="email-field">
               <mat-form-field class="email-id-field full-width" appearance="outline">
                 <mat-label>Email id</mat-label>
                 <input style="color: #aaaaaa" matInput #email placeholder="Email id" formControlName="email">
@@ -59,7 +59,7 @@
           </div>
 
           <div class="d-flex">
-            <div class="full-width field" style="margin-right: 2%;">
+            <div class="full-width field wow fadeInDown" style="margin-right: 2%;">
               <mat-form-field class="address-field full-width" appearance="outline">
                 <mat-label>Address</mat-label>
                 <input matInput placeholder="12, Chitrakoot" formControlName="address">
@@ -72,7 +72,7 @@
           </div>
 
           <div class="d-flex">
-            <div class="field">
+            <div class="field wow fadeInDown">
               <mat-form-field class="pin-code-field" appearance="outline">
                 <mat-label>Pincode</mat-label>
                 <input matInput #pincode maxlength="6" placeholder="302021" formControlName="pinCode">
@@ -85,7 +85,7 @@
             </div>
           </div>
 
-          <div class="d-flex">
+          <div class="d-flex wow fadeInDown">
             <div style="margin-right: 2%" class="field">
               <mat-form-field class="city-field" appearance="outline">
                 <mat-label>City</mat-label>
@@ -96,7 +96,7 @@
                 </mat-error>
               </mat-form-field>
             </div>
-            <div class="d-flex">
+            <div class="d-flex wow fadeInDown">
               <div class="field">
                 <mat-form-field class="state-field" appearance="outline">
                   <mat-label>State</mat-label>
@@ -110,7 +110,7 @@
             </div>
           </div>
 
-          <div class="full-width field">
+          <div class="full-width field wow fadeInDown">
             <mat-form-field appearance="outline" class=full-width>
               <mat-label>College/University Name</mat-label>
               <input matInput placeholder="JK Lakshmipat University" formControlName="college">
@@ -121,18 +121,18 @@
             </mat-form-field>
           </div>
 
-          <div>
+          <div wow fadeInDown>
             <section class="transport-section field">
               <mat-slide-toggle class="example-margin" formControlName="transport"
-                                matTooltip="Free transport is available for Jaipur residents.">
-                <p style="font-family: 'Gloria Hallelujah', cursive !important;">Transportation</p>
+                                matTooltip="Free transport is available, only for Jaipur residents.">
+                <p >Require Transportation</p>
               </mat-slide-toggle>
             </section>
           </div>
           <div class="note">
             <p>Note: All fields are required in order to finish registration.</p>
           </div>
-          <div class="submit-button field" style="margin-top:15px; text-align: right">
+          <div class="submit-button field wow fadeInDown" style="margin-top:15px; text-align: right">
             <button mat-raised-button type="submit" [disabled]="!userDetailsForm.valid">Submit
             </button>
           </div>
