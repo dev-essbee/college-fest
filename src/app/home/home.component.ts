@@ -23,6 +23,14 @@ export class HomeComponent implements OnInit, AfterContentInit, OnDestroy, After
   headerImg: string;
   parallaxInst: any;
   router: Router;
+  sabrangDes = 'SABRANG is celebrated annually by the University since 2011, with the objective to provide an opportunity to the' +
+    'students from different colleges and Universities across the nation and encourage them to show their potential and' +
+    'talents. Response in SABRANG’18 held on February 22-23, 2018 was overwhelming. Students of different institutions' +
+    'from various parts of the country participated in around 27 different events during SABRANG’18.' +
+    'Spread over a span of three days, the fest is likely to attract huge participation from across country along with' +
+    'the present strength of approx. 700 students of the University. Apart from 2000 participating students, around 100' +
+    'faculty and staff members will also grace the occasion. The fest focuses on taking in its fold the major' +
+    'disciplines of the University I.e. Management & Engineering and Technology.';
   @ViewChild('sabrangLogoRef', {static: false}) sabrangLogoRef: ElementRef;
 
   @ViewChild('about', {static: false}) aboutRef: ElementRef;
@@ -58,6 +66,7 @@ export class HomeComponent implements OnInit, AfterContentInit, OnDestroy, After
   }
 
   scrollToAbout(): boolean {
+    console.log('scroll');
     this.aboutRef.nativeElement.scrollIntoView({behavior: 'smooth'});
     return true;
   }
