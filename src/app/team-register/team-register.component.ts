@@ -180,7 +180,7 @@ export class TeamRegisterComponent implements OnInit {
     console.log(maxMem);
     const size = this.teamForm.value.teamMembers.length;
     console.log(size);
-    if (maxMem === size) {
+    if (maxMem - 1 === size) {
       return true;
     } else {
       return false;
