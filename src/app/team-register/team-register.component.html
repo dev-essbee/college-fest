@@ -42,9 +42,6 @@
           <div formArrayName="teamMembers">
             <div *ngFor="let teamMember of teamMembers.controls; let i=index" [formGroupName]="i">
               <div>
-              <span>
-                Member {{i + 2}}
-              </span>
                 <span *ngIf="teamMembers.controls.length>1" (click)="deleteTeamMember(i)"></span>
               </div>
 
@@ -97,9 +94,6 @@
 
         </form>
       </div>
-      <!--      {{this.teamForm.value|json}}-->
-      <!--      {{this.teamForm.status}}-->
-
     </mat-card-content>
   </mat-card>
 </div>

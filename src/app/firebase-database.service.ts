@@ -117,7 +117,6 @@ export class FirebaseDatabaseService {
 
   findTeam(teamName) {
     return this.afs.collection('teams').doc(teamName).valueChanges();
-    // return this.afs.collection('teams').valueChanges();
   }
 
   // todo: .then after update data for confirmation
@@ -133,6 +132,16 @@ export class FirebaseDatabaseService {
     // console.log(signObj);
     this.afs.collection('users').doc(id).set(eveObj);
     this.afs.collection('users').doc(this.loggedInUserData.id).set(signObj);
+    this.findTeam(teamName).subscribe(team => {
+      // console.log(team);
+      if (team) {
+        let eventStatus;
+        if (team.hasOwnProperty('id')) {
+          eventStatus = (team as any).id;
+        }
+        console.log(eventStatus);
+      }
+    });
   }
 }
 
