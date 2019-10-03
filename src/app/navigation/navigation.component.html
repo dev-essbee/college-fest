@@ -13,18 +13,36 @@
       <div class="collapse navbar-collapse" id="navcol-1">
         <ul class="nav navbar-nav ml-auto">
           <li class="nav-item"></li>
-          <li class="nav-item"><a class="nav-link" routerLink="/home" routerLinkActive="active">Home</a></li>
-          <li class="nav-item"><a class="nav-link" routerLink="/events" routerLinkActive="active">Events</a></li>
-          <li class="nav-item"><a class="nav-link" routerLink="/team" routerLinkActive="active">Our Team</a></li>
-          <li class="nav-item"><a class="nav-link" routerLink="/sponsors" routerLinkActive="active">Our Sponsors</a>
-          <li class="nav-item"><a class="nav-link" routerLink="/profile" routerLinkActive="active">My Profile</a></li>
+          <li data-toggle="collapse" data-target=".navbar-collapse.show" class="nav-item"><a class="nav-link"
+                                                                                             routerLink="/home"
+                                                                                             routerLinkActive="active">Home</a>
+          </li>
+          <li data-toggle="collapse" data-target=".navbar-collapse.show"
+              class="nav-item"><a class="nav-link" routerLink="/events" routerLinkActive="active">Events</a>
+          </li>
+          <li data-toggle="collapse" data-target=".navbar-collapse.show" class="nav-item"><a class="nav-link"
+                                                                                             routerLink="/team"
+                                                                                             routerLinkActive="active">Our
+            Team</a></li>
+          <li data-toggle="collapse" data-target=".navbar-collapse.show" class="nav-item"><a class="nav-link"
+                                                                                             routerLink="/sponsors"
+                                                                                             routerLinkActive="active">Our
+            Sponsors</a>
+          <li data-toggle="collapse" data-target=".navbar-collapse.show" class="nav-item"><a class="nav-link"
+                                                                                             routerLink="/profile"
+                                                                                             routerLinkActive="active">My
+            Profile</a></li>
         </ul>
         <div *ngIf="dbService.loggedInUserData; then authenticated else guest"></div>
         <ng-template #guest>
-          <button class="interaction" mat-button (click)="auth.googleSignIn()">Login/Signup</button>
+          <button data-toggle="collapse" data-target=".navbar-collapse.show" class="interaction" mat-button
+                  (click)="auth.googleSignIn()">Login/Signup
+          </button>
         </ng-template>
         <ng-template #authenticated>
-          <button class="interaction" mat-button (click)="auth.signOut()">Logout</button>
+          <button data-toggle="collapse" data-target=".navbar-collapse.show" class="interaction" mat-button
+                  (click)="auth.signOut()">Logout
+          </button>
         </ng-template>
       </div>
     </div>

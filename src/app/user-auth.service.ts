@@ -52,7 +52,7 @@ export class UserAuthService {
   async signOut() {
     let route = this.router.url;
     await this.afAuth.auth.signOut();
-    if (route === '/dashboard') {
+    if (route === '/profile') {
       route = '/';
     }
     this.customSnackBar.showSnackBar('Logout Successful', '', 3);
