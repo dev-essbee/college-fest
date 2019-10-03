@@ -68,7 +68,7 @@ export class DashboardComponent implements OnInit {
       if (status as boolean === true) {
         return 'Create Team';
       } else {
-        return status;
+        return ('Team Name:' + status);
       }
     } else {
       return null;
