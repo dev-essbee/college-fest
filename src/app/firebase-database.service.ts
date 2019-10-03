@@ -108,11 +108,20 @@ export class FirebaseDatabaseService {
       .valueChanges().pipe();
   }
 
+  findTeam(teamName) {
+    return this.afs.collection('teams').doc(teamName).valueChanges();
+    // return this.afs.collection('teams').valueChanges();
+  }
+
   // todo: .then after update data for confirmation
 
-  teamRegister(id, event) {
-    const eveOb = 'registeredEvents[' + id + ']/'
-    his.afs.collection('users').doc(id).set(event, {merge: true});
+  teamRegister(event, teamName, data) {
+    const id = data.id;
+    const eveObj = data.participatingEvents;
+    eveObj[event] = teamName;
+    console.log(eveObj);
+    this.afs.collection('users').doc(id).update(eveObj);
+
   }
 }
 

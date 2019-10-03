@@ -31,7 +31,8 @@ export class TeamRegisterComponent implements OnInit {
   event: Event;
   eventId: number;
   teamMemberValidMsg = {
-    teamName: [{type: 'required', message: 'Enter Team Name'}],
+    teamName: [{type: 'required', message: 'Enter Team Name'},
+      {type: 'duplicate', message: 'Team already registered for the event.'}],
     email: [{type: 'required', message: 'Enter email id of a team member'},
       {type: 'email', message: 'Enter valid email id'},
       {type: 'noAccount', message: 'User not registered for Sabrang 2k19'},
@@ -73,8 +74,31 @@ export class TeamRegisterComponent implements OnInit {
 
   createTeamForm() {
     this.teamForm = this.fb.group({
-      teamName: ['', Validators.required],
+      teamName: ['', Validators.required, [this.checkTeamName.bind(this)]],
       teamMembers: this.fb.array([this.initTeamMember()]),
+    });
+  }
+
+  checkTeamName(control: AbstractControl) {
+    return new Promise(res => {
+      this.dbService.findTeam(control.value.toString().trim().toLowerCase()).subscribe(team => {
+        console.log(team);
+        if (team) {
+          const eventStatus = team.id;
+          for (const i of eventStatus) {
+            console.log(i);
+            console.log(this.eventId);
+            if (i === this.eventId) {
+              console.log(i);
+              res({duplicate: true});
+              break;
+            }
+          }
+          res(null);
+        } else {
+          res(null);
+        }
+      });
     });
   }
 
@@ -164,8 +188,12 @@ export class TeamRegisterComponent implements OnInit {
       console.log(this.teamForm);
       const team = this.teamForm.value.teamName.toString().trim();
       for (const key in this.teamForm.value.teamMembers) {
+        console.log(this.teamForm.value.teamMembers[key]);
         this.dbService.findUser(this.teamForm.value.teamMembers[key].email).subscribe(user => {
-          this.dbService.teamRegister(this.teamForm.value.teamMembers[key].id, this.eventId);
+          console.log(user);
+          const data = user[0];
+          this.dbService.teamRegister(this.eventId,
+            this.teamForm.controls.teamName.value, data);
         });
       }
     } else {
