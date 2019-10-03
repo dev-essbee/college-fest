@@ -85,7 +85,7 @@ export class FirebaseDatabaseService {
         this.updateData(data);
         this.customSnackbar.showSnackBar('You have successfully registered for the event.', '', 5);
         if (team) {
-          const createTeamSnackbarRef = this.snackBar.showSnackBar('Create your team', 'Go!', 5)
+          const createTeamSnackbarRef = this.snackBar.showSnackBar('Create your team', 'Go!', 5);
           createTeamSnackbarRef.onAction().subscribe(() => {
             createTeamSnackbarRef.dismiss();
             this.router.navigate(['/dashboard']);

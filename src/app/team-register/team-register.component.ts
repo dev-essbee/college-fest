@@ -86,16 +86,17 @@ export class TeamRegisterComponent implements OnInit {
       this.dbService.findTeam(control.value.toString().trim().toLowerCase()).subscribe(team => {
         console.log(team);
         if (team) {
+          let eventStatus;
           if (team.hasOwnProperty('id')) {
-            const eventStatus = team.id;
-            for (const i of eventStatus) {
+            eventStatus = (team as any).id;
+          }
+          for (const i of eventStatus) {
+            console.log(i);
+            console.log(this.eventId);
+            if (i === this.eventId) {
               console.log(i);
-              console.log(this.eventId);
-              if (i === this.eventId) {
-                console.log(i);
-                res({duplicate: true});
-                break;
-              }
+              res({duplicate: true});
+              break;
             }
           }
           res(null);
