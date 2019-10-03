@@ -163,11 +163,11 @@ export class TeamRegisterComponent implements OnInit {
       console.log(this.teamForm.value.teamMembers);
       console.log(this.teamForm);
       const team = this.teamForm.value.teamName.toString().trim();
-      /*for (const key in this.teamForm.value.teamMembers) {
+      for (const key in this.teamForm.value.teamMembers) {
         this.dbService.findUser(this.teamForm.value.teamMembers[key].email).subscribe(user => {
-          this.dbService.teamRegister(user.id, this.eventId);
+          this.dbService.teamRegister(this.teamForm.value.teamMembers[key].id, this.eventId);
         });
-      }*/
+      }
     } else {
       console.log('called');
       this.customSnackBar.showSnackBar('Minimum ' + this.event.minTeamMembers +

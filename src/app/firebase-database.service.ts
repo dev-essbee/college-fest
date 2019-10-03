@@ -111,8 +111,8 @@ export class FirebaseDatabaseService {
   // todo: .then after update data for confirmation
 
   teamRegister(id, event) {
-    // const eveOb= 'registeredEvents['+id+']/'
-    // his.afs.collection('users').doc(id).set(event, {merge: true});
+    const eveOb = 'registeredEvents[' + id + ']/'
+    his.afs.collection('users').doc(id).set(event, {merge: true});
   }
 }
 
