@@ -75,7 +75,7 @@ export class FirebaseDatabaseService {
     return this.afs.collection('users').doc(this.loggedInUserData.id).set(data, {merge: true});
   }
 
-  registerEvent(data) {
+  registerEvent(data, team) {
     if (this.loggedInUserData.participatingEvents[Object.keys(data.participatingEvents)[0]]) {
       this.customSnackbar.showSnackBar('You have already registered for this event', '', 3);
     } else {
@@ -84,6 +84,13 @@ export class FirebaseDatabaseService {
       } else {
         this.updateData(data);
         this.customSnackbar.showSnackBar('You have successfully registered for the event.', '', 5);
+        if (team) {
+          const createTeamSnackbarRef = this.snackBar.showSnackBar('Create your team', 'Go!', 5)
+          createTeamSnackbarRef.onAction().subscribe(() => {
+            createTeamSnackbarRef.dismiss();
+            this.router.navigate(['/dashboard']);
+          });
+        }
       }
     }
   }
