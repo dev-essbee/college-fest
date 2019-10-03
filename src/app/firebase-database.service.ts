@@ -47,7 +47,7 @@ export class FirebaseDatabaseService {
       }
 
     };
-    this.customSnackbar.showSnackBar('Hi ' + user.displayName + ', Welcome Onboard!', '', 3);
+    // this.customSnackbar.showSnackBar('Hi ' + user.displayName + ', Welcome Onboard!', '', 3);
     return userRef.set(data, {merge: true});
   }
 
