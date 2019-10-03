@@ -65,7 +65,7 @@ export class DashboardComponent implements OnInit {
   eventStatus(key) {
     if (this.eventsData[key].team) {
       status = this.userData.participatingEvents[key];
-      if (typeof (status) === 'boolean' && status === true) {
+      if (status as boolean === true) {
         return 'Create Team';
       } else {
         return status;
