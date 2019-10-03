@@ -16,7 +16,7 @@ const appRoutes: Routes = [
   {path: 'register', component: RegisterComponent, canActivate: [AuthGuard]},
   {path: 'events', component: EventsComponent},
   {path: 'sponsors', component: SponsorsComponent},
-  {path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard]},
+  {path: 'profile', component: DashboardComponent, canActivate: [AuthGuard]},
   {path: 'events/:id', component: EventDetailComponent},
   {path: 'team-register/:id', component: TeamRegisterComponent, canActivate: [AuthGuard]},
   {path: '**', component: HomeComponent}

@@ -126,11 +126,11 @@ export class FirebaseDatabaseService {
     const id = data.id;
     const eveObj = data;
     eveObj.participatingEvents[event] = teamName;
-    console.log('eve');
-    console.log(eveObj);
+    // console.log('eve');
+    // console.log(eveObj);
     const signObj = this.loggedInUserData;
     signObj.participatingEvents[event] = teamName;
-    console.log(signObj);
+    // console.log(signObj);
     this.afs.collection('users').doc(id).set(eveObj);
     this.afs.collection('users').doc(this.loggedInUserData.id).set(signObj);
   }

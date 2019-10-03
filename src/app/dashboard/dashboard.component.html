@@ -2,14 +2,6 @@
   <!-- template will replace this div -->
 </div>
 
-<!-- User NOT logged in -->
-<ng-template #guest>
-  <h3>Howdy, GUEST</h3>
-  <p>Login to get started...</p>
-  <button (click)="auth.googleSignIn()">
-    <i class="fa fa-google"></i> Connect Google
-  </button>
-</ng-template>
 <!-- User logged in -->
 <ng-template #authenticated>
   <mat-card class="dash-card wow bounceInDown">

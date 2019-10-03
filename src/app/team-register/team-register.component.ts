@@ -84,17 +84,17 @@ export class TeamRegisterComponent implements OnInit {
   checkTeamName(control: AbstractControl) {
     return new Promise(res => {
       this.dbService.findTeam(control.value.toString().trim().toLowerCase()).subscribe(team => {
-        console.log(team);
+        // console.log(team);
         if (team) {
           let eventStatus;
           if (team.hasOwnProperty('id')) {
             eventStatus = (team as any).id;
           }
           for (const i of eventStatus) {
-            console.log(i);
-            console.log(this.eventId);
+            // console.log(i);
+            // console.log(this.eventId);
             if (i === this.eventId) {
-              console.log(i);
+              // console.log(i);
               res({duplicate: true});
               break;
             }
@@ -121,19 +121,19 @@ export class TeamRegisterComponent implements OnInit {
     return new Promise(res => {
       this.dbService.findUser(control.value.toString().trim().toLowerCase()).subscribe(user => {
         userDet = user[0];
-        console.log(userDet);
+        // console.log(userDet);
 
         if (userDet) {
           const eventStatus = userDet.participatingEvents[this.eventId];
-          console.log(eventStatus);
+          // console.log(eventStatus);
           if (eventStatus === false) {
-            console.log(' user has not registered for the event');
+            // console.log(' user has not registered for the event');
             res({notRegistered: true});
           } else if (eventStatus === true) {
             control.parent.controls['name'].setValue(userDet.name);
             res(null);
           } else {
-            console.log('user already part of a team');
+            // console.log('user already part of a team');
             res({teamAlready: true});
           }
         } else {
@@ -175,11 +175,11 @@ export class TeamRegisterComponent implements OnInit {
   }
 
   maxMembers() {
-    console.log(this.teamForm.value.teamMembers.length);
+    // console.log(this.teamForm.value.teamMembers.length);
     const maxMem = this.event.maxTeamMembers;
-    console.log(maxMem);
+    // console.log(maxMem);
     const size = this.teamForm.value.teamMembers.length;
-    console.log(size);
+    // console.log(size);
     if (maxMem - 1 === size) {
       return true;
     } else {
@@ -191,23 +191,23 @@ export class TeamRegisterComponent implements OnInit {
   saveMethod() {
     // console.log(this.teamMembers.value);
     if (this.teamForm.value.teamMembers.length + 1 >= this.event.minTeamMembers) {
-      console.log('save');
-      console.log(this.teamForm.value.teamMembers);
-      console.log(this.teamForm);
+      // console.log('save');
+      // console.log(this.teamForm.value.teamMembers);
+      // console.log(this.teamForm);
       const team = this.teamForm.controls.teamName.value.toString().trim();
       for (const key in this.teamForm.value.teamMembers) {
-        console.log(this.teamForm.value.teamMembers[key]);
+        // console.log(this.teamForm.value.teamMembers[key]);
         this.dbService.findUser(this.teamForm.value.teamMembers[key].email).subscribe(user => {
-          console.log(user);
+          // console.log(user);
           const data = user[0];
-          console.log(data);
+          // console.log(data);
           this.dbService.teamRegister(this.eventId,
             team, data);
         });
       }
-      this.router.navigate(['/dashboard']);
+      this.router.navigate(['/profile']);
     } else {
-      console.log('called');
+      // console.log('called');
       this.customSnackBar.showSnackBar('Minimum ' + this.event.minTeamMembers +
         ' team members required', '', 5);
     }
