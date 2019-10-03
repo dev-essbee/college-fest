@@ -39,7 +39,7 @@
             </div>
           </div>
           <h4 style="text-align: center; margin: 20px; font-family: 'Griffy', cursive;">Team Members</h4>
-          <div formArrayName="teamMembers wow fadeInDown">
+          <div formArrayName="teamMembers">
             <div *ngFor="let teamMember of teamMembers.controls; let i=index" [formGroupName]="i">
               <div>
                 <span *ngIf="teamMembers.controls.length>1" (click)="deleteTeamMember(i)"></span>

@@ -66,7 +66,6 @@ export class HomeComponent implements OnInit, AfterContentInit, OnDestroy, After
   }
 
   scrollToAbout(): boolean {
-    console.log('scroll');
     this.aboutRef.nativeElement.scrollIntoView({behavior: 'smooth'});
     return true;
   }
