@@ -3,7 +3,6 @@ import {Event} from '../event';
 import {categories, events} from '../data/events-data';
 import {FirebaseDatabaseService} from '../firebase-database.service';
 import {UserAuthService} from '../user-auth.service';
-import {MatSnackBar} from '@angular/material/snack-bar';
 import {Router} from '@angular/router';
 
 @Component({
@@ -23,7 +22,6 @@ export class EventsComponent implements OnInit, AfterViewInit {
 
   constructor(private dbService: FirebaseDatabaseService,
               private authService: UserAuthService,
-              private snackBar: MatSnackBar,
               private router: Router) {
 
   }

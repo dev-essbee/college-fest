@@ -1,10 +1,10 @@
 <div class="team-register-container">
   <mat-card class="team-register-card">
     <mat-card-header style="justify-content: center">
-      <mat-card-title><h2 style="font-family: 'Griffy', cursive;">Register Your Team</h2></mat-card-title>
+      <mat-card-title><h2 style="font-family: 'Griffy', cursive;" class="wow fadeInDown">Register Your Team</h2></mat-card-title>
     </mat-card-header>
 
-    <mat-card-content class="team-register-fields">
+    <mat-card-content class="team-register-fields wow fadeInDown">
       <p class="team-note">Note: Make Sure all the Team Members are registered on the Sabrang 2k19 Website.</p>
 
       <div class="form-fields d-flex flex-column">
@@ -12,7 +12,7 @@
 
           <div class="d-flex flex-row justify-content-center">
             <div class="full-width field">
-              <mat-form-field class="full-width" appearance="outline">
+              <mat-form-field class="full-width wow fadeInDown" appearance="outline">
                 <mat-label>Team Name</mat-label>
                 <input matInput placeholders="Team Name" formControlName="teamName">
                 <mat-error *ngFor="let validation of teamMemberValidMsg.teamName">
@@ -25,21 +25,21 @@
           </div>
           <div class="d-flex flex-row flex-wrap name-email justify-content-center">
             <div class="full-width field">
-              <mat-form-field class="full-width" appearance="outline">
+              <mat-form-field class="full-width wow fadeInDown" appearance="outline">
                 <mat-label>Email</mat-label>
                 <input matInput placeholder="Email" readonly formControlName="firstEmail">
               </mat-form-field>
             </div>
 
             <div class="full-width field">
-              <mat-form-field style="margin-left: 2%" class="full-width" appearance="outline">
+              <mat-form-field style="margin-left: 2%" class="full-width wow fadeInDown" appearance="outline">
                 <mat-label>Name</mat-label>
                 <input matInput placeholder="Name" readonly formControlName="firstName">
               </mat-form-field>
             </div>
           </div>
           <h4 style="text-align: center; margin: 20px; font-family: 'Griffy', cursive;">Team Members</h4>
-          <div formArrayName="teamMembers">
+          <div formArrayName="teamMembers wow fadeInDown">
             <div *ngFor="let teamMember of teamMembers.controls; let i=index" [formGroupName]="i">
               <div>
                 <span *ngIf="teamMembers.controls.length>1" (click)="deleteTeamMember(i)"></span>
@@ -48,7 +48,7 @@
               <div class="d-flex flex-row flex-wrap name-email justify-content-center">
                 <div class="d-flex flex-col">
                   <div class="full-width field">
-                    <mat-form-field class="full-width" appearance="outline">
+                    <mat-form-field class="full-width wow fadeInDown" appearance="outline">
                       <mat-label>Email</mat-label>
                       <input matInput placeholder="Email" formControlName="email">
                       <mat-error *ngFor="let validation of teamMemberValidMsg.email">
@@ -62,7 +62,7 @@
 
                 <div class="d-flex flex-col">
                   <div class="full-width field">
-                    <mat-form-field style="margin-left: 2%" class="full-width" appearance="outline">
+                    <mat-form-field style="margin-left: 2%" class="full-width wow fadeInDown" appearance="outline">
                       <mat-label>Name</mat-label>
                       <input matInput placeholder="Name" readonly formControlName="name">
                     </mat-form-field>
@@ -71,7 +71,7 @@
 
 
                 <div style="align-items: center" class="d-flex flex-col flex-fill flex-wrap">
-                  <button style="color: #430A06; max-width: fit-content" class="add-remove-buttons" mat-button
+                  <button style="color: #430A06; max-width: fit-content" class="add-remove-buttons wow fadeInDown" mat-button
                           (click)="deleteTeamMember(i)">
                     <mat-icon style="vertical-align: baseline">remove_circle_outline</mat-icon>
                   </button>
@@ -81,14 +81,16 @@
 
             </div>
             <div class="d-flex flex-row flex-fill">
-              <button style="color: #430A06;" class="add-remove-buttons" mat-button (click)="addTeamMember()">
+              <button style="color: #430A06;" class="add-remove-buttons wow fadeInDown" mat-button (click)="addTeamMember()">
                 <mat-icon>add_circle_outline</mat-icon>
               </button>
             </div>
           </div>
 
           <div class="submit-button field" style="margin-top:15px; text-align: right">
-            <button mat-raised-button type="submit" [disabled]="!teamForm.valid" (click)="saveMethod()">Submit
+            <button mat-raised-button type="submit" class="wow fadeInDown"
+                    style="font-family: 'Griffy', cursive; font-size:x-large;" [disabled]="!teamForm.valid"
+                    (click)="saveMethod()">Submit
             </button>
           </div>
 
