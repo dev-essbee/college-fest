@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Event} from '../event';
-import {ActivatedRoute} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 import {EventService} from '../event.service';
 import {Location} from '@angular/common';
 import {FirebaseDatabaseService} from '../firebase-database.service';
@@ -20,12 +20,13 @@ export class EventDetailComponent implements OnInit {
               private location: Location,
               private dbService: FirebaseDatabaseService,
               private authService: UserAuthService,
-              private snackbarService: SnackbarService
+              private snackbarService: SnackbarService,
   ) {
   }
 
   ngOnInit() {
     this.getEvent();
+
   }
 
   getEvent(): void {

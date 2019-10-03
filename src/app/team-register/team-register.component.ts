@@ -55,6 +55,9 @@ export class TeamRegisterComponent implements OnInit {
 
   ngOnInit() {
     this.getEvent();
+    if (this.event.team !== true || this.dbService.loggedInUserData.participatingEvents[this.eventId] !== true) {
+      this.router.navigate(['/profile'], {replaceUrl: true});
+    }
     this.createTeamForm();
   }
 
