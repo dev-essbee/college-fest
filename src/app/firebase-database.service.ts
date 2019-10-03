@@ -88,7 +88,7 @@ export class FirebaseDatabaseService {
           const createTeamSnackbarRef = this.snackBar.showSnackBar('Create your team', 'Go!', 5);
           createTeamSnackbarRef.onAction().subscribe(() => {
             createTeamSnackbarRef.dismiss();
-            this.router.navigate(['/dashboard']);
+            this.router.navigate(['/profile']);
           });
         }
       }
