@@ -81,8 +81,9 @@ export class RegisterComponent implements OnInit {
       gender: new FormControl(data.gender, [Validators.required]),
       city: new FormControl(toTitleCase(data.city), [Validators.required, Validators.pattern('[a-zA-Z][a-zA-Z\\s.]*')]),
       state: new FormControl(toTitleCase(data.state), [Validators.required, Validators.pattern('[a-zA-Z][a-zA-Z\\s.]*')]),
-      college: new FormControl(toTitleCase(data.college), [Validators.required, Validators.pattern('[a-zA-Z][a-zA-Z\\s.,]*')]),
-      address: new FormControl(toTitleCase(data.address), [Validators.required, Validators.pattern('[a-zA-Z0-9][a-zA-Z0-9\\s.,/()]*')]),
+      college: new FormControl(toTitleCase(data.college), [Validators.required, Validators.pattern('[a-zA-Z][a-zA-Z\\s.,\-_\*#]*')]),
+      address: new FormControl(toTitleCase(data.address),
+        [Validators.required, Validators.pattern('[a-zA-Z0-9#][a-zA-Z0-9\\s.,/()\-_#&\*]*')]),
       transport: new FormControl({
           value: this.transStringToBool(data.transport),
           disabled: this.disableStringToBool(data.transport)
@@ -154,24 +155,28 @@ export class RegisterComponent implements OnInit {
   }
 
   onSubmit() {
-    const data = {
-      name: this.name.value.toString().trim(),
-      gender: this.gender.value,
-      phoneNo: this.phoneNo.value,
-      pinCode: this.pinCode.value,
-      city: this.city.value.toString().trim(),
-      state: this.state.value.toString().trim(),
-      college: this.college.value.toString().trim(),
-      address: this.address.value.toString().trim(),
-      transport: this.transBoolToString(this.transport),
-      newUser: false
-    };
-    // console.log(this.transport.value);
-    // console.log(this.databaseService.updateData(data));
-    this.databaseService.updateData(data);
-    this.customSnackbar.showSnackBar('Details Updated Successfully', '', 3);
-    this.location.back();
-    //  TODO: Reload Page
+    if (this.userDetailsForm.valid) {
+      const data = {
+        name: this.name.value.toString().trim(),
+        gender: this.gender.value,
+        phoneNo: this.phoneNo.value,
+        pinCode: this.pinCode.value,
+        city: this.city.value.toString().trim(),
+        state: this.state.value.toString().trim(),
+        college: this.college.value.toString().trim(),
+        address: this.address.value.toString().trim(),
+        transport: this.transBoolToString(this.transport),
+        newUser: false
+      };
+      // console.log(this.transport.value);
+      // console.log(this.databaseService.updateData(data));
+      this.databaseService.updateData(data);
+      this.customSnackbar.showSnackBar('Details Updated Successfully', '', 3);
+      this.location.back();
+      //  TODO: Reload Page
+    } else {
+      this.customSnackbar.showSnackBar('All fields are required', '', 3);
+    }
   }
 
 
