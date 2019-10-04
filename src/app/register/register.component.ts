@@ -27,7 +27,7 @@ export class RegisterComponent implements OnInit {
       {type: 'pattern', message: 'Enter valid pincode'}],
     gender: [{type: 'required', message: 'Please select a gender'}],
     city: [{type: 'required', message: 'Enter your city name'},
-      {type: 'pattern', message: 'Special Characters not allowed'}],
+      {type: 'pattern', message: 'Only city name allowed'}],
     state: [{type: 'required', message: 'Enter your state name'},
       {type: 'pattern', message: 'Special Characters not allowed'}],
     college: [{type: 'required', message: 'Enter your College name'},
