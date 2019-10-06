@@ -22,7 +22,10 @@ export class TeamComponent implements OnInit {
   }, {name: 'Karan Sharma', contact: ''}, {
     name: 'Sonakshi Jhawar',
     contact: ''
-  }, {name: 'Saransh Gupta', contact: ''}];
+  }, {name: 'Saransh Gupta', contact: ''}, {
+    name: 'Vishal Chaurasia', contact: ''
+  }
+  ];
   web = [{
     name: 'Shubham Bhandari',
     mail: 'dev.sb18@gmail.com',
