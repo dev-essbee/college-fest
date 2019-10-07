@@ -1,5 +1,5 @@
 import {Event} from '../event';
-
+// TODO: Add singing event
 export let categories = [{id: 'c0', value: 'Cultural'}, {id: 't0', value: 'Technical'}, {
   id: 'm0',
   value: 'Management'
@@ -27,7 +27,7 @@ export let events: Event[] = [
       startTime: '12:12',
       endTime: '18:18',
       fee: '150',
-      prize: 'Expected prize money will be 8-10 times of registration fee. '
+      prize: 'The Winner will receive Rs.1500.'
 
     },
     {
@@ -54,7 +54,7 @@ export let events: Event[] = [
       startTime: '12:12',
       endTime: '18:18',
       fee: '150',
-      prize: 'Expected prize money will be 8-10 times of registration fee. '
+      prize: 'The Winner will receive Rs.1500.'
     },
     {
       id: '2',
@@ -80,7 +80,7 @@ export let events: Event[] = [
       startTime: '12:12',
       endTime: '18:18',
       fee: '150',
-      prize: 'Expected prize money will be 8-10 times of registration fee. '
+      prize: 'The Winner will receive Rs.1500. '
     },
     {
       id: '3',
@@ -105,7 +105,7 @@ export let events: Event[] = [
       startTime: '12:12',
       endTime: '18:18',
       fee: '1000',
-      prize: 'Expected prize money will be 8-10 times of registration fee. '
+      prize: 'The Winner will receive Rs.10,000 . '
     },
     {
       id: '4',
@@ -139,7 +139,7 @@ export let events: Event[] = [
       fee:
         '350',
       prize:
-        'Expected prize money will be 8-10 times of registration fee. ',
+        'The Winner will receive Rs.3,500 .',
 
     },
     {
@@ -169,7 +169,7 @@ export let events: Event[] = [
       fee:
         '1200',
       prize:
-        'Expected prize money will be 8-10 times of registration fee. '
+        'The Winner will receive Rs.10,000 '
     },
     {
       id: '6',
@@ -207,7 +207,7 @@ export let events: Event[] = [
       fee:
         '250',
       prize:
-        'Expected prize money will be 8-10 times of registration fee. '
+        'The Winner will receive Rs.2000 '
     },
     {
       id: '7',
@@ -241,7 +241,7 @@ export let events: Event[] = [
       fee:
         '150',
       prize:
-        'Expected prize money will be 8-10 times of registration fee. '
+        'The Winner will receive Rs.1500. '
     },
     {
       id: '8',
@@ -283,7 +283,7 @@ export let events: Event[] = [
       fee:
         '800',
       prize:
-        'Expected prize money will be 8-10 times of registration fee. '
+        'The Winner will receive Rs.6500. '
     },
     {
       id: '9',
@@ -319,7 +319,7 @@ export let events: Event[] = [
       fee:
         '150',
       prize:
-        'Expected prize money will be 8-10 times of registration fee. '
+        'The Winner will receive Rs.2000. '
     },
 
     {
@@ -357,7 +357,7 @@ export let events: Event[] = [
       fee:
         '300',
       prize:
-        'Expected prize money will be 8-10 times of registration fee. '
+        'The Winner will receive Rs.3000. '
     },
 
     {
@@ -380,7 +380,7 @@ export let events: Event[] = [
       startTime: '12:12',
       endTime: '18:18',
       fee: '150',
-      prize: 'Expected prize money will be 8-10 times of registration fee. '
+      prize: 'The Winner will receive Rs.1100. '
     },
     {
       id: '12',
@@ -394,7 +394,7 @@ export let events: Event[] = [
       des: 'Beat-boxing is a form of vocal percussion which primarily involves the art of producing drum beats, ' +
         'rhythm and musical sounds using one’s mouth, lips, tongue and voice. It may also involve singing, ' +
         'vocal imitation of turntablism, the simulation of hours, strings and other musical instruments.',
-      judgement: ['WConfidence', 'Voice quality', 'Clarity', 'Rhythm', 'Their appeal to the audience.'],
+      judgement: ['Confidence', 'Voice quality', 'Clarity', 'Rhythm', 'Their appeal to the audience.'],
       rules: ['Time allotted for each performance is 3-4 minutes ',
         'The competition is open to beat boxers only.',
         'The beats should not be bite (COPY) from anywhere.',
@@ -402,10 +402,37 @@ export let events: Event[] = [
       startTime: '12:12',
       endTime: '18:18',
       fee: '150',
-      prize: 'Expected prize money will be 8-10 times of registration fee. '
+      prize: 'The Winner will receive Rs.1100. '
     },
     {
       id: '13',
+      team: false,
+      maxTeamMembers: 0,
+      minTeamMembers: 0,
+      name: 'SINGING PALOOZA - Solo Singing ',
+      smallImg: baseLoc + 'singingpalooza1.jpg',
+      // largeImg: baseLocLarge + 'beatboxing.jpg',
+      category: 'c10',
+      des: 'Music is the greatest communication in the world. Even if people dont ' +
+        'understand the language that youre singing in, they still know good music ' +
+        'when they hear it."The stage is set for the melodious showstoppers to gear up ' +
+        'their “sur and taal” in front of a capacity crowd.GearUp and participate in ' +
+        '“Singing Palooza” this SABRANG to let people hear your music and win exciting prize. ',
+      judgement: ['Vocal range', 'Voice quality', 'Subtext', 'Stage presentation', 'Audience response'],
+      rules: ['Maximum time limit for round 1 will be 4 minutes and for round 2 will be 5 minutes.',
+        'Participants are required to bring karaoke or musical instrument, if required in the performance with them for round 1',
+        'Participants will not be allowed to refer to the lyrics while singing.',
+        'Choice of song is open to the participants,but the song should not have any slangs or derogatory language',
+        'In case of a tie, one on one round will take place.',
+        'The participants will be judged on the song selection, voice quality, clarity, rhythm and their appeal to the audience.',
+        'Judge’s decision shall be final.'],
+      startTime: '12:12',
+      endTime: '18:18',
+      fee: '150',
+      prize: 'The Winner will receive Rs.2000. '
+    },
+    {
+      id: '14',
       team: false,
       maxTeamMembers: 0,
       minTeamMembers: 0,
@@ -433,12 +460,12 @@ export let events: Event[] = [
       fee:
         '150',
       prize:
-        'Expected prize money will be 8-10 times of registration fee. '
+        'The Winner will receive Rs.1500. '
     }, {
-      id: '14',
-    team: true,
-    maxTeamMembers: 2,
-    minTeamMembers: 2,
+      id: '15',
+      team: true,
+      maxTeamMembers: 2,
+      minTeamMembers: 2,
       name:
         'CODEXTREME',
       smallImg:
@@ -469,10 +496,10 @@ export let events: Event[] = [
       fee:
         '150',
       prize:
-        'Expected prize money will be 8-10 times of registration fee. '
+        'The Winner will receive Rs.1500. '
     },
     {
-      id: '15',
+      id: '16',
       team: true,
       maxTeamMembers: 4,
       minTeamMembers: 2,
@@ -519,10 +546,10 @@ export let events: Event[] = [
       fee:
         '150',
       prize:
-        'Expected prize money will be 8-10 times of registration fee. '
+        'The Winner will receive Rs.1500. '
     },
     {
-      id: '16',
+      id: '17',
       team: true,
       maxTeamMembers: 2,
       minTeamMembers: 2,
@@ -561,10 +588,10 @@ export let events: Event[] = [
       fee:
         '250',
       prize:
-        'Expected prize money will be 8-10 times of registration fee. '
+        'The Winner will receive Rs.2500. '
     },
     {
-      id: '17',
+      id: '18',
       team: true,
       maxTeamMembers: 2,
       minTeamMembers: 2,
@@ -592,10 +619,10 @@ export let events: Event[] = [
       fee:
         '150',
       prize:
-        'Expected prize money will be 8-10 times of registration fee. '
+        'The Winner will receive Rs.1500. '
     },
     {
-      id: '18',
+      id: '19',
       team: true,
       maxTeamMembers: 2,
       minTeamMembers: 2,
@@ -625,10 +652,10 @@ export let events: Event[] = [
       fee:
         '150',
       prize:
-        'Expected prize money will be 8-10 times of registration fee. '
+        'The Winner will receive Rs.1500. '
     },
     {
-      id: '19',
+      id: '20',
       team: true,
       maxTeamMembers: 5,
       minTeamMembers: 4,
@@ -645,11 +672,11 @@ export let events: Event[] = [
       startTime: '12:12',
       endTime: '18:18',
       fee: '200',
-      prize: 'Expected prize money will be 8-10 times of registration fee. '
+      prize: 'The Winner will receive Rs.2000. '
     },
 
     {
-      id: '20',
+      id: '21',
       team: true,
       maxTeamMembers: 5,
       minTeamMembers: 5,
@@ -675,11 +702,11 @@ export let events: Event[] = [
       startTime: '12:12',
       endTime: '18:18',
       fee: '250',
-      prize: 'Expected prize money will be 8-10 times of registration fee. '
+      prize: 'The Winner will receive Rs.2100. '
     },
 
     {
-      id: '21',
+      id: '22',
       team: false,
       maxTeamMembers: 0,
       minTeamMembers: 0,
@@ -704,11 +731,11 @@ export let events: Event[] = [
       startTime: '12:12',
       endTime: '18:18',
       fee: '100',
-      prize: 'Expected prize money will be 8-10 times of registration fee. '
+      prize: 'The Winner will receive Rs.1100. '
     },
 
     {
-      id: '22',
+      id: '23',
       team: false,
       maxTeamMembers: 0,
       minTeamMembers: 0,
@@ -730,11 +757,11 @@ export let events: Event[] = [
       startTime: '12:12',
       endTime: '18:18',
       fee: '100',
-      prize: 'Expected prize money will be 8-10 times of registration fee. '
+      prize: 'The Winner will receive Rs.1100. '
     },
 
     {
-      id: '23',
+      id: '24',
       team: false,
       maxTeamMembers: 0,
       minTeamMembers: 0,
@@ -756,7 +783,7 @@ export let events: Event[] = [
       startTime: '12:12',
       endTime: '18:18',
       fee: '100',
-      prize: 'Expected prize money will be 8-10 times of registration fee. '
+      prize: 'The Winner will receive Rs.1100. '
     }
   ]
 ;
