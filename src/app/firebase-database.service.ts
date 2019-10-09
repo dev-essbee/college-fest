@@ -15,6 +15,7 @@ import {CustomSnackbarService} from './custom-snackbar.service';
 
 export class FirebaseDatabaseService {
   loggedInUserData: User;
+  dataEvent;
 
   constructor(private afs: AngularFirestore,
               private afAuth: AngularFireAuth,
@@ -72,7 +73,15 @@ export class FirebaseDatabaseService {
   }
 
   updateData(data) {
-    return this.afs.collection('users').doc(this.loggedInUserData.id).set(data, {merge: true});
+    if (data) {
+      // console.log('up');
+      // console.log(this.dataEvent);
+      return this.afs.collection('users').doc(this.loggedInUserData.id).set(data, {merge: true});
+    } else {
+      // console.log('dn');
+      // console.log(this.dataEvent);
+      return this.afs.collection('users').doc(this.loggedInUserData.id).set(this.dataEvent, {merge: true});
+    }
   }
 
   registerEvent(data, team) {
@@ -80,6 +89,7 @@ export class FirebaseDatabaseService {
       this.customSnackbar.showSnackBar('You have already registered for this event', '', 3);
     } else {
       if (this.loggedInUserData.newUser) {
+        this.dataEvent = data;
         this.router.navigate(['/register']);
       } else {
         this.updateData(data);

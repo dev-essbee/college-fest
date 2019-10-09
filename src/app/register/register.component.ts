@@ -171,7 +171,8 @@ export class RegisterComponent implements OnInit {
       // console.log(this.transport.value);
       // console.log(this.databaseService.updateData(data));
       this.databaseService.updateData(data);
-      this.customSnackbar.showSnackBar('Details Updated Successfully. Head over to events for Registration.', '', 3);
+      this.customSnackbar.showSnackBar('Details Updated Successfully.', '', 3);
+      this.databaseService.updateData(null);
       this.location.back();
       //  TODO: Reload Page
     } else {
