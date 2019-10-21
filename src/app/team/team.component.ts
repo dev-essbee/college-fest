@@ -16,15 +16,17 @@ export class TeamComponent implements OnInit {
   students = [{name: 'Vishnu Agarwal', contact: '+91-8085194808'}, {
     name: 'Somesh Sharma',
     contact: '+91-9509703636'
-  }, {name: 'Payal Sharma', contact: '+91-8112288381'}, {
+  }, {name: 'Payal Sharma', contact: '+91-8112288381'},
+    {
+      name: 'Vishal Chaurasia', contact: '+91-7000650441'
+    },
+    {
     name: 'Ashish Kumar',
     contact: ''
   }, {name: 'Karan Sharma', contact: ''}, {
     name: 'Sonakshi Jhawar',
     contact: ''
-  }, {name: 'Saransh Gupta', contact: ''}, {
-    name: 'Vishal Chaurasia', contact: ''
-  }
+  }, {name: 'Saransh Gupta', contact: ''}
   ];
   web = [{
     name: 'Shubham Bhandari',
