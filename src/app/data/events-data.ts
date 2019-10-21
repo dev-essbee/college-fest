@@ -473,22 +473,25 @@ export let events: Event[] = [
       // largeImg: baseLocLarge + 'codextreme.jpg',
       category: 't1',
       des:
+        'This is a three hour long competitive programming competition that will be held in two rounds:' +
+        'First round will be held on HackerEarth' +
+        'and second round will be the onsite final round' +
         'This event is based on time, complexity, algorithm designing and executing code in ' +
-        'which participants are required to solve the given problem set, generating output and debug the code.' +
-        'Teams are required to solve the real life problems through coding. Programming skills of participants would be tested.',
+        'which participants are required to solve the given problem set, generating output.',
       judgement:
-        ['Scoring: The exact marking scheme will be disclosed later. ' +
-        'In case of a tie, the teams will compete for a rapid-fire Round and the winner will be decided based on marks obtained.'],
+        ['Scoring: Each question will have varying marks based on the difficulty level. Score distribution will be provided beforehand. ' ,
+        'Programs will be evaluated by the online judges of HackerEarth (online round) and CodeChef (final round).'],
       rules:
-        ['The organisers reserve the rights to change any or all of the above rules as they deem fit. ' +
-        'Change in rules, if any, will be highlighted on the website and notified to the registered teams.',
+        ['Selected students from the online round will be invited for the onsite final round.',
+          'Participants need to bring their own laptops during the final round.',
+          'However, Internet facility will be provided to the participants.',
+          'Both the rounds will have allotted time of 3 hours.',
+          'Programmers are free to use any programming language supported by online judges of HackerEarth and CodeChef.',
+          'All students with a valid identity card of their respective educational institutes are eligible to participate in the event. ',
+          'The organisers reserve the rights to change any or all of the above rules as they deem fit. ' +
+          'Change in rules, if any, will be highlighted on the website and notified to the registered teams.',
           'Note that at any point of time, the latest information will be that which is on the site. ' +
-          'The information provided in the pdf downloaded earlier may not be the latest. ' +
-          'However, registered participants will be informed through mail about any such changes.' +
-          'Participants need not to bring their own laptops during the competition.',
-          'Usage of string or glue or any other material is now allowed. ',
-          'Time allotted will be 3 hour. ',
-          'All students with a valid identity card of their respective educational institutes are eligible to participate in the event. '],
+          'The information provided in the pdf downloaded earlier may not be the latest. '],
       startTime:
         '12:12',
       endTime:

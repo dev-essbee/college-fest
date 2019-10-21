@@ -63,6 +63,27 @@
         </div>
       </div>
 
+
+      <div *ngIf="event.name=='CODEXTREME'">
+        <div class="details">
+          <mat-card class="event-detail-card">
+            <mat-card-title>
+              Registration Details
+            </mat-card-title>
+            <mat-card-content>
+              <div *ngFor="let e of codextremeRegistration">
+                <ul>
+                  <li>
+                    <div [innerHTML]="e"></div>
+                  </li>
+                </ul>
+              </div>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </div>
+
+
       <div class="details">
         <div *ngIf="event.prize || event.fee">
           <mat-card class="event-detail-card">
@@ -71,8 +92,20 @@
             </mat-card-title>
             <mat-card-content>
               <ul>
-                <li>The Registration fee for this event is ₹{{event.fee}}</li>
-                <li>The Winner will receive ₹{{event.prize}}</li>
+                <li *ngIf="event.name!='CODEXTREME'">The Registration fee for this event is ₹{{event.fee}}</li>
+                <br>
+                <li *ngIf="event.name=='CODEXTREME'">The Registration fee for the final round of the event is
+                  ₹{{event.fee}}. Online round is free.
+                </li>
+                <br>
+                <li>The Winner of final round will receive ₹{{event.prize}}</li>
+                <br>
+                <li *ngIf="event.name=='CODEXTREME'">Winners of first round are entitled for HackerEarth T-shirts.</li>
+                <br>
+                <li *ngIf="event.name=='CODEXTREME'">Top three contestants of final round are entitled for 300 CodeChef
+                  Laddus alongwith scholarships
+                  for CCDSAP and above mentioned cash prize.
+                </li>
               </ul>
             </mat-card-content>
           </mat-card>
@@ -81,7 +114,9 @@
 
     </div>
     <div class="button-container">
-      <button mat-button style="font-family: 'Griffy', cursive; font-size:x-large;" (click)="onClickRegister(event)">Register</button>
+      <button mat-button style="font-family: 'Griffy', cursive; font-size:x-large;" (click)="onClickRegister(event)">
+        Register
+      </button>
     </div>
   </div>
 </div>
