@@ -27,7 +27,7 @@ export let events: Event[] = [
       startTime: '12:12',
       endTime: '18:18',
       fee: '150',
-      prize: 'The Winner will receive Rs.1500.'
+      prize: '1500.'
 
     },
     {
@@ -54,7 +54,7 @@ export let events: Event[] = [
       startTime: '12:12',
       endTime: '18:18',
       fee: '150',
-      prize: 'The Winner will receive Rs.1500.'
+      prize: '1500.'
     },
     {
       id: '2',
@@ -80,7 +80,7 @@ export let events: Event[] = [
       startTime: '12:12',
       endTime: '18:18',
       fee: '150',
-      prize: 'The Winner will receive Rs.1500. '
+      prize: '1500. '
     },
     {
       id: '3',
@@ -105,7 +105,7 @@ export let events: Event[] = [
       startTime: '12:12',
       endTime: '18:18',
       fee: '1000',
-      prize: 'The Winner will receive Rs.10,000 . '
+      prize: '10,000 . '
     },
     {
       id: '4',
@@ -139,7 +139,7 @@ export let events: Event[] = [
       fee:
         '350',
       prize:
-        'The Winner will receive Rs.3,500 .',
+        '3,500 .',
 
     },
     {
@@ -169,7 +169,7 @@ export let events: Event[] = [
       fee:
         '1200',
       prize:
-        'The Winner will receive Rs.10,000 '
+        '10,000 '
     },
     {
       id: '6',
@@ -207,7 +207,7 @@ export let events: Event[] = [
       fee:
         '250',
       prize:
-        'The Winner will receive Rs.2000 '
+        '2000 '
     },
     {
       id: '7',
@@ -241,7 +241,7 @@ export let events: Event[] = [
       fee:
         '150',
       prize:
-        'The Winner will receive Rs.1500. '
+        '1500. '
     },
     {
       id: '8',
@@ -283,7 +283,7 @@ export let events: Event[] = [
       fee:
         '800',
       prize:
-        'The Winner will receive Rs.6500. '
+        '6500. '
     },
     {
       id: '9',
@@ -319,7 +319,7 @@ export let events: Event[] = [
       fee:
         '150',
       prize:
-        'The Winner will receive Rs.2000. '
+        '2000. '
     },
 
     {
@@ -357,7 +357,7 @@ export let events: Event[] = [
       fee:
         '300',
       prize:
-        'The Winner will receive Rs.3000. '
+        '3000. '
     },
 
     {
@@ -380,7 +380,7 @@ export let events: Event[] = [
       startTime: '12:12',
       endTime: '18:18',
       fee: '150',
-      prize: 'The Winner will receive Rs.1100. '
+      prize: '1100. '
     },
     {
       id: '12',
@@ -402,7 +402,7 @@ export let events: Event[] = [
       startTime: '12:12',
       endTime: '18:18',
       fee: '150',
-      prize: 'The Winner will receive Rs.1100. '
+      prize: '1100. '
     },
     {
       id: '13',
@@ -429,7 +429,7 @@ export let events: Event[] = [
       startTime: '12:12',
       endTime: '18:18',
       fee: '150',
-      prize: 'The Winner will receive Rs.2000. '
+      prize: '2000. '
     },
     {
       id: '14',
@@ -460,7 +460,7 @@ export let events: Event[] = [
       fee:
         '150',
       prize:
-        'The Winner will receive Rs.1500. '
+        '1500. '
     }, {
       id: '15',
       team: true,
@@ -496,7 +496,7 @@ export let events: Event[] = [
       fee:
         '150',
       prize:
-        'The Winner will receive Rs.1500. '
+        '1500. '
     },
     {
       id: '16',
@@ -546,7 +546,7 @@ export let events: Event[] = [
       fee:
         '150',
       prize:
-        'The Winner will receive Rs.1500. '
+        '1500. '
     },
     {
       id: '17',
@@ -588,7 +588,7 @@ export let events: Event[] = [
       fee:
         '250',
       prize:
-        'The Winner will receive Rs.2500. '
+        '2500. '
     },
     {
       id: '18',
@@ -619,7 +619,7 @@ export let events: Event[] = [
       fee:
         '150',
       prize:
-        'The Winner will receive Rs.1500. '
+        '1500. '
     },
     {
       id: '19',
@@ -652,7 +652,7 @@ export let events: Event[] = [
       fee:
         '150',
       prize:
-        'The Winner will receive Rs.1500. '
+        '1500. '
     },
     {
       id: '20',
@@ -672,7 +672,7 @@ export let events: Event[] = [
       startTime: '12:12',
       endTime: '18:18',
       fee: '200',
-      prize: 'The Winner will receive Rs.2000. '
+      prize: '2000. '
     },
 
     {
@@ -702,7 +702,7 @@ export let events: Event[] = [
       startTime: '12:12',
       endTime: '18:18',
       fee: '250',
-      prize: 'The Winner will receive Rs.2100. '
+      prize: '2100. '
     },
 
     {
@@ -731,7 +731,7 @@ export let events: Event[] = [
       startTime: '12:12',
       endTime: '18:18',
       fee: '100',
-      prize: 'The Winner will receive Rs.1100. '
+      prize: '1100. '
     },
 
     {
@@ -757,7 +757,7 @@ export let events: Event[] = [
       startTime: '12:12',
       endTime: '18:18',
       fee: '100',
-      prize: 'The Winner will receive Rs.1100. '
+      prize: '1100. '
     },
 
     {
@@ -783,7 +783,7 @@ export let events: Event[] = [
       startTime: '12:12',
       endTime: '18:18',
       fee: '100',
-      prize: 'The Winner will receive Rs.1100. '
+      prize: '1100. '
     }
   ]
 ;
