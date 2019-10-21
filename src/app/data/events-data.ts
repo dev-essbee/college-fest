@@ -473,9 +473,9 @@ export let events: Event[] = [
       // largeImg: baseLocLarge + 'codextreme.jpg',
       category: 't1',
       des:
-        'This is a three hour long competitive programming competition that will be held in two rounds:' +
-        'First round will be held on HackerEarth' +
-        'and second round will be the onsite final round' +
+        'This is a three hour long competitive programming competition that will be held in two rounds: ' +
+        'First round will be held on HackerEarth ' +
+        'and second round will be the onsite final round. ' +
         'This event is based on time, complexity, algorithm designing and executing code in ' +
         'which participants are required to solve the given problem set, generating output.',
       judgement:
