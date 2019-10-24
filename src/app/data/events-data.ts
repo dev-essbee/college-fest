@@ -463,9 +463,9 @@ export let events: Event[] = [
         '1500. '
     }, {
       id: '15',
-      team: true,
-      maxTeamMembers: 2,
-      minTeamMembers: 2,
+      team: false,
+      maxTeamMembers: 0,
+      minTeamMembers: 0,
       name:
         'CODEXTREME',
       smallImg:
