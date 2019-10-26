@@ -93,13 +93,13 @@
             <mat-card-content>
               <ul>
                 <li *ngIf="event.name!='CODEXTREME'">The Registration fee for this event is ₹{{event.fee}}</li>
-                <br>
+                <br *ngIf="event.name=='CODEXTREME'">
                 <li *ngIf="event.name=='CODEXTREME'">The Registration fee for the final round of the event is
                   ₹{{event.fee}}. Online round is free.
                 </li>
                 <br>
                 <li>The Winner of final round will receive ₹{{event.prize}}</li>
-                <br>
+                <br *ngIf="event.name=='CODEXTREME'">
                 <li *ngIf="event.name=='CODEXTREME'">Winners of first round are entitled for HackerEarth T-shirts.</li>
                 <br>
                 <li *ngIf="event.name=='CODEXTREME'">Top contestants of final round are entitled for 300 CodeChef
