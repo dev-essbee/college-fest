@@ -87,9 +87,10 @@ export class FirebaseDatabaseService {
   }
 
   directToForm(data) {
-    console.log('form');
     if (Object.keys(data.participatingEvents)[0] === '15') {
       window.open('https://www.hackerearth.com/challenges/college/codextreme2019/', '_blank');
+    } else if (Object.keys(data.participatingEvents)[0] === '7') {
+      window.open('https://docs.google.com/forms/d/e/1FAIpQLSc0REkmrqtBB5vT_zC0b235fjveewi8ZTGVCtIp5EXJ5bX71A/viewform', '_blank');
     }
   }
 
