@@ -225,14 +225,19 @@ export let events: Event[] = [
         'A Talent show is an event where participants perform talents across Poetry, ' +
         'Whistle mania, Stand-up comedy. Get ready to showcase your talent this SABARNG 2K19 and win exciting prizes.',
       judgement:
-        ['Content', 'Fluency', 'Spontaneity', 'Presentation', 'Sense of humor'],
+        ['Content', 'Delivery', 'Gestures', 'Stage presence', 'Audience engagement', 'Overall Impact'],
       rules:
         ['Any kind of non-acceptable content would be disqualified. ',
           'Time limit is 4-5 minutes. ',
-          'Negative marking for exceeding time limit. ',
+          'Negative marking for exceeding time limit. If the time limit is exceeded, only the part of the ' +
+          'content that was served within the time allotted ' +
+          'shall be considered ',
           'Participants can show their performance in any way they want but it should be decent. ',
-          'Participants may perform only one time during the show. ' +
-          'Any participant who participates in more than one performance will be disqualified from both the acts. ',
+          'Participants may perform only one time during the show. Any participant who participates in more than one ' +
+          'performance will be disqualified from both the acts.',
+          'Only solo performances are allowed.',
+          'Use of props is allowed, brought in by the participant himself. The organisers hold the discretion ' +
+          'of allowing it on stage.',
           'The decision of the judges would be considered final. '],
       startTime:
         '12:12',
@@ -479,8 +484,8 @@ export let events: Event[] = [
         'This event is based on time, complexity, algorithm designing and executing code in ' +
         'which participants are required to solve the given problem set, generating output.',
       judgement:
-        ['Scoring: Each question will have varying marks based on the difficulty level. Score distribution will be provided beforehand. ' ,
-        'Programs will be evaluated by the online judges of HackerEarth (online round) and CodeChef (final round).'],
+        ['Scoring: Each question will have varying marks based on the difficulty level. Score distribution will be provided beforehand. ',
+          'Programs will be evaluated by the online judges of HackerEarth (online round) and CodeChef (final round).'],
       rules:
         ['Selected students from the online round will be invited for the onsite final round.',
           'Participants need to bring their own laptops during the final round.',

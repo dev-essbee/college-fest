@@ -83,6 +83,24 @@
         </div>
       </div>
 
+      <div *ngIf="event.name=='TALENTX'">
+        <div class="details">
+          <mat-card class="event-detail-card">
+            <mat-card-title>
+              Rounds: Eliminations & Finals
+            </mat-card-title>
+            <mat-card-content>
+              <div *ngFor="let e of talentxRounds">
+                <ul type="none">
+                  <li>
+                    <div [innerHTML]="e"></div>
+                  </li>
+                </ul>
+              </div>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </div>
 
       <div class="details">
         <div *ngIf="event.prize || event.fee">
