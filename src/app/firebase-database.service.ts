@@ -76,17 +76,27 @@ export class FirebaseDatabaseService {
     if (data) {
       // console.log('up');
       // console.log(this.dataEvent);
-      return this.afs.collection('users').doc(this.loggedInUserData.id).set(data, {merge: true});
+      this.afs.collection('users').doc(this.loggedInUserData.id).set(data, {merge: true});
+      console.log(data);
     } else {
       // console.log('dn');
       // console.log(this.dataEvent);
-      return this.afs.collection('users').doc(this.loggedInUserData.id).set(this.dataEvent, {merge: true});
+      this.afs.collection('users').doc(this.loggedInUserData.id).set(this.dataEvent, {merge: true});
+      this.directToForm(this.dataEvent);
+    }
+  }
+
+  directToForm(data) {
+    console.log('form');
+    if (Object.keys(data.participatingEvents)[0] === '15') {
+      window.open('https://www.hackerearth.com/challenges/college/codextreme2019/', '_blank');
     }
   }
 
   registerEvent(data, team) {
     if (this.loggedInUserData.participatingEvents[Object.keys(data.participatingEvents)[0]]) {
       this.customSnackbar.showSnackBar('You have already registered for this event', '', 3);
+      this.directToForm(data);
     } else {
       if (this.loggedInUserData.newUser) {
         this.dataEvent = data;
@@ -94,6 +104,7 @@ export class FirebaseDatabaseService {
       } else {
         this.updateData(data);
         this.customSnackbar.showSnackBar('You have successfully registered for the event.', '', 3);
+        this.directToForm(data);
         if (team) {
           const createTeamSnackbarRef = this.snackBar.showSnackBar('Successfully registered, create your team', 'Go!', 5);
           createTeamSnackbarRef.onAction().subscribe(() => {
