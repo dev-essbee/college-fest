@@ -479,7 +479,7 @@ export let events: Event[] = [
       category: 't1',
       des:
         'This is a three hour long competitive programming competition that will be held in two rounds: ' +
-        'First round will be held on HackerEarth ' +
+        'First round has already been held on HackerEarth ' +
         'and second round will be the onsite final round. ' +
         'This event is based on time, complexity, algorithm designing and executing code in ' +
         'which participants are required to solve the given problem set, generating output.',
@@ -488,6 +488,7 @@ export let events: Event[] = [
           'Programs will be evaluated by the online judges of HackerEarth (online round) and CodeChef (final round).'],
       rules:
         ['Selected students from the online round will be invited for the onsite final round.',
+          'Participants can also participate directly in the onsite final round.',
           'Participants need to bring their own laptops during the final round.',
           'However, Internet facility will be provided to the participants.',
           'Both the rounds will have allotted time of 3 hours.',

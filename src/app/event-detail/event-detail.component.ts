@@ -14,11 +14,11 @@ import {SnackbarService} from '../snackbar.service';
 })
 export class EventDetailComponent implements OnInit {
   event: Event;
-  codextremeRegistration = ['Register for the event by pressing Register button below',
+ /* codextremeRegistration = ['Register for the event by pressing Register button below',
     'For online round participants need to register on HackerEarth here: ' +
     '<a href="https://www.hackerearth.com/challenges/college/codextreme2019/">CodeXtreme</a>',
     'Participants need to fill following form to claim prizes:' +
-    ' <a href="https://forms.gle/2QTorXT8xACgs6UJ8">CodeXtreme: Username Form</a>'];
+    ' <a href="https://forms.gle/2QTorXT8xACgs6UJ8">CodeXtreme: Username Form</a>'];*/
   talentxRounds = [
     'First Round:',
     '1. You have to submit a video of you performing one of your pieces, the video may be even'

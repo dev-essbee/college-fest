@@ -64,7 +64,7 @@
       </div>
 
 
-      <div *ngIf="event.name=='CODEXTREME'">
+      <!--<div *ngIf="event.name=='CODEXTREME'">
         <div class="details">
           <mat-card class="event-detail-card">
             <mat-card-title>
@@ -81,7 +81,7 @@
             </mat-card-content>
           </mat-card>
         </div>
-      </div>
+      </div>-->
 
       <div *ngIf="event.name=='TALENTX'">
         <div class="details">
@@ -113,7 +113,7 @@
                 <li *ngIf="event.name!='CODEXTREME'">The Registration fee for this event is ₹{{event.fee}}</li>
                 <br *ngIf="event.name=='CODEXTREME'">
                 <li *ngIf="event.name=='CODEXTREME'">The Registration fee for the final round of the event is
-                  ₹{{event.fee}}. Online round is free.
+                  ₹{{event.fee}}.
                 </li>
                 <br>
                 <li>The Winner of final round will receive ₹{{event.prize}}</li>
