@@ -30,6 +30,20 @@
       </div>
 
       <div class="details">
+        <div *ngIf="event.startTime">
+          <mat-card class="event-detail-card">
+            <mat-card-title>
+              Event Date & Time
+            </mat-card-title>
+            <mat-card-content>
+              <p>{{event.startTime}} - {{event.endTime}}</p>
+
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </div>
+
+      <div class="details">
         <div *ngIf="event.judgement.length>0">
           <mat-card class="event-detail-card">
             <mat-card-title>
@@ -118,8 +132,6 @@
                 <br>
                 <li>The Winner of final round will receive ₹{{event.prize}}</li>
                 <br *ngIf="event.name=='CODEXTREME'">
-                <li *ngIf="event.name=='CODEXTREME'">Winners of first round are entitled for HackerEarth T-shirts.</li>
-                <br>
                 <li *ngIf="event.name=='CODEXTREME'">Top contestants of final round are entitled for 300 CodeChef
                   Laddus along with scholarships
                   for CCDSAP and above mentioned cash prize.
