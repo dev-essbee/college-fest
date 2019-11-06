@@ -19,13 +19,12 @@ export let events: Event[] = [
       des: 'Show your creativity with stacks. Pile up the wooden pieces in a ' +
         'creative and stable form using your mind and some techniques without any gum/thread. ',
       judgement: ['Stability', 'Height', 'Looks / aesthetics', 'Interesting / creative', 'Challenging '],
-      rules: ['There will be only 1 participant as it is an individual event.',
+      rules: ['Time allotted will be 1 hour. ',
         'Participants will be provided by 100 pieces of wood. ' +
         'Participant must create a tower or building with those pieces making it stable and attractive. ',
-        'Usage of string or glue or any other material is now allowed. ',
-        'Time allotted will be 1 hour. '],
-      startTime: '12:12',
-      endTime: '18:18',
+        'Usage of string or glue or any other material is now allowed. '],
+      startTime: '10-NOV-2019: 2:00 PM',
+      endTime: '3:00 PM',
       fee: '150',
       prize: '1500.'
 
@@ -51,8 +50,8 @@ export let events: Event[] = [
         'Participants must carry their own material, whatever required.',
         'Participants will be provided with materials like newspaper, glue, sheets ' +
         'etc so that they can make additional items with mask, if time left. (according to the theme)'],
-      startTime: '12:12',
-      endTime: '18:18',
+      startTime: '10-NOV-2019: 1:00 PM',
+      endTime: '2:00 PM',
       fee: '150',
       prize: '1500.'
     },
@@ -67,18 +66,18 @@ export let events: Event[] = [
       category: 'd2',
       des: '“Taking an image, freezing a moment, reveals how rich reality truly is. ”' +
         'SABRANG 2K19 invites you to capture and freeze the moment in Click-O-Graphy: Photography challenge.' +
-        'themes: Architecture, Leading lines, Nature and landscape, Emotions, Social environments, ' +
-        'Objects in frames, Human wildness',
+        'themes: Architecture, Leading lines, Nature and landscape, Emotions, Environments, ' +
+        'Objects in frames, Long Exposure',
       rules: ['Photographer can choose any five themes out of the mentioned themes.',
-        'Photo must be clicked within the campus boundary. ' +
-        'Competition will be started from the first day of Sabrang. ',
-        'Photographer must click their between the shoot. ',
+        'Photo must be clicked within the campus permises ' +
+        'Use of given props is compulsory for any 3 photos out of 5. ',
         'Photographer can make all basic adjustment like exposure, contrast. ',
         'Photographer can click photos from mobile or any professional camera. ',
-        'Themes and regulations should be strictly followed otherwise entry will be discarded'],
+        'Pictures must be in the format SerialNo_Theme.',
+        'Rules must be followed else entry will be discarded.'],
       judgement: [],
-      startTime: '12:12',
-      endTime: '18:18',
+      startTime: '09-NOV-2019: 11:00 AM',
+      endTime: '9:00 PM',
       fee: '150',
       prize: '1500. '
     },
@@ -102,8 +101,8 @@ export let events: Event[] = [
         'Any other equipment like headphones, laptops must be carried by the participant. ',
         'Any damage done to the equipment will be beard by the player only.',
         'Each participant will get only 5-7 min for setting up their Equipment. '],
-      startTime: '12:12',
-      endTime: '18:18',
+      startTime: '08-NOV-2019: 5:00 PM',
+      endTime: '10:00 PM',
       fee: '1000',
       prize: '10,000 . '
     },
@@ -133,9 +132,9 @@ export let events: Event[] = [
         'pendrive ready to play as one single track, edited exactly as you want it to sound. ',
         'Decision of the judges will be final.'],
       startTime:
-        '12:12',
+        '10-NOV-2019: 12:00 PM',
       endTime:
-        '18:18',
+        '3:00 PM',
       fee:
         '350',
       prize:
@@ -153,19 +152,23 @@ export let events: Event[] = [
       category: 'c2',
       des: 'Get ready to sway your hands and bang your head to energizing and rocking beats of Rocko-O-Phonix. ',
       judgement: ['Planning/preparedness', 'Originality',
-        'Interface with audience', 'Quality of performance', 'Presentation'],
+        'Stage Presence ', 'Quality of performance', 'Interface with audience'],
       rules:
         ['Participants must report 45 minutes before the competition. ',
-          'Each Participant will get 5 minutes for their instrumental setup. ' +
-          'Each Participant will get 20 minutes for their performance. ',
+          'Time limit for each band performance is of 20  minutes including sound check. ' +
+          'If the time limit exceeds 20 min. then sound will be cut. ',
+          'The decision of organizers regarding Stage lineup will be final. ',
+          'Obscenity of any kind is not allowed and will lead to disqualification. ',
           'The decision of the judges will be final, and no one shall question it. ',
-          'All participants must bring their own instruments and drum is optional (we shall provide in case teams decide not to bring). ',
-          'Drum Kit will be provided with basic cymbal set i.e. Hi Hats, Crash, Ride. ' +
-          'Apart from this if any participant wishes to use any other cymbal then he should bring his own cymbal with proper boom stand. '],
+          'Bands have to bring their own instruments rather than drum kit. Drum Kit will be provided with basic cymbal set ' +
+          'i.e. Hi Hats, Crash, Ride. Apart from this if any participant wishes to use any other cymbal ' +
+          'then he should bring his own cymbal with proper boom stand. ',
+          'Apart from this if any participant wishes to use any other cymbal then he should bring his own cymbal with proper boom stand. ',
+          'Violation of rules will lead to disqualification. '],
       startTime:
-        '12:12',
+        '09-NOV-2019: 05:00 PM',
       endTime:
-        '18:18',
+        '09:00 PM',
       fee:
         '1200',
       prize:
@@ -201,9 +204,9 @@ export let events: Event[] = [
           'Hiding, misplacing, or destroying the clues of other teams shall lead to disqualification. ',
           'Once the game is on, it won’t be paused unnecessarily. '],
       startTime:
-        '12:12',
+        '09-NOV-2019: 12:00 PM',
       endTime:
-        '18:18',
+        '06:00 PM',
       fee:
         '250',
       prize:
@@ -240,9 +243,9 @@ export let events: Event[] = [
           'of allowing it on stage.',
           'The decision of the judges would be considered final. '],
       startTime:
-        '12:12',
+        '09-NOV-2019: 12:00 PM',
       endTime:
-        '18:18',
+        '02:00 PM',
       fee:
         '150',
       prize:
@@ -269,10 +272,8 @@ export let events: Event[] = [
         ['Creativity ', 'Theme ', 'Choreography ', 'Walking stance ', 'Usage of props'],
       rules:
         ['Maximum of 15 participants can perform on stage. However, all participants need not be on stage at the same time. (minimum 10). ',
-          'All teams will have an on-campus elimination round. ' +
           'Time limit 12 minutes (curtain to curtain). Points will be deducted for exceeding the time limit. ',
           'One of the team members can explain their views of dressing to judges. ',
-          'Emphasis will be given to apparels, portrayals and originality. ',
           'Backstage helpers should not exceed. ',
           'Two members must be present to provide cues for musical night. ',
           'The lightning of candles, matches or cigarettes will not be allowed on stage and violation will result in disqualification. ',
@@ -282,9 +283,9 @@ export let events: Event[] = [
           'Teams must bring a pen drive containing their soundtrack. The soundtrack should be in MP3 format. ',
           'The participants must report at least 1.5 hours before the event is scheduled.'],
       startTime:
-        '12:12',
+        '10-NOV-2019: 05:00 PM',
       endTime:
-        '18:18',
+        '9:00 PM',
       fee:
         '800',
       prize:
@@ -318,9 +319,9 @@ export let events: Event[] = [
           'Each entry must be completed with a non-refundable cash as per the registration guidelines. ',
           'Decision of the judges will be final. '],
       startTime:
-        '12:12',
+        '10-NOV-2019: 3:00 PM',
       endTime:
-        '18:18',
+        '05:00 PM',
       fee:
         '150',
       prize:
@@ -356,9 +357,9 @@ export let events: Event[] = [
           'Each entry must be completed with a non-refundable cash as per the registration guidelines. ',
           'Decision of the judges will be final. '],
       startTime:
-        '12:12',
+        '10-NOV-2019: 3:00 PM',
       endTime:
-        '18:18',
+        '05:00 PM',
       fee:
         '300',
       prize:
@@ -382,8 +383,8 @@ export let events: Event[] = [
         'Participants will not be allowed to refer to the lyrics while raping.',
         'The rap should not be bite (COPY) from anywhere.',
         'The rap should not have any slangs or derogatory language else the contestant will be considered as disqualify.'],
-      startTime: '12:12',
-      endTime: '18:18',
+      startTime: '09-NOV-2019: 02:00 PM',
+      endTime: '03:00 PM',
       fee: '150',
       prize: '1100. '
     },
@@ -404,8 +405,8 @@ export let events: Event[] = [
         'The competition is open to beat boxers only.',
         'The beats should not be bite (COPY) from anywhere.',
         'There should not be any slangs or derogatory language else the contestant will be considered as disqualify.'],
-      startTime: '12:12',
-      endTime: '18:18',
+      startTime: '09-NOV-2019: 02:00 PM',
+      endTime: '03:00 PM',
       fee: '150',
       prize: '1100. '
     },
@@ -431,8 +432,8 @@ export let events: Event[] = [
         'In case of a tie, one on one round will take place.',
         'The participants will be judged on the song selection, voice quality, clarity, rhythm and their appeal to the audience.',
         'Judge’s decision shall be final.'],
-      startTime: '12:12',
-      endTime: '18:18',
+      startTime: '09-NOV-2019: 03:00PM',
+      endTime: '05:00 PM',
       fee: '150',
       prize: '2000. '
     },
@@ -448,20 +449,21 @@ export let events: Event[] = [
       // largeImg: baseLocLarge + 'autocad.jpg',
       category: 't0',
       des:
-        'This event allows the participants to display their ' +
-        'very best technical drawings.this category is for 2D CAD drawings.' +
-        'This is a display of the students’ ability to create technical drawings, not their design ability. ',
+        'Participants has to replicate an given 2d autocad design regardless of subject. ' +
+        'The timing will be counted. ',
       judgement:
         ['Completeness', 'Accuracy', 'Time Stamp', 'Dimensioning'],
       rules:
-        ['Time provided will be 1.5 hours. ',
+        ['AutoCAD design will be provided. ',
           'Limited one entry per student. ' +
-          'A complete drawing is required otherwise the participant will be disqualified. ',
-          'If nobody can complete the drawing than participant will be judged on the criteria specified above '],
+          'You have to replicate the same design in AutoCAD. ',
+          'Completion in 30 min will get you full 10 marks for time completion. ',
+          'After 30 min for each 5min there will be a deduction of 2 points.',
+          'A total of 50 minutes will be awarded for completion.'],
       startTime:
-        '12:12',
+        '10-NOV-2019: 03:00 PM',
       endTime:
-        '18:18',
+        '05:00 PM',
       fee:
         '150',
       prize:
@@ -499,9 +501,9 @@ export let events: Event[] = [
           'Note that at any point of time, the latest information will be that which is on the site. ' +
           'The information provided in the pdf downloaded earlier may not be the latest. '],
       startTime:
-        '12:12',
+        '10-NOV-2019: 02:00 PM',
       endTime:
-        '18:18',
+        '05:00 PM',
       fee:
         '150',
       prize:
@@ -516,11 +518,22 @@ export let events: Event[] = [
         'Robo-Soccer',
       smallImg:
         baseLoc + 'robosoccer1.jpg',
-      // largeImg: baseLocLarge + 'robosoccer.jpg',
       category: 't2',
       des:
-        'For all those who have passion for Robotics as well as Sports, Sabrang’19 presents Robo-soccer. ' +
-        'This competition is to show how tactile and robust your robot is in soccer by competing and scoring more goals.',
+        'Teams have to build a manually controlled bot which can do simple tasks of pushing a tennis ball and putting them' +
+        'in targeted goal post of opponent player such that in doing so it may not harm the opponent\'s bot.' +
+        ' If the opponent bot is harmed in any case the player gets disqualified immediately. The bot can be wired or wireless. ' +
+        'In case the participants use wireless mechanism, they must use dual frequency remote.' +
+        'Robot Specifications: \n' +
+        '1. Dimensions of the robot should not exceed 30cm x 30cm x 30cm. (lxbxh)\n' +
+        '2. Weight of the robot should not exceed 5 kg.\n' +
+        '3. Any mechanism of the robot should not damage the arena.\n' +
+        '4. Any mechanism should not be used to harm the opponent’s robots.\n' +
+        '5. The maximum voltage in the circuit should not exceed 12 Volt DC at any time.\n' +
+        '6. To avoid noise between wireless communication during the event, the team can\n' +
+        'use remote of 2.4GHz. (optional).\n' +
+        '7. Only up to 5% tolerance will be allowed else the bot will be unfit for the game and\n' +
+        'will lead to disqualification.',
       judgement:
         ['The team should score the maximum number of goals in order to win the match.',
           'In case of a tie, an additional 1 min will be given for competing. If the tie still persists, ' +
@@ -539,19 +552,19 @@ export let events: Event[] = [
           'Teams have to be present on scheduled time and delay will lead to disqualification.',
           'In case of any discrepancies, the decision of the event coordinators will be final.',
           'The match will have two halves, each of 3 min with a breaktime of 1 min between the two halves. ',
-          'In case the robot of Team A gets stuck to the robot of Team B during the match then all ' +
-          'the robots will be replaced to the starting position. Violation of any of the above rules will lead to disqualification.',
+          'If any bot gets technical fault during match they will get 1-2 minutes to repair ' +
+          'it and they can take technical time out twice in whole match. ',
           'Dimensions of the robot should not exceed 30cm x 30cm x 30cm.(lxbxh). ',
-          'Weight of the robot should not exceed 5 kg. ',
+          'The robot can move in the whole arena. ',
           'Any mechanism of the robot should not damage the arena. ',
           'Any mechanism should not be used to harm the opponent’s robots. ',
-          'The maximum voltage in the circuit should not exceed 12 Volt DC at any time. ',
+          ' Violation of any of the above rules will lead to disqualification. ',
           'To avoid noise between wireless communication during the event, the team can use remote of 2.4GHz. (optional). ',
-          'Only up to 5% tolerance will be allowed else the bot will be unfit for the game and will lead to disqualification. '],
+          ' Team Size: 2-4 members. '],
       startTime:
-        '12:12',
+        '10-NOV-2019: 02:00 PM',
       endTime:
-        '18:18',
+        '03:00 PM',
       fee:
         '150',
       prize:
@@ -591,9 +604,9 @@ export let events: Event[] = [
           'In case of any conflict, decision of jury/organisers will be considered final. Topics of debate will be ' +
           'announced two days prior the event at sabrang.jklu.edu.in and will be mailed to participants registered email id.'],
       startTime:
-        '12:12',
+        '10-NOV-2019: 12:00 PM',
       endTime:
-        '18:18',
+        '02:00 PM',
       fee:
         '250',
       prize:
@@ -622,9 +635,9 @@ export let events: Event[] = [
           '5.	5 team will be selected for finals based on score',
           '6.	Inbuilt tie breakers'],
       startTime:
-        '12:12',
+        '09-NOV-2019: 12:00 PM',
       endTime:
-        '18:18',
+        '02:00 PM',
       fee:
         '150',
       prize:
@@ -655,9 +668,9 @@ export let events: Event[] = [
           'Group providing accurate result with shortest time will be the winner.',
           'Expected prize money will be 8-10 times of registration fee or more.'],
       startTime:
-        '12:12',
+        '09-NOV-2019: 01:00 PM',
       endTime:
-        '18:18',
+        '03:00 PM',
       fee:
         '150',
       prize:
@@ -678,8 +691,8 @@ export let events: Event[] = [
       rules: ['1.	There can be 4 to 5 members in a team.',
         '2.	Each team will get 60 seconds to pitch their ideas in 1st round.' +
         '3.	The selected teams will then get time of 6 minutes to present their full report in 2nd round to members and the jury.'],
-      startTime: '12:12',
-      endTime: '18:18',
+      startTime: '09-NOV-2019: 10:00 AM',
+      endTime: '06:00 PM',
       fee: '200',
       prize: '2000. '
     },
@@ -708,8 +721,8 @@ export let events: Event[] = [
         'If a player drops the server will be paused at the end of the current round. ',
         'In general, all scripts are illegal except for buy, toggle and demo scripts.',
       ],
-      startTime: '12:12',
-      endTime: '18:18',
+      startTime: '09-NOV-2019: 12:00 PM',
+      endTime: '06:00 PM',
       fee: '250',
       prize: '2100. '
     },
@@ -737,8 +750,8 @@ export let events: Event[] = [
         'The last one standing will win. ',
         'The intentional use of any bug, glitches or error in the game is strictly prohibited. ',
         'All participants must obey the coordinator and follow the rules. '],
-      startTime: '12:12',
-      endTime: '18:18',
+      startTime: '09-NOV-2019: 12:00 PM',
+      endTime: '06:00 PM',
       fee: '100',
       prize: '1100. '
     },
@@ -763,8 +776,8 @@ export let events: Event[] = [
         'Mods will be disabled by default. ',
         'Maps will be randomized. ',
         'One shot wreck will be disabled. '],
-      startTime: '12:12',
-      endTime: '18:18',
+      startTime: '09-NOV-2019: 12:00 PM',
+      endTime: '06:00 PM',
       fee: '100',
       prize: '1100. '
     },
@@ -789,8 +802,8 @@ export let events: Event[] = [
         'Defending can be of your choice. ',
         'You can customize your own controls as per your need. ',
         'If you want to play with a controller, you should bring up your own. '],
-      startTime: '12:12',
-      endTime: '18:18',
+      startTime: '09-NOV-2019: 12:00 PM',
+      endTime: '06:00 PM',
       fee: '100',
       prize: '1100. '
     }
