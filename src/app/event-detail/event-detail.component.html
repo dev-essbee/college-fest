@@ -96,12 +96,29 @@
           </mat-card>
         </div>
       </div>-->
-
-      <div *ngIf="event.name=='TALENTX'">
+      <div *ngIf="event.name=='SINGING PALOOZA - Solo Singing '">
         <div class="details">
           <mat-card class="event-detail-card">
             <mat-card-title>
               Rounds: Eliminations & Finals
+            </mat-card-title>
+            <mat-card-content>
+              <div *ngFor="let e of singingRounds">
+                <ul type="none">
+                  <li>
+                    <div [innerHTML]="e"></div>
+                  </li>
+                </ul>
+              </div>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </div>
+      <div *ngIf="event.name=='TALENTX'">
+        <div class="details">
+          <mat-card class="event-detail-card">
+            <mat-card-title>
+              Rounds
             </mat-card-title>
             <mat-card-content>
               <div *ngFor="let e of talentxRounds">

@@ -14,11 +14,11 @@ import {SnackbarService} from '../snackbar.service';
 })
 export class EventDetailComponent implements OnInit {
   event: Event;
- /* codextremeRegistration = ['Register for the event by pressing Register button below',
-    'For online round participants need to register on HackerEarth here: ' +
-    '<a href="https://www.hackerearth.com/challenges/college/codextreme2019/">CodeXtreme</a>',
-    'Participants need to fill following form to claim prizes:' +
-    ' <a href="https://forms.gle/2QTorXT8xACgs6UJ8">CodeXtreme: Username Form</a>'];*/
+  /* codextremeRegistration = ['Register for the event by pressing Register button below',
+     'For online round participants need to register on HackerEarth here: ' +
+     '<a href="https://www.hackerearth.com/challenges/college/codextreme2019/">CodeXtreme</a>',
+     'Participants need to fill following form to claim prizes:' +
+     ' <a href="https://forms.gle/2QTorXT8xACgs6UJ8">CodeXtreme: Username Form</a>'];*/
   talentxRounds = [
     'First Round:',
     '1. You have to submit a video of you performing one of your pieces, the video may be even'
@@ -47,6 +47,39 @@ export class EventDetailComponent implements OnInit {
     '4. Organisers will not be responsible if you are unable to show up on time and miss your slot.'
     ,
     '5. Time Limit: 3-4 Minutes.'];
+
+  singingRounds = ['There will be two rounds in this competition.',
+    'Preliminary Round',
+
+    '1. Time limit for this round will be 2 minutes.\n',
+
+    '2. No karaoke and instruments are allowed in this round.\n',
+
+    '3. Negative marks will be awarded if the time limit is exceeded.\n',
+
+    '4. Participants will not be allowed to refer to lyrics while singing.\n',
+
+    '5. The decision of judges will be final.\n',
+
+    '6. Instrument will be there to provide scale.\n',
+
+    'Final Round\n',
+
+    '1. Time limit for this round will be 5 minutes (Including sound check ).\n',
+
+    '2. Participants can use any instruments or karaoke track in this round.\n',
+
+    '3. Maximum 2 accompanists are allowed.\n',
+
+    '4. Negative marks will be awarded if the time limit is exceeded.\n',
+
+    '5. Participants will not be allowed to refer to lyrics while singing.\n',
+
+    '6. The decision of judges will be final.\n',
+
+    '7. The participants should bring their own instruments.\n',
+    '8. For karaoke users, please bring your karaoke track in a pen drive (Mandatory) and submit it at the registration desk. ' +
+    'No delay of any kind will be tolerated. Also keep a backup file in your mobile phones.'];
 
   constructor(private route: ActivatedRoute,
               private eventService: EventService,
