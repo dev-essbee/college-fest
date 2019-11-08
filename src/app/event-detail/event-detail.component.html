@@ -160,10 +160,19 @@
       </div>
 
     </div>
-    <div class="button-container">
-      <button mat-button style="font-family: 'Griffy', cursive; font-size:x-large;" (click)="onClickRegister(event)">
-        Register
-      </button>
+    <div class="details">
+      <div *ngIf="event.judgement.length>0">
+        <mat-card class="event-detail-card">
+          <mat-card-title>
+            Online Registrations have been closed. You can register when you visit Sabrang.
+          </mat-card-title>
+        </mat-card>
+      </div>
     </div>
+<!--    <div class="button-container">-->
+<!--      <button mat-button style="font-family: 'Griffy', cursive; font-size:x-large;" (click)="onClickRegister(event)">-->
+<!--        Register-->
+<!--      </button>-->
+<!--    </div>-->
   </div>
 </div>
