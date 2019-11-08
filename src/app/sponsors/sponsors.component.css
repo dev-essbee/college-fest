@@ -19,6 +19,7 @@
 .sponsor-logo-a{
   margin-bottom: 50px;
   border: none;
+  max-width: 300px
 }
 
 @media (max-width:768px) {
