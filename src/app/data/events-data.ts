@@ -23,8 +23,8 @@ export let events: Event[] = [
         'Participants will be provided by 100 pieces of wood. ' +
         'Participant must create a tower or building with those pieces making it stable and attractive. ',
         'Usage of string or glue or any other material is now allowed. '],
-      startTime: '10-NOV-2019: 2:00 PM',
-      endTime: '3:00 PM',
+      startTime: '10-NOV-2019: 11:00 AM',
+      endTime: '01:00 PM',
       fee: '150',
       prize: '1500.'
 
@@ -76,8 +76,8 @@ export let events: Event[] = [
         'Pictures must be in the format SerialNo_Theme.',
         'Rules must be followed else entry will be discarded.'],
       judgement: [],
-      startTime: '09-NOV-2019: 11:00 AM',
-      endTime: '9:00 PM',
+      startTime: '10-NOV-2019: 09:00 AM',
+      endTime: '05:00 PM',
       fee: '150',
       prize: '1500. '
     },
@@ -132,7 +132,7 @@ export let events: Event[] = [
         'pendrive ready to play as one single track, edited exactly as you want it to sound. ',
         'Decision of the judges will be final.'],
       startTime:
-        '10-NOV-2019: 12:00 PM',
+        '10-NOV-2019: 12:30 PM',
       endTime:
         '3:00 PM',
       fee:
@@ -203,10 +203,8 @@ export let events: Event[] = [
           'but it will result in deduction of 10 points from their overall score. ',
           'Hiding, misplacing, or destroying the clues of other teams shall lead to disqualification. ',
           'Once the game is on, it won’t be paused unnecessarily. '],
-      startTime:
-        '09-NOV-2019: 12:00 PM',
-      endTime:
-        '06:00 PM',
+      startTime: '10-NOV-2019: 11:00 AM',
+      endTime: '05:00 PM',
       fee:
         '250',
       prize:
@@ -242,10 +240,8 @@ export let events: Event[] = [
           'Use of props is allowed, brought in by the participant himself. The organisers hold the discretion ' +
           'of allowing it on stage.',
           'The decision of the judges would be considered final. '],
-      startTime:
-        '09-NOV-2019: 12:00 PM',
-      endTime:
-        '02:00 PM',
+      startTime: '10-NOV-2019: 10:00 AM',
+      endTime: '11:30 AM',
       fee:
         '150',
       prize:
@@ -383,8 +379,8 @@ export let events: Event[] = [
         'Participants will not be allowed to refer to the lyrics while raping.',
         'The rap should not be bite (COPY) from anywhere.',
         'The rap should not have any slangs or derogatory language else the contestant will be considered as disqualify.'],
-      startTime: '09-NOV-2019: 02:00 PM',
-      endTime: '03:00 PM',
+      startTime: '10-NOV-2019: 11:30 AM',
+      endTime: '12:30 PM',
       fee: '150',
       prize: '1100. '
     },
@@ -405,8 +401,8 @@ export let events: Event[] = [
         'The competition is open to beat boxers only.',
         'The beats should not be bite (COPY) from anywhere.',
         'There should not be any slangs or derogatory language else the contestant will be considered as disqualify.'],
-      startTime: '09-NOV-2019: 02:00 PM',
-      endTime: '03:00 PM',
+      startTime: '10-NOV-2019: 11:30 AM',
+      endTime: '12:30 PM',
       fee: '150',
       prize: '1100. '
     },
@@ -434,8 +430,8 @@ export let events: Event[] = [
         'The decision of organizers regarding Stage line up will be final.',
         'Obscenity of any kind is not allowed and will lead to disqualification.',
         'Violation of rules will lead to disqualification.'],
-      startTime: '09-NOV-2019: 03:00PM',
-      endTime: '05:00 PM',
+      startTime: '10-NOV-2019: 12:30 PM',
+      endTime: '03:00 PM',
       fee: '150',
       prize: '2000. '
     },
@@ -605,10 +601,8 @@ export let events: Event[] = [
           'will be rated out of 5. So, top 2 teams getting best scores out of 20, will be rewarded.',
           'In case of any conflict, decision of jury/organisers will be considered final. Topics of debate will be ' +
           'announced two days prior the event at sabrang.jklu.edu.in and will be mailed to participants registered email id.'],
-      startTime:
-        '10-NOV-2019: 12:00 PM',
-      endTime:
-        '02:00 PM',
+      startTime: '10-NOV-2019: 12:00 PM',
+      endTime: '02:00 PM',
       fee:
         '250',
       prize:
@@ -637,9 +631,9 @@ export let events: Event[] = [
           '5.	5 team will be selected for finals based on score',
           '6.	Inbuilt tie breakers'],
       startTime:
-        '09-NOV-2019: 12:00 PM',
+        '10-NOV-2019: 10:00 AM',
       endTime:
-        '02:00 PM',
+        '12:00 PM',
       fee:
         '150',
       prize:
@@ -669,10 +663,8 @@ export let events: Event[] = [
           'Time allotted will be 1.5 hours.',
           'Group providing accurate result with shortest time will be the winner.',
           'Expected prize money will be 8-10 times of registration fee or more.'],
-      startTime:
-        '09-NOV-2019: 01:00 PM',
-      endTime:
-        '03:00 PM',
+      startTime: '10-NOV-2019: 11:00 AM',
+      endTime: '01:00 PM',
       fee:
         '150',
       prize:
@@ -693,7 +685,7 @@ export let events: Event[] = [
       rules: ['1.	There can be 4 to 5 members in a team.',
         '2.	Each team will get 60 seconds to pitch their ideas in 1st round.' +
         '3.	The selected teams will then get time of 6 minutes to present their full report in 2nd round to members and the jury.'],
-      startTime: '09-NOV-2019: 10:00 AM',
+      startTime: '10-NOV-2019: 11:00 AM',
       endTime: '06:00 PM',
       fee: '200',
       prize: '2000. '
@@ -723,8 +715,8 @@ export let events: Event[] = [
         'If a player drops the server will be paused at the end of the current round. ',
         'In general, all scripts are illegal except for buy, toggle and demo scripts.',
       ],
-      startTime: '09-NOV-2019: 12:00 PM',
-      endTime: '06:00 PM',
+      startTime: '10-NOV-2019: 11:00 AM',
+      endTime: '05:00 PM',
       fee: '250',
       prize: '2100. '
     },
@@ -752,8 +744,8 @@ export let events: Event[] = [
         'The last one standing will win. ',
         'The intentional use of any bug, glitches or error in the game is strictly prohibited. ',
         'All participants must obey the coordinator and follow the rules. '],
-      startTime: '09-NOV-2019: 12:00 PM',
-      endTime: '06:00 PM',
+      startTime: '10-NOV-2019: 11:00 AM',
+      endTime: '05:00 PM',
       fee: '100',
       prize: '1100. '
     },
@@ -778,8 +770,8 @@ export let events: Event[] = [
         'Mods will be disabled by default. ',
         'Maps will be randomized. ',
         'One shot wreck will be disabled. '],
-      startTime: '09-NOV-2019: 12:00 PM',
-      endTime: '06:00 PM',
+      startTime: '10-NOV-2019: 11:00 AM',
+      endTime: '05:00 PM',
       fee: '100',
       prize: '1100. '
     },
@@ -804,8 +796,8 @@ export let events: Event[] = [
         'Defending can be of your choice. ',
         'You can customize your own controls as per your need. ',
         'If you want to play with a controller, you should bring up your own. '],
-      startTime: '09-NOV-2019: 12:00 PM',
-      endTime: '06:00 PM',
+      startTime: '10-NOV-2019: 11:00 AM',
+      endTime: '05:00 PM',
       fee: '100',
       prize: '1100. '
     }
