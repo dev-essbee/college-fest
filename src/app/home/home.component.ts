@@ -23,14 +23,11 @@ export class HomeComponent implements OnInit, AfterContentInit, OnDestroy, After
   headerImg: string;
   parallaxInst: any;
   router: Router;
-  sabrangDes = 'SABRANG is celebrated annually by the University since 2011, with the objective to provide an opportunity to the ' +
-    'students from different colleges and universities across the nation and encourage them to show their potential and ' +
-    'talents. Response in SABRANG Carnival 2k18 held on October 26-28, 2018 was overwhelming. Students of different institutions ' +
-    'from various parts of the country participated in around 27 different events during the fest. ' +
-    'Spread over a span of three days, the fest is likely to attract huge participation from across country along with ' +
-    'the present strength of approx. 700 students of the University. Apart from 2000+ participating students, around 100 ' +
-    'faculty and staff members will also grace the occasion. The fest focuses on taking in its fold the major ' +
-    'disciplines of the University i.e. Management & Engineering and Technology.';
+  eventDes = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut' +
+    ' labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco ' +
+    'laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in' +
+    ' reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.' +
+    ' Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.';
   @ViewChild('sabrangLogoRef', {static: false}) sabrangLogoRef: ElementRef;
 
   @ViewChild('about', {static: false}) aboutRef: ElementRef;

@@ -7,7 +7,7 @@
       </button>
 
       <a routerLink="/home">
-        <img src="../../assets/minimg/sabrang-logo.png" class="nav_logo img-fluid" alt="SABRANG2K19">
+        <img src="../../assets/minimg/logo.png" class="nav_logo img-fluid" alt="event logo">
       </a>
 
       <div class="collapse navbar-collapse" id="navcol-1">
@@ -32,10 +32,6 @@
                                                                                              routerLink="/profile"
                                                                                              routerLinkActive="active">My
             Profile</a></li>
-          <li data-toggle="collapse" data-target=".navbar-collapse.show" class="nav-item"><a class="nav-link"
-                                                                                             href="https://drive.google.com/drive/folders/1x09tOxms_1jeWem10HcMf-qXuRpvgr8i?usp=sharing"
-                                                                                             target="_blank">
-            Transportation Routes</a></li>
         </ul>
         <div *ngIf="dbService.loggedInUserData; then authenticated else guest"></div>
         <ng-template #guest>
