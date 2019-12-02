@@ -119,7 +119,7 @@ export let events: Event[] = [
         'dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris',
         'nisi ut aliquip ex ea commodo consequat.'],
       startTime:
-        '10-NOV-2019: 12:00 PM',
+        '10-NOV-2019: 12:30 PM',
       endTime:
         '3:00 PM',
       fee:
@@ -517,9 +517,9 @@ export let events: Event[] = [
           'dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris',
           'nisi ut aliquip ex ea commodo consequat.'],
       startTime:
-        '09-NOV-2019: 12:00 PM',
+        '10-NOV-2019: 10:00 AM',
       endTime:
-        '02:00 PM',
+        '12:00 PM',
       fee:
         '150',
       prize:
