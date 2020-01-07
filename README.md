@@ -2,7 +2,8 @@
 
 This is an angular app. The app uses Cloud firestore as database and Firebase google authentication for authentication of a user. The firebase project is now shut down, therefore you will need to create your own firebase project and set up this angular app to use the app.
 
-**The screenshots of the webapp can be found in the screenshots folder**
+**The screenshots of the original webapp can be found in the screenshots folder. This repository is the same app after removing all the data of the event.**
+**Kindly open an issue for any kind of support.**
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.3.
 
